@@ -14,7 +14,6 @@ import com.gregtechceu.gtceu.api.recipe.GTRecipe;
 import com.gregtechceu.gtceu.api.recipe.RecipeHelper;
 import com.gregtechceu.gtceu.api.registry.GTRegistries;
 import com.gregtechceu.gtceu.api.sound.AutoReleasedSound;
-import com.gregtechceu.gtceu.config.ConfigHolder;
 
 import com.lowdragmc.lowdraglib.gui.texture.IGuiTexture;
 import com.lowdragmc.lowdraglib.syncdata.IEnhancedManaged;
@@ -114,6 +113,8 @@ public class RecipeLogic extends MachineTrait implements IEnhancedManaged, IWork
     @Persisted
     @Getter
     protected long totalContinuousRunningTime;
+    protected int runAttempt = 0;
+    protected int runDelay = 0;
     @Persisted
     @Setter
     @Getter
@@ -189,7 +190,11 @@ public class RecipeLogic extends MachineTrait implements IEnhancedManaged, IWork
         if (!isSuspend()) {
             if (!isIdle() && lastRecipe != null) {
                 if (progress < duration) {
-                    handleRecipeWorking();
+                    if (runDelay > 0) {
+                        runDelay--;
+                    } else {
+                        handleRecipeWorking();
+                    }
                 }
                 if (progress >= duration) {
                     onRecipeFinish();
@@ -263,6 +268,12 @@ public class RecipeLogic extends MachineTrait implements IEnhancedManaged, IWork
                 totalContinuousRunningTime++;
             } else {
                 setWaiting(handleTick.reason());
+                runAttempt++;
+                if (runAttempt > 5) {
+                    runAttempt = 0;
+                    setStatus(Status.SUSPEND);
+                }
+                runDelay = runAttempt * 10;
             }
         } else {
             setWaiting(conditionResult.reason());
@@ -274,11 +285,7 @@ public class RecipeLogic extends MachineTrait implements IEnhancedManaged, IWork
 
     protected void regressRecipe() {
         if (progress > 0 && machine.regressWhenWaiting()) {
-            if (ConfigHolder.INSTANCE.machines.recipeProgressLowEnergy) {
-                this.progress = 1;
-            } else {
-                this.progress = Math.max(1, progress - 2);
-            }
+            this.progress = 1;
         }
     }
 
@@ -432,6 +439,8 @@ public class RecipeLogic extends MachineTrait implements IEnhancedManaged, IWork
     public void onRecipeFinish() {
         machine.afterWorking();
         if (lastRecipe != null) {
+            runAttempt = 0;
+            runDelay = 0;
             consecutiveRecipes++;
             handleRecipeIO(lastRecipe, IO.OUT);
             if (machine.alwaysTryModifyRecipe()) {
