@@ -1576,7 +1576,7 @@ public class GTRecipeBuilder {
      */
     public record ResearchRecipeEntry(@NotNull String researchId,
                                       @NotNull ItemStack researchItem, @NotNull FluidStack researchFluid,
-                                      @NotNull ItemStack dataStack, int duration, int EUt, int CWUt) {
+                                      @NotNull ItemStack dataStack, int duration, EnergyStack EUt, int CWUt) {
 
     }
 }
