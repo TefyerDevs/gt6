@@ -133,11 +133,11 @@ public class RecipeRunner {
             if (res.isEmpty()) {
                 if (!simulated) {
                     // Actually consume the contents of this handler and also all the bypassed handlers
-                    handler.handleRecipe(io, recipe, recipeContents, false);
+                    recipeContents = handler.handleRecipe(io, recipe, recipeContents, false);
                     for (RecipeHandlerList bypassHandler : handlerGroups.getOrDefault(
                             RecipeHandlerGroupDistinctness.BYPASS_DISTINCT,
                             Collections.emptyList())) {
-                        bypassHandler.handleRecipe(io, recipe, recipeContents, false);
+                        recipeContents = bypassHandler.handleRecipe(io, recipe, recipeContents, false);
                     }
                 }
                 recipeContents.clear();
