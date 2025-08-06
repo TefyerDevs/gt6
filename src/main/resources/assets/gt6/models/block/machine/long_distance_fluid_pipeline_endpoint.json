@@ -1,0 +1,10 @@
+{
+    "parent": "gt6:block/machine/template/pipeline_endpoint_machine",
+    "textures": {
+        "overlay": "gt6:block/pipe/ld_fluid_pipe/overlay",
+        "overlay_emissive": "gt6:block/pipe/ld_fluid_pipe/overlay_emissive",
+
+        "hatch_in": "gt6:block/overlay/machine/overlay_fluid_hatch_input",
+        "hatch_out": "gt6:block/overlay/machine/overlay_fluid_hatch_output"
+    }
+}

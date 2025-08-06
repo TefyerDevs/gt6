@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "gt6:block/machine/me_pattern_buffer_proxy",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "gt6:block/machine/me_pattern_buffer_proxy",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gt6:block/machine/me_pattern_buffer_proxy"
+    },
+    "facing=south": {
+      "model": "gt6:block/machine/me_pattern_buffer_proxy",
+      "y": 180
+    },
+    "facing=up": {
+      "gt6:z": 180,
+      "model": "gt6:block/machine/me_pattern_buffer_proxy",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "gt6:block/machine/me_pattern_buffer_proxy",
+      "y": 270
+    }
+  }
+}

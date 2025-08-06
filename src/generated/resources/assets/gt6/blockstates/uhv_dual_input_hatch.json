@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "gt6:block/machine/uhv_dual_input_hatch",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "gt6:block/machine/uhv_dual_input_hatch",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gt6:block/machine/uhv_dual_input_hatch"
+    },
+    "facing=south": {
+      "model": "gt6:block/machine/uhv_dual_input_hatch",
+      "y": 180
+    },
+    "facing=up": {
+      "gt6:z": 180,
+      "model": "gt6:block/machine/uhv_dual_input_hatch",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "gt6:block/machine/uhv_dual_input_hatch",
+      "y": 270
+    }
+  }
+}

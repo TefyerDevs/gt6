@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "gt6:block/casings/battery/empty_tier_ii/top",
+    "side": "gt6:block/casings/battery/empty_tier_ii/side",
+    "top": "gt6:block/casings/battery/empty_tier_ii/top"
+  }
+}

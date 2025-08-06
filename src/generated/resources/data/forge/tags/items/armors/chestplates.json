@@ -1,13 +1,13 @@
 {
   "values": [
-    "gtceu:nanomuscle_chestplate",
-    "gtceu:rubber_gloves",
-    "gtceu:hazmat_chestpiece",
-    "gtceu:quarktech_chestplate",
-    "gtceu:liquid_fuel_jetpack",
-    "gtceu:electric_jetpack",
-    "gtceu:advanced_electric_jetpack",
-    "gtceu:advanced_nanomuscle_chestplate",
-    "gtceu:advanced_quarktech_chestplate"
+    "gt6:nanomuscle_chestplate",
+    "gt6:rubber_gloves",
+    "gt6:hazmat_chestpiece",
+    "gt6:quarktech_chestplate",
+    "gt6:liquid_fuel_jetpack",
+    "gt6:electric_jetpack",
+    "gt6:advanced_electric_jetpack",
+    "gt6:advanced_nanomuscle_chestplate",
+    "gt6:advanced_quarktech_chestplate"
   ]
 }

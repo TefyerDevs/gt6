@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gt6:block/pipe/ld_item_pipe/block"
+  }
+}

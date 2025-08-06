@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:zpm_energy_output_hatch",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/part/energy_output_hatch",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/zpm/bottom",
+          "side": "gt6:block/casings/voltage/zpm/side",
+          "top": "gt6:block/casings/voltage/zpm/top"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gt6:block/fusion_casing_mk3"
+    },
+    "active=true": {
+      "model": "gt6:block/fusion_casing_mk3_active"
+    }
+  }
+}

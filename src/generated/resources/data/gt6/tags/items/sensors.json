@@ -1,0 +1,32 @@
+{
+  "values": [
+    "gt6:lv_sensor",
+    "gt6:mv_sensor",
+    "gt6:hv_sensor",
+    "gt6:ev_sensor",
+    "gt6:iv_sensor",
+    "gt6:luv_sensor",
+    "gt6:zpm_sensor",
+    "gt6:uv_sensor",
+    {
+      "id": "gt6:uhv_sensor",
+      "required": false
+    },
+    {
+      "id": "gt6:uev_sensor",
+      "required": false
+    },
+    {
+      "id": "gt6:uiv_sensor",
+      "required": false
+    },
+    {
+      "id": "gt6:uxv_sensor",
+      "required": false
+    },
+    {
+      "id": "gt6:opv_sensor",
+      "required": false
+    }
+  ]
+}

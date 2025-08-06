@@ -1,0 +1,19 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:ev_fisher",
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/overlay/2_layer/top_emissive",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/ev/bottom",
+          "overlay": "gt6:block/overlay/machine/overlay_screen",
+          "overlay_emissive": "gt6:block/overlay/machine/overlay_qtank_emissive",
+          "side": "gt6:block/casings/voltage/ev/side",
+          "top": "gt6:block/casings/voltage/ev/top"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "values": [
+    "gt6:face_mask",
+    "gt6:rubber_gloves",
+    "gt6:hazmat_chestpiece",
+    "gt6:hazmat_leggings",
+    "gt6:hazmat_boots",
+    "gt6:hazmat_headpiece",
+    "gt6:quarktech_chestplate",
+    "gt6:quarktech_leggings",
+    "gt6:quarktech_boots",
+    "gt6:quarktech_helmet",
+    "gt6:advanced_nanomuscle_chestplate",
+    "gt6:advanced_quarktech_chestplate"
+  ]
+}

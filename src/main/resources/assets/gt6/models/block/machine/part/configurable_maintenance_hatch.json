@@ -1,0 +1,7 @@
+{
+    "parent": "gt6:block/overlay/2_layer/front",
+    "textures": {
+        "overlay": "gt6:block/overlay/machine/overlay_maintenance_configurable",
+        "overlay_2": "gt6:block/void"
+    }
+}

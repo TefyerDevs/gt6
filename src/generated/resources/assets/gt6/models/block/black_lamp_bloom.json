@@ -1,0 +1,7 @@
+{
+  "parent": "gt6:block/lamp",
+  "textures": {
+    "active": "gt6:block/lamps/black",
+    "active_overlay": "gt6:block/lamps/black_emissive"
+  }
+}

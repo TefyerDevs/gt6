@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt6:block/machine/lv_world_accelerator"
+    }
+  }
+}

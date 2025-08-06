@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:item/material_sets/metallic/dust_impure",
+  "textures": {
+    "layer1": "gt6:item/material_sets/radioactive/dust_impure_secondary"
+  }
+}

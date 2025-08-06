@@ -22,7 +22,7 @@ repositories {
         name = 'GTCEu Maven'
         url = 'https://maven.gtceu.com'
         content {
-            includeGroup 'com.gregtechceu.gtceu'
+            includeGroup 'com.gregtechceu.gt6'
         }
     }
 }
@@ -31,13 +31,13 @@ Then, you can add it as a dependency, with `${mc_version}` being your Minecraft 
 ```groovy
 dependencies {
 	// Forge (see below block as well if you use Forge Gradle)
-	implementation fg.deobf("com.gregtechceu.gtceu:gtceu-${mc_version}:${gtm_version}")
+	implementation fg.deobf("com.gregtechceu.gt6:gtceu-${mc_version}:${gtm_version}")
 
 	// NeoForge
-	implementation "com.gregtechceu.gtceu:gtceu-${mc_version}:${gtm_version}"
+	implementation "com.gregtechceu.gt6:gtceu-${mc_version}:${gtm_version}"
 
 	// Architectury
-	modImplementation "com.gregtechceu.gtceu:gtceu-${mc_version}:${gtm_version}"
+	modImplementation "com.gregtechceu.gt6:gtceu-${mc_version}:${gtm_version}"
 }
 ```
 

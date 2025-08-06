@@ -1,0 +1,32 @@
+{
+  "values": [
+    "gt6:lv_electric_pump",
+    "gt6:mv_electric_pump",
+    "gt6:hv_electric_pump",
+    "gt6:ev_electric_pump",
+    "gt6:iv_electric_pump",
+    "gt6:luv_electric_pump",
+    "gt6:zpm_electric_pump",
+    "gt6:uv_electric_pump",
+    {
+      "id": "gt6:uhv_electric_pump",
+      "required": false
+    },
+    {
+      "id": "gt6:uev_electric_pump",
+      "required": false
+    },
+    {
+      "id": "gt6:uiv_electric_pump",
+      "required": false
+    },
+    {
+      "id": "gt6:uxv_electric_pump",
+      "required": false
+    },
+    {
+      "id": "gt6:opv_electric_pump",
+      "required": false
+    }
+  ]
+}

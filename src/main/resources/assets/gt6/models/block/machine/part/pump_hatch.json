@@ -1,0 +1,11 @@
+{
+    "parent": "gt6:block/machine/template/part/hatch_machine_emissive",
+    "textures": {
+        "bottom": "gt6:block/casings/pump_deck/bottom",
+        "top": "gt6:block/casings/pump_deck/top",
+        "side": "#top",
+
+        "overlay": "gt6:block/overlay/machine/overlay_pipe",
+        "overlay_emissive": "gt6:block/overlay/machine/overlay_fluid_hatch"
+    }
+}

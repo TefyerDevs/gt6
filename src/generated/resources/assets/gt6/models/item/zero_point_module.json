@@ -1,0 +1,56 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "gt6:item/zero_point_module/0",
+      "predicate": {
+        "gt6:battery": 0.0
+      }
+    },
+    {
+      "model": "gt6:item/zero_point_module/1",
+      "predicate": {
+        "gt6:battery": 0.01
+      }
+    },
+    {
+      "model": "gt6:item/zero_point_module/2",
+      "predicate": {
+        "gt6:battery": 0.02
+      }
+    },
+    {
+      "model": "gt6:item/zero_point_module/3",
+      "predicate": {
+        "gt6:battery": 0.03
+      }
+    },
+    {
+      "model": "gt6:item/zero_point_module/4",
+      "predicate": {
+        "gt6:battery": 0.04
+      }
+    },
+    {
+      "model": "gt6:item/zero_point_module/5",
+      "predicate": {
+        "gt6:battery": 0.05
+      }
+    },
+    {
+      "model": "gt6:item/zero_point_module/6",
+      "predicate": {
+        "gt6:battery": 0.06
+      }
+    },
+    {
+      "model": "gt6:item/zero_point_module/7",
+      "predicate": {
+        "gt6:battery": 0.07
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "gt6:item/zero_point_module/1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "parent": "gt6:block/machine/template/part/hpca_part_machine",
+  "textures": {
+    "back": "gt6:block/casings/hpca/advanced_computer_casing/back",
+    "bottom": "gt6:block/casings/hpca/advanced_computer_casing/bottom",
+    "front": "gt6:block/casings/hpca/advanced_computer_casing/front",
+    "side": "gt6:block/casings/hpca/advanced_computer_casing/side",
+    "top": "gt6:block/casings/hpca/advanced_computer_casing/top"
+  }
+}

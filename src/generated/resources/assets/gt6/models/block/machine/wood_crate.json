@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:wood_crate",
+  "variants": {
+    "taped=false": {
+      "model": "gt6:block/machine/template/crate/wooden_crate"
+    },
+    "taped=true": {
+      "model": "gt6:block/machine/template/crate/wooden_crate_taped"
+    }
+  }
+}

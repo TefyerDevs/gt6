@@ -1,0 +1,32 @@
+{
+  "values": [
+    "gt6:lv_fluid_regulator",
+    "gt6:mv_fluid_regulator",
+    "gt6:hv_fluid_regulator",
+    "gt6:ev_fluid_regulator",
+    "gt6:iv_fluid_regulator",
+    "gt6:luv_fluid_regulator",
+    "gt6:zpm_fluid_regulator",
+    "gt6:uv_fluid_regulator",
+    {
+      "id": "gt6:uhv_fluid_regulator",
+      "required": false
+    },
+    {
+      "id": "gt6:uev_fluid_regulator",
+      "required": false
+    },
+    {
+      "id": "gt6:uiv_fluid_regulator",
+      "required": false
+    },
+    {
+      "id": "gt6:uxv_fluid_regulator",
+      "required": false
+    },
+    {
+      "id": "gt6:opv_fluid_regulator",
+      "required": false
+    }
+  ]
+}

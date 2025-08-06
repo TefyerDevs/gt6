@@ -1,0 +1,32 @@
+{
+  "values": [
+    "gt6:lv_emitter",
+    "gt6:mv_emitter",
+    "gt6:hv_emitter",
+    "gt6:ev_emitter",
+    "gt6:iv_emitter",
+    "gt6:luv_emitter",
+    "gt6:zpm_emitter",
+    "gt6:uv_emitter",
+    {
+      "id": "gt6:uhv_emitter",
+      "required": false
+    },
+    {
+      "id": "gt6:uev_emitter",
+      "required": false
+    },
+    {
+      "id": "gt6:uiv_emitter",
+      "required": false
+    },
+    {
+      "id": "gt6:uxv_emitter",
+      "required": false
+    },
+    {
+      "id": "gt6:opv_emitter",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+    "parent": "gt6:item/material_sets/metallic/plate_double",
+    "textures": {
+        "layer1": "gt6:item/material_sets/radioactive/plate_double_secondary"
+    }
+}

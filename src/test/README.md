@@ -16,11 +16,11 @@
 
 ## Defining a Test Class
 
-- Put it in the same class path as the main element you're trying to test, e.g. `test/java/com/gregtechceu/gtceu/api/machine/trait/RecipeLogicTest.java`
+- Put it in the same class path as the main element you're trying to test, e.g. `test/java/com/gregtechceu/gt6/api/machine/trait/RecipeLogicTest.java`
 - Annotate with `@GameTestHolder(GTCEu.MOD_ID)` to register the class for testing.
 - Use `@PrefixGameTestTemplate(false)` to ignore the automatic template prefix
-    - Without annotation: looks for `data/gtceu/structures/MyTests.basicBlockTest.singleblock.nbt`
-    - With annotation: looks for `data/gtceu/structures/singleblock.nbt`
+    - Without annotation: looks for `data/gt6/structures/MyTests.basicBlockTest.singleblock.nbt`
+    - With annotation: looks for `data/gt6/structures/singleblock.nbt`
 
 ```java
 @GameTestHolder(GTCEu.MOD_ID)
@@ -36,7 +36,7 @@ public class MyTests {
 
 - Annotate each test method with `@GameTest`.
 - Parameters:
-    - `template`: name of the structure or test chamber (in `data/gtceu/structures/`).
+    - `template`: name of the structure or test chamber (in `data/gt6/structures/`).
     - `batch` (default 'defaultBatch'): group name for running subsets, see '@BeforeBatch'
     - `timeoutTicks` (default 100): fail if not succeeded within ticks.
     - `required`: (default true) fail the test run if this test fails.
@@ -68,7 +68,7 @@ To make your own templates:
 4. Edit the relative offset and the structure size
 5. Press "Save"
 6. Copy `run/saves/[worldname]/generated/minecraft/structures/[name]`
-7. Paste it in `src/test/resources/data/gtceu/structures/[name]`
+7. Paste it in `src/test/resources/data/gt6/structures/[name]`
 8. Reference via `@GameTest(template = "[name]")`
 9. Don't forget to git add it when committing :)
 
@@ -92,7 +92,7 @@ To make your own templates:
 It can also help you interact with the world, spawn mock/fake players, assert conditions, etc. etc.
 
 You can also write your own utility methods for repeated patterns (e.g., checking inventories). 
-These go in `test/java/com/gregtechceu/gtceu/gametest/util/TestUtils.java`
+These go in `test/java/com/gregtechceu/gt6/gametest/util/TestUtils.java`
 
 ---
 

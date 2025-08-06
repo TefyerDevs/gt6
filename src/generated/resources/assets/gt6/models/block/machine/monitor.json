@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:monitor",
+  "replaceable_textures": [
+    "all"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/part/computer_monitor",
+        "textures": {
+          "all": "gt6:block/casings/solid/machine_casing_frost_proof"
+        }
+      }
+    }
+  }
+}

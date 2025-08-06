@@ -1,0 +1,124 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:lp_steam_miner",
+  "multipart": [
+    {
+      "apply": {
+        "model": {
+          "parent": "gt6:block/casings/steam/bricked_bronze",
+          "textures": {
+            "overlay_back": "gt6:block/machines/steam_miner/overlay_back",
+            "overlay_bottom": "gt6:block/machines/steam_miner/overlay_bottom",
+            "overlay_front": "gt6:block/machines/steam_miner/overlay_front",
+            "overlay_side": "gt6:block/machines/steam_miner/overlay_side"
+          }
+        }
+      },
+      "when": {
+        "recipe_logic_status": "idle"
+      }
+    },
+    {
+      "apply": {
+        "model": {
+          "parent": "gt6:block/casings/steam/bricked_bronze",
+          "textures": {
+            "overlay_back": "gt6:block/machines/steam_miner/overlay_back",
+            "overlay_bottom": "gt6:block/machines/steam_miner/overlay_bottom",
+            "overlay_front": "gt6:block/machines/steam_miner/overlay_front",
+            "overlay_side": "gt6:block/machines/steam_miner/overlay_side"
+          }
+        }
+      },
+      "when": {
+        "recipe_logic_status": "working"
+      }
+    },
+    {
+      "apply": {
+        "model": {
+          "parent": "gt6:block/casings/steam/bricked_bronze",
+          "textures": {
+            "overlay_back": "gt6:block/machines/steam_miner/overlay_back",
+            "overlay_bottom": "gt6:block/machines/steam_miner/overlay_bottom",
+            "overlay_front": "gt6:block/machines/steam_miner/overlay_front",
+            "overlay_side": "gt6:block/machines/steam_miner/overlay_side"
+          }
+        }
+      },
+      "when": {
+        "recipe_logic_status": "waiting"
+      }
+    },
+    {
+      "apply": {
+        "model": {
+          "parent": "gt6:block/casings/steam/bricked_bronze",
+          "textures": {
+            "overlay_back": "gt6:block/machines/steam_miner/overlay_back",
+            "overlay_bottom": "gt6:block/machines/steam_miner/overlay_bottom",
+            "overlay_front": "gt6:block/machines/steam_miner/overlay_front",
+            "overlay_side": "gt6:block/machines/steam_miner/overlay_side"
+          }
+        }
+      },
+      "when": {
+        "recipe_logic_status": "suspend"
+      }
+    },
+    {
+      "apply": {
+        "model": "gt6:block/overlay/machine/overlay_steam_vent",
+        "x": 270
+      },
+      "when": {
+        "steam_vent": "up"
+      }
+    },
+    {
+      "apply": {
+        "model": "gt6:block/overlay/machine/overlay_steam_vent",
+        "x": 90
+      },
+      "when": {
+        "steam_vent": "down"
+      }
+    },
+    {
+      "apply": {
+        "model": "gt6:block/overlay/machine/overlay_steam_vent",
+        "y": 270
+      },
+      "when": {
+        "steam_vent": "left"
+      }
+    },
+    {
+      "apply": {
+        "model": "gt6:block/overlay/machine/overlay_steam_vent",
+        "y": 90
+      },
+      "when": {
+        "steam_vent": "right"
+      }
+    },
+    {
+      "apply": {
+        "model": "gt6:block/overlay/machine/overlay_steam_vent"
+      },
+      "when": {
+        "steam_vent": "front"
+      }
+    },
+    {
+      "apply": {
+        "model": "gt6:block/overlay/machine/overlay_steam_vent",
+        "y": 180
+      },
+      "when": {
+        "steam_vent": "back"
+      }
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:block/lamp_borderless_off",
+  "textures": {
+    "inactive": "gt6:block/lamps/pink_off_borderless"
+  }
+}

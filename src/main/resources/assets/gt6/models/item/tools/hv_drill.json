@@ -1,0 +1,9 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "gt6:item/tools/power_unit_hv",
+    "layer1": "gt6:item/tools/drill",
+    "layer2": "gt6:item/void",
+    "layer3": "gt6:item/tools/drill_body"
+  }
+}

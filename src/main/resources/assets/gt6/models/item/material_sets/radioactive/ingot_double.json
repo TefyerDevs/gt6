@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:item/material_sets/metallic/ingot_double",
+  "textures": {
+    "layer1": "gt6:item/material_sets/radioactive/ingot_double_secondary"
+  }
+}

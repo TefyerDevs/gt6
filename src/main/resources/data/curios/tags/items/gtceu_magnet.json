@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "gtceu:lv_item_magnet",
-    "gtceu:hv_item_magnet"
+    "gt6:lv_item_magnet",
+    "gt6:hv_item_magnet"
   ]
 }

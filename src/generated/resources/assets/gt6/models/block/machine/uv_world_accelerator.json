@@ -1,0 +1,135 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:uv_world_accelerator",
+  "variants": {
+    "active=false,random_tick_mode=false,working_enabled=false": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator_te/overlay_back",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator_te/overlay_back_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator_te/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator_te/overlay_front_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator_te/overlay_side",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator_te/overlay_side_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    },
+    "active=false,random_tick_mode=false,working_enabled=true": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator_te/overlay_back",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator_te/overlay_back_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator_te/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator_te/overlay_front_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator_te/overlay_side",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator_te/overlay_side_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    },
+    "active=false,random_tick_mode=true,working_enabled=false": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator/overlay_back",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator/overlay_back_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator/overlay_front_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator/overlay_side",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator/overlay_side_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    },
+    "active=false,random_tick_mode=true,working_enabled=true": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator/overlay_back",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator/overlay_back_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator/overlay_front_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator/overlay_side",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator/overlay_side_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    },
+    "active=true,random_tick_mode=false,working_enabled=false": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator_te/overlay_back",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator_te/overlay_back_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator_te/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator_te/overlay_front_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator_te/overlay_side",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator_te/overlay_side_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    },
+    "active=true,random_tick_mode=false,working_enabled=true": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator_te/overlay_back_active",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator_te/overlay_back_active_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator_te/overlay_front_active",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator_te/overlay_front_active_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator_te/overlay_side_active",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator_te/overlay_side_active_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    },
+    "active=true,random_tick_mode=true,working_enabled=false": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator/overlay_back",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator/overlay_back_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator/overlay_front_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator/overlay_side",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator/overlay_side_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    },
+    "active=true,random_tick_mode=true,working_enabled=true": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uv/bottom",
+          "overlay_back": "gt6:block/machines/world_accelerator/overlay_back_active",
+          "overlay_back_emissive": "gt6:block/machines/world_accelerator/overlay_back_active_emissive",
+          "overlay_front": "gt6:block/machines/world_accelerator/overlay_front_active",
+          "overlay_front_emissive": "gt6:block/machines/world_accelerator/overlay_front_active_emissive",
+          "overlay_side": "gt6:block/machines/world_accelerator/overlay_side_active",
+          "overlay_side_emissive": "gt6:block/machines/world_accelerator/overlay_side_active_emissive",
+          "side": "gt6:block/casings/voltage/uv/side",
+          "top": "gt6:block/casings/voltage/uv/top"
+        }
+      }
+    }
+  }
+}

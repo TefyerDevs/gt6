@@ -1,0 +1,9 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": [
+    "gt6:red_granite_blob",
+    "gt6:marble_blob"
+  ],
+  "step": "underground_ores"
+}

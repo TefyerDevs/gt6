@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "gt6:block/machine/uv_electric_furnace",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gt6:block/machine/uv_electric_furnace"
+    },
+    "facing=south": {
+      "model": "gt6:block/machine/uv_electric_furnace",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gt6:block/machine/uv_electric_furnace",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:lv_combustion",
+  "variants": {
+    "recipe_logic_status=idle": {
+      "model": {
+        "parent": "gt6:block/machine/template/generator_machine",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/lv/bottom",
+          "overlay_top": "gt6:block/generators/combustion/overlay_top",
+          "side": "gt6:block/casings/voltage/lv/side",
+          "top": "gt6:block/casings/voltage/lv/top"
+        }
+      }
+    },
+    "recipe_logic_status=suspend": {
+      "model": {
+        "parent": "gt6:block/machine/template/generator_machine",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/lv/bottom",
+          "overlay_top": "gt6:block/generators/combustion/overlay_top",
+          "side": "gt6:block/casings/voltage/lv/side",
+          "top": "gt6:block/casings/voltage/lv/top"
+        }
+      }
+    },
+    "recipe_logic_status=waiting": {
+      "model": {
+        "parent": "gt6:block/machine/template/generator_machine",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/lv/bottom",
+          "overlay_top": "gt6:block/generators/combustion/overlay_top_active",
+          "side": "gt6:block/casings/voltage/lv/side",
+          "top": "gt6:block/casings/voltage/lv/top"
+        }
+      }
+    },
+    "recipe_logic_status=working": {
+      "model": {
+        "parent": "gt6:block/machine/template/generator_machine",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/lv/bottom",
+          "overlay_top": "gt6:block/generators/combustion/overlay_top_active",
+          "side": "gt6:block/casings/voltage/lv/side",
+          "top": "gt6:block/casings/voltage/lv/top"
+        }
+      }
+    }
+  }
+}

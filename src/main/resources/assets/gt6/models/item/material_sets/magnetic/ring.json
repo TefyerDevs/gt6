@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:item/material_sets/dull/ring",
+  "textures": {
+    "layer3": "gt6:item/material_sets/magnetic/magnetic_overlay"
+  }
+}

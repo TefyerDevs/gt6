@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "gt6:block/machine/lp_steam_liquid_boiler",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "gt6:block/machine/lp_steam_liquid_boiler",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gt6:block/machine/lp_steam_liquid_boiler"
+    },
+    "facing=south": {
+      "model": "gt6:block/machine/lp_steam_liquid_boiler",
+      "y": 180
+    },
+    "facing=up": {
+      "gt6:z": 180,
+      "model": "gt6:block/machine/lp_steam_liquid_boiler",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "gt6:block/machine/lp_steam_liquid_boiler",
+      "y": 270
+    }
+  }
+}

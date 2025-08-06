@@ -1,9 +1,9 @@
 {
   "values": [
-    "gtceu:nightvision_goggles",
-    "gtceu:nanomuscle_helmet",
-    "gtceu:face_mask",
-    "gtceu:hazmat_headpiece",
-    "gtceu:quarktech_helmet"
+    "gt6:nightvision_goggles",
+    "gt6:nanomuscle_helmet",
+    "gt6:face_mask",
+    "gt6:hazmat_headpiece",
+    "gt6:quarktech_helmet"
   ]
 }

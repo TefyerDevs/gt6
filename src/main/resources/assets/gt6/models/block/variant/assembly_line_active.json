@@ -1,0 +1,7 @@
+{
+  "parent": "gt6:block/cube_2_layer/all",
+  "textures": {
+    "bot_all": "gt6:block/casings/mechanic/machine_casing_assembly_line",
+    "top_all": "gt6:block/casings/mechanic/machine_casing_assembly_line_bloom"
+  }
+}

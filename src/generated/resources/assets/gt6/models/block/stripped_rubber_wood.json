@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "gt6:block/stripped_rubber_wood",
+    "side": "gt6:block/stripped_rubber_wood"
+  }
+}

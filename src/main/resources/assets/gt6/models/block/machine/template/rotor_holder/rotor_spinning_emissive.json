@@ -1,0 +1,6 @@
+{
+    "parent": "gt6:block/machine/template/rotor_holder/rotor_idle_emissive",
+    "textures": {
+        "rotor": "gt6:block/multiblock/large_turbine/rotor_spinning"
+    }
+}

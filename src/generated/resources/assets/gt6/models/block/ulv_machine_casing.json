@@ -1,0 +1,8 @@
+{
+  "parent": "gt6:block/cube/tinted/bottom_top",
+  "textures": {
+    "bottom": "gt6:block/casings/voltage/ulv/bottom",
+    "side": "gt6:block/casings/voltage/ulv/side",
+    "top": "gt6:block/casings/voltage/ulv/top"
+  }
+}

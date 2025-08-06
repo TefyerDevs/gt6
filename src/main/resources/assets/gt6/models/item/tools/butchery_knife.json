@@ -1,0 +1,8 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "gt6:item/tools/butchery_knife_base",
+    "layer1": "gt6:item/tools/butchery_knife",
+    "layer2": "gt6:item/tools/butchery_knife_overlay"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "dynamic_renders": [
+    {
+      "type": "gt6:quantum_chest_item"
+    }
+  ],
+  "loader": "gt6:machine",
+  "machine": "gt6:zpm_quantum_chest",
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/template/quantum/quantum_chest",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/zpm/bottom",
+          "side": "gt6:block/casings/voltage/zpm/side",
+          "top": "gt6:block/casings/voltage/zpm/top"
+        }
+      }
+    }
+  }
+}

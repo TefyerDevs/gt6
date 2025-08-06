@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gt6:block/steel_firebox_casing"
+    },
+    "active=true": {
+      "model": "gt6:block/steel_firebox_casing_active"
+    }
+  }
+}

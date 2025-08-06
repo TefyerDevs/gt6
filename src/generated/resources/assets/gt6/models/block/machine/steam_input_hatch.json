@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:steam_input_hatch",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "steel=false": {
+      "model": {
+        "parent": "gt6:block/machine/part/steam_hatch",
+        "textures": {
+          "bottom": "gt6:block/casings/steam/bronze/bottom",
+          "side": "gt6:block/casings/steam/bronze/side",
+          "top": "gt6:block/casings/steam/bronze/top"
+        }
+      }
+    },
+    "steel=true": {
+      "model": {
+        "parent": "gt6:block/machine/part/steam_hatch",
+        "textures": {
+          "bottom": "gt6:block/casings/steam/steel/bottom",
+          "side": "gt6:block/casings/steam/steel/side",
+          "top": "gt6:block/casings/steam/steel/top"
+        }
+      }
+    }
+  }
+}

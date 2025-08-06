@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:block/block",
+  "dynamic_renders": [
+    {
+      "type": "gt6:quantum_tank_fluid"
+    }
+  ],
+  "loader": "gt6:machine",
+  "machine": "gt6:creative_tank",
+  "variants": {
+    "": {
+      "model": "gt6:block/machine/template/quantum/creative_container"
+    }
+  }
+}

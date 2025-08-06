@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:item/material_sets/shiny/rotor",
+  "textures": {
+    "layer2": "gt6:item/material_sets/bright/rotor_overlay"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:item/material_sets/dull/wire_fine",
+  "textures": {
+    "layer2": "gt6:item/material_sets/magnetic/wire_fine_overlay"
+  }
+}

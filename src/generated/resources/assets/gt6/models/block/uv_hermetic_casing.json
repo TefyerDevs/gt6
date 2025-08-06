@@ -1,0 +1,8 @@
+{
+  "parent": "gt6:block/hermetic_casing",
+  "textures": {
+    "bot_bottom": "gt6:block/casings/voltage/uv/bottom",
+    "bot_side": "gt6:block/casings/voltage/uv/side",
+    "bot_top": "gt6:block/casings/voltage/uv/top"
+  }
+}

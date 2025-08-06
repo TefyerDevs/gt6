@@ -1,0 +1,6 @@
+{
+    "parent": "block/cube_all",
+    "textures": {
+        "all": "gt6:block/storage/crates/wooden_crate"
+    }
+}

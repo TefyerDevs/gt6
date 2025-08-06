@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "gt6:block/red_granite"
+      },
+      {
+        "model": "gt6:block/red_granite",
+        "y": 180
+      },
+      {
+        "model": "gt6:block/red_granite_mirrored"
+      },
+      {
+        "model": "gt6:block/red_granite_mirrored",
+        "y": 180
+      }
+    ]
+  }
+}

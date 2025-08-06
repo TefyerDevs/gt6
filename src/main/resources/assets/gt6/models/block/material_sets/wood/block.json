@@ -1,0 +1,7 @@
+{
+  "parent": "gt6:block/cube_2_layer/tinted_both/all_translucent",
+  "textures": {
+    "bot_all": "gt6:block/material_sets/wood/block",
+    "top_all": "gt6:block/material_sets/wood/block_secondary"
+  }
+}

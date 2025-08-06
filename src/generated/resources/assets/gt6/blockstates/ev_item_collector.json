@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt6:block/machine/ev_item_collector"
+    }
+  }
+}

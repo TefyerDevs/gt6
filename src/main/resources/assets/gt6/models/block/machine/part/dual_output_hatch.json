@@ -1,0 +1,7 @@
+{
+    "parent": "gt6:block/machine/template/part/hatch_machine_emissive",
+    "textures": {
+        "overlay": "gt6:block/overlay/machine/overlay_pipe",
+        "overlay_emissive": "gt6:block/overlay/machine/overlay_dual_hatch"
+    }
+}

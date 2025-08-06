@@ -1,0 +1,24 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:creative_computation_provider",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/single",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/max/bottom",
+          "overlay": "gt6:block/overlay/machine/overlay_data_hatch_optical",
+          "overlay_emissive": "gt6:block/overlay/machine/overlay_data_hatch_optical_emissive",
+          "side": "gt6:block/casings/voltage/max/side",
+          "top": "gt6:block/casings/voltage/max/top"
+        }
+      }
+    }
+  }
+}

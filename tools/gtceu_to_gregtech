@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for file in $(find ../gradle -type f -name "*.*"); do
+	sed -i \
+		-e 's/gtceu/gt6/g' \
+	$file
+
+	echo "Converted $file"
+done
+
+echo 'Done'

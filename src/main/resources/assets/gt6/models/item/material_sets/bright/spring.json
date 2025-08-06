@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:item/material_sets/shiny/spring",
+  "textures": {
+    "layer2": "gt6:item/material_sets/bright/spring_overlay"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "gt6:block/treated_wood_slab"
+    },
+    "type=double": {
+      "model": "gt6:block/treated_wood_planks"
+    },
+    "type=top": {
+      "model": "gt6:block/treated_wood_slab_top"
+    }
+  }
+}

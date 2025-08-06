@@ -1,0 +1,7 @@
+{
+  "values": [
+    "gt6:mv_sodium_battery",
+    "gt6:mv_lithium_battery",
+    "gt6:mv_cadmium_battery"
+  ]
+}

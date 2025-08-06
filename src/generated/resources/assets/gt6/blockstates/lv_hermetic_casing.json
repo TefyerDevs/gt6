@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt6:block/lv_hermetic_casing"
+    }
+  }
+}

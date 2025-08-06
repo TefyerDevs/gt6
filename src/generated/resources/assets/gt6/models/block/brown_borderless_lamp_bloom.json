@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:block/lamp_borderless",
+  "textures": {
+    "active": "gt6:block/lamps/brown_borderless_emissive"
+  }
+}

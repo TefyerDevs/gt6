@@ -1,0 +1,42 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:luv_charger_4x",
+  "variants": {
+    "charger_state=finished": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/luv/bottom",
+          "overlay_front": "gt6:block/machines/charger/overlay_charger_finished",
+          "overlay_front_emissive": "gt6:block/machines/charger/overlay_charger_finished_emissive",
+          "side": "gt6:block/casings/voltage/luv/side",
+          "top": "gt6:block/casings/voltage/luv/top"
+        }
+      }
+    },
+    "charger_state=idle": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/luv/bottom",
+          "overlay_front": "gt6:block/machines/charger/overlay_charger_idle",
+          "side": "gt6:block/casings/voltage/luv/side",
+          "top": "gt6:block/casings/voltage/luv/top"
+        }
+      }
+    },
+    "charger_state=running": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/luv/bottom",
+          "overlay_front": "gt6:block/machines/charger/overlay_charger_running",
+          "overlay_front_emissive": "gt6:block/machines/charger/overlay_charger_running_emissive",
+          "side": "gt6:block/casings/voltage/luv/side",
+          "top": "gt6:block/casings/voltage/luv/top"
+        }
+      }
+    }
+  }
+}

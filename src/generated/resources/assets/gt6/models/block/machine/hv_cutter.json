@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:hv_cutter",
+  "variants": {
+    "recipe_logic_status=idle": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/hv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/cutter/overlay_front",
+          "overlay_side": "gt6:block/machines/cutter/overlay_side"
+        }
+      }
+    },
+    "recipe_logic_status=suspend": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/hv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/cutter/overlay_front",
+          "overlay_side": "gt6:block/machines/cutter/overlay_side"
+        }
+      }
+    },
+    "recipe_logic_status=waiting": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/hv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/cutter/overlay_front_active",
+          "overlay_side": "gt6:block/machines/cutter/overlay_side_active"
+        }
+      }
+    },
+    "recipe_logic_status=working": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/hv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/cutter/overlay_front_active",
+          "overlay_side": "gt6:block/machines/cutter/overlay_side_active"
+        }
+      }
+    }
+  }
+}

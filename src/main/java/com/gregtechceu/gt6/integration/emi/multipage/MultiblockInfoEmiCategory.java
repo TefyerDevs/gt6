@@ -1,0 +1,35 @@
+package com.gregtechceu.gt6.integration.emi.multipage;
+
+import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.api.machine.MultiblockMachineDefinition;
+import com.gregtechceu.gt6.api.registry.GTRegistries;
+import com.gregtechceu.gt6.common.data.machines.GTMultiMachines;
+
+import net.minecraft.network.chat.Component;
+
+import dev.emi.emi.api.EmiRegistry;
+import dev.emi.emi.api.recipe.EmiRecipeCategory;
+import dev.emi.emi.api.stack.EmiStack;
+
+public class MultiblockInfoEmiCategory extends EmiRecipeCategory {
+
+    public static final MultiblockInfoEmiCategory CATEGORY = new MultiblockInfoEmiCategory();
+
+    private MultiblockInfoEmiCategory() {
+        super(GTCEu.id("multiblock_info"), EmiStack.of(GTMultiMachines.ELECTRIC_BLAST_FURNACE.getItem()));
+    }
+
+    public static void registerDisplays(EmiRegistry registry) {
+        GTRegistries.MACHINES.values().stream()
+                .filter(MultiblockMachineDefinition.class::isInstance)
+                .map(MultiblockMachineDefinition.class::cast)
+                .filter(MultiblockMachineDefinition::isRenderXEIPreview)
+                .map(MultiblockInfoEmiRecipe::new)
+                .forEach(registry::addRecipe);
+    }
+
+    @Override
+    public Component getName() {
+        return Component.translatable("gt6.jei.multiblock_info");
+    }
+}

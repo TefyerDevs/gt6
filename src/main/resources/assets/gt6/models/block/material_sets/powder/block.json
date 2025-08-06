@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:block/cube/tinted/all_0",
+  "textures": {
+    "all": "gt6:block/material_sets/powder/block"
+  }
+}

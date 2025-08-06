@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "gt6:block/machine/uhv_autoclave",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "gt6:block/machine/uhv_autoclave"
+    },
+    "facing=south": {
+      "model": "gt6:block/machine/uhv_autoclave",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "gt6:block/machine/uhv_autoclave",
+      "y": 270
+    }
+  }
+}

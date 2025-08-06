@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gt6:block/empty_tier_i_battery"
+    }
+  }
+}

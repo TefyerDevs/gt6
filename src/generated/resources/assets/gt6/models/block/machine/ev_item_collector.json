@@ -1,0 +1,55 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:ev_item_collector",
+  "variants": {
+    "active=false,working_enabled=false": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/ev/bottom",
+          "overlay_bottom": "gt6:block/machines/item_collector/overlay_bottom",
+          "overlay_top": "gt6:block/machines/item_collector/overlay_top",
+          "side": "gt6:block/casings/voltage/ev/side",
+          "top": "gt6:block/casings/voltage/ev/top"
+        }
+      }
+    },
+    "active=false,working_enabled=true": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/ev/bottom",
+          "overlay_bottom": "gt6:block/machines/item_collector/overlay_bottom",
+          "overlay_top": "gt6:block/machines/item_collector/overlay_top",
+          "side": "gt6:block/casings/voltage/ev/side",
+          "top": "gt6:block/casings/voltage/ev/top"
+        }
+      }
+    },
+    "active=true,working_enabled=false": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/ev/bottom",
+          "overlay_bottom": "gt6:block/machines/item_collector/overlay_bottom",
+          "overlay_top": "gt6:block/machines/item_collector/overlay_top",
+          "side": "gt6:block/casings/voltage/ev/side",
+          "top": "gt6:block/casings/voltage/ev/top"
+        }
+      }
+    },
+    "active=true,working_enabled=true": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/ev/bottom",
+          "overlay_bottom": "gt6:block/machines/item_collector/overlay_bottom",
+          "overlay_top": "gt6:block/machines/item_collector/overlay_top_active",
+          "side": "gt6:block/casings/voltage/ev/side",
+          "top": "gt6:block/casings/voltage/ev/top"
+        }
+      }
+    }
+  }
+}

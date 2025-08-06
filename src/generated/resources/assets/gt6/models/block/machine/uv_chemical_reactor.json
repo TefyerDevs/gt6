@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:uv_chemical_reactor",
+  "variants": {
+    "recipe_logic_status=idle": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/uv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/chemical_reactor/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/chemical_reactor/overlay_front_emissive"
+        }
+      }
+    },
+    "recipe_logic_status=suspend": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/uv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/chemical_reactor/overlay_front",
+          "overlay_front_emissive": "gt6:block/machines/chemical_reactor/overlay_front_emissive"
+        }
+      }
+    },
+    "recipe_logic_status=waiting": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/uv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/chemical_reactor/overlay_front_active",
+          "overlay_front_emissive": "gt6:block/machines/chemical_reactor/overlay_front_active_emissive"
+        }
+      }
+    },
+    "recipe_logic_status=working": {
+      "model": {
+        "parent": "gt6:block/casings/voltage/uv",
+        "textures": {
+          "overlay_front": "gt6:block/machines/chemical_reactor/overlay_front_active",
+          "overlay_front_emissive": "gt6:block/machines/chemical_reactor/overlay_front_active_emissive"
+        }
+      }
+    }
+  }
+}

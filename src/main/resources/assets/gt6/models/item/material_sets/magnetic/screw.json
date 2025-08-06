@@ -1,0 +1,6 @@
+{
+  "parent": "gt6:item/material_sets/metallic/screw",
+  "textures": {
+    "layer3": "gt6:item/material_sets/magnetic/magnetic_overlay"
+  }
+}

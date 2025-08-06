@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#gt6:batteries/ulv",
+    "#gt6:batteries/lv",
+    "#gt6:batteries/mv",
+    "#gt6:batteries/hv",
+    "#gt6:batteries/ev",
+    "#gt6:batteries/iv",
+    "#gt6:batteries/luv",
+    "#gt6:batteries/zpm",
+    "#gt6:batteries/uv",
+    "#gt6:batteries/uhv"
+  ]
+}

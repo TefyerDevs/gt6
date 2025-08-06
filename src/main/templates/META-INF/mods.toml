@@ -14,7 +14,7 @@ displayURL = "${mod_url}"
 credits = "GregoriusT, Mr_Touchyou, Zerrens for making GregTech and textures, the GT5u authors and maintainers for providing the original code, and the community."
 
 [mods."modernfix:integration"]
-client_entrypoint = "com.gregtechceu.gtceu.integration.modernfix.GTModernFixIntegration"
+client_entrypoint = "com.gregtechceu.gt6.integration.modernfix.GTModernFixIntegration"
 
 [[dependencies.${mod_id}]]
 modId = "forge"
@@ -49,10 +49,6 @@ embedded = true
 versionRange = "[${configuration_version},)"
 ordering = "AFTER"
 side = "BOTH"
-[dependencies.${mod_id}.mc-publish]
-    ignore = false
-    modrinth = "configuration"
-    curseforge = "configuration"
 
 
 [[dependencies.${mod_id}]]

@@ -1,0 +1,8 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "gt6:item/tools/handle_hammer",
+    "layer1": "gt6:item/tools/mallet",
+    "layer2": "gt6:item/tools/mallet_overlay"
+  }
+}

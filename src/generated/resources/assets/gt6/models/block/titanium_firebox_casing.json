@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "gt6:block/casings/solid/machine_casing_stable_titanium",
+    "side": "gt6:block/casings/firebox/machine_casing_firebox_titanium",
+    "top": "gt6:block/casings/solid/machine_casing_stable_titanium"
+  }
+}

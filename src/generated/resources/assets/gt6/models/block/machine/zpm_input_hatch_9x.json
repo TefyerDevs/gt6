@@ -1,0 +1,38 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:zpm_input_hatch_9x",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "is_painted=false": {
+      "model": {
+        "parent": "gt6:block/machine/template/part/hatch_machine_emissive",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/zpm/bottom",
+          "overlay": "gt6:block/overlay/machine/overlay_pipe_in_emissive",
+          "overlay_emissive": "gt6:block/overlay/machine/overlay_fluid_hatch_half_px_out",
+          "overlay_pipe": "gt6:block/overlay/machine/overlay_pipe_9x",
+          "side": "gt6:block/casings/voltage/zpm/side",
+          "top": "gt6:block/casings/voltage/zpm/top"
+        }
+      }
+    },
+    "is_painted=true": {
+      "model": {
+        "parent": "gt6:block/machine/template/part/hatch_machine_emissive_color_ring",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/zpm/bottom",
+          "overlay": "gt6:block/overlay/machine/overlay_pipe_in_emissive",
+          "overlay_emissive": "gt6:block/overlay/machine/overlay_fluid_hatch_half_px_out",
+          "overlay_pipe": "gt6:block/overlay/machine/overlay_pipe_9x",
+          "side": "gt6:block/casings/voltage/zpm/side",
+          "top": "gt6:block/casings/voltage/zpm/top"
+        }
+      }
+    }
+  }
+}

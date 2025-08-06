@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:configurable_maintenance_hatch",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "taped=false": {
+      "model": {
+        "parent": "gt6:block/machine/part/configurable_maintenance_hatch",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/hv/bottom",
+          "side": "gt6:block/casings/voltage/hv/side",
+          "top": "gt6:block/casings/voltage/hv/top"
+        }
+      }
+    },
+    "taped=true": {
+      "model": {
+        "parent": "gt6:block/machine/part/configurable_maintenance_hatch",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/hv/bottom",
+          "overlay_2": "gt6:block/overlay/machine/overlay_maintenance_taped",
+          "side": "gt6:block/casings/voltage/hv/side",
+          "top": "gt6:block/casings/voltage/hv/top"
+        }
+      }
+    }
+  }
+}

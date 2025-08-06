@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:opv_1024a_laser_source_hatch",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/part/laser_source_hatch",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/opv/bottom",
+          "side": "gt6:block/casings/voltage/opv/side",
+          "top": "gt6:block/casings/voltage/opv/top"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:hpca_computation_component",
+  "variants": {
+    "active=false,hpca_part_damaged=false": {
+      "model": {
+        "parent": "gt6:block/hpca_computation_component_base",
+        "textures": {
+          "overlay": "gt6:block/overlay/machine/hpca/computation",
+          "overlay_emissive": "gt6:block/void"
+        }
+      }
+    },
+    "active=false,hpca_part_damaged=true": {
+      "model": {
+        "parent": "gt6:block/hpca_computation_component_base",
+        "textures": {
+          "overlay": "gt6:block/overlay/machine/hpca/damaged",
+          "overlay_emissive": "gt6:block/void"
+        }
+      }
+    },
+    "active=true,hpca_part_damaged=false": {
+      "model": {
+        "parent": "gt6:block/hpca_computation_component_base",
+        "textures": {
+          "overlay": "gt6:block/overlay/machine/hpca/computation_active",
+          "overlay_emissive": "gt6:block/overlay/machine/hpca/computation_active_emissive"
+        }
+      }
+    },
+    "active=true,hpca_part_damaged=true": {
+      "model": {
+        "parent": "gt6:block/hpca_computation_component_base",
+        "textures": {
+          "overlay": "gt6:block/overlay/machine/hpca/damaged_active",
+          "overlay_emissive": "gt6:block/overlay/machine/hpca/damaged_active_emissive"
+        }
+      }
+    }
+  }
+}

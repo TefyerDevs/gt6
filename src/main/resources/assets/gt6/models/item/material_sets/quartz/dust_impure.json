@@ -1,0 +1,7 @@
+{
+  "parent": "gt6:item/material_sets/rough/dust_impure",
+  "textures": {
+    "layer0": "gt6:item/material_sets/quartz/dust",
+    "layer1": "gt6:item/material_sets/quartz/dust_secondary"
+  }
+}

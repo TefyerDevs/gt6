@@ -1,0 +1,10 @@
+{
+  "loader": "forge:fluid_container",
+  "parent": "forge:item/default",
+  "textures": {
+    "base": "gt6:item/liquid_fuel_jetpack/base",
+    "fluid": "gt6:item/liquid_fuel_jetpack/overlay",
+    "cover": "gt6:item/liquid_fuel_jetpack/base"
+  },
+  "fluid": "minecraft:empty"
+}

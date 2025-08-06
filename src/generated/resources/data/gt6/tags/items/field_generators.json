@@ -1,0 +1,32 @@
+{
+  "values": [
+    "gt6:lv_field_generator",
+    "gt6:mv_field_generator",
+    "gt6:hv_field_generator",
+    "gt6:ev_field_generator",
+    "gt6:iv_field_generator",
+    "gt6:luv_field_generator",
+    "gt6:zpm_field_generator",
+    "gt6:uv_field_generator",
+    {
+      "id": "gt6:uhv_field_generator",
+      "required": false
+    },
+    {
+      "id": "gt6:uev_field_generator",
+      "required": false
+    },
+    {
+      "id": "gt6:uiv_field_generator",
+      "required": false
+    },
+    {
+      "id": "gt6:uxv_field_generator",
+      "required": false
+    },
+    {
+      "id": "gt6:opv_field_generator",
+      "required": false
+    }
+  ]
+}

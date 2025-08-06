@@ -1,0 +1,100 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:wooden_multiblock_tank",
+  "texture_overrides": {
+    "bottom": "gt6:block/casings/wood_wall/bottom",
+    "side": "gt6:block/casings/wood_wall/side",
+    "top": "gt6:block/casings/wood_wall/top"
+  },
+  "variants": {
+    "is_formed=false,recipe_logic_status=idle": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    },
+    "is_formed=false,recipe_logic_status=suspend": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    },
+    "is_formed=false,recipe_logic_status=waiting": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front_active",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    },
+    "is_formed=false,recipe_logic_status=working": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front_active",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    },
+    "is_formed=true,recipe_logic_status=idle": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    },
+    "is_formed=true,recipe_logic_status=suspend": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    },
+    "is_formed=true,recipe_logic_status=waiting": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front_active",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    },
+    "is_formed=true,recipe_logic_status=working": {
+      "model": {
+        "parent": "gt6:block/machine/template/sided/sided",
+        "textures": {
+          "bottom": "gt6:block/casings/wood_wall/bottom",
+          "overlay_front": "gt6:block/multiblock/multiblock_tank/overlay_front_active",
+          "side": "gt6:block/casings/wood_wall/side",
+          "top": "gt6:block/casings/wood_wall/top"
+        }
+      }
+    }
+  }
+}

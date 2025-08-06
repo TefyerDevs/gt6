@@ -1,8 +1,8 @@
 {
   "values": [
-    "gtceu:red_granite_cobblestone",
-    "gtceu:marble_cobblestone",
-    "gtceu:light_concrete_cobblestone",
-    "gtceu:dark_concrete_cobblestone"
+    "gt6:red_granite_cobblestone",
+    "gt6:marble_cobblestone",
+    "gt6:light_concrete_cobblestone",
+    "gt6:dark_concrete_cobblestone"
   ]
 }

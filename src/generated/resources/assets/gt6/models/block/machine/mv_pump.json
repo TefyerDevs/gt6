@@ -1,0 +1,17 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:mv_pump",
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/template/pump_machine",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/mv/bottom",
+          "side": "gt6:block/casings/voltage/mv/side",
+          "top": "gt6:block/casings/voltage/mv/top"
+        }
+      }
+    }
+  }
+}

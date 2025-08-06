@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:max_substation_output_hatch_64a",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/part/energy_output_hatch_64a",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/max/bottom",
+          "side": "gt6:block/casings/voltage/max/side",
+          "top": "gt6:block/casings/voltage/max/top"
+        }
+      }
+    }
+  }
+}

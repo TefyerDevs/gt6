@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:luv_1024a_laser_target_hatch",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/part/laser_target_hatch",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/luv/bottom",
+          "side": "gt6:block/casings/voltage/luv/side",
+          "top": "gt6:block/casings/voltage/luv/top"
+        }
+      }
+    }
+  }
+}

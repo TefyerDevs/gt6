@@ -1,0 +1,206 @@
+{
+  "parent": "minecraft:item/generated",
+  "overrides": [
+    {
+      "model": "gt6:item/programmed_circuit/0",
+      "predicate": {
+        "gt6:circuit": 0.0
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/1",
+      "predicate": {
+        "gt6:circuit": 0.01
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/2",
+      "predicate": {
+        "gt6:circuit": 0.02
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/3",
+      "predicate": {
+        "gt6:circuit": 0.03
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/4",
+      "predicate": {
+        "gt6:circuit": 0.04
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/5",
+      "predicate": {
+        "gt6:circuit": 0.05
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/6",
+      "predicate": {
+        "gt6:circuit": 0.06
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/7",
+      "predicate": {
+        "gt6:circuit": 0.07
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/8",
+      "predicate": {
+        "gt6:circuit": 0.08
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/9",
+      "predicate": {
+        "gt6:circuit": 0.09
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/10",
+      "predicate": {
+        "gt6:circuit": 0.1
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/11",
+      "predicate": {
+        "gt6:circuit": 0.11
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/12",
+      "predicate": {
+        "gt6:circuit": 0.12
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/13",
+      "predicate": {
+        "gt6:circuit": 0.13
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/14",
+      "predicate": {
+        "gt6:circuit": 0.14
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/15",
+      "predicate": {
+        "gt6:circuit": 0.15
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/16",
+      "predicate": {
+        "gt6:circuit": 0.16
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/17",
+      "predicate": {
+        "gt6:circuit": 0.17
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/18",
+      "predicate": {
+        "gt6:circuit": 0.18
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/19",
+      "predicate": {
+        "gt6:circuit": 0.19
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/20",
+      "predicate": {
+        "gt6:circuit": 0.2
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/21",
+      "predicate": {
+        "gt6:circuit": 0.21
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/22",
+      "predicate": {
+        "gt6:circuit": 0.22
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/23",
+      "predicate": {
+        "gt6:circuit": 0.23
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/24",
+      "predicate": {
+        "gt6:circuit": 0.24
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/25",
+      "predicate": {
+        "gt6:circuit": 0.25
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/26",
+      "predicate": {
+        "gt6:circuit": 0.26
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/27",
+      "predicate": {
+        "gt6:circuit": 0.27
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/28",
+      "predicate": {
+        "gt6:circuit": 0.28
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/29",
+      "predicate": {
+        "gt6:circuit": 0.29
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/30",
+      "predicate": {
+        "gt6:circuit": 0.3
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/31",
+      "predicate": {
+        "gt6:circuit": 0.31
+      }
+    },
+    {
+      "model": "gt6:item/programmed_circuit/32",
+      "predicate": {
+        "gt6:circuit": 0.32
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "gt6:item/programmed_circuit/1"
+  }
+}

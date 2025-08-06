@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gt6:item/lapotronic_energy_orb_cluster/6"
+  }
+}

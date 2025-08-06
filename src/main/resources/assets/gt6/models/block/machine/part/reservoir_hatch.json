@@ -1,0 +1,6 @@
+{
+    "parent": "gt6:block/overlay/front",
+    "textures": {
+        "overlay": "gt6:block/overlay/machine/overlay_water"
+    }
+}

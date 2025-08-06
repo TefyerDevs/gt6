@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:ev_energy_input_hatch_16a",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/part/energy_input_hatch_16a",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/ev/bottom",
+          "side": "gt6:block/casings/voltage/ev/side",
+          "top": "gt6:block/casings/voltage/ev/top"
+        }
+      }
+    }
+  }
+}

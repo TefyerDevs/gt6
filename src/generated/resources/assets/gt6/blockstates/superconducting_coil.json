@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "gt6:block/superconducting_coil"
+    },
+    "active=true": {
+      "model": "gt6:block/superconducting_coil_active"
+    }
+  }
+}

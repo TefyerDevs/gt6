@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "gt6:machine",
+  "machine": "gt6:uxv_energy_input_hatch_4a",
+  "replaceable_textures": [
+    "bottom",
+    "top",
+    "side"
+  ],
+  "variants": {
+    "": {
+      "model": {
+        "parent": "gt6:block/machine/part/energy_input_hatch_4a",
+        "textures": {
+          "bottom": "gt6:block/casings/voltage/uxv/bottom",
+          "side": "gt6:block/casings/voltage/uxv/side",
+          "top": "gt6:block/casings/voltage/uxv/top"
+        }
+      }
+    }
+  }
+}

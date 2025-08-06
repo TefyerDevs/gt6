@@ -1,0 +1,13 @@
+{
+    "parent": "block/orientable_with_bottom",
+    "textures": {
+        "particle": "#side",
+        "south": "#back",
+
+        "bottom": "gt6:block/casings/hpca/computer_casing/bottom",
+        "top": "gt6:block/casings/hpca/computer_casing/top",
+        "front": "gt6:block/casings/hpca/computer_casing/front",
+        "back": "gt6:block/casings/hpca/computer_casing/back",
+        "side": "gt6:block/casings/hpca/computer_casing/side"
+    }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "gt6:item/mv_lithium_battery/3"
+  }
+}

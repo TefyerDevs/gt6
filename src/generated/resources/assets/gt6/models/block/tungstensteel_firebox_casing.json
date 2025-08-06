@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "gt6:block/casings/solid/machine_casing_robust_tungstensteel",
+    "side": "gt6:block/casings/firebox/machine_casing_firebox_tungstensteel",
+    "top": "gt6:block/casings/solid/machine_casing_robust_tungstensteel"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "gt6:item/material_sets/dull/ingot",
+  "textures": {
+    "layer0": "gt6:item/material_sets/dull/ingot",
+    "layer1": "gt6:item/material_sets/dull/ingot_secondary",
+    "layer2": "gt6:item/material_sets/dull/ingot_overlay",
+    "layer3": "gt6:item/material_sets/dull/ingot_hot_overlay"
+  }
+}

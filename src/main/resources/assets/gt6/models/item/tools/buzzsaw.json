@@ -1,0 +1,8 @@
+{
+  "parent": "gt6:item/handheld_buzz",
+  "textures": {
+    "layer0": "gt6:item/tools/handle_buzzsaw",
+    "layer1": "gt6:item/tools/buzzsaw_tool",
+    "layer2": "gt6:item/tools/buzzsaw_tool_overlay"
+  }
+}

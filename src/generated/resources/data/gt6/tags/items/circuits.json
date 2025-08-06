@@ -1,0 +1,34 @@
+{
+  "values": [
+    "#gt6:circuits/ulv",
+    "#gt6:circuits/lv",
+    "#gt6:circuits/mv",
+    "#gt6:circuits/hv",
+    "#gt6:circuits/ev",
+    "#gt6:circuits/iv",
+    "#gt6:circuits/luv",
+    "#gt6:circuits/zpm",
+    "#gt6:circuits/uv",
+    "#gt6:circuits/uhv",
+    {
+      "id": "#gt6:circuits/uev",
+      "required": false
+    },
+    {
+      "id": "#gt6:circuits/uiv",
+      "required": false
+    },
+    {
+      "id": "#gt6:circuits/uxv",
+      "required": false
+    },
+    {
+      "id": "#gt6:circuits/opv",
+      "required": false
+    },
+    {
+      "id": "#gt6:circuits/max",
+      "required": false
+    }
+  ]
+}
