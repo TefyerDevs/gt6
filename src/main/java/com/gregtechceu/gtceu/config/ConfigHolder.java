@@ -185,13 +185,13 @@ public class ConfigHolder {
             @Configurable
             @Configurable.Comment({ "Forge Energy to GTEU ratio for converting FE to EU.", "Only affects converters.",
                     "Default: 4 FE == 1 EU" })
-            @Configurable.Range(min = 1, max = 16)
+            @Configurable.Range(min = 1, max = Integer.MAX_VALUE)
             public int feToEuRatio = 4;
 
             @Configurable
             @Configurable.Comment({ "GTEU to Forge Energy ratio for converting EU to FE.",
                     "Affects native conversion and Converters.", "Default: 4 FE == 1 EU" })
-            @Configurable.Range(min = 1, max = 16)
+            @Configurable.Range(min = 1, max = Integer.MAX_VALUE)
             public int euToFeRatio = 4;
         }
 
