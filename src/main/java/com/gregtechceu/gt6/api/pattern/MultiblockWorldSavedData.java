@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.pattern;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.feature.multiblock.IMultiController;
 
 import net.minecraft.core.BlockPos;
@@ -107,17 +107,17 @@ public class MultiblockWorldSavedData extends SavedData {
 
     private void searchingTask() {
         try {
-            if (!GTCEu.canGetServerLevel()) return;
+            if (!Gregtech.canGetServerLevel()) return;
             IN_SERVICE.set(true);
             for (var controller : controllers) {
                 try {
                     controller.asyncCheckPattern(periodID);
                 } catch (Throwable e) {
-                    GTCEu.LOGGER.error("Error while assembling multiblock {}: {}", controller, e.getMessage());
+                    Gregtech.LOGGER.error("Error while assembling multiblock {}: {}", controller, e.getMessage());
                 }
             }
         } catch (Throwable e) {
-            GTCEu.LOGGER.error("Error while assembling multiblocks: {}", e.getMessage());
+            Gregtech.LOGGER.error("Error while assembling multiblocks: {}", e.getMessage());
         } finally {
             IN_SERVICE.set(false);
         }
@@ -125,7 +125,7 @@ public class MultiblockWorldSavedData extends SavedData {
     }
 
     public static boolean isThreadService() {
-        return IN_SERVICE.get() && GTCEu.canGetServerLevel();
+        return IN_SERVICE.get() && Gregtech.canGetServerLevel();
     }
 
     public void releaseExecutorService() {

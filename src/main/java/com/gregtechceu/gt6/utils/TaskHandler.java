@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.utils;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerLevel;
@@ -46,7 +46,7 @@ public class TaskHandler {
                 try {
                     task.runnable.run();
                 } catch (Exception e) {
-                    GTCEu.LOGGER.error("error while schedule gregtech task", e);
+                    Gregtech.LOGGER.error("error while schedule gregtech task", e);
                 }
                 iter.remove();
             } else {

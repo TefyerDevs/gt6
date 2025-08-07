@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jei.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.client.ClientProxy;
 import com.gregtechceu.gt6.common.data.GTItems;
 import com.gregtechceu.gt6.common.data.GTMaterials;
@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 public class GTBedrockFluidInfoCategory extends ModularUIRecipeCategory<GTBedrockFluidInfoWrapper> {
 
     public final static RecipeType<GTBedrockFluidInfoWrapper> RECIPE_TYPE = new RecipeType<>(
-            GTCEu.id("bedrock_fluid_diagram"), GTBedrockFluidInfoWrapper.class);
+            Gregtech.id("bedrock_fluid_diagram"), GTBedrockFluidInfoWrapper.class);
     private final IDrawable background;
     private final IDrawable icon;
 

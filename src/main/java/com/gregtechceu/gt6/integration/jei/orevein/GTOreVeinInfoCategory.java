@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jei.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.client.ClientProxy;
@@ -25,7 +25,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class GTOreVeinInfoCategory extends ModularUIRecipeCategory<GTOreVeinInfoWrapper> {
 
-    public final static RecipeType<GTOreVeinInfoWrapper> RECIPE_TYPE = new RecipeType<>(GTCEu.id("ore_vein_diagram"),
+    public final static RecipeType<GTOreVeinInfoWrapper> RECIPE_TYPE = new RecipeType<>(Gregtech.id("ore_vein_diagram"),
             GTOreVeinInfoWrapper.class);
     private final IDrawable background;
     private final IDrawable icon;

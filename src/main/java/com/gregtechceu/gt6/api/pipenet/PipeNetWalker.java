@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.pipenet;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.utils.GTUtil;
 
 import net.minecraft.core.BlockPos;
@@ -137,7 +137,7 @@ public abstract class PipeNetWalker<T extends IPipeNode<?, ?>, NodeDataType, Net
         running = false;
         root.walked.clear();
         if (i >= maxWalks)
-            GTCEu.LOGGER.warn("The walker reached the maximum amount of walks {}", i);
+            Gregtech.LOGGER.warn("The walker reached the maximum amount of walks {}", i);
         invalid = true;
     }
 
@@ -188,7 +188,7 @@ public abstract class PipeNetWalker<T extends IPipeNode<?, ?>, NodeDataType, Net
         if (currentPipe == null) {
             BlockEntity thisPipe = getLevel().getBlockEntity(currentPos);
             if (!(thisPipe instanceof IPipeNode<?, ?>)) {
-                GTCEu.LOGGER.error("PipeWalker expected a pipe, but found {} at {}", thisPipe, currentPos);
+                Gregtech.LOGGER.error("PipeWalker expected a pipe, but found {} at {}", thisPipe, currentPos);
                 return false;
             }
             if (!getBasePipeClass().isAssignableFrom(thisPipe.getClass())) {

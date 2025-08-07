@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
@@ -31,7 +31,7 @@ import snownee.jade.api.config.IPluginConfig;
 public class RecipeLogicProvider extends CapabilityBlockProvider<RecipeLogic> {
 
     public RecipeLogicProvider() {
-        super(GTCEu.id("recipe_logic_provider"));
+        super(Gregtech.id("recipe_logic_provider"));
     }
 
     @Nullable

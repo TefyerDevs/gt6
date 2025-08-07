@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.loot;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -17,7 +17,7 @@ public class DungeonLootLoader {
 
     public static void init() {
         if (ConfigHolder.INSTANCE.worldgen.addLoot || ConfigHolder.INSTANCE.worldgen.increaseDungeonLoot) {
-            GTCEu.LOGGER.info("Registering dungeon loot...");
+            Gregtech.LOGGER.info("Registering dungeon loot...");
             ChestGenHooks.init();
         }
         if (ConfigHolder.INSTANCE.worldgen.addLoot) {

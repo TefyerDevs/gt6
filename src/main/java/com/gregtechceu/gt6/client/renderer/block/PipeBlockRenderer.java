@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.api.pipenet.IPipeNode;
 import com.gregtechceu.gt6.client.model.PipeModel;
@@ -48,7 +48,7 @@ public class PipeBlockRenderer implements IRenderer, ICoverableRenderer {
 
     public PipeBlockRenderer(PipeModel pipeModel) {
         this.pipeModel = pipeModel;
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             registerEvent();
         }
     }

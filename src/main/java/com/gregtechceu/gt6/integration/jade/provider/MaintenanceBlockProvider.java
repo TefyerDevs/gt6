@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.feature.multiblock.IMaintenanceMachine;
@@ -26,7 +26,7 @@ import snownee.jade.api.ui.IElementHelper;
 public class MaintenanceBlockProvider extends CapabilityBlockProvider<IMaintenanceMachine> {
 
     public MaintenanceBlockProvider() {
-        super(GTCEu.id("maintenance_info"));
+        super(Gregtech.id("maintenance_info"));
     }
 
     @Nullable

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data.machines;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.RotationState;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
@@ -105,8 +105,8 @@ public class GTResearchMachines {
                             COMPUTER_CASING.getDefaultState())
                     .where('H', GTResearchMachines.OBJECT_HOLDER, Direction.SOUTH)
                     .build())
-            .sidedWorkableCasingModel(GTCEu.id("block/casings/hpca/advanced_computer_casing"),
-                    GTCEu.id("block/multiblock/research_station"))
+            .sidedWorkableCasingModel(Gregtech.id("block/casings/hpca/advanced_computer_casing"),
+                    Gregtech.id("block/multiblock/research_station"))
             .register();
 
     public static final MachineDefinition OBJECT_HOLDER = REGISTRATE.machine("object_holder", ObjectHolderMachine::new)
@@ -115,7 +115,7 @@ public class GTResearchMachines {
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.OBJECT_HOLDER)
             .modelProperty(GTMachineModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
-            .model(createWorkableTieredHullMachineModel(GTCEu.id("block/machines/object_holder"))
+            .model(createWorkableTieredHullMachineModel(Gregtech.id("block/machines/object_holder"))
                     .andThen((ctx, prov, model) -> {
                         model.addReplaceableTextures("bottom", "top", "side");
                     }))
@@ -148,8 +148,8 @@ public class GTResearchMachines {
                             .or(abilities(PartAbility.INPUT_ENERGY).setMinGlobalLimited(1).setMaxGlobalLimited(2, 1))
                             .or(autoAbilities(true, false, false)))
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/hpca/high_power_casing"),
-                    GTCEu.id("block/multiblock/data_bank"))
+            .workableCasingModel(Gregtech.id("block/casings/hpca/high_power_casing"),
+                    Gregtech.id("block/multiblock/data_bank"))
             .register();
 
     public static final MachineDefinition NETWORK_SWITCH = REGISTRATE
@@ -187,8 +187,8 @@ public class GTResearchMachines {
                     .where('M', GTMachines.MAINTENANCE_HATCH, Direction.NORTH)
                     .where('E', GTMachines.ENERGY_INPUT_HATCH[LuV], Direction.NORTH)
                     .build())
-            .sidedWorkableCasingModel(GTCEu.id("block/casings/hpca/computer_casing"),
-                    GTCEu.id("block/multiblock/network_switch"))
+            .sidedWorkableCasingModel(Gregtech.id("block/casings/hpca/computer_casing"),
+                    Gregtech.id("block/multiblock/network_switch"))
             .register();
 
     public static final MachineDefinition HIGH_PERFORMANCE_COMPUTING_ARRAY = REGISTRATE
@@ -288,8 +288,8 @@ public class GTResearchMachines {
 
                 return shapeInfo;
             })
-            .sidedWorkableCasingModel(GTCEu.id("block/casings/hpca/computer_casing"),
-                    GTCEu.id("block/multiblock/hpca"))
+            .sidedWorkableCasingModel(Gregtech.id("block/casings/hpca/computer_casing"),
+                    Gregtech.id("block/multiblock/hpca"))
             .register();
 
     ////////////////////////////////////////////
@@ -456,8 +456,8 @@ public class GTResearchMachines {
                 .modelProperty(GTMachineModelProperties.IS_HPCA_PART_DAMAGED, false)
                 .modelProperty(GTMachineModelProperties.IS_ACTIVE, false)
                 .model(createHPCAPartModel(isAdvanced,
-                        GTCEu.id("block/overlay/machine/hpca/" + texture),
-                        GTCEu.id("block/overlay/machine/hpca/damaged" + (isAdvanced ? "_advanced" : ""))));
+                        Gregtech.id("block/overlay/machine/hpca/" + texture),
+                        Gregtech.id("block/overlay/machine/hpca/damaged" + (isAdvanced ? "_advanced" : ""))));
     }
 
     public static void init() {}

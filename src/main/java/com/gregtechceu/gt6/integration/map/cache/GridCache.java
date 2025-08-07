@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map.cache;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.ores.GeneratedVeinMetadata;
 
 import net.minecraft.nbt.ListTag;
@@ -30,7 +30,7 @@ public class GridCache {
         for (GeneratedVeinMetadata pos : veins) {
             result.add((isClient ? GeneratedVeinMetadata.CLIENT_CODEC : GeneratedVeinMetadata.CODEC)
                     .encodeStart(NbtOps.INSTANCE, pos)
-                    .getOrThrow(false, GTCEu.LOGGER::error));
+                    .getOrThrow(false, Gregtech.LOGGER::error));
         }
         return result;
     }
@@ -39,7 +39,7 @@ public class GridCache {
         for (Tag veinTag : tag) {
             GeneratedVeinMetadata vein = (isClient ? GeneratedVeinMetadata.CLIENT_CODEC : GeneratedVeinMetadata.CODEC)
                     .parse(NbtOps.INSTANCE, veinTag)
-                    .getOrThrow(false, GTCEu.LOGGER::error);
+                    .getOrThrow(false, Gregtech.LOGGER::error);
             if (!veins.contains(vein)) {
                 veins.add(vein);
             }

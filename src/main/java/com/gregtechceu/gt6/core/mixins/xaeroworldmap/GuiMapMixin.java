@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.core.mixins.xaeroworldmap;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.config.ConfigHolder;
 import com.gregtechceu.gt6.integration.map.ButtonState;
 import com.gregtechceu.gt6.integration.map.xaeros.worldmap.gui.GuiTexturedButtonWithSize;
@@ -113,7 +113,7 @@ public abstract class GuiMapMixin extends ScreenBase implements IRightClickableE
             Button mapButton = new GuiTexturedButtonWithSize(
                     startX + (20 * xOffset * offset), startY + (20 * yOffset * offset), 20, 20,
                     0, ButtonState.isEnabled(button) ? 16 : 0, 16, 16, 16, 32,
-                    GTCEu.id("textures/gui/widget/button_" + button.name + ".png"),
+                    Gregtech.id("textures/gui/widget/button_" + button.name + ".png"),
                     guiButton -> {
                         ButtonState.toggleButton(button);
                         init(minecraft, width, height);

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.rei.oreprocessing;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -28,7 +28,7 @@ import static com.gregtechceu.gt6.common.data.GTMachines.*;
 public class GTOreProcessingDisplayCategory extends ModularUIDisplayCategory<GTOreProcessingDisplay> {
 
     public static final CategoryIdentifier<GTOreProcessingDisplay> CATEGORY = CategoryIdentifier
-            .of(GTCEu.id("ore_processing_diagram"));
+            .of(Gregtech.id("ore_processing_diagram"));
     @Getter
     private final Renderer icon;
 

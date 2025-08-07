@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
 import com.gregtechceu.gt6.integration.top.element.ProgressElement;
@@ -27,7 +27,7 @@ public class ElectricContainerInfoProvider extends CapabilityInfoProvider<IEnerg
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("energy_container_provider");
+        return Gregtech.id("energy_container_provider");
     }
 
     @Nullable

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.armor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
 import com.gregtechceu.gt6.api.item.armor.ArmorLogicSuite;
@@ -86,7 +86,7 @@ public class NightvisionGoggles extends ArmorLogicSuite {
 
     @Override
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return GTCEu.id("textures/armor/nightvision_goggles.png");
+        return Gregtech.id("textures/armor/nightvision_goggles.png");
     }
 
     @Override

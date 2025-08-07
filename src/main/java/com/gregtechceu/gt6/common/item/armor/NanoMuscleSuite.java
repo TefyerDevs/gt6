@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.armor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
 import com.gregtechceu.gt6.api.item.armor.ArmorLogicSuite;
@@ -38,7 +38,7 @@ public class NanoMuscleSuite extends ArmorLogicSuite implements IStepAssist {
 
     public NanoMuscleSuite(ArmorItem.Type slot, int energyPerUse, long maxCapacity, int tier) {
         super(energyPerUse, maxCapacity, tier, slot);
-        if (GTCEu.isClientSide() && this.shouldDrawHUD()) {
+        if (Gregtech.isClientSide() && this.shouldDrawHUD()) {
             // noinspection NewExpressionSideOnly
             HUD = new ArmorUtils.ModularHUD();
         }
@@ -138,8 +138,8 @@ public class NanoMuscleSuite extends ArmorLogicSuite implements IStepAssist {
         String armorTexture = "nano_muscule_suite";
         if (advancedChest.is(currentChest.getItem())) armorTexture = "advanced_nano_muscle_suite";
         return slot != EquipmentSlot.LEGS ?
-                GTCEu.id(String.format("textures/armor/%s_1.png", armorTexture)) :
-                GTCEu.id(String.format("textures/armor/%s_2.png", armorTexture));
+                Gregtech.id(String.format("textures/armor/%s_1.png", armorTexture)) :
+                Gregtech.id(String.format("textures/armor/%s_2.png", armorTexture));
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.kjs.events;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.registrate.BuilderBase;
 import com.gregtechceu.gt6.integration.kjs.GTRegistryInfo;
 
@@ -24,7 +24,7 @@ public class GTRegistryEventJS<K, V> extends StartupEventJS {
         }
 
         var b = t.factory()
-                .createBuilder(UtilsJS.getMCID(ScriptType.STARTUP.manager.get().context, GTCEu.id(id)));
+                .createBuilder(UtilsJS.getMCID(ScriptType.STARTUP.manager.get().context, Gregtech.id(id)));
 
         if (b == null) {
             throw new IllegalArgumentException("Unknown type '" + type + "' for object '" + id + "'!");
@@ -44,7 +44,7 @@ public class GTRegistryEventJS<K, V> extends StartupEventJS {
         }
 
         var b = t.factory()
-                .createBuilder(UtilsJS.getMCID(ScriptType.STARTUP.manager.get().context, GTCEu.id(id)));
+                .createBuilder(UtilsJS.getMCID(ScriptType.STARTUP.manager.get().context, Gregtech.id(id)));
 
         if (b == null) {
             throw new IllegalArgumentException("Unknown type '" + t.type() + "' for object '" + id + "'!");

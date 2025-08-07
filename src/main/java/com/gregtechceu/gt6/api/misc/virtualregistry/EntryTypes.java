@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.misc.virtualregistry;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.misc.virtualregistry.entries.VirtualTank;
 
 import net.minecraft.nbt.CompoundTag;
@@ -15,7 +15,7 @@ import java.util.function.Supplier;
 public final class EntryTypes<T extends VirtualEntry> {
 
     private static final Map<ResourceLocation, EntryTypes<?>> TYPES_MAP = new Object2ObjectOpenHashMap<>();
-    public static final EntryTypes<VirtualTank> ENDER_FLUID = addEntryType(GTCEu.id("ender_fluid"), VirtualTank::new);
+    public static final EntryTypes<VirtualTank> ENDER_FLUID = addEntryType(Gregtech.id("ender_fluid"), VirtualTank::new);
     // ENDER_ITEM("ender_item", null),
     // ENDER_ENERGY("ender_energy", null),
     // ENDER_REDSTONE("ender_redstone", null);
@@ -29,7 +29,7 @@ public final class EntryTypes<T extends VirtualEntry> {
 
     @Nullable
     public static EntryTypes<? extends VirtualEntry> fromString(String name) {
-        return TYPES_MAP.getOrDefault(GTCEu.id(name), null);
+        return TYPES_MAP.getOrDefault(Gregtech.id(name), null);
     }
 
     @Nullable
@@ -42,7 +42,7 @@ public final class EntryTypes<T extends VirtualEntry> {
         if (!TYPES_MAP.containsKey(location)) {
             TYPES_MAP.put(location, type);
         } else {
-            GTCEu.LOGGER.warn("Entry \"{}\" is already registered!", location);
+            Gregtech.LOGGER.warn("Entry \"{}\" is already registered!", location);
         }
         return type;
     }

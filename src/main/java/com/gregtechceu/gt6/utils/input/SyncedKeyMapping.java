@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.utils.input;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.network.GTNetwork;
 import com.gregtechceu.gt6.common.network.packets.CPacketKeyDown;
 
@@ -49,7 +49,7 @@ public final class SyncedKeyMapping {
     private final Set<IKeyPressedListener> globalListeners = Collections.newSetFromMap(new WeakHashMap<>());
 
     private SyncedKeyMapping(Supplier<Supplier<KeyMapping>> mcKeyMapping) {
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             this.keyMappingGetter = mcKeyMapping;
         }
         // Does not need to be registered, will be registered by MC
@@ -59,7 +59,7 @@ public final class SyncedKeyMapping {
     }
 
     private SyncedKeyMapping(int keyCode) {
-        if (GTCEu.isClientSide() && !GTCEu.isDataGen()) {
+        if (Gregtech.isClientSide() && !Gregtech.isDataGen()) {
             this.keyCode = keyCode;
         }
         // Does not need to be registered, is not a configurable key mapping
@@ -69,7 +69,7 @@ public final class SyncedKeyMapping {
     }
 
     private SyncedKeyMapping(String nameKey, IKeyConflictContext ctx, int keyCode, String category) {
-        if (GTCEu.isClientSide() && !GTCEu.isDataGen()) {
+        if (Gregtech.isClientSide() && !Gregtech.isDataGen()) {
             this.keyMapping = (KeyMapping) createKeyMapping(nameKey, ctx, keyCode, category);
         }
         this.needsRegister = true;
@@ -104,7 +104,7 @@ public final class SyncedKeyMapping {
      * @param keyCode The key code, from {@link InputConstants}.
      */
     public static SyncedKeyMapping createConfigurable(String nameKey, IKeyConflictContext ctx, int keyCode) {
-        return createConfigurable(nameKey, ctx, keyCode, GTCEu.NAME);
+        return createConfigurable(nameKey, ctx, keyCode, Gregtech.NAME);
     }
 
     /**

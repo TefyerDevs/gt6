@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical.material;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.world.item.DyeColor;
 
@@ -17,7 +17,7 @@ public class MarkerMaterials {
     /**
      * Marker materials without category
      */
-    public static final MarkerMaterial Empty = new MarkerMaterial(GTCEu.id("empty"));
+    public static final MarkerMaterial Empty = new MarkerMaterial(Gregtech.id("empty"));
 
     /**
      * Color materials
@@ -29,24 +29,24 @@ public class MarkerMaterials {
          * Means absence of color on TagPrefix
          * Often a default value for color prefixes
          */
-        public static final MarkerMaterial Colorless = new MarkerMaterial(GTCEu.id("colorless"));
+        public static final MarkerMaterial Colorless = new MarkerMaterial(Gregtech.id("colorless"));
 
-        public static final MarkerMaterial White = new MarkerMaterial(GTCEu.id("white"));
-        public static final MarkerMaterial Orange = new MarkerMaterial(GTCEu.id("orange"));
-        public static final MarkerMaterial Magenta = new MarkerMaterial(GTCEu.id("magenta"));
-        public static final MarkerMaterial LightBlue = new MarkerMaterial(GTCEu.id("light_blue"));
-        public static final MarkerMaterial Yellow = new MarkerMaterial(GTCEu.id("yellow"));
-        public static final MarkerMaterial Lime = new MarkerMaterial(GTCEu.id("lime"));
-        public static final MarkerMaterial Pink = new MarkerMaterial(GTCEu.id("pink"));
-        public static final MarkerMaterial Gray = new MarkerMaterial(GTCEu.id("gray"));
-        public static final MarkerMaterial LightGray = new MarkerMaterial(GTCEu.id("light_gray"));
-        public static final MarkerMaterial Cyan = new MarkerMaterial(GTCEu.id("cyan"));
-        public static final MarkerMaterial Purple = new MarkerMaterial(GTCEu.id("purple"));
-        public static final MarkerMaterial Blue = new MarkerMaterial(GTCEu.id("blue"));
-        public static final MarkerMaterial Brown = new MarkerMaterial(GTCEu.id("brown"));
-        public static final MarkerMaterial Green = new MarkerMaterial(GTCEu.id("green"));
-        public static final MarkerMaterial Red = new MarkerMaterial(GTCEu.id("red"));
-        public static final MarkerMaterial Black = new MarkerMaterial(GTCEu.id("black"));
+        public static final MarkerMaterial White = new MarkerMaterial(Gregtech.id("white"));
+        public static final MarkerMaterial Orange = new MarkerMaterial(Gregtech.id("orange"));
+        public static final MarkerMaterial Magenta = new MarkerMaterial(Gregtech.id("magenta"));
+        public static final MarkerMaterial LightBlue = new MarkerMaterial(Gregtech.id("light_blue"));
+        public static final MarkerMaterial Yellow = new MarkerMaterial(Gregtech.id("yellow"));
+        public static final MarkerMaterial Lime = new MarkerMaterial(Gregtech.id("lime"));
+        public static final MarkerMaterial Pink = new MarkerMaterial(Gregtech.id("pink"));
+        public static final MarkerMaterial Gray = new MarkerMaterial(Gregtech.id("gray"));
+        public static final MarkerMaterial LightGray = new MarkerMaterial(Gregtech.id("light_gray"));
+        public static final MarkerMaterial Cyan = new MarkerMaterial(Gregtech.id("cyan"));
+        public static final MarkerMaterial Purple = new MarkerMaterial(Gregtech.id("purple"));
+        public static final MarkerMaterial Blue = new MarkerMaterial(Gregtech.id("blue"));
+        public static final MarkerMaterial Brown = new MarkerMaterial(Gregtech.id("brown"));
+        public static final MarkerMaterial Green = new MarkerMaterial(Gregtech.id("green"));
+        public static final MarkerMaterial Red = new MarkerMaterial(Gregtech.id("red"));
+        public static final MarkerMaterial Black = new MarkerMaterial(Gregtech.id("black"));
 
         /**
          * Arrays containing all possible color values (without Colorless!)

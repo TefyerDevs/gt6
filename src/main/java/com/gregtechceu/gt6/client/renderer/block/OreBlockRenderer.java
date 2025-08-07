@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.MaterialBlock;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.OreProperty;
@@ -65,7 +65,7 @@ public class OreBlockRenderer {
         // read the base ore model JSON
         JsonObject original;
         try (BufferedReader reader = Minecraft.getInstance().getResourceManager()
-                .openAsReader(GTCEu.id("models/block/ore%s.json".formatted(prop.isEmissive() ? "_emissive" : "")))) {
+                .openAsReader(Gregtech.id("models/block/ore%s.json".formatted(prop.isEmissive() ? "_emissive" : "")))) {
             original = GsonHelper.parse(reader, true);
         } catch (IOException e) {
             throw new RuntimeException(e);

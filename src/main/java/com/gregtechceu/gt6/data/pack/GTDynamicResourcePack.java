@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.pack;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.config.ConfigHolder;
@@ -59,7 +59,7 @@ public class GTDynamicResourcePack implements PackResources {
     private final String name;
 
     static {
-        CLIENT_DOMAINS.addAll(Sets.newHashSet(GTCEu.MOD_ID, "minecraft", "forge", "c"));
+        CLIENT_DOMAINS.addAll(Sets.newHashSet(Gregtech.MOD_ID, "minecraft", "forge", "c"));
     }
 
     public GTDynamicResourcePack(String name) {
@@ -81,7 +81,7 @@ public class GTDynamicResourcePack implements PackResources {
 
     public static void addResource(ResourceLocation location, byte[] data) {
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeJson(location, null, parent, data);
         }
         CONTENTS.addToData(location, data);
@@ -92,7 +92,7 @@ public class GTDynamicResourcePack implements PackResources {
         byte[] modelBytes = obj.toString().getBytes(StandardCharsets.UTF_8);
 
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeJson(l, null, parent, modelBytes);
         }
         CONTENTS.addToData(l, modelBytes);
@@ -107,7 +107,7 @@ public class GTDynamicResourcePack implements PackResources {
         byte[] modelBytes = obj.toString().getBytes(StandardCharsets.UTF_8);
 
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeJson(l, null, parent, modelBytes);
         }
         CONTENTS.addToData(l, modelBytes);
@@ -122,7 +122,7 @@ public class GTDynamicResourcePack implements PackResources {
         byte[] stateBytes = stateJson.toString().getBytes(StandardCharsets.UTF_8);
 
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeJson(l, null, parent, stateBytes);
         }
         CONTENTS.addToData(l, stateBytes);
@@ -137,11 +137,11 @@ public class GTDynamicResourcePack implements PackResources {
         JsonElement sourceJson = SpriteSources.FILE_CODEC
                 .encodeStart(JsonOps.INSTANCE, Collections.singletonList(source))
                 .getOrThrow(false,
-                        error -> GTCEu.LOGGER.error("Failed to encode atlas sprite source. {}", error));
+                        error -> Gregtech.LOGGER.error("Failed to encode atlas sprite source. {}", error));
         byte[] sourceBytes = sourceJson.toString().getBytes(StandardCharsets.UTF_8);
 
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeJson(l, null, parent, sourceBytes);
         }
         CONTENTS.addToData(l, sourceBytes);
@@ -150,11 +150,11 @@ public class GTDynamicResourcePack implements PackResources {
     public static void addAtlasSpriteSourceList(ResourceLocation atlasLoc, List<SpriteSource> sources) {
         ResourceLocation l = getAtlasLocation(atlasLoc);
         JsonElement sourceJson = SpriteSources.FILE_CODEC.encodeStart(JsonOps.INSTANCE, sources).getOrThrow(false,
-                error -> GTCEu.LOGGER.error("Failed to encode atlas sprite source. {}", error));
+                error -> Gregtech.LOGGER.error("Failed to encode atlas sprite source. {}", error));
         byte[] sourceBytes = sourceJson.toString().getBytes(StandardCharsets.UTF_8);
 
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeJson(l, null, parent, sourceBytes);
         }
         CONTENTS.addToData(l, sourceBytes);
@@ -163,7 +163,7 @@ public class GTDynamicResourcePack implements PackResources {
     public static void addBlockTexture(ResourceLocation loc, byte[] data) {
         ResourceLocation l = getTextureLocation("block", loc);
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeByteArray(l, null, parent, data);
         }
         CONTENTS.addToData(l, data);
@@ -172,7 +172,7 @@ public class GTDynamicResourcePack implements PackResources {
     public static void addItemTexture(ResourceLocation loc, byte[] data) {
         ResourceLocation l = getTextureLocation("item", loc);
         if (ConfigHolder.INSTANCE.dev.dumpAssets) {
-            Path parent = GTCEu.getGameDir().resolve("gt6/dumped/assets");
+            Path parent = Gregtech.getGameDir().resolve("gt6/dumped/assets");
             writeByteArray(l, null, parent, data);
         }
         CONTENTS.addToData(l, data);
@@ -194,7 +194,7 @@ public class GTDynamicResourcePack implements PackResources {
                 output.write(data);
             }
         } catch (IOException e) {
-            GTCEu.LOGGER.error("Failed to write JSON export for file {}", id, e);
+            Gregtech.LOGGER.error("Failed to write JSON export for file {}", id, e);
         }
     }
 
@@ -202,7 +202,7 @@ public class GTDynamicResourcePack implements PackResources {
     @Override
     public IoSupplier<InputStream> getRootResource(String... elements) {
         if (elements.length > 0 && elements[0].equals("pack.png")) {
-            return () -> GTCEu.class.getResourceAsStream("/icon.png");
+            return () -> Gregtech.class.getResourceAsStream("/icon.png");
         }
         return null;
     }

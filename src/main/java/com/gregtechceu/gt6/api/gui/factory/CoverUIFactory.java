@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.gui.factory;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
 import com.gregtechceu.gt6.api.cover.IUICover;
@@ -21,7 +21,7 @@ public class CoverUIFactory extends UIFactory<CoverBehavior> {
     public static final CoverUIFactory INSTANCE = new CoverUIFactory();
 
     public CoverUIFactory() {
-        super(GTCEu.id("cover"));
+        super(Gregtech.id("cover"));
     }
 
     @Override

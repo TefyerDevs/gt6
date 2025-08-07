@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.common.machine.electric.TransformerMachine;
@@ -58,6 +58,6 @@ public class TransformerInfoProvider implements IProbeInfoProvider {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("transformer_provider");
+        return Gregtech.id("transformer_provider");
     }
 }

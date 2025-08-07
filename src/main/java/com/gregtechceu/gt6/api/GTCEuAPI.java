@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.api.block.ICoilType;
@@ -27,7 +27,7 @@ import java.util.function.Supplier;
 public class GTCEuAPI {
 
     /** Will always be available */
-    public static GTCEu instance;
+    public static Gregtech instance;
     /** Will be available at the Construction stage */
     public static IMaterialRegistryManager materialManager;
 
@@ -47,11 +47,11 @@ public class GTCEuAPI {
     public static void initializeHighTier() {
         if (highTierInitialized) throw new IllegalStateException("High-Tier is already initialized.");
         highTier = ConfigHolder.INSTANCE.machines.highTierContent ||
-                AddonFinder.getAddons().stream().anyMatch(IGTAddon::requiresHighTier) || GTCEu.isDev();
+                AddonFinder.getAddons().stream().anyMatch(IGTAddon::requiresHighTier) || Gregtech.isDev();
         highTierInitialized = true;
 
-        if (isHighTier()) GTCEu.LOGGER.info("High-Tier is Enabled.");
-        else GTCEu.LOGGER.info("High-Tier is Disabled.");
+        if (isHighTier()) Gregtech.LOGGER.info("High-Tier is Enabled.");
+        else Gregtech.LOGGER.info("High-Tier is Disabled.");
     }
 
     public static class RegisterEvent<K, V> extends GenericEvent<V> implements IModBusEvent {

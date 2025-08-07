@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.data.recipe.CustomTags;
 
 import net.minecraft.core.*;
@@ -18,11 +18,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class GTBiomeModifiers {
 
     public static final ResourceKey<BiomeModifier> RUBBER = ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS,
-            GTCEu.id("rubber_tree"));
+            Gregtech.id("rubber_tree"));
     public static final ResourceKey<BiomeModifier> STONE_BLOB = ResourceKey.create(ForgeRegistries.Keys.BIOME_MODIFIERS,
-            GTCEu.id("stone_blob"));
+            Gregtech.id("stone_blob"));
     public static final ResourceKey<BiomeModifier> RAW_OIL_SPROUT = ResourceKey
-            .create(ForgeRegistries.Keys.BIOME_MODIFIERS, GTCEu.id("raw_oil_sprout"));
+            .create(ForgeRegistries.Keys.BIOME_MODIFIERS, Gregtech.id("raw_oil_sprout"));
 
     public static void bootstrap(BootstapContext<BiomeModifier> ctx) {
         HolderGetter<Biome> biomeLookup = ctx.lookup(Registries.BIOME);

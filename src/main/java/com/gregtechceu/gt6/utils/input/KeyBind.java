@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.utils.input;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.network.GTNetwork;
 import com.gregtechceu.gt6.common.network.packets.CPacketKeysPressed;
 
@@ -28,7 +28,7 @@ import java.util.function.Supplier;
  * @deprecated Use {@link SyncedKeyMappings} instead
  */
 @Deprecated
-@Mod.EventBusSubscriber(modid = GTCEu.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = Gregtech.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public enum KeyBind {
 
     VANILLA_JUMP(() -> () -> Minecraft.getInstance().options.keyJump),
@@ -51,8 +51,8 @@ public enum KeyBind {
     private static double mouseDelta = 0.0;
 
     public static void init() {
-        GTCEu.LOGGER.info("Registering KeyBinds");
-        if (GTCEu.isClientSide()) {
+        Gregtech.LOGGER.info("Registering KeyBinds");
+        if (Gregtech.isClientSide()) {
             MinecraftForge.EVENT_BUS.register(KeyBind.class);
         }
     }
@@ -74,7 +74,7 @@ public enum KeyBind {
             try {
                 GTNetwork.sendToServer(new CPacketKeysPressed(updating));
             } catch (NullPointerException exception) {
-                GTCEu.LOGGER.error("Keys pressed packet failed to send with an exception", exception);
+                Gregtech.LOGGER.error("Keys pressed packet failed to send with an exception", exception);
             }
         }
     }
@@ -121,20 +121,20 @@ public enum KeyBind {
     // For Vanilla/Other Mod keybinds
     // Double Supplier to keep client classes from loading
     KeyBind(Supplier<Supplier<KeyMapping>> keybindingGetter) {
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             this.keybindingGetter = keybindingGetter;
         }
     }
 
     KeyBind(String langKey, int button) {
-        if (GTCEu.isClientSide()) {
-            this.keybinding = new KeyMapping(langKey, button, GTCEu.NAME);
+        if (Gregtech.isClientSide()) {
+            this.keybinding = new KeyMapping(langKey, button, Gregtech.NAME);
         }
     }
 
     KeyBind(String langKey, IKeyConflictContext ctx, int button) {
-        if (GTCEu.isClientSide()) {
-            this.keybinding = new KeyMapping(langKey, ctx, InputConstants.Type.KEYSYM, button, GTCEu.NAME);
+        if (Gregtech.isClientSide()) {
+            this.keybinding = new KeyMapping(langKey, ctx, InputConstants.Type.KEYSYM, button, Gregtech.NAME);
         }
     }
 

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data.machines;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.RotationState;
@@ -70,7 +70,7 @@ public class GCYMMachines {
                     .abilities(PartAbility.PARALLEL_HATCH)
                     .modelProperty(GTMachineModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
                     .model(createWorkableTieredHullMachineModel(
-                            GTCEu.id("block/machines/parallel_hatch_mk" + (tier - 4)))
+                            Gregtech.id("block/machines/parallel_hatch_mk" + (tier - 4)))
                             .andThen((ctx, prov, model) -> {
                                 model.addReplaceableTextures("bottom", "top", "side");
                             }))
@@ -102,8 +102,8 @@ public class GCYMMachines {
                     .where('G', Predicates.blocks(CRUSHING_WHEELS.get()))
                     .where('A', Predicates.air())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/secure_maceration_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_maceration_tower"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/secure_maceration_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_maceration_tower"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_CHEMICAL_BATH = REGISTRATE
@@ -133,8 +133,8 @@ public class GCYMMachines {
                     .build())
             .hasBER(true)
             .modelProperty(GTMachineModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
-            .model(createWorkableCasingMachineModel(GTCEu.id("block/casings/gcym/watertight_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_chemical_bath"))
+            .model(createWorkableCasingMachineModel(Gregtech.id("block/casings/gcym/watertight_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_chemical_bath"))
                     .andThen(b -> b.addDynamicRenderer(DynamicRenderHelper::makeRecipeFluidAreaRender)))
             .register();
 
@@ -162,8 +162,8 @@ public class GCYMMachines {
                     .where('A', Predicates.air())
                     .where('#', Predicates.any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/vibration_safe_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_centrifuge"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/vibration_safe_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_centrifuge"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_MIXER = REGISTRATE
@@ -194,8 +194,8 @@ public class GCYMMachines {
                     .build())
             .hasBER(true)
             .modelProperty(GTMachineModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
-            .model(createWorkableCasingMachineModel(GTCEu.id("block/casings/gcym/reaction_safe_mixing_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_mixer"))
+            .model(createWorkableCasingMachineModel(Gregtech.id("block/casings/gcym/reaction_safe_mixing_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_mixer"))
                     .andThen(b -> b.addDynamicRenderer(DynamicRenderHelper::makeRecipeFluidAreaRender)))
             .register();
 
@@ -220,8 +220,8 @@ public class GCYMMachines {
                             .or(Predicates.autoAbilities(true, false, true)))
                     .where('C', blocks(ELECTROLYTIC_CELL.get()))
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/nonconducting_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_electrolyzer"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/nonconducting_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_electrolyzer"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_ELECTROMAGNET = REGISTRATE
@@ -246,8 +246,8 @@ public class GCYMMachines {
                             .or(Predicates.autoAbilities(true, false, true)))
                     .where('C', blocks(ELECTROLYTIC_CELL.get()))
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/nonconducting_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_electrolyzer"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/nonconducting_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_electrolyzer"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_PACKER = REGISTRATE
@@ -273,8 +273,8 @@ public class GCYMMachines {
                             .or(Predicates.autoAbilities(true, false, true)))
                     .where('A', Predicates.air())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/solid/machine_casing_robust_tungstensteel"),
-                    GTCEu.id("block/multiblock/gcym/large_packer"))
+            .workableCasingModel(Gregtech.id("block/casings/solid/machine_casing_robust_tungstensteel"),
+                    Gregtech.id("block/multiblock/gcym/large_packer"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_ASSEMBLER = REGISTRATE
@@ -305,8 +305,8 @@ public class GCYMMachines {
                     .where('A', Predicates.air())
                     .where('#', Predicates.any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/large_scale_assembling_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_assembler"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/large_scale_assembling_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_assembler"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_CIRCUIT_ASSEMBLER = REGISTRATE
@@ -341,8 +341,8 @@ public class GCYMMachines {
                     .where('A', Predicates.air())
                     .where('#', Predicates.any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/large_scale_assembling_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_circuit_assembler"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/large_scale_assembling_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_circuit_assembler"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_ARC_SMELTER = REGISTRATE
@@ -370,8 +370,8 @@ public class GCYMMachines {
                     .where('A', Predicates.air())
                     .where('#', Predicates.any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/high_temperature_smelting_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_arc_smelter"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/high_temperature_smelting_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_arc_smelter"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_ENGRAVING_LASER = REGISTRATE
@@ -402,8 +402,8 @@ public class GCYMMachines {
                     .where('K', blocks(CASING_GRATE.get()))
                     .where('A', Predicates.air())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/laser_safe_engraving_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_engraving_laser"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/laser_safe_engraving_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_engraving_laser"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_SIFTING_FUNNEL = REGISTRATE
@@ -430,8 +430,8 @@ public class GCYMMachines {
                     .where('A', Predicates.air())
                     .where('#', Predicates.any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/vibration_safe_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_sifting_funnel"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/vibration_safe_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_sifting_funnel"))
             .register();
 
     public final static MultiblockMachineDefinition BLAST_ALLOY_SMELTER = REGISTRATE
@@ -486,8 +486,8 @@ public class GCYMMachines {
                                 coil -> shapeInfo.add(builder.shallowCopy().where('C', coil.getValue().get()).build()));
                 return shapeInfo;
             })
-            .workableCasingModel(GTCEu.id("block/casings/gcym/high_temperature_smelting_casing"),
-                    GTCEu.id("block/multiblock/gcym/blast_alloy_smelter"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/high_temperature_smelting_casing"),
+                    Gregtech.id("block/multiblock/gcym/blast_alloy_smelter"))
             .additionalDisplay((controller, components) -> {
                 if (controller instanceof CoilWorkableElectricMultiblockMachine coilMachine && controller.isFormed()) {
                     components.add(Component.translatable("gt6.multiblock.blast_furnace.max_temperature",
@@ -525,8 +525,8 @@ public class GCYMMachines {
                     .where('T', blocks(CASING_STEEL_PIPE.get()))
                     .where('#', any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/watertight_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_autoclave"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/watertight_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_autoclave"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_MATERIAL_PRESS = REGISTRATE
@@ -552,8 +552,8 @@ public class GCYMMachines {
                     .where('C', blocks(CASING_TEMPERED_GLASS.get()))
                     .where('A', air())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/stress_proof_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_material_press"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/stress_proof_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_material_press"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_BREWER = REGISTRATE
@@ -582,8 +582,8 @@ public class GCYMMachines {
                     .where('A', air())
                     .where('#', any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/corrosion_proof_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_brewer"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/corrosion_proof_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_brewer"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_CUTTER = REGISTRATE
@@ -610,8 +610,8 @@ public class GCYMMachines {
                     .where('A', air())
                     .where('#', any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/shock_proof_cutting_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_cutter"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/shock_proof_cutting_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_cutter"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_DISTILLERY = REGISTRATE
@@ -627,7 +627,7 @@ public class GCYMMachines {
             .pattern(definition -> {
                 TraceabilityPredicate casingPredicate = blocks(CASING_WATERTIGHT.get()).setMinGlobalLimited(40);
                 TraceabilityPredicate exportPredicate = abilities(PartAbility.EXPORT_FLUIDS_1X);
-                if (GTCEu.Mods.isAE2Loaded())
+                if (Gregtech.Mods.isAE2Loaded())
                     exportPredicate = exportPredicate.or(blocks(GTAEMachines.FLUID_EXPORT_HATCH_ME.get()));
                 exportPredicate.setMaxLayerLimited(1);
                 return FactoryBlockPattern.start(RIGHT, BACK, UP)
@@ -701,8 +701,8 @@ public class GCYMMachines {
             })
             .allowExtendedFacing(false)
             .partSorter(Comparator.comparingInt(p -> p.self().getPos().getY()))
-            .workableCasingModel(GTCEu.id("block/casings/gcym/watertight_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_distillery"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/watertight_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_distillery"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_EXTRACTOR = REGISTRATE
@@ -726,8 +726,8 @@ public class GCYMMachines {
                     .where('C', blocks(CASING_STEEL_PIPE.get()))
                     .where('A', air())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/watertight_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_extractor"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/watertight_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_extractor"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_EXTRUDER = REGISTRATE
@@ -755,8 +755,8 @@ public class GCYMMachines {
                     .where('A', air())
                     .where('#', any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/stress_proof_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_extruder"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/stress_proof_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_extruder"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_SOLIDIFIER = REGISTRATE
@@ -783,8 +783,8 @@ public class GCYMMachines {
                     .where('A', air())
                     .where('#', any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/watertight_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_solidifier"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/watertight_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_solidifier"))
             .register();
 
     public final static MultiblockMachineDefinition LARGE_WIREMILL = REGISTRATE
@@ -808,8 +808,8 @@ public class GCYMMachines {
                     .where('C', blocks(CASING_TITANIUM_GEARBOX.get()))
                     .where('#', any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/gcym/stress_proof_casing"),
-                    GTCEu.id("block/multiblock/gcym/large_wiremill"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/stress_proof_casing"),
+                    Gregtech.id("block/multiblock/gcym/large_wiremill"))
             .register();
 
     // spotless:off
@@ -895,8 +895,8 @@ public class GCYMMachines {
                         .forEach(coil -> shapeInfo.add(builder.shallowCopy().where('C', coil.getValue().get()).build()));
                 return shapeInfo;
             })
-            .workableCasingModel(GTCEu.id("block/casings/gcym/high_temperature_smelting_casing"),
-                    GTCEu.id("block/multiblock/gcym/mega_blast_furnace"))
+            .workableCasingModel(Gregtech.id("block/casings/gcym/high_temperature_smelting_casing"),
+                    Gregtech.id("block/multiblock/gcym/mega_blast_furnace"))
             .additionalDisplay((controller, components) -> {
                 if (controller instanceof CoilWorkableElectricMultiblockMachine coilMachine && controller.isFormed()) {
                     components.add(Component.translatable("gt6.multiblock.blast_furnace.max_temperature",
@@ -936,8 +936,8 @@ public class GCYMMachines {
                     .where('A', air())
                     .where('#', any())
                     .build())
-            .workableCasingModel(GTCEu.id("block/casings/solid/machine_casing_frost_proof"),
-                    GTCEu.id("block/multiblock/gcym/mega_vacuum_freezer"))
+            .workableCasingModel(Gregtech.id("block/casings/solid/machine_casing_frost_proof"),
+                    Gregtech.id("block/multiblock/gcym/mega_vacuum_freezer"))
             .register();
     // spotless:on
 }

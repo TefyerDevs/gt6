@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.builder;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.recipe.ShapedEnergyTransferRecipe;
 
 import com.lowdragmc.lowdraglib.utils.Builder;
@@ -140,13 +140,13 @@ public class ShapedEnergyTransferRecipeBuilder extends Builder<Ingredient, Shape
         json.addProperty("overrideCharge", overrideCharge);
         json.addProperty("transferMaxCharge", transferMaxCharge);
         if (chargeIngredient.isEmpty()) {
-            GTCEu.LOGGER.error("shaped energy transfer recipe {} chargeIngredient is empty", id);
+            Gregtech.LOGGER.error("shaped energy transfer recipe {} chargeIngredient is empty", id);
             throw new IllegalArgumentException(id + ": chargeIngredient is empty");
         } else {
             json.add("chargeIngredient", chargeIngredient.toJson());
         }
         if (output.isEmpty()) {
-            GTCEu.LOGGER.error("shaped energy transfer recipe {} output is empty", id);
+            Gregtech.LOGGER.error("shaped energy transfer recipe {} output is empty", id);
             throw new IllegalArgumentException(id + ": output items is empty");
         } else {
             JsonObject result = new JsonObject();

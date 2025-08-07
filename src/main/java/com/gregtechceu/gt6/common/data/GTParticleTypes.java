@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.particle.HazardParticleOptions;
 
 import net.minecraft.core.particles.ParticleType;
@@ -15,7 +15,7 @@ import com.mojang.serialization.Codec;
 public class GTParticleTypes {
 
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES = DeferredRegister
-            .create(Registries.PARTICLE_TYPE, GTCEu.MOD_ID);
+            .create(Registries.PARTICLE_TYPE, Gregtech.MOD_ID);
 
     public static final RegistryObject<ParticleType<HazardParticleOptions>> HAZARD_PARTICLE = PARTICLE_TYPES
             .register("hazard", () -> new ParticleType<>(false, HazardParticleOptions.DESERIALIZER) {

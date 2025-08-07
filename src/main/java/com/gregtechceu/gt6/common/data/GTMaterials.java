@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.MarkerMaterial;
 import com.gregtechceu.gt6.api.data.chemical.material.MarkerMaterials;
@@ -275,7 +275,7 @@ public class GTMaterials {
         var mat = GTCEuAPI.materialManager.getMaterial(name);
         // material could be null here due to the registry grabbing a material that isn't in the map
         if (mat == null) {
-            GTCEu.LOGGER.warn("{} is not a known Material", name);
+            Gregtech.LOGGER.warn("{} is not a known Material", name);
             return GTMaterials.NULL;
         }
         return mat;
@@ -307,7 +307,7 @@ public class GTMaterials {
         EXT2_METAL.addAll(Arrays.asList(GENERATE_LONG_ROD, GENERATE_BOLT_SCREW));
     }
 
-    public static final MarkerMaterial NULL = new MarkerMaterial(GTCEu.id("null"));
+    public static final MarkerMaterial NULL = new MarkerMaterial(Gregtech.id("null"));
 
     /**
      * Direct Elements

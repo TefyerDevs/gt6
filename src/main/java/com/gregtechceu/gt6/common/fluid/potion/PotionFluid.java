@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.fluid.potion;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.data.GTFluids;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -88,7 +88,7 @@ public class PotionFluid extends ForgeFlowingFluid {
 
     public static class PotionFluidType extends FluidType {
 
-        private static final ResourceLocation texture = GTCEu.id("block/fluids/fluid.potion");
+        private static final ResourceLocation texture = Gregtech.id("block/fluids/fluid.potion");
 
         /**
          * Default constructor.

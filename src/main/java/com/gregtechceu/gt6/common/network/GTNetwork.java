@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.network;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.network.packets.*;
 import com.gregtechceu.gt6.common.network.packets.hazard.SPacketAddHazardZone;
 import com.gregtechceu.gt6.common.network.packets.hazard.SPacketRemoveHazardZone;
@@ -28,7 +28,7 @@ import java.util.function.Function;
 public class GTNetwork {
 
     private static final String PROTOCOL_VERSION = "1.0.0";
-    private static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(GTCEu.id("network"),
+    private static final SimpleChannel INSTANCE = NetworkRegistry.newSimpleChannel(Gregtech.id("network"),
             () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
 
     private static int nextPacketId = 0;

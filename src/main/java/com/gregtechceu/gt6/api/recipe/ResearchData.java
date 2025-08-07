@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.item.ItemStack;
@@ -101,14 +101,14 @@ public final class ResearchData implements Iterable<ResearchData.ResearchEntry> 
 
         public static ResearchEntry fromJson(JsonObject tag) {
             return new ResearchEntry(tag.get("researchId").getAsString(), ItemStack.CODEC
-                    .parse(JsonOps.INSTANCE, tag.get("dataItem")).getOrThrow(false, GTCEu.LOGGER::error));
+                    .parse(JsonOps.INSTANCE, tag.get("dataItem")).getOrThrow(false, Gregtech.LOGGER::error));
         }
 
         public JsonObject toJson() {
             JsonObject json = new JsonObject();
             json.addProperty("researchId", researchId);
             json.add("dataItem",
-                    ItemStack.CODEC.encodeStart(JsonOps.INSTANCE, dataItem).getOrThrow(false, GTCEu.LOGGER::error));
+                    ItemStack.CODEC.encodeStart(JsonOps.INSTANCE, dataItem).getOrThrow(false, Gregtech.LOGGER::error));
             return json;
         }
 

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.feature.IEnvironmentalHazardCleaner;
 
@@ -20,7 +20,7 @@ import snownee.jade.api.config.IPluginConfig;
 public class HazardCleanerBlockProvider extends CapabilityBlockProvider<IEnvironmentalHazardCleaner> {
 
     public HazardCleanerBlockProvider() {
-        super(GTCEu.id("hazard_cleaner_provider"));
+        super(Gregtech.id("hazard_cleaner_provider"));
     }
 
     @Override

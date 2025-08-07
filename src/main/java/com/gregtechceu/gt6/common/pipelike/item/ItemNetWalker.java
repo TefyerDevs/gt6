@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.item;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.ItemPipeProperties;
 import com.gregtechceu.gt6.api.pipenet.PipeNetWalker;
@@ -38,7 +38,7 @@ public class ItemNetWalker extends PipeNetWalker<ItemPipeBlockEntity, ItemPipePr
             walker.traversePipeNet();
             return walker.inventories;
         } catch (Exception e) {
-            GTCEu.LOGGER.error("error while create net data for ItemPipeNet", e);
+            Gregtech.LOGGER.error("error while create net data for ItemPipeNet", e);
         }
         return null;
     }

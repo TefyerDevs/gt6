@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.multiblock.electric;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.recipe.EURecipeCapability;
@@ -147,11 +147,11 @@ public class BedrockOreMinerMachine extends WorkableElectricMultiblockMachine im
 
     public static ResourceLocation getBaseTexture(int tier) {
         if (tier == GTValues.MV)
-            return GTCEu.id("block/casings/solid/machine_casing_solid_steel");
+            return Gregtech.id("block/casings/solid/machine_casing_solid_steel");
         if (tier == GTValues.HV)
-            return GTCEu.id("block/casings/solid/machine_casing_stable_titanium");
+            return Gregtech.id("block/casings/solid/machine_casing_stable_titanium");
         if (tier == GTValues.EV)
-            return GTCEu.id("block/casings/solid/machine_casing_robust_tungstensteel");
-        return GTCEu.id("block/casings/solid/machine_casing_solid_steel");
+            return Gregtech.id("block/casings/solid/machine_casing_robust_tungstensteel");
+        return Gregtech.id("block/casings/solid/machine_casing_solid_steel");
     }
 }

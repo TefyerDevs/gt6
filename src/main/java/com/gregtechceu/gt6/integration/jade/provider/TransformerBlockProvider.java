@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
@@ -21,7 +21,7 @@ public class TransformerBlockProvider implements IBlockComponentProvider, IServe
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("transformer");
+        return Gregtech.id("transformer");
     }
 
     @Override

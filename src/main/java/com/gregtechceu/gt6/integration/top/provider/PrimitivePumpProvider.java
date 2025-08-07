@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.common.machine.multiblock.primitive.PrimitivePumpMachine;
 import com.gregtechceu.gt6.utils.FormattingUtil;
@@ -20,7 +20,7 @@ public class PrimitivePumpProvider implements IProbeInfoProvider {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("primitive_pump_provider");
+        return Gregtech.id("primitive_pump_provider");
     }
 
     @Override

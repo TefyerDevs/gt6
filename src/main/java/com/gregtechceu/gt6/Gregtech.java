@@ -24,16 +24,16 @@ import org.apache.logging.log4j.Logger;
 
 import java.nio.file.Path;
 
-@Mod(GTCEu.MOD_ID)
-public class GTCEu {
+@Mod(Gregtech.MOD_ID)
+public class Gregtech {
 
     public static final String MOD_ID = "gt6";
     private static final ResourceLocation TEMPLATE_LOCATION = new ResourceLocation(MOD_ID, "");
-    public static final String NAME = "GregTechCEu";
+    public static final String NAME = "GregTech: 6";
     public static final Logger LOGGER = LogManager.getLogger(NAME);
 
-    public GTCEu() {
-        GTCEu.init();
+    public Gregtech() {
+        Gregtech.init();
         GTCEuAPI.instance = this;
         DistExecutor.unsafeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
     }
@@ -110,7 +110,7 @@ public class GTCEu {
     }
 
     /**
-     * For async stuff use this, otherwise use {@link GTCEu isClientSide}
+     * For async stuff use this, otherwise use {@link Gregtech isClientSide}
      * 
      * @return if the current thread is the client thread
      */

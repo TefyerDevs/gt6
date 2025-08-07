@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jei;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.recipe.category.GTRecipeCategory;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.common.data.GTFluids;
@@ -46,13 +46,13 @@ public class GTJEIPlugin implements IModPlugin {
 
     @Override
     public ResourceLocation getPluginUid() {
-        return GTCEu.id("jei_plugin");
+        return Gregtech.id("jei_plugin");
     }
 
     @Override
     public void registerCategories(@NotNull IRecipeCategoryRegistration registry) {
-        if (GTCEu.Mods.isREILoaded() || GTCEu.Mods.isEMILoaded()) return;
-        GTCEu.LOGGER.info("JEI register categories");
+        if (Gregtech.Mods.isREILoaded() || Gregtech.Mods.isEMILoaded()) return;
+        Gregtech.LOGGER.info("JEI register categories");
         IJeiHelpers jeiHelpers = registry.getJeiHelpers();
         registry.addRecipeCategories(new MultiblockInfoCategory(jeiHelpers));
         if (!ConfigHolder.INSTANCE.compat.hideOreProcessingDiagrams)
@@ -71,7 +71,7 @@ public class GTJEIPlugin implements IModPlugin {
 
     @Override
     public void registerRecipeCatalysts(@NotNull IRecipeCatalystRegistration registration) {
-        if (GTCEu.Mods.isREILoaded() || GTCEu.Mods.isEMILoaded()) return;
+        if (Gregtech.Mods.isREILoaded() || Gregtech.Mods.isEMILoaded()) return;
         GTRecipeJEICategory.registerRecipeCatalysts(registration);
         if (!ConfigHolder.INSTANCE.compat.hideOreProcessingDiagrams)
             GTOreProcessingInfoCategory.registerRecipeCatalysts(registration);
@@ -86,8 +86,8 @@ public class GTJEIPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(@NotNull IRecipeRegistration registration) {
-        if (GTCEu.Mods.isREILoaded() || GTCEu.Mods.isEMILoaded()) return;
-        GTCEu.LOGGER.info("JEI register");
+        if (Gregtech.Mods.isREILoaded() || Gregtech.Mods.isEMILoaded()) return;
+        Gregtech.LOGGER.info("JEI register");
         MultiblockInfoCategory.registerRecipes(registration);
         GTRecipeJEICategory.registerRecipes(registration);
         if (!ConfigHolder.INSTANCE.compat.hideOreProcessingDiagrams)
@@ -102,8 +102,8 @@ public class GTJEIPlugin implements IModPlugin {
 
     @Override
     public void registerIngredients(@NotNull IModIngredientRegistration registry) {
-        if (GTCEu.Mods.isREILoaded() || GTCEu.Mods.isEMILoaded()) return;
-        GTCEu.LOGGER.info("JEI register ingredients");
+        if (Gregtech.Mods.isREILoaded() || Gregtech.Mods.isEMILoaded()) return;
+        Gregtech.LOGGER.info("JEI register ingredients");
     }
 
     @Override

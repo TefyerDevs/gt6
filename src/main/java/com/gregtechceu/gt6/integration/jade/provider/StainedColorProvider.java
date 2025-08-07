@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.IPaintable;
 
 import net.minecraft.nbt.CompoundTag;
@@ -36,6 +36,6 @@ public class StainedColorProvider implements IBlockComponentProvider, IServerDat
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("stained_color");
+        return Gregtech.id("stained_color");
     }
 }

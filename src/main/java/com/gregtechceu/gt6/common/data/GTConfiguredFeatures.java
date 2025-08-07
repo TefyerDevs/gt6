@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.worldgen.feature.configurations.FluidSproutConfiguration;
 import com.gregtechceu.gt6.common.worldgen.feature.configurations.StoneBlobConfiguration;
 
@@ -24,13 +24,13 @@ import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 public class GTConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBBER = ResourceKey.create(Registries.CONFIGURED_FEATURE,
-            GTCEu.id("rubber_tree"));
+            Gregtech.id("rubber_tree"));
     public static final ResourceKey<ConfiguredFeature<?, ?>> RED_GRANITE_BLOB = ResourceKey
-            .create(Registries.CONFIGURED_FEATURE, GTCEu.id("red_granite_blob"));
+            .create(Registries.CONFIGURED_FEATURE, Gregtech.id("red_granite_blob"));
     public static final ResourceKey<ConfiguredFeature<?, ?>> MARBLE_BLOB = ResourceKey
-            .create(Registries.CONFIGURED_FEATURE, GTCEu.id("marble_blob"));
+            .create(Registries.CONFIGURED_FEATURE, Gregtech.id("marble_blob"));
     public static final ResourceKey<ConfiguredFeature<?, ?>> RAW_OIL_SPROUT = ResourceKey
-            .create(Registries.CONFIGURED_FEATURE, GTCEu.id("raw_oil_sprout"));
+            .create(Registries.CONFIGURED_FEATURE, Gregtech.id("raw_oil_sprout"));
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> ctx) {
         FeatureUtils.register(ctx, RUBBER, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(

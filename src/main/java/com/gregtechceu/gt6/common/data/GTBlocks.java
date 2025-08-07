@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
@@ -101,11 +101,11 @@ public class GTBlocks {
 
     // Laser Pipe Blocks
     private static void generateLaserPipeBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Laser Pipe Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Laser Pipe Blocks...");
         for (int i = 0; i < LaserPipeType.values().length; ++i) {
             registerLaserPipeBlock(i);
         }
-        GTCEu.LOGGER.debug("Generating GTCEu Laser Pipe Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Laser Pipe Blocks... Complete!");
     }
 
     private static void registerLaserPipeBlock(int index) {
@@ -130,11 +130,11 @@ public class GTBlocks {
 
     // Optical Pipe Blocks
     private static void generateOpticalPipeBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Optical Pipe Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Optical Pipe Blocks...");
         for (int i = 0; i < OpticalPipeType.values().length; ++i) {
             registerOpticalPipeBlock(i);
         }
-        GTCEu.LOGGER.debug("Generating GTCEu Optical Pipe Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Optical Pipe Blocks... Complete!");
     }
 
     private static void registerOpticalPipeBlock(int index) {
@@ -159,11 +159,11 @@ public class GTBlocks {
 
     // Duct Pipe Blocks
     private static void generateDuctPipeBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Duct Pipe Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Duct Pipe Blocks...");
         for (int i = 0; i < DuctPipeType.VALUES.length; ++i) {
             registerDuctPipeBlock(i);
         }
-        GTCEu.LOGGER.debug("Generating GTCEu Duct Pipe Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Duct Pipe Blocks... Complete!");
     }
 
     private static void registerDuctPipeBlock(int index) {
@@ -189,7 +189,7 @@ public class GTBlocks {
             .block("long_distance_item_pipeline",
                     properties -> new LongDistancePipeBlock(properties, LDItemPipeType.INSTANCE))
             .initialProperties(() -> Blocks.IRON_BLOCK)
-            .exBlockstate(GTModels.cubeAllModel(GTCEu.id("block/pipe/ld_item_pipe/block")))
+            .exBlockstate(GTModels.cubeAllModel(Gregtech.id("block/pipe/ld_item_pipe/block")))
             .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH, BlockTags.NEEDS_STONE_TOOL)
             .simpleItem()
             .register();
@@ -199,7 +199,7 @@ public class GTBlocks {
             .block("long_distance_fluid_pipeline",
                     properties -> new LongDistancePipeBlock(properties, LDFluidPipeType.INSTANCE))
             .initialProperties(() -> Blocks.IRON_BLOCK)
-            .exBlockstate(GTModels.cubeAllModel(GTCEu.id("block/pipe/ld_fluid_pipe/block")))
+            .exBlockstate(GTModels.cubeAllModel(Gregtech.id("block/pipe/ld_fluid_pipe/block")))
             .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH, BlockTags.NEEDS_STONE_TOOL)
             .simpleItem()
             .register();
@@ -213,33 +213,33 @@ public class GTBlocks {
 
     // Multiblock Machine Casing Blocks
     public static final BlockEntry<Block> CASING_WOOD_WALL = createSidedCasingBlock("wood_wall",
-            GTCEu.id("block/casings/wood_wall"));
+            Gregtech.id("block/casings/wood_wall"));
     public static final BlockEntry<Block> CASING_COKE_BRICKS = createBrickCasingBlock("coke_oven_bricks",
-            GTCEu.id("block/casings/solid/machine_coke_bricks"));
+            Gregtech.id("block/casings/solid/machine_coke_bricks"));
     public static final BlockEntry<Block> CASING_PRIMITIVE_BRICKS = createBrickCasingBlock("firebricks",
-            GTCEu.id("block/casings/solid/machine_primitive_bricks"));
+            Gregtech.id("block/casings/solid/machine_primitive_bricks"));
     public static final BlockEntry<Block> CASING_BRONZE_BRICKS = createCasingBlock("steam_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_bronze_plated_bricks"));
+            Gregtech.id("block/casings/solid/machine_casing_bronze_plated_bricks"));
     public static final BlockEntry<Block> CASING_INVAR_HEATPROOF = createCasingBlock("heatproof_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_heatproof"));
+            Gregtech.id("block/casings/solid/machine_casing_heatproof"));
     public static final BlockEntry<Block> CASING_ALUMINIUM_FROSTPROOF = createCasingBlock("frostproof_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_frost_proof"));
+            Gregtech.id("block/casings/solid/machine_casing_frost_proof"));
     public static final BlockEntry<Block> CASING_STEEL_SOLID = createCasingBlock("solid_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_solid_steel"));
+            Gregtech.id("block/casings/solid/machine_casing_solid_steel"));
     public static final BlockEntry<Block> CASING_STAINLESS_CLEAN = createCasingBlock("clean_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_clean_stainless_steel"));
+            Gregtech.id("block/casings/solid/machine_casing_clean_stainless_steel"));
     public static final BlockEntry<Block> CASING_TITANIUM_STABLE = createCasingBlock("stable_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_stable_titanium"));
+            Gregtech.id("block/casings/solid/machine_casing_stable_titanium"));
     public static final BlockEntry<Block> CASING_TUNGSTENSTEEL_ROBUST = createCasingBlock("robust_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_robust_tungstensteel"));
+            Gregtech.id("block/casings/solid/machine_casing_robust_tungstensteel"));
     public static final BlockEntry<Block> CASING_PTFE_INERT = createCasingBlock("inert_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_inert_ptfe"));
+            Gregtech.id("block/casings/solid/machine_casing_inert_ptfe"));
     public static final BlockEntry<Block> CASING_HSSE_STURDY = createCasingBlock("sturdy_machine_casing",
-            GTCEu.id("block/casings/solid/machine_casing_sturdy_hsse"));
+            Gregtech.id("block/casings/solid/machine_casing_sturdy_hsse"));
     public static final BlockEntry<Block> CASING_PALLADIUM_SUBSTATION = createCasingBlock("palladium_substation",
-            GTCEu.id("block/casings/solid/machine_casing_palladium_substation"));
+            Gregtech.id("block/casings/solid/machine_casing_palladium_substation"));
     public static final BlockEntry<GlassBlock> CASING_TEMPERED_GLASS = createGlassCasingBlock("tempered_glass",
-            GTCEu.id("block/casings/transparent/tempered_glass"), () -> RenderType::translucent);
+            Gregtech.id("block/casings/transparent/tempered_glass"), () -> RenderType::translucent);
     public static final ImmutableMap<Material, BlockEntry<Block>> MATERIALS_TO_CASINGS;
 
     static {
@@ -271,52 +271,52 @@ public class GTBlocks {
 
     // Assembly Line
     public static final BlockEntry<Block> CASING_GRATE = createCasingBlock("assembly_line_grating",
-            GTCEu.id("block/casings/pipe/machine_casing_grate"));
+            Gregtech.id("block/casings/pipe/machine_casing_grate"));
     public static final BlockEntry<Block> CASING_ASSEMBLY_CONTROL = createCasingBlock("assembly_line_casing",
-            GTCEu.id("block/casings/mechanic/machine_casing_assembly_control"));
+            Gregtech.id("block/casings/mechanic/machine_casing_assembly_control"));
     public static final BlockEntry<GlassBlock> CASING_LAMINATED_GLASS = createGlassCasingBlock("laminated_glass",
-            GTCEu.id("block/casings/transparent/laminated_glass"), () -> RenderType::cutoutMipped);
+            Gregtech.id("block/casings/transparent/laminated_glass"), () -> RenderType::cutoutMipped);
     public static final BlockEntry<ActiveBlock> CASING_ASSEMBLY_LINE = createActiveCasing("assembly_line_unit",
             "block/variant/assembly_line");
 
     // Gear Boxes
     public static final BlockEntry<Block> CASING_BRONZE_GEARBOX = createCasingBlock("bronze_gearbox",
-            GTCEu.id("block/casings/gearbox/machine_casing_gearbox_bronze"));
+            Gregtech.id("block/casings/gearbox/machine_casing_gearbox_bronze"));
     public static final BlockEntry<Block> CASING_STEEL_GEARBOX = createCasingBlock("steel_gearbox",
-            GTCEu.id("block/casings/gearbox/machine_casing_gearbox_steel"));
+            Gregtech.id("block/casings/gearbox/machine_casing_gearbox_steel"));
     public static final BlockEntry<Block> CASING_STAINLESS_STEEL_GEARBOX = createCasingBlock("stainless_steel_gearbox",
-            GTCEu.id("block/casings/gearbox/machine_casing_gearbox_stainless_steel"));
+            Gregtech.id("block/casings/gearbox/machine_casing_gearbox_stainless_steel"));
     public static final BlockEntry<Block> CASING_TITANIUM_GEARBOX = createCasingBlock("titanium_gearbox",
-            GTCEu.id("block/casings/gearbox/machine_casing_gearbox_titanium"));
+            Gregtech.id("block/casings/gearbox/machine_casing_gearbox_titanium"));
     public static final BlockEntry<Block> CASING_TUNGSTENSTEEL_GEARBOX = createCasingBlock("tungstensteel_gearbox",
-            GTCEu.id("block/casings/gearbox/machine_casing_gearbox_tungstensteel"));
+            Gregtech.id("block/casings/gearbox/machine_casing_gearbox_tungstensteel"));
 
     // Turbine Casings
     public static final BlockEntry<Block> CASING_STEEL_TURBINE = createCasingBlock("steel_turbine_casing",
-            GTCEu.id("block/casings/mechanic/machine_casing_turbine_steel"));
+            Gregtech.id("block/casings/mechanic/machine_casing_turbine_steel"));
     public static final BlockEntry<Block> CASING_TITANIUM_TURBINE = createCasingBlock("titanium_turbine_casing",
-            GTCEu.id("block/casings/mechanic/machine_casing_turbine_titanium"));
+            Gregtech.id("block/casings/mechanic/machine_casing_turbine_titanium"));
     public static final BlockEntry<Block> CASING_STAINLESS_TURBINE = createCasingBlock("stainless_steel_turbine_casing",
-            GTCEu.id("block/casings/mechanic/machine_casing_turbine_stainless_steel"));
+            Gregtech.id("block/casings/mechanic/machine_casing_turbine_stainless_steel"));
     public static final BlockEntry<Block> CASING_TUNGSTENSTEEL_TURBINE = createCasingBlock(
-            "tungstensteel_turbine_casing", GTCEu.id("block/casings/mechanic/machine_casing_turbine_tungstensteel"));
+            "tungstensteel_turbine_casing", Gregtech.id("block/casings/mechanic/machine_casing_turbine_tungstensteel"));
 
     // Pipe casings
     public static final BlockEntry<Block> CASING_BRONZE_PIPE = createCasingBlock("bronze_pipe_casing",
-            GTCEu.id("block/casings/pipe/machine_casing_pipe_bronze"));
+            Gregtech.id("block/casings/pipe/machine_casing_pipe_bronze"));
     public static final BlockEntry<Block> CASING_STEEL_PIPE = createCasingBlock("steel_pipe_casing",
-            GTCEu.id("block/casings/pipe/machine_casing_pipe_steel"));
+            Gregtech.id("block/casings/pipe/machine_casing_pipe_steel"));
     public static final BlockEntry<Block> CASING_TITANIUM_PIPE = createCasingBlock("titanium_pipe_casing",
-            GTCEu.id("block/casings/pipe/machine_casing_pipe_titanium"));
+            Gregtech.id("block/casings/pipe/machine_casing_pipe_titanium"));
     public static final BlockEntry<Block> CASING_TUNGSTENSTEEL_PIPE = createCasingBlock("tungstensteel_pipe_casing",
-            GTCEu.id("block/casings/pipe/machine_casing_pipe_tungstensteel"));
+            Gregtech.id("block/casings/pipe/machine_casing_pipe_tungstensteel"));
     public static final BlockEntry<Block> CASING_POLYTETRAFLUOROETHYLENE_PIPE = createCasingBlock("ptfe_pipe_casing",
-            GTCEu.id("block/casings/pipe/machine_casing_pipe_polytetrafluoroethylene"));
+            Gregtech.id("block/casings/pipe/machine_casing_pipe_polytetrafluoroethylene"));
     public static final BlockEntry<MinerPipeBlock> MINER_PIPE = REGISTRATE.block("miner_pipe", MinerPipeBlock::new)
             .initialProperties(() -> Blocks.BEDROCK)
             .properties(BlockBehaviour.Properties::noOcclusion)
             .addLayer(() -> RenderType::cutoutMipped)
-            .exBlockstate(GTModels.createModelBlockState(GTCEu.id("block/miner_pipe")))
+            .exBlockstate(GTModels.createModelBlockState(Gregtech.id("block/miner_pipe")))
             .tag(BlockTags.DRAGON_IMMUNE, BlockTags.WITHER_IMMUNE, BlockTags.INFINIBURN_END,
                     BlockTags.FEATURES_CANNOT_REPLACE, BlockTags.GEODE_INVALID_BLOCKS)
             .register();
@@ -326,7 +326,7 @@ public class GTBlocks {
             .block("pump_deck", Block::new)
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(p -> p.sound(SoundType.WOOD).mapColor(MapColor.WOOD))
-            .blockstate(GTModels.createSidedCasingModel(GTCEu.id("block/casings/pump_deck")))
+            .blockstate(GTModels.createSidedCasingModel(Gregtech.id("block/casings/pump_deck")))
             .tag(CustomTags.MINEABLE_WITH_WRENCH, BlockTags.MINEABLE_WITH_AXE)
             .item(BlockItem::new)
             .build()
@@ -400,13 +400,13 @@ public class GTBlocks {
     public static final BlockEntry<FusionCasingBlock> FUSION_CASING_MK2 = createFusionCasing(FusionCasingBlock.CasingType.FUSION_CASING_MK2);
     public static final BlockEntry<FusionCasingBlock> FUSION_CASING_MK3 = createFusionCasing(FusionCasingBlock.CasingType.FUSION_CASING_MK3);
     public static final BlockEntry<GlassBlock> FUSION_GLASS = createGlassCasingBlock("fusion_glass",
-            GTCEu.id("block/casings/transparent/fusion_glass"), () -> RenderType::cutoutMipped);
+            Gregtech.id("block/casings/transparent/fusion_glass"), () -> RenderType::cutoutMipped);
 
     // Cleanroom
-    public static final BlockEntry<Block> PLASTCRETE = createCasingBlock("plascrete", GTCEu.id("block/casings/cleanroom/plascrete"));
+    public static final BlockEntry<Block> PLASTCRETE = createCasingBlock("plascrete", Gregtech.id("block/casings/cleanroom/plascrete"));
     public static final BlockEntry<Block> FILTER_CASING = createCleanroomFilter(CleanroomFilterType.FILTER_CASING);
     public static final BlockEntry<Block> FILTER_CASING_STERILE = createCleanroomFilter(CleanroomFilterType.FILTER_CASING_STERILE);
-    public static final BlockEntry<GlassBlock> CLEANROOM_GLASS = createGlassCasingBlock("cleanroom_glass", GTCEu.id("block/casings/transparent/cleanroom_glass"), () -> RenderType::cutoutMipped);
+    public static final BlockEntry<GlassBlock> CLEANROOM_GLASS = createGlassCasingBlock("cleanroom_glass", Gregtech.id("block/casings/transparent/cleanroom_glass"), () -> RenderType::cutoutMipped);
 
     // Fireboxes
     public static final Map<BoilerFireboxType, BlockEntry<ActiveBlock>> ALL_FIREBOXES = new HashMap<>();
@@ -423,7 +423,7 @@ public class GTBlocks {
             .initialProperties(() -> Blocks.IRON_BLOCK)
             .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
             .blockstate((ctx, prov) -> {
-                prov.simpleBlock(ctx.getEntry(), prov.models().getExistingFile(GTCEu.id("block/computer_casing")));
+                prov.simpleBlock(ctx.getEntry(), prov.models().getExistingFile(Gregtech.id("block/computer_casing")));
             })
             .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
             .item(BlockItem::new)
@@ -435,7 +435,7 @@ public class GTBlocks {
             .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
             .blockstate((ctx, prov) -> {
                 prov.simpleBlock(ctx.getEntry(),
-                        prov.models().getExistingFile(GTCEu.id("block/advanced_computer_casing")));
+                        prov.models().getExistingFile(Gregtech.id("block/advanced_computer_casing")));
             })
             .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
             .item(BlockItem::new)
@@ -447,15 +447,15 @@ public class GTBlocks {
             .properties(p -> p.isValidSpawn((state, level, pos, ent) -> false))
             .blockstate((ctx, prov) -> {
                 prov.simpleBlock(ctx.getEntry(), prov.models().cubeColumn("computer_heat_vent",
-                        GTCEu.id("block/casings/hpca/computer_heat_vent_side"),
-                        GTCEu.id("block/casings/hpca/computer_heat_vent_top_bot")));
+                        Gregtech.id("block/casings/hpca/computer_heat_vent_side"),
+                        Gregtech.id("block/casings/hpca/computer_heat_vent_top_bot")));
             })
             .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
             .item(BlockItem::new)
             .build()
             .register();
     public static final BlockEntry<Block> HIGH_POWER_CASING = createCasingBlock("high_power_casing",
-            GTCEu.id("block/casings/hpca/high_power_casing"));
+            Gregtech.id("block/casings/hpca/high_power_casing"));
 
     @SuppressWarnings("SameParameterValue")
     private static BlockEntry<Block> createSidedCasingBlock(String name, ResourceLocation texture) {
@@ -626,10 +626,10 @@ public class GTBlocks {
         return REGISTRATE.block(name, ActiveBlock::new)
                 .initialProperties(() -> Blocks.IRON_BLOCK)
                 .addLayer(() -> RenderType::cutoutMipped)
-                .blockstate(GTModels.createActiveModel(GTCEu.id(baseModelPath)))
+                .blockstate(GTModels.createActiveModel(Gregtech.id(baseModelPath)))
                 .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
                 .item(BlockItem::new)
-                .model((ctx, prov) -> prov.withExistingParent(prov.name(ctx), GTCEu.id(baseModelPath)))
+                .model((ctx, prov) -> prov.withExistingParent(prov.name(ctx), Gregtech.id(baseModelPath)))
                 .build()
                 .register();
     }
@@ -668,7 +668,7 @@ public class GTBlocks {
             .properties(p -> p.mapColor(MapColor.FIRE).instabreak().sound(SoundType.GRASS).ignitedByLava())
             .tag(BlockTags.MINEABLE_WITH_AXE)
             .blockstate((ctx, prov) -> prov.simpleBlock(ctx.get(), prov.models().cubeBottomTop(ctx.getName(),
-                    GTCEu.id("block/misc/industrial_tnt_side"),
+                    Gregtech.id("block/misc/industrial_tnt_side"),
                     new ResourceLocation("minecraft", "block/tnt_bottom"),
                     new ResourceLocation("minecraft", "block/tnt_top"))))
             .simpleItem()
@@ -751,9 +751,9 @@ public class GTBlocks {
             .register();
 
     public static final BlockSetType RUBBER_SET = BlockSetType
-            .register(new BlockSetType(GTCEu.id("rubber").toString()));
+            .register(new BlockSetType(Gregtech.id("rubber").toString()));
     public static final WoodType RUBBER_TYPE = WoodType
-            .register(new WoodType(GTCEu.id("rubber").toString(), RUBBER_SET));
+            .register(new WoodType(Gregtech.id("rubber").toString(), RUBBER_SET));
 
     public static final BlockEntry<RotatedPillarBlock> STRIPPED_RUBBER_LOG = REGISTRATE
             .block("stripped_rubber_log", RotatedPillarBlock::new)
@@ -937,8 +937,8 @@ public class GTBlocks {
             .lang("Rubber Door")
             .loot((table, block) -> table.add(block, table.createDoorTable(block)))
             .addLayer(() -> RenderType::cutout)
-            .blockstate((ctx, prov) -> prov.doorBlock(ctx.getEntry(), GTCEu.id("block/rubber_door_bottom"),
-                    GTCEu.id("block/rubber_door_top")))
+            .blockstate((ctx, prov) -> prov.doorBlock(ctx.getEntry(), Gregtech.id("block/rubber_door_bottom"),
+                    Gregtech.id("block/rubber_door_top")))
             .tag(BlockTags.WOODEN_DOORS, BlockTags.MINEABLE_WITH_AXE)
             .item()
             .model((ctx, prov) -> prov.generated(ctx))
@@ -947,9 +947,9 @@ public class GTBlocks {
             .register();
 
     public static final BlockSetType TREATED_WOOD_SET = BlockSetType
-            .register(new BlockSetType(GTCEu.id("treated_wood").toString()));
+            .register(new BlockSetType(Gregtech.id("treated_wood").toString()));
     public static final WoodType TREATED_WOOD_TYPE = WoodType
-            .register(new WoodType(GTCEu.id("treated_wood").toString(), TREATED_WOOD_SET));
+            .register(new WoodType(Gregtech.id("treated_wood").toString(), TREATED_WOOD_SET));
 
     public static final BlockEntry<Block> TREATED_WOOD_PLANK = REGISTRATE
             .block("treated_wood_planks", Block::new)
@@ -1102,8 +1102,8 @@ public class GTBlocks {
             .lang("Treated Wood Door")
             .loot((table, block) -> table.add(block, table.createDoorTable(block)))
             .addLayer(() -> RenderType::cutout)
-            .blockstate((ctx, prov) -> prov.doorBlock(ctx.getEntry(), GTCEu.id("block/treated_wood_door_bottom"),
-                    GTCEu.id("block/treated_wood_door_top")))
+            .blockstate((ctx, prov) -> prov.doorBlock(ctx.getEntry(), Gregtech.id("block/treated_wood_door_bottom"),
+                    Gregtech.id("block/treated_wood_door_top")))
             .tag(BlockTags.WOODEN_DOORS)
             .item()
             .model((ctx, prov) -> prov.generated(ctx))
@@ -1113,55 +1113,55 @@ public class GTBlocks {
 
     // Decoration Stuff
     public static final BlockEntry<Block> ACID_HAZARD_SIGN_BLOCK = createCasingBlock("acid_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_acidhazard"));
+            Gregtech.id("block/casings/signs/machine_casing_acidhazard"));
     public static final BlockEntry<Block> ANTIMATTER_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "antimatter_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_antimatterhazard"));
+            "antimatter_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_antimatterhazard"));
     public static final BlockEntry<Block> BIO_HAZARD_SIGN_BLOCK = createCasingBlock("bio_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_biohazard"));
+            Gregtech.id("block/casings/signs/machine_casing_biohazard"));
     public static final BlockEntry<Block> BOSS_HAZARD_SIGN_BLOCK = createCasingBlock("boss_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_bosshazard"));
+            Gregtech.id("block/casings/signs/machine_casing_bosshazard"));
     public static final BlockEntry<Block> CAUSALITY_HAZARD_SIGN_BLOCK = createCasingBlock("causality_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_causalityhazard"));
+            Gregtech.id("block/casings/signs/machine_casing_causalityhazard"));
     public static final BlockEntry<Block> EXPLOSION_HAZARD_SIGN_BLOCK = createCasingBlock("explosion_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_explosionhazard"));
+            Gregtech.id("block/casings/signs/machine_casing_explosionhazard"));
     public static final BlockEntry<Block> FIRE_HAZARD_SIGN_BLOCK = createCasingBlock("fire_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_firehazard"));
+            Gregtech.id("block/casings/signs/machine_casing_firehazard"));
     public static final BlockEntry<Block> FROST_HAZARD_SIGN_BLOCK = createCasingBlock("frost_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_frosthazard"));
+            Gregtech.id("block/casings/signs/machine_casing_frosthazard"));
     public static final BlockEntry<Block> GENERIC_HAZARD_SIGN_BLOCK = createCasingBlock("generic_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_generichazard"));
+            Gregtech.id("block/casings/signs/machine_casing_generichazard"));
     public static final BlockEntry<Block> GREGIFICATION_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "gregification_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_gregificationhazard"));
+            "gregification_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_gregificationhazard"));
     public static final BlockEntry<Block> HIGH_PRESSURE_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "high_pressure_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_highpressurehazard"));
+            "high_pressure_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_highpressurehazard"));
     public static final BlockEntry<Block> HIGH_VOLTAGE_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "high_voltage_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_highvoltagehazard"));
+            "high_voltage_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_highvoltagehazard"));
     public static final BlockEntry<Block> HIGH_TEMPERATURE_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "high_temperature_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_hightemperaturehazard"));
+            "high_temperature_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_hightemperaturehazard"));
     public static final BlockEntry<Block> LASER_HAZARD_SIGN_BLOCK = createCasingBlock("laser_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_laserhazard"));
+            Gregtech.id("block/casings/signs/machine_casing_laserhazard"));
     public static final BlockEntry<Block> MAGIC_HAZARD_SIGN_BLOCK = createCasingBlock("magic_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_magichazard"));
+            Gregtech.id("block/casings/signs/machine_casing_magichazard"));
     public static final BlockEntry<Block> MAGNETIC_HAZARD_SIGN_BLOCK = createCasingBlock("magnetic_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_magneticfieldhazard"));
+            Gregtech.id("block/casings/signs/machine_casing_magneticfieldhazard"));
     public static final BlockEntry<Block> MOB_INFESTATION_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "mob_infestation_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_mobhazard"));
+            "mob_infestation_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_mobhazard"));
     public static final BlockEntry<Block> MOB_SPAWNER_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "mob_spawner_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_mobspawnhazard"));
+            "mob_spawner_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_mobspawnhazard"));
     public static final BlockEntry<Block> NOISE_HAZARD_SIGN_BLOCK = createCasingBlock("noise_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_noisehazard"));
+            Gregtech.id("block/casings/signs/machine_casing_noisehazard"));
     public static final BlockEntry<Block> RADIOACTIVE_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "radioactive_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_radioactivehazard"));
+            "radioactive_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_radioactivehazard"));
     public static final BlockEntry<Block> SPATIAL_STORAGE_HAZARD_SIGN_BLOCK = createCasingBlock(
-            "spatial_storage_hazard_sign_block", GTCEu.id("block/casings/signs/machine_casing_spatialhazard"));
+            "spatial_storage_hazard_sign_block", Gregtech.id("block/casings/signs/machine_casing_spatialhazard"));
     public static final BlockEntry<Block> TURRET_HAZARD_SIGN_BLOCK = createCasingBlock("turret_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_turrethazard"));
+            Gregtech.id("block/casings/signs/machine_casing_turrethazard"));
     public static final BlockEntry<Block> VOID_HAZARD_SIGN_BLOCK = createCasingBlock("void_hazard_sign_block",
-            GTCEu.id("block/casings/signs/machine_casing_voidhazard"));
+            Gregtech.id("block/casings/signs/machine_casing_voidhazard"));
     public static final BlockEntry<Block> YELLOW_STRIPES_BLOCK_A = createCasingBlock("yellow_stripes_block_a",
-            GTCEu.id("block/casings/signs/machine_casing_stripes_a"));
+            Gregtech.id("block/casings/signs/machine_casing_stripes_a"));
     public static final BlockEntry<Block> YELLOW_STRIPES_BLOCK_B = createCasingBlock("yellow_stripes_block_b",
-            GTCEu.id("block/casings/signs/machine_casing_stripes_b"));
+            Gregtech.id("block/casings/signs/machine_casing_stripes_b"));
 
     public static Table<StoneBlockType, StoneTypes, BlockEntry<Block>> STONE_BLOCKS;
 
@@ -1176,7 +1176,7 @@ public class GTBlocks {
             .loot((table, block) -> table.add(block,
                     table.createSingleItemTable(Items.CHARCOAL, UniformGenerator.between(1.0F, 3.0F))))
             .lang("Brittle Charcoal")
-            .exBlockstate(GTModels.cubeAllModel(GTCEu.id("block/misc/brittle_charcoal")))
+            .exBlockstate(GTModels.cubeAllModel(Gregtech.id("block/misc/brittle_charcoal")))
             .tag(BlockTags.MINEABLE_WITH_SHOVEL)
             .item((b, p) -> new BlockItem(b, p) {
 
@@ -1219,7 +1219,7 @@ public class GTBlocks {
                 if (type == StoneBlockType.STONE && strata.isNatural()) {
                     entry.tag(BlockTags.STONE_ORE_REPLACEABLES, BlockTags.BASE_STONE_OVERWORLD,
                             BlockTags.DRIPSTONE_REPLACEABLE, BlockTags.MOSS_REPLACEABLE)
-                            .blockstate(GTModels.randomRotatedModel(GTCEu.id(ModelProvider.BLOCK_FOLDER + "/stones/" +
+                            .blockstate(GTModels.randomRotatedModel(Gregtech.id(ModelProvider.BLOCK_FOLDER + "/stones/" +
                                     strata.getSerializedName() + "/" + type.id)));
                 } else {
                     entry.blockstate((ctx, prov) -> prov.simpleBlock(ctx.getEntry(),
@@ -1323,7 +1323,7 @@ public class GTBlocks {
                     .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
                     .blockstate((ctx, prov) -> prov.simpleBlock(ctx.get(),
                             prov.models().cubeAll(ctx.getName(),
-                                    GTCEu.id("block/decoration/metalsheet_%s".formatted(dyeColor.getName())))))
+                                    Gregtech.id("block/decoration/metalsheet_%s".formatted(dyeColor.getName())))))
                     .simpleItem()
                     .register());
         }
@@ -1337,7 +1337,7 @@ public class GTBlocks {
                             .properties(p -> p.strength(2.0F, 5.0F).mapColor(dyeColor))
                             .tag(CustomTags.MINEABLE_WITH_CONFIG_VALID_PICKAXE_WRENCH)
                             .blockstate((ctx, prov) -> prov.simpleBlock(ctx.get(), prov.models().cubeAll(ctx.getName(),
-                                    GTCEu.id("block/decoration/large_metalsheet_%s".formatted(dyeColor.getName())))))
+                                    Gregtech.id("block/decoration/large_metalsheet_%s".formatted(dyeColor.getName())))))
                             .simpleItem()
                             .register());
         }
@@ -1351,7 +1351,7 @@ public class GTBlocks {
                     .tag(BlockTags.MINEABLE_WITH_PICKAXE, CustomTags.NEEDS_WOOD_TOOL)
                     .blockstate((ctx, prov) -> prov.simpleBlock(ctx.get(),
                             prov.models().cubeAll(ctx.getName(),
-                                    GTCEu.id("block/decoration/studs_%s".formatted(dyeColor.getName())))))
+                                    Gregtech.id("block/decoration/studs_%s".formatted(dyeColor.getName())))))
                     .simpleItem()
                     .register());
         }

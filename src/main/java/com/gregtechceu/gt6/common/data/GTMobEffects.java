@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.effect.GTPoisonEffect;
 
 import net.minecraft.world.effect.MobEffect;
@@ -13,7 +13,7 @@ import net.minecraftforge.registries.RegistryObject;
 public class GTMobEffects {
 
     public static final DeferredRegister<MobEffect> MOB_EFFECTS = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS,
-            GTCEu.MOD_ID);
+            Gregtech.MOD_ID);
 
     public static final RegistryObject<GTPoisonEffect> WEAK_POISON = MOB_EFFECTS.register("weak_poison",
             () -> new GTPoisonEffect(MobEffectCategory.HARMFUL, 0x6D7917));

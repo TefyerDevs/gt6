@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
@@ -26,14 +26,14 @@ import static com.gregtechceu.gt6.common.data.GTRecipeModifiers.*;
 import static com.gregtechceu.gt6.common.data.GTRecipeTypes.LARGE_CHEMICAL_RECIPES;
 
 @PrefixGameTestTemplate(false)
-@GameTestHolder(GTCEu.MOD_ID)
+@GameTestHolder(Gregtech.MOD_ID)
 public class OverclockLogicTest {
 
     @BeforeBatch(batch = "OverclockLogic")
     public static void prepare(ServerLevel level) {
         LARGE_CHEMICAL_RECIPES.getLookup().addRecipe(LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-overlock-logic"))
-                .id(GTCEu.id("test-overlock-logic"))
+                .recipeBuilder(Gregtech.id("test-overlock-logic"))
+                .id(Gregtech.id("test-overlock-logic"))
                 .inputItems(new ItemStack(Items.RED_BED))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.HV])
@@ -41,8 +41,8 @@ public class OverclockLogicTest {
                 // NBT has a schematic in it with an HV energy input hatch
                 .buildRawRecipe());
         LARGE_CHEMICAL_RECIPES.getLookup().addRecipe(LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-overlock-logic-2"))
-                .id(GTCEu.id("test-overlock-logic-2"))
+                .recipeBuilder(Gregtech.id("test-overlock-logic-2"))
+                .id(Gregtech.id("test-overlock-logic-2"))
                 .inputItems(new ItemStack(Items.STICK))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.LV])
@@ -50,8 +50,8 @@ public class OverclockLogicTest {
                 // NBT has a schematic in it with an HV energy input hatch
                 .buildRawRecipe());
         LARGE_CHEMICAL_RECIPES.getLookup().addRecipe(LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-overlock-logic-3"))
-                .id(GTCEu.id("test-overlock-logic-3"))
+                .recipeBuilder(Gregtech.id("test-overlock-logic-3"))
+                .id(Gregtech.id("test-overlock-logic-3"))
                 .inputItems(new ItemStack(Items.BROWN_BED))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.EV])
@@ -139,8 +139,8 @@ public class OverclockLogicTest {
         // We pass the controller because it is used to fetch .getMaxVoltageTier() and check input ingredients for
         // parallel
         GTRecipe recipeBeforeModifiers = LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-multiblock-input-separation"))
-                .id(GTCEu.id("test-multiblock-input-separation"))
+                .recipeBuilder(Gregtech.id("test-multiblock-input-separation"))
+                .id(Gregtech.id("test-multiblock-input-separation"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE), new ItemStack(Blocks.ACACIA_WOOD))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.MV]).duration(100)
@@ -165,8 +165,8 @@ public class OverclockLogicTest {
         // We pass the controller because it is used to fetch .getMaxVoltageTier() and check input ingredients for
         // parallel
         GTRecipe recipeBeforeModifiers = LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-multiblock-overclock-test-npo"))
-                .id(GTCEu.id("test-multiblock-overclock-test-npo"))
+                .recipeBuilder(Gregtech.id("test-multiblock-overclock-test-npo"))
+                .id(Gregtech.id("test-multiblock-overclock-test-npo"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE), new ItemStack(Blocks.ACACIA_WOOD))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.MV]).duration(100)
@@ -191,8 +191,8 @@ public class OverclockLogicTest {
         // We pass the controller because it is used to fetch .getMaxVoltageTier() and check input ingredients for
         // parallel
         GTRecipe recipeBeforeModifiers = LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-multiblock-overclock-test-psto"))
-                .id(GTCEu.id("test-multiblock-overclock-test-psto"))
+                .recipeBuilder(Gregtech.id("test-multiblock-overclock-test-psto"))
+                .id(Gregtech.id("test-multiblock-overclock-test-psto"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.MV]).duration(1)
@@ -219,8 +219,8 @@ public class OverclockLogicTest {
         // We pass the controller because it is used to fetch .getMaxVoltageTier() and check input ingredients for
         // parallel
         GTRecipe recipeBeforeModifiers = LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-multiblock-overclock-test-npsto"))
-                .id(GTCEu.id("test-multiblock-overclock-test-npsto"))
+                .recipeBuilder(Gregtech.id("test-multiblock-overclock-test-npsto"))
+                .id(Gregtech.id("test-multiblock-overclock-test-npsto"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.MV]).duration(1)
@@ -247,8 +247,8 @@ public class OverclockLogicTest {
         // We pass the controller because it is used to fetch .getMaxVoltageTier() and check input ingredients for
         // parallel
         GTRecipe recipeBeforeModifiers = LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-multiblock-overclock-test-npsto"))
-                .id(GTCEu.id("test-multiblock-overclock-test-npsto"))
+                .recipeBuilder(Gregtech.id("test-multiblock-overclock-test-npsto"))
+                .id(Gregtech.id("test-multiblock-overclock-test-npsto"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.MV]).duration(1)
@@ -274,8 +274,8 @@ public class OverclockLogicTest {
         // We pass the controller because it is used to fetch .getMaxVoltageTier() and check input ingredients for
         // parallel
         GTRecipe recipeBeforeModifiers = LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-multiblock-overclock-test-ev-hv"))
-                .id(GTCEu.id("test-multiblock-overclock-test-ev-hv"))
+                .recipeBuilder(Gregtech.id("test-multiblock-overclock-test-ev-hv"))
+                .id(Gregtech.id("test-multiblock-overclock-test-ev-hv"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.EV]).duration(1)

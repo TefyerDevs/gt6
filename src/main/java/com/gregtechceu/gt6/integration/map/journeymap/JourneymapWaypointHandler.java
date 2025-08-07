@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map.journeymap;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.integration.map.IWaypointHandler;
 
 import net.minecraft.core.BlockPos;
@@ -18,7 +18,7 @@ public class JourneymapWaypointHandler implements IWaypointHandler {
 
     @Override
     public void setWaypoint(String key, String name, int color, ResourceKey<Level> dim, int x, int y, int z) {
-        Waypoint waypoint = new Waypoint(GTCEu.MOD_ID, name, dim, new BlockPos(x, y, z))
+        Waypoint waypoint = new Waypoint(Gregtech.MOD_ID, name, dim, new BlockPos(x, y, z))
                 .setPersistent(true)
                 .setColor(color);
         waypoints.put(key, waypoint);
@@ -26,7 +26,7 @@ public class JourneymapWaypointHandler implements IWaypointHandler {
             JourneyMapPlugin.getJmApi().show(waypoint);
         } catch (Exception e) {
             // It never actually throws anything...
-            GTCEu.LOGGER.error("Failed to enable waypoint with name {}", name, e);
+            Gregtech.LOGGER.error("Failed to enable waypoint with name {}", name, e);
         }
     }
 

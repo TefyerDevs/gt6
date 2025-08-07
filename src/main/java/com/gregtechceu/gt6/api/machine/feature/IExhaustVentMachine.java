@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.machine.feature;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.property.GTMachineModelProperties;
 import com.gregtechceu.gt6.api.pattern.util.RelativeDirection;
 import com.gregtechceu.gt6.common.data.GTDamageTypes;
@@ -163,7 +163,7 @@ public interface IExhaustVentMachine extends IMachineFeature {
                     level.addParticle(ParticleTypes.CLOUD, posX + d1, posY + d3, posZ + d5, d6, d7, d8);
                     continue;
                 } catch (Throwable throwable) {
-                    GTCEu.LOGGER.warn("Could not spawn particle effect {}", ParticleTypes.CLOUD);
+                    Gregtech.LOGGER.warn("Could not spawn particle effect {}", ParticleTypes.CLOUD);
                     return;
                 }
             }

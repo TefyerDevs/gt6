@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.cable;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.IEnergyContainer;
 import com.gregtechceu.gt6.common.blockentity.CableBlockEntity;
 import com.gregtechceu.gt6.utils.GTUtil;
@@ -136,7 +136,7 @@ public class EnergyNetHandler implements IEnergyContainer {
 
     @Override
     public long changeEnergy(long energyToAdd) {
-        GTCEu.LOGGER.warn("Do not use changeEnergy() for cables! Use acceptEnergyFromNetwork()");
+        Gregtech.LOGGER.warn("Do not use changeEnergy() for cables! Use acceptEnergyFromNetwork()");
         return acceptEnergyFromNetwork(null,
                 energyToAdd / getInputAmperage(),
                 energyToAdd / getInputVoltage()) * getInputVoltage();

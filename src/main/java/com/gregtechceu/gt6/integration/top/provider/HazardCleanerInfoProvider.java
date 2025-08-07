@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.feature.IEnvironmentalHazardCleaner;
 
@@ -21,7 +21,7 @@ public class HazardCleanerInfoProvider extends CapabilityInfoProvider<IEnvironme
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("hazard_cleaner_provider");
+        return Gregtech.id("hazard_cleaner_provider");
     }
 
     @Nullable

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.rei.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockfluid.BedrockFluidDefinition;
 import com.gregtechceu.gt6.client.ClientProxy;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 public class GTBedrockFluidDisplayCategory extends ModularUIDisplayCategory<GTBedrockFluidDisplay> {
 
     public static final CategoryIdentifier<GTBedrockFluidDisplay> CATEGORY = CategoryIdentifier
-            .of(GTCEu.id("bedrock_fluid_diagram"));
+            .of(Gregtech.id("bedrock_fluid_diagram"));
 
     private final Renderer icon;
 

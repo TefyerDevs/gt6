@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gt6.client.util.TooltipHelper;
 import com.gregtechceu.gt6.integration.ae2.machine.MEPatternBufferPartMachine;
@@ -57,7 +57,7 @@ public class MEPatternBufferProvider implements IBlockComponentProvider, IServer
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("me_pattern_buffer");
+        return Gregtech.id("me_pattern_buffer");
     }
 
     public static void writeBufferTag(CompoundTag compoundTag, MEPatternBufferPartMachine buffer) {

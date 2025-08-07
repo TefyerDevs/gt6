@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.ingredient;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 
 import net.minecraft.nbt.CompoundTag;
@@ -28,7 +28,7 @@ import java.util.stream.Stream;
 
 public class IntProviderIngredient extends Ingredient {
 
-    public static final ResourceLocation TYPE = GTCEu.id("int_provider");
+    public static final ResourceLocation TYPE = Gregtech.id("int_provider");
     public static final ItemStack[] EMPTY_STACK_ARRAY = new ItemStack[0];
 
     @Getter
@@ -115,7 +115,7 @@ public class IntProviderIngredient extends Ingredient {
         JsonObject json = new JsonObject();
         json.addProperty("type", TYPE.toString());
         json.add("count_provider", IntProvider.CODEC.encodeStart(JsonOps.INSTANCE, countProvider)
-                .getOrThrow(false, GTCEu.LOGGER::error));
+                .getOrThrow(false, Gregtech.LOGGER::error));
         json.add("ingredient", inner.toJson());
         return json;
     }
@@ -125,14 +125,14 @@ public class IntProviderIngredient extends Ingredient {
         @Override
         public @NotNull IntProviderIngredient parse(FriendlyByteBuf buffer) {
             IntProvider amount = IntProvider.CODEC.parse(NbtOps.INSTANCE, buffer.readNbt().get("provider"))
-                    .getOrThrow(false, GTCEu.LOGGER::error);
+                    .getOrThrow(false, Gregtech.LOGGER::error);
             return new IntProviderIngredient(Ingredient.fromNetwork(buffer), amount);
         }
 
         @Override
         public @NotNull IntProviderIngredient parse(JsonObject json) {
             IntProvider amount = IntProvider.CODEC.parse(JsonOps.INSTANCE, json.get("count_provider"))
-                    .getOrThrow(false, GTCEu.LOGGER::error);
+                    .getOrThrow(false, Gregtech.LOGGER::error);
             Ingredient inner = Ingredient.fromJson(json.get("ingredient"));
             return new IntProviderIngredient(inner, amount);
         }
@@ -141,7 +141,7 @@ public class IntProviderIngredient extends Ingredient {
         public void write(FriendlyByteBuf buffer, IntProviderIngredient ingredient) {
             CompoundTag wrapper = new CompoundTag();
             wrapper.put("provider", IntProvider.CODEC.encodeStart(NbtOps.INSTANCE, ingredient.countProvider)
-                    .getOrThrow(false, GTCEu.LOGGER::error));
+                    .getOrThrow(false, Gregtech.LOGGER::error));
             buffer.writeNbt(wrapper);
             ingredient.inner.toNetwork(buffer);
         }

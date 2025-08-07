@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jei.multipage;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MultiblockMachineDefinition;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.common.data.machines.GTMultiMachines;
@@ -18,7 +18,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class MultiblockInfoCategory extends ModularUIRecipeCategory<MultiblockInfoWrapper> {
 
-    public final static RecipeType<MultiblockInfoWrapper> RECIPE_TYPE = new RecipeType<>(GTCEu.id("multiblock_info"),
+    public final static RecipeType<MultiblockInfoWrapper> RECIPE_TYPE = new RecipeType<>(Gregtech.id("multiblock_info"),
             MultiblockInfoWrapper.class);
     private final IDrawable background;
     private final IDrawable icon;

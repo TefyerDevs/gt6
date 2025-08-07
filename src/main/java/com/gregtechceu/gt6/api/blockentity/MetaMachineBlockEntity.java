@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.blockentity;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.*;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
@@ -273,7 +273,7 @@ public class MetaMachineBlockEntity extends BlockEntity implements IMachineBlock
                 return GTCapability.CAPABILITY_MONITOR_COMPONENT.orEmpty(cap, LazyOptional.of(() -> list.get(0)));
             }
         }
-        if (GTCEu.Mods.isAE2Loaded()) {
+        if (Gregtech.Mods.isAE2Loaded()) {
             LazyOptional<?> opt = AE2CallWrapper.getGridNodeHostCapability(cap, machine, side);
             if (opt.isPresent()) {
                 // noinspection unchecked

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.gui.widget;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import com.lowdragmc.lowdraglib.gui.editor.annotation.ConfigSetter;
 import com.lowdragmc.lowdraglib.gui.editor.annotation.LDLRegister;
@@ -108,9 +108,9 @@ public class PhantomFluidWidget extends TankWidget implements IGhostIngredientTa
     @Override
     @OnlyIn(Dist.CLIENT)
     public List<Target> getPhantomTargets(Object ingredient) {
-        if (GTCEu.Mods.isREILoaded() && ingredient instanceof dev.architectury.fluid.FluidStack fluidStack) {
+        if (Gregtech.Mods.isREILoaded() && ingredient instanceof dev.architectury.fluid.FluidStack fluidStack) {
             ingredient = new FluidStack(fluidStack.getFluid(), (int) fluidStack.getAmount(), fluidStack.getTag());
-        } else if (GTCEu.Mods.isEMILoaded() && ingredient instanceof EmiStack emiStack) {
+        } else if (Gregtech.Mods.isEMILoaded() && ingredient instanceof EmiStack emiStack) {
             var key = emiStack.getKey();
             if (key instanceof Fluid f) {
                 int amount = emiStack.getAmount() == 0 ? 1000 : (int) emiStack.getAmount();
@@ -121,7 +121,7 @@ public class PhantomFluidWidget extends TankWidget implements IGhostIngredientTa
             } else {
                 ingredient = null;
             }
-        } else if (GTCEu.Mods.isJEILoaded() && ingredient instanceof ITypedIngredient<?> jeiStack) {
+        } else if (Gregtech.Mods.isJEILoaded() && ingredient instanceof ITypedIngredient<?> jeiStack) {
             ingredient = jeiStack.getIngredient();
         }
 
@@ -140,11 +140,11 @@ public class PhantomFluidWidget extends TankWidget implements IGhostIngredientTa
 
             @Override
             public void accept(@Nonnull Object ingredient) {
-                if (GTCEu.Mods.isREILoaded() && ingredient instanceof dev.architectury.fluid.FluidStack fluidStack) {
+                if (Gregtech.Mods.isREILoaded() && ingredient instanceof dev.architectury.fluid.FluidStack fluidStack) {
                     ingredient = new FluidStack(fluidStack.getFluid(),
                             (int) fluidStack.getAmount(),
                             fluidStack.getTag());
-                } else if (GTCEu.Mods.isEMILoaded() && ingredient instanceof EmiStack emiStack) {
+                } else if (Gregtech.Mods.isEMILoaded() && ingredient instanceof EmiStack emiStack) {
                     var key = emiStack.getKey();
                     if (key instanceof Fluid f) {
                         int amount = emiStack.getAmount() == 0 ? 1000 : (int) emiStack.getAmount();

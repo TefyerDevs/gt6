@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data.models;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.block.*;
 import com.gregtechceu.gt6.api.block.property.GTBlockStateProperties;
@@ -37,7 +37,7 @@ import java.io.IOException;
 
 public class GTModels {
 
-    public static final ResourceLocation BLANK_TEXTURE = GTCEu.id("block/void");
+    public static final ResourceLocation BLANK_TEXTURE = Gregtech.id("block/void");
 
     // region BLOCK MODELS
 
@@ -169,29 +169,29 @@ public class GTModels {
             prov.simpleBlock(ctx.getEntry(),
                     prov.models()
                             .withExistingParent("%s_machine_casing".formatted(tierName),
-                                    GTCEu.id("block/cube/tinted/bottom_top"))
-                            .texture("bottom", GTCEu.id("block/casings/voltage/%s/bottom".formatted(tierName)))
-                            .texture("top", GTCEu.id("block/casings/voltage/%s/top".formatted(tierName)))
-                            .texture("side", GTCEu.id("block/casings/voltage/%s/side".formatted(tierName))));
+                                    Gregtech.id("block/cube/tinted/bottom_top"))
+                            .texture("bottom", Gregtech.id("block/casings/voltage/%s/bottom".formatted(tierName)))
+                            .texture("top", Gregtech.id("block/casings/voltage/%s/top".formatted(tierName)))
+                            .texture("side", Gregtech.id("block/casings/voltage/%s/side".formatted(tierName))));
         };
     }
 
     public static NonNullBiConsumer<DataGenContext<Block, Block>, RegistrateBlockstateProvider> createHermeticCasingModel(String tierName) {
         return (ctx, prov) -> {
             prov.simpleBlock(ctx.getEntry(), prov.models()
-                    .withExistingParent("%s_hermetic_casing".formatted(tierName), GTCEu.id("block/hermetic_casing"))
-                    .texture("bot_bottom", GTCEu.id("block/casings/voltage/%s/bottom".formatted(tierName)))
-                    .texture("bot_top", GTCEu.id("block/casings/voltage/%s/top".formatted(tierName)))
-                    .texture("bot_side", GTCEu.id("block/casings/voltage/%s/side".formatted(tierName))));
+                    .withExistingParent("%s_hermetic_casing".formatted(tierName), Gregtech.id("block/hermetic_casing"))
+                    .texture("bot_bottom", Gregtech.id("block/casings/voltage/%s/bottom".formatted(tierName)))
+                    .texture("bot_top", Gregtech.id("block/casings/voltage/%s/top".formatted(tierName)))
+                    .texture("bot_side", Gregtech.id("block/casings/voltage/%s/side".formatted(tierName))));
         };
     }
 
     public static NonNullBiConsumer<DataGenContext<Block, Block>, RegistrateBlockstateProvider> createSteamCasingModel(String material) {
         return (ctx, prov) -> {
             prov.simpleBlock(ctx.getEntry(), prov.models().cubeBottomTop(ctx.getName(),
-                    GTCEu.id("block/casings/steam/%s/side".formatted(material)),
-                    GTCEu.id("block/casings/steam/%s/bottom".formatted(material)),
-                    GTCEu.id("block/casings/steam/%s/top".formatted(material))));
+                    Gregtech.id("block/casings/steam/%s/side".formatted(material)),
+                    Gregtech.id("block/casings/steam/%s/bottom".formatted(material)),
+                    Gregtech.id("block/casings/steam/%s/top".formatted(material))));
         };
     }
 
@@ -200,7 +200,7 @@ public class GTModels {
             String name = ctx.getName();
             ActiveBlock block = ctx.getEntry();
             ModelFile inactive = prov.models().cubeAll(name, coilType.getTexture());
-            ModelFile active = prov.models().withExistingParent(name + "_active", GTCEu.id("block/cube_2_layer/all"))
+            ModelFile active = prov.models().withExistingParent(name + "_active", Gregtech.id("block/cube_2_layer/all"))
                     .texture("bot_all", coilType.getTexture())
                     .texture("top_all", coilType.getTexture().withSuffix("_bloom"));
             prov.getVariantBuilder(block)
@@ -214,9 +214,9 @@ public class GTModels {
     public static NonNullBiConsumer<DataGenContext<Block, BatteryBlock>, RegistrateBlockstateProvider> createBatteryBlockModel(IBatteryData batteryData) {
         return (ctx, prov) -> {
             prov.simpleBlock(ctx.getEntry(), prov.models().cubeBottomTop(ctx.getName(),
-                    GTCEu.id("block/casings/battery/" + batteryData.getBatteryName() + "/side"),
-                    GTCEu.id("block/casings/battery/" + batteryData.getBatteryName() + "/top"),
-                    GTCEu.id("block/casings/battery/" + batteryData.getBatteryName() + "/top")));
+                    Gregtech.id("block/casings/battery/" + batteryData.getBatteryName() + "/side"),
+                    Gregtech.id("block/casings/battery/" + batteryData.getBatteryName() + "/top"),
+                    Gregtech.id("block/casings/battery/" + batteryData.getBatteryName() + "/top")));
         };
     }
 
@@ -225,7 +225,7 @@ public class GTModels {
             String name = ctx.getName();
             ActiveBlock block = ctx.getEntry();
             ModelFile inactive = prov.models().cubeAll(name, casingType.getTexture());
-            ModelFile active = prov.models().withExistingParent(name + "_active", GTCEu.id("block/cube_2_layer/all"))
+            ModelFile active = prov.models().withExistingParent(name + "_active", Gregtech.id("block/cube_2_layer/all"))
                     .texture("bot_all", casingType.getTexture())
                     .texture("top_all", new ResourceLocation(casingType.getTexture() + "_bloom"));
             prov.getVariantBuilder(block)
@@ -239,7 +239,7 @@ public class GTModels {
     public static NonNullBiConsumer<DataGenContext<Block, Block>, RegistrateBlockstateProvider> createCleanroomFilterModel(IFilterType type) {
         return (ctx, prov) -> {
             prov.simpleBlock(ctx.getEntry(), prov.models()
-                    .cubeAll(ctx.getName(), GTCEu.id("block/casings/cleanroom/" + type.getSerializedName())));
+                    .cubeAll(ctx.getName(), Gregtech.id("block/casings/cleanroom/" + type.getSerializedName())));
         };
     }
 
@@ -261,7 +261,7 @@ public class GTModels {
             String name = ctx.getName();
             ActiveBlock block = ctx.getEntry();
             ModelFile inactive = prov.models().cubeBottomTop(name, type.side(), type.bottom(), type.top());
-            ModelFile active = prov.models().withExistingParent(name + "_active", GTCEu.id("block/fire_box_active"))
+            ModelFile active = prov.models().withExistingParent(name + "_active", Gregtech.id("block/fire_box_active"))
                     .texture("side", type.side())
                     .texture("bottom", type.bottom())
                     .texture("top", type.top());
@@ -307,7 +307,7 @@ public class GTModels {
                     // read the base bucket model JSON
                     JsonObject original;
                     try (BufferedReader reader = Minecraft.getInstance().getResourceManager()
-                            .openAsReader(GTCEu.id("models/item/bucket/bucket.json"))) {
+                            .openAsReader(Gregtech.id("models/item/bucket/bucket.json"))) {
                         original = GsonHelper.parse(reader, true);
                     } catch (IOException e) {
                         throw new RuntimeException(e);

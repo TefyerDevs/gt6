@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map.xaeros;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.config.ConfigHolder;
 
@@ -33,7 +33,7 @@ public class XaerosMapPlugin {
         }
 
         if (ConfigHolder.INSTANCE.compat.minimap.toggle.xaerosMapIntegration &&
-                GTCEu.isModLoaded(GTValues.MODID_XAEROS_WORLDMAP)) {
+                Gregtech.isModLoaded(GTValues.MODID_XAEROS_WORLDMAP)) {
             WorldMapSession session = WorldMapSession.getCurrentSession();
             MapWorld world = session.getMapProcessor().getMapWorld();
             for (MapDimension mapDim : world.getDimensionsList()) {

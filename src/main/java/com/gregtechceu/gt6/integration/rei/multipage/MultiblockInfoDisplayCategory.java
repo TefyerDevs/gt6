@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.rei.multipage;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MultiblockMachineDefinition;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.common.data.machines.GTMultiMachines;
@@ -18,7 +18,7 @@ import me.shedaniel.rei.api.common.category.CategoryIdentifier;
 public class MultiblockInfoDisplayCategory extends ModularUIDisplayCategory<MultiblockInfoDisplay> {
 
     public static final CategoryIdentifier<MultiblockInfoDisplay> CATEGORY = CategoryIdentifier
-            .of(GTCEu.id("multiblock_info"));
+            .of(Gregtech.id("multiblock_info"));
     private final Renderer icon;
 
     public MultiblockInfoDisplayCategory() {

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.steam.SteamBoilerMachine;
 import com.gregtechceu.gt6.utils.FormattingUtil;
@@ -22,7 +22,7 @@ import snownee.jade.api.config.IPluginConfig;
 public class SteamBoilerBlockProvider extends BlockInfoProvider<SteamBoilerMachine> {
 
     public SteamBoilerBlockProvider() {
-        super(GTCEu.id("steam_boiler_info"));
+        super(Gregtech.id("steam_boiler_info"));
     }
 
     @Nullable

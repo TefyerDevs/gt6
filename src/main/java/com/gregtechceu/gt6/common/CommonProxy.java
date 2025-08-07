@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
@@ -102,7 +102,7 @@ public class CommonProxy {
         GTCEuAPI.materialManager = MaterialRegistryManager.getInstance();
         ConfigHolder.init();
         GTCEuAPI.initializeHighTier();
-        if (GTCEu.isDev()) {
+        if (Gregtech.isDev()) {
             ConfigHolder.INSTANCE.recipes.generateLowQualityGems = true;
             ConfigHolder.INSTANCE.compat.energy.enableFEConverters = true;
         }
@@ -116,7 +116,7 @@ public class CommonProxy {
     }
 
     public static void init() {
-        GTCEu.LOGGER.info("GTCEu common proxy init!");
+        Gregtech.LOGGER.info("GTCEu common proxy init!");
         GTNetwork.init();
         UIFactory.register(MachineUIFactory.INSTANCE);
         UIFactory.register(CoverUIFactory.INSTANCE);
@@ -136,10 +136,10 @@ public class CommonProxy {
         GTSoundEntries.init();
         GTDamageTypes.init();
         GTPlaceholders.initPlaceholders();
-        if (GTCEu.Mods.isCreateLoaded()) {
+        if (Gregtech.Mods.isCreateLoaded()) {
             GTCreateIntegration.init();
         }
-        if (GTCEu.Mods.isAE2Loaded()) {
+        if (Gregtech.Mods.isAE2Loaded()) {
             GTAEPlaceholders.init();
         }
 
@@ -210,22 +210,22 @@ public class CommonProxy {
         // First, register other mods' Registries
         MaterialRegistryManager managerInternal = (MaterialRegistryManager) GTCEuAPI.materialManager;
 
-        GTCEu.LOGGER.info("Registering material registries");
+        Gregtech.LOGGER.info("Registering material registries");
         ModLoader.get().postEvent(new MaterialRegistryEvent());
 
         // First, register CEu Materials
         managerInternal.unfreezeRegistries();
-        GTCEu.LOGGER.info("Registering GTCEu Materials");
+        Gregtech.LOGGER.info("Registering GTCEu Materials");
         GTMaterials.init();
         MaterialRegistryManager.getInstance()
-                .getRegistry(GTCEu.MOD_ID)
+                .getRegistry(Gregtech.MOD_ID)
                 .setFallbackMaterial(GTMaterials.Aluminium);
 
         // Then, register addon Materials
-        GTCEu.LOGGER.info("Registering addon Materials");
+        Gregtech.LOGGER.info("Registering addon Materials");
         MaterialEvent materialEvent = new MaterialEvent();
         ModLoader.get().postEvent(materialEvent);
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             KJSEventWrapper.materialRegistry();
         }
 
@@ -233,7 +233,7 @@ public class CommonProxy {
         // Block entirely new Materials from being added in the Post event
         managerInternal.closeRegistries();
         ModLoader.get().postEvent(new PostMaterialEvent());
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             KJSEventWrapper.materialModification();
         }
 
@@ -289,8 +289,8 @@ public class CommonProxy {
             MapIngredientTypeManager.registerMapIngredient(ItemStack.class, CustomMapIngredient::from);
             // spotless:on
 
-            if (GTCEu.Mods.isCCTweakedLoaded()) {
-                GTCEu.LOGGER.info("CC: Tweaked found. Enabling integration...");
+            if (Gregtech.Mods.isCCTweakedLoaded()) {
+                Gregtech.LOGGER.info("CC: Tweaked found. Enabling integration...");
                 CCTweakedPlugin.init();
             }
         });
@@ -299,8 +299,8 @@ public class CommonProxy {
     @SubscribeEvent
     public void loadComplete(FMLLoadCompleteEvent e) {
         e.enqueueWork(() -> {
-            if (GTCEu.isModLoaded(GTValues.MODID_TOP)) {
-                GTCEu.LOGGER.info("TheOneProbe found. Enabling integration...");
+            if (Gregtech.isModLoaded(GTValues.MODID_TOP)) {
+                Gregtech.LOGGER.info("TheOneProbe found. Enabling integration...");
                 TheOneProbePluginImpl.init();
             }
         });
@@ -331,7 +331,7 @@ public class CommonProxy {
             GTRecipes.recipeAddition(GTDynamicDataPack::addRecipe);
             // Initialize dungeon loot additions
             DungeonLootLoader.init();
-            GTCEu.LOGGER.info("GregTech Data loading took {}ms", System.currentTimeMillis() - startTime);
+            Gregtech.LOGGER.info("GregTech Data loading took {}ms", System.currentTimeMillis() - startTime);
 
             event.addRepositorySource(new GTPackSource("gt6:dynamic_data",
                     event.getPackType(),
@@ -343,7 +343,7 @@ public class CommonProxy {
     public static final class KJSEventWrapper {
 
         public static void materialRegistry() {
-            GTRegistryInfo.registerFor(GTCEuAPI.materialManager.getRegistry(GTCEu.MOD_ID).getRegistryName());
+            GTRegistryInfo.registerFor(GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).getRegistryName());
         }
 
         public static void materialModification() {

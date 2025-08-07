@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.IMiner;
@@ -76,7 +76,7 @@ public class GTMachines {
             (pressure, builder) -> builder.rotationState(RotationState.ALL)
                     .recipeType(STEAM_BOILER_RECIPES)
                     .recipeModifier(SteamBoilerMachine::recipeModifier)
-                    .workableSteamHullModel(pressure, GTCEu.id("block/generators/boiler/coal"))
+                    .workableSteamHullModel(pressure, Gregtech.id("block/generators/boiler/coal"))
                     .tooltips(Component.translatable("gt6.universal.tooltip.produces_fluid",
                             (pressure ? ConfigHolder.INSTANCE.machines.smallBoilers.hpSolidBoilerBaseOutput :
                                     ConfigHolder.INSTANCE.machines.smallBoilers.solidBoilerBaseOutput) *
@@ -89,7 +89,7 @@ public class GTMachines {
             (pressure, builder) -> builder.rotationState(RotationState.ALL)
                     .recipeType(STEAM_BOILER_RECIPES)
                     .recipeModifier(SteamBoilerMachine::recipeModifier)
-                    .workableSteamHullModel(pressure, GTCEu.id("block/generators/boiler/lava"))
+                    .workableSteamHullModel(pressure, Gregtech.id("block/generators/boiler/lava"))
                     .tooltips(Component.translatable("gt6.universal.tooltip.produces_fluid",
                             (pressure ? ConfigHolder.INSTANCE.machines.smallBoilers.hpLiquidBoilerBaseOutput :
                                     ConfigHolder.INSTANCE.machines.smallBoilers.liquidBoilerBaseOutput) *
@@ -102,7 +102,7 @@ public class GTMachines {
             (pressure, builder) -> builder.rotationState(RotationState.NON_Y_AXIS)
                     .recipeType(STEAM_BOILER_RECIPES)
                     .recipeModifier(SteamBoilerMachine::recipeModifier)
-                    .workableSteamHullModel(pressure, GTCEu.id("block/generators/boiler/solar"))
+                    .workableSteamHullModel(pressure, Gregtech.id("block/generators/boiler/solar"))
                     .tooltips(Component.translatable("gt6.universal.tooltip.produces_fluid",
                             (pressure ? ConfigHolder.INSTANCE.machines.smallBoilers.hpSolarBoilerBaseOutput :
                                     ConfigHolder.INSTANCE.machines.smallBoilers.solarBoilerBaseOutput) *
@@ -118,7 +118,7 @@ public class GTMachines {
                     .recipeModifier(SimpleSteamMachine::recipeModifier)
                     .addOutputLimit(ItemRecipeCapability.CAP, 1)
                     .modelProperty(GTMachineModelProperties.VENT_DIRECTION, RelativeDirection.BACK)
-                    .workableSteamHullModel(pressure, GTCEu.id("block/machines/macerator"))
+                    .workableSteamHullModel(pressure, Gregtech.id("block/machines/macerator"))
                     .register());
     public static final Pair<MachineDefinition, MachineDefinition> STEAM_COMPRESSOR = registerSimpleSteamMachines(
             "compressor", GTRecipeTypes.COMPRESSOR_RECIPES);
@@ -147,8 +147,8 @@ public class GTMachines {
                     })
                     .modelProperty(GTMachineModelProperties.VENT_DIRECTION, RelativeDirection.UP)
                     .workableSteamHullModel(isHP, isHP ?
-                            GTCEu.id("block/machines/high_pressure_steam_miner") :
-                            GTCEu.id("block/machines/steam_miner"))
+                            Gregtech.id("block/machines/high_pressure_steam_miner") :
+                            Gregtech.id("block/machines/steam_miner"))
                     .register());
 
     //////////////////////////////////////
@@ -229,7 +229,7 @@ public class GTMachines {
     public static final MachineDefinition[] MACERATOR = registerTieredMachines("macerator",
             (holder, tier) -> new SimpleTieredMachine(holder, tier, defaultTankSizeFunction), (tier, builder) -> builder
                     .langValue("%s Macerator %s".formatted(VLVH[tier], VLVT[tier]))
-                    .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id("macerator"),
+                    .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id("macerator"),
                             GTRecipeTypes.MACERATOR_RECIPES))
                     .rotationState(RotationState.NON_Y_AXIS)
                     .recipeType(GTRecipeTypes.MACERATOR_RECIPES)
@@ -239,7 +239,7 @@ public class GTMachines {
                         default -> 4;
                     })
                     .recipeModifier(GTRecipeModifiers.OC_NON_PERFECT)
-                    .workableTieredHullModel(GTCEu.id("block/machines/macerator"))
+                    .workableTieredHullModel(Gregtech.id("block/machines/macerator"))
                     .tooltips(workableTiered(tier, GTValues.V[tier], GTValues.V[tier] * 64,
                             GTRecipeTypes.MACERATOR_RECIPES, defaultTankSizeFunction.applyAsInt(tier), true))
                     .register(),
@@ -249,12 +249,12 @@ public class GTMachines {
     public static final MachineDefinition[] ROCK_CRUSHER = registerTieredMachines("rock_crusher",
             RockCrusherMachine::new, (tier, builder) -> builder
                     .langValue("%s Rock Crusher %s".formatted(VLVH[tier], VLVT[tier]))
-                    .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id("rock_crusher"),
+                    .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id("rock_crusher"),
                             GTRecipeTypes.ROCK_BREAKER_RECIPES))
                     .rotationState(RotationState.NON_Y_AXIS)
                     .recipeType(GTRecipeTypes.ROCK_BREAKER_RECIPES)
                     .recipeModifier(GTRecipeModifiers.OC_NON_PERFECT)
-                    .workableTieredHullModel(GTCEu.id("block/machines/rock_crusher"))
+                    .workableTieredHullModel(Gregtech.id("block/machines/rock_crusher"))
                     .tooltips(workableTiered(tier, GTValues.V[tier], GTValues.V[tier] * 64,
                             GTRecipeTypes.ROCK_BREAKER_RECIPES, defaultTankSizeFunction.applyAsInt(tier), true))
                     .tooltips(explosion())
@@ -263,12 +263,12 @@ public class GTMachines {
     public static final MachineDefinition[] AIR_SCRUBBER = registerTieredMachines("air_scrubber",
             AirScrubberMachine::new, (tier, builder) -> builder
                     .langValue("%s Air Scrubber %s".formatted(VLVH[tier], VLVT[tier]))
-                    .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id("air_scrubber"),
+                    .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id("air_scrubber"),
                             GTRecipeTypes.AIR_SCRUBBER_RECIPES))
                     .rotationState(RotationState.NON_Y_AXIS)
                     .recipeType(GTRecipeTypes.AIR_SCRUBBER_RECIPES)
                     .recipeModifier(GTRecipeModifiers.OC_NON_PERFECT)
-                    .workableTieredHullModel(GTCEu.id("block/machines/air_scrubber"))
+                    .workableTieredHullModel(Gregtech.id("block/machines/air_scrubber"))
                     .tooltips(workableTiered(tier, GTValues.V[tier], GTValues.V[tier] * 64,
                             GTRecipeTypes.AIR_SCRUBBER_RECIPES, defaultTankSizeFunction.applyAsInt(tier), true))
                     .tooltips(explosion())
@@ -306,7 +306,7 @@ public class GTMachines {
             .langValue("Long Distance Item Pipeline Endpoint")
             .rotationState(RotationState.ALL)
             .tier(LV)
-            .blockModel(GTModels.createModelBlockState(GTCEu.id("block/machine/long_distance_item_pipeline_endpoint")))
+            .blockModel(GTModels.createModelBlockState(Gregtech.id("block/machine/long_distance_item_pipeline_endpoint")))
             .tooltips(LangHandler.getMultiLang("gt6.machine.endpoint.tooltip"))
             .tooltipBuilder((stack, tooltip) -> {
                 if (ConfigHolder.INSTANCE.machines.ldItemPipeMinDistance > 0) {
@@ -321,7 +321,7 @@ public class GTMachines {
             .langValue("Long Distance Fluid Pipeline Endpoint")
             .rotationState(RotationState.ALL)
             .tier(LV)
-            .blockModel(GTModels.createModelBlockState(GTCEu.id("block/machine/long_distance_fluid_pipeline_endpoint")))
+            .blockModel(GTModels.createModelBlockState(Gregtech.id("block/machine/long_distance_fluid_pipeline_endpoint")))
             .tooltips(Component.translatable("gt6.machine.endpoint.tooltip.0"),
                     Component.translatable("gt6.machine.endpoint.tooltip.1"),
                     Component.translatable("gt6.machine.endpoint.tooltip.2"))
@@ -344,7 +344,7 @@ public class GTMachines {
     public static final MachineDefinition[] PUMP = registerTieredMachines("pump", PumpMachine::new,
             (tier, builder) -> builder
                     .rotationState(RotationState.ALL)
-                    .tieredHullModel(GTCEu.id("block/machine/template/pump_machine"))
+                    .tieredHullModel(Gregtech.id("block/machine/template/pump_machine"))
                     .langValue("%s Pump %s".formatted(VLVH[tier], VLVT[tier]))
                     .tooltips(Component.translatable("gt6.machine.pump.tooltip"),
                             Component.translatable("gt6.universal.tooltip.voltage_in",
@@ -363,7 +363,7 @@ public class GTMachines {
     public static final MachineDefinition[] FISHER = registerTieredMachines("fisher", FisherMachine::new,
             (tier, builder) -> builder
                     .rotationState(RotationState.ALL)
-                    .editableUI(FisherMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id("fisher"), (tier + 1) * (tier + 1)))
+                    .editableUI(FisherMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id("fisher"), (tier + 1) * (tier + 1)))
                     .model(createFisherModel())
                     .langValue("%s Fisher %s".formatted(VLVH[tier], VLVT[tier]))
                     .tooltips(Component.translatable("gt6.machine.fisher.tooltip"),
@@ -382,9 +382,9 @@ public class GTMachines {
             BlockBreakerMachine::new,
             (tier, builder) -> builder
                     .rotationState(RotationState.NON_Y_AXIS)
-                    .editableUI(BlockBreakerMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id("block_breaker"),
+                    .editableUI(BlockBreakerMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id("block_breaker"),
                             (tier + 1) * (tier + 1)))
-                    .workableTieredHullModel(GTCEu.id("block/machines/block_breaker"))
+                    .workableTieredHullModel(Gregtech.id("block/machines/block_breaker"))
                     .langValue("%s Block Breaker %s".formatted(VLVH[tier], VLVT[tier]))
                     .tooltips(Component.translatable("gt6.machine.block_breaker.tooltip"),
                             Component.translatable("gt6.machine.block_breaker.speed_bonus",
@@ -404,8 +404,8 @@ public class GTMachines {
                     .rotationState(RotationState.NON_Y_AXIS)
                     .langValue("%s Miner %s".formatted(VLVH[tier], VLVT[tier]))
                     .recipeType(DUMMY_RECIPES)
-                    .editableUI(MinerMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id("miner"), (tier + 1) * (tier + 1)))
-                    .workableTieredHullModel(GTCEu.id("block/machines/miner"))
+                    .editableUI(MinerMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id("miner"), (tier + 1) * (tier + 1)))
+                    .workableTieredHullModel(Gregtech.id("block/machines/miner"))
                     .tooltipBuilder((stack, tooltip) -> {
                         int maxArea = IMiner.getWorkingArea(tier * 8);
                         long energyPerTick = GTValues.V[tier - 1];
@@ -435,8 +435,8 @@ public class GTMachines {
                     .modelProperty(GTMachineModelProperties.IS_RANDOM_TICK_MODE, true)
                     .modelProperty(GTMachineModelProperties.IS_WORKING_ENABLED, true)
                     .modelProperty(GTMachineModelProperties.IS_ACTIVE, false)
-                    .model(createWorldAcceleratorModel(GTCEu.id("block/machines/world_accelerator_te"),
-                            GTCEu.id("block/machines/world_accelerator")))
+                    .model(createWorldAcceleratorModel(Gregtech.id("block/machines/world_accelerator_te"),
+                            Gregtech.id("block/machines/world_accelerator")))
                     .tooltipBuilder((stack, tooltip) -> {
                         int randTickWorkingArea = 3 + (tier - 1) * 2;
                         tooltip.add(Component.translatable("gt6.machine.world_accelerator.description"));
@@ -463,9 +463,9 @@ public class GTMachines {
                     .recipeType(DUMMY_RECIPES)
                     .modelProperty(GTMachineModelProperties.IS_ACTIVE, false)
                     .modelProperty(GTMachineModelProperties.IS_WORKING_ENABLED, false)
-                    .editableUI(ItemCollectorMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id("item_collector"),
+                    .editableUI(ItemCollectorMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id("item_collector"),
                             ItemCollectorMachine.getINVENTORY_SIZES()[tier]))
-                    .model(createItemCollectorModel(GTCEu.id("block/machines/item_collector")))
+                    .model(createItemCollectorModel(Gregtech.id("block/machines/item_collector")))
                     .tooltips(
                             Component.translatable("gt6.machine.item_collector.tooltip"),
                             Component.translatable("gt6.machine.item_collector.gui.collect_range",
@@ -487,8 +487,8 @@ public class GTMachines {
             (tier, builder) -> builder
                     .langValue("%s Buffer %s".formatted(VLVH[tier], VLVT[tier]))
                     .rotationState(RotationState.NONE)
-                    .model(createSingleOverlayTieredHullMachineModel(GTCEu.id("block/overlay/machine/overlay_buffer"),
-                            GTCEu.id("block/overlay/machine/overlay_buffer_emissive")))
+                    .model(createSingleOverlayTieredHullMachineModel(Gregtech.id("block/overlay/machine/overlay_buffer"),
+                            Gregtech.id("block/overlay/machine/overlay_buffer_emissive")))
                     .tooltips(
                             Component.translatable("gt6.machine.buffer.tooltip"),
                             Component.translatable(
@@ -510,7 +510,7 @@ public class GTMachines {
             .machine("creative_energy", CreativeEnergyContainerMachine::new)
             .rotationState(RotationState.NONE)
             .model(createSingleOverlayTieredHullMachineModel(GTModels.BLANK_TEXTURE,
-                    GTCEu.id("block/overlay/machine/overlay_energy_emitter")))
+                    Gregtech.id("block/overlay/machine/overlay_energy_emitter")))
             .tooltipBuilder(CREATIVE_TOOLTIPS)
             .tier(MAX)
             .register();
@@ -519,8 +519,8 @@ public class GTMachines {
             .machine("creative_computation_provider", CreativeComputationProviderMachine::new)
             .rotationState(RotationState.NONE)
             .model(createSingleOverlayTieredHullMachineModel(
-                    GTCEu.id("block/overlay/machine/overlay_data_hatch_optical"),
-                    GTCEu.id("block/overlay/machine/overlay_data_hatch_optical_emissive")))
+                    Gregtech.id("block/overlay/machine/overlay_data_hatch_optical"),
+                    Gregtech.id("block/overlay/machine/overlay_data_hatch_optical_emissive")))
             .tooltipBuilder(CREATIVE_TOOLTIPS)
             .tier(MAX)
             .register();
@@ -538,7 +538,7 @@ public class GTMachines {
                             FormattingUtil.formatNumbers(perCycle)));
                 }
             })
-            .model(createBasicMachineModel(GTCEu.id("block/machine/template/quantum/creative_container"))
+            .model(createBasicMachineModel(Gregtech.id("block/machine/template/quantum/creative_container"))
                     .andThen(b -> b.addDynamicRenderer(DynamicRenderHelper::createQuantumTankRender)))
             .hasBER(true)
             .register();
@@ -556,7 +556,7 @@ public class GTMachines {
                             FormattingUtil.formatNumbers(perCycle)));
                 }
             })
-            .model(createBasicMachineModel(GTCEu.id("block/machine/template/quantum/creative_container"))
+            .model(createBasicMachineModel(Gregtech.id("block/machine/template/quantum/creative_container"))
                     .andThen(b -> b.addDynamicRenderer(DynamicRenderHelper::createQuantumChestRender)))
             .hasBER(true)
             .register();
@@ -852,13 +852,13 @@ public class GTMachines {
     public static final MachineDefinition COKE_OVEN_HATCH = REGISTRATE.machine("coke_oven_hatch", CokeOvenHatch::new)
             .rotationState(RotationState.ALL)
             .tooltips(Component.translatable("gt6.part_sharing.disabled"))
-            .simpleModel(GTCEu.id("block/machine/part/coke_oven_hatch"))
+            .simpleModel(Gregtech.id("block/machine/part/coke_oven_hatch"))
             .register();
 
     public static final MachineDefinition PUMP_HATCH = REGISTRATE.machine("pump_hatch", PumpHatchPartMachine::new)
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.PUMP_FLUID_HATCH)
-            .model(createBasicReplaceableTextureMachineModel(GTCEu.id("block/machine/part/pump_hatch")))
+            .model(createBasicReplaceableTextureMachineModel(Gregtech.id("block/machine/part/pump_hatch")))
             .register();
 
     public static final MachineDefinition MAINTENANCE_HATCH = REGISTRATE
@@ -867,7 +867,7 @@ public class GTMachines {
             .abilities(PartAbility.MAINTENANCE)
             .tooltips(Component.translatable("gt6.part_sharing.disabled"))
             .modelProperty(GTMachineModelProperties.IS_TAPED, false)
-            .model(createMaintenanceModel(GTCEu.id("block/machine/part/maintenance_hatch")))
+            .model(createMaintenanceModel(Gregtech.id("block/machine/part/maintenance_hatch")))
             .tier(LV)
             .register();
 
@@ -878,7 +878,7 @@ public class GTMachines {
             .abilities(PartAbility.MAINTENANCE)
             .tooltips(Component.translatable("gt6.part_sharing.disabled"))
             .modelProperty(GTMachineModelProperties.IS_TAPED, false)
-            .model(createMaintenanceModel(GTCEu.id("block/machine/part/configurable_maintenance_hatch")))
+            .model(createMaintenanceModel(Gregtech.id("block/machine/part/configurable_maintenance_hatch")))
             .tier(HV)
             .register();
 
@@ -894,7 +894,7 @@ public class GTMachines {
                 tooltips.add(Component.literal("  ").append(Component
                         .translatable(CleanroomType.CLEANROOM.getTranslationKey()).withStyle(ChatFormatting.GREEN)));
             })
-            .overlayTieredHullModel(GTCEu.id("block/machine/part/cleaning_maintenance_hatch"))
+            .overlayTieredHullModel(Gregtech.id("block/machine/part/cleaning_maintenance_hatch"))
             .tier(HV)
             .register();
 
@@ -903,7 +903,7 @@ public class GTMachines {
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.MAINTENANCE)
             .tooltips(Component.translatable("gt6.part_sharing.disabled"))
-            .overlayTieredHullModel(GTCEu.id("block/machine/part/auto_maintenance_hatch"))
+            .overlayTieredHullModel(Gregtech.id("block/machine/part/auto_maintenance_hatch"))
             .tier(HV)
             .register();
 
@@ -1041,8 +1041,8 @@ public class GTMachines {
             PartAbility.OUTPUT_LASER);
     public static final MachineDefinition MONITOR = REGISTRATE.machine("monitor", MonitorPartMachine::new)
             .rotationState(RotationState.ALL)
-            .model(createOverlayCasingMachineModel(GTCEu.id("block/casings/solid/machine_casing_frost_proof"),
-                    GTCEu.id("block/machine/part/computer_monitor")))
+            .model(createOverlayCasingMachineModel(Gregtech.id("block/casings/solid/machine_casing_frost_proof"),
+                    Gregtech.id("block/machine/part/computer_monitor")))
             .tier(MV)
             .register();
 
@@ -1051,11 +1051,11 @@ public class GTMachines {
         GCYMMachines.init();
         GTResearchMachines.init();
 
-        if (GTCEu.Mods.isAE2Loaded()) {
+        if (Gregtech.Mods.isAE2Loaded()) {
             GTAEMachines.init();
         }
 
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             GTRegistryInfo.registerFor(GTRegistries.MACHINES.getRegistryName());
         }
         ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.MACHINES, MachineDefinition.class));
@@ -1070,6 +1070,6 @@ public class GTMachines {
     }
 
     public static MachineDefinition get(String name) {
-        return GTRegistries.MACHINES.get(GTCEu.id(name));
+        return GTRegistries.MACHINES.get(Gregtech.id(name));
     }
 }

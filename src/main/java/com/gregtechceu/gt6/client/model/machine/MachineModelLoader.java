@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.model.machine;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.client.model.BasicUnbakedModel;
@@ -40,11 +40,11 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-@Mod.EventBusSubscriber(modid = GTCEu.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = Gregtech.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class MachineModelLoader implements IGeometryLoader<UnbakedMachineModel> {
 
     public static final MachineModelLoader INSTANCE = new MachineModelLoader();
-    public static final ResourceLocation ID = GTCEu.id("machine");
+    public static final ResourceLocation ID = Gregtech.id("machine");
     public static final Gson GSON = new GsonBuilder()
             .registerTypeAdapter(BlockModel.class, new ExtendedBlockModelDeserializer())
             .registerTypeAdapter(BlockElement.class, new BlockElement.Deserializer())

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.feature.IAutoOutputFluid;
 import com.gregtechceu.gt6.api.machine.feature.IAutoOutputItem;
@@ -27,7 +27,7 @@ public class AutoOutputInfoProvider implements IProbeInfoProvider {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("auto_output_info");
+        return Gregtech.id("auto_output_info");
     }
 
     @Override

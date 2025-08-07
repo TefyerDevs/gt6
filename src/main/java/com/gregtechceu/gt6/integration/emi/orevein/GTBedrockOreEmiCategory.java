@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.emi.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockore.BedrockOreDefinition;
@@ -19,7 +19,7 @@ public class GTBedrockOreEmiCategory extends EmiRecipeCategory {
     public static final GTBedrockOreEmiCategory CATEGORY = new GTBedrockOreEmiCategory();
 
     public GTBedrockOreEmiCategory() {
-        super(GTCEu.id("bedrock_ore_diagram"),
+        super(Gregtech.id("bedrock_ore_diagram"),
                 EmiStack.of(ChemicalHelper.get(TagPrefix.rawOre, GTMaterials.Tungstate)));
     }
 

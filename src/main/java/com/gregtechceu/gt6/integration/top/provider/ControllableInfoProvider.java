@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IControllable;
 
@@ -21,7 +21,7 @@ public class ControllableInfoProvider extends CapabilityInfoProvider<IControllab
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("controllable_provider");
+        return Gregtech.id("controllable_provider");
     }
 
     @Nullable

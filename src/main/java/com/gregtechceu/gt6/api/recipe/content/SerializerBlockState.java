@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.content;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.level.block.Block;
@@ -34,7 +34,7 @@ public class SerializerBlockState implements IContentSerializer<BlockState> {
 
     @Override
     public BlockState fromJson(JsonElement json) {
-        return BlockState.CODEC.parse(JsonOps.INSTANCE, json).getOrThrow(false, GTCEu.LOGGER::error);
+        return BlockState.CODEC.parse(JsonOps.INSTANCE, json).getOrThrow(false, Gregtech.LOGGER::error);
     }
 
     @Override

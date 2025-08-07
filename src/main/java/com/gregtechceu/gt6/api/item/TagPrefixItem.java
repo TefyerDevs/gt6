@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.item;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.DustProperty;
@@ -41,7 +41,7 @@ public class TagPrefixItem extends Item {
         super(properties);
         this.tagPrefix = tagPrefix;
         this.material = material;
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             TagPrefixItemRenderer.create(this, tagPrefix.materialIconType(), material.getMaterialIconSet());
         }
     }

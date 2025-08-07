@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.multiblock.part.monitor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 
 import com.lowdragmc.lowdraglib.gui.texture.IGuiTexture;
@@ -23,7 +23,7 @@ public class MonitorPartMachine extends MonitorComponentPartMachine {
 
     @Override
     public IGuiTexture getComponentIcon() {
-        return ResourceTexture.fromSpirit(GTCEu.id("item/computer_monitor_cover"));
+        return ResourceTexture.fromSpirit(Gregtech.id("item/computer_monitor_cover"));
     }
 
     @Override

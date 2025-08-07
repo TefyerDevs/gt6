@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.integration.map.cache.client.IClientCache;
 
 import net.minecraft.client.Minecraft;
@@ -33,7 +33,7 @@ import java.util.stream.Collectors;
 public class ClientCacheManager {
 
     public static final File clientCacheDir = new File(Minecraft.getInstance().gameDirectory,
-            GTCEu.MOD_ID + File.separator + "prospection_cache");
+            Gregtech.MOD_ID + File.separator + "prospection_cache");
     private static final char resourceLocationSeparator = '=';
     private static final String filePrefix = "DIM";
     private static final String fileEnding = ".nbt";

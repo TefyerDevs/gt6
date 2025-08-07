@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.cosmetics;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.cosmetics.event.RegisterGTCapesEvent;
 
 import net.minecraft.resources.ResourceLocation;
@@ -9,49 +9,49 @@ import java.util.UUID;
 
 public class GTCapes {
 
-    public static final ResourceLocation GREGTECH_CAPE = GTCEu.id("gregtech");
-    public static final ResourceLocation GREEN_CAPE = GTCEu.id("green");
-    public static final ResourceLocation YELLOW_CAPE = GTCEu.id("yellow");
-    public static final ResourceLocation RED_CAPE = GTCEu.id("red");
-    public static final ResourceLocation DEBUG_CAPE = GTCEu.id("debug");
+    public static final ResourceLocation GREGTECH_CAPE = Gregtech.id("gregtech");
+    public static final ResourceLocation GREEN_CAPE = Gregtech.id("green");
+    public static final ResourceLocation YELLOW_CAPE = Gregtech.id("yellow");
+    public static final ResourceLocation RED_CAPE = Gregtech.id("red");
+    public static final ResourceLocation DEBUG_CAPE = Gregtech.id("debug");
 
-    public static final ResourceLocation RAINBOW_CAPE = GTCEu.id("rainbow");
-    public static final ResourceLocation ACE_CAPE = GTCEu.id("ace");
-    public static final ResourceLocation AGENDER_CAPE = GTCEu.id("agender");
-    public static final ResourceLocation AROMANTIC_CAPE = GTCEu.id("aromantic");
-    public static final ResourceLocation BI_CAPE = GTCEu.id("bi");
-    public static final ResourceLocation GENDERFLUID_CAPE = GTCEu.id("genderfluid");
-    public static final ResourceLocation GENDERQUEER_CAPE = GTCEu.id("genderqueer");
-    public static final ResourceLocation INTERSEX_CAPE = GTCEu.id("intersex");
-    public static final ResourceLocation LESBIAN_CAPE = GTCEu.id("lesbian");
-    public static final ResourceLocation NONBINARY_CAPE = GTCEu.id("nonbinary");
-    public static final ResourceLocation PAN_CAPE = GTCEu.id("pan");
-    public static final ResourceLocation TRANS_CAPE = GTCEu.id("trans");
+    public static final ResourceLocation RAINBOW_CAPE = Gregtech.id("rainbow");
+    public static final ResourceLocation ACE_CAPE = Gregtech.id("ace");
+    public static final ResourceLocation AGENDER_CAPE = Gregtech.id("agender");
+    public static final ResourceLocation AROMANTIC_CAPE = Gregtech.id("aromantic");
+    public static final ResourceLocation BI_CAPE = Gregtech.id("bi");
+    public static final ResourceLocation GENDERFLUID_CAPE = Gregtech.id("genderfluid");
+    public static final ResourceLocation GENDERQUEER_CAPE = Gregtech.id("genderqueer");
+    public static final ResourceLocation INTERSEX_CAPE = Gregtech.id("intersex");
+    public static final ResourceLocation LESBIAN_CAPE = Gregtech.id("lesbian");
+    public static final ResourceLocation NONBINARY_CAPE = Gregtech.id("nonbinary");
+    public static final ResourceLocation PAN_CAPE = Gregtech.id("pan");
+    public static final ResourceLocation TRANS_CAPE = Gregtech.id("trans");
 
     public static void registerGTCapes(RegisterGTCapesEvent event) {
         // TODO add the advancements to unlock these
         // Reference
         // https://github.com/GregTechCEu/GregTech/blob/master/src/main/java/gregtech/api/util/CapesRegistry.java#L151-L156
         // for correct advancement IDs
-        event.registerCape(GREGTECH_CAPE, GTCEu.id("textures/capes/gregtech_cape.png"));
-        event.registerCape(GREEN_CAPE, GTCEu.id("textures/capes/green_cape.png"));
-        event.registerCape(YELLOW_CAPE, GTCEu.id("textures/capes/yellow_cape.png"));
-        event.registerCape(RED_CAPE, GTCEu.id("textures/capes/red_cape.png"));
+        event.registerCape(GREGTECH_CAPE, Gregtech.id("textures/capes/gregtech_cape.png"));
+        event.registerCape(GREEN_CAPE, Gregtech.id("textures/capes/green_cape.png"));
+        event.registerCape(YELLOW_CAPE, Gregtech.id("textures/capes/yellow_cape.png"));
+        event.registerCape(RED_CAPE, Gregtech.id("textures/capes/red_cape.png"));
         // don't link this to anything (except easter egg? april fools? TBD)
-        event.registerCape(DEBUG_CAPE, GTCEu.id("textures/capes/debug_cape.png"));
+        event.registerCape(DEBUG_CAPE, Gregtech.id("textures/capes/debug_cape.png"));
 
-        event.registerFreeCape(RAINBOW_CAPE, GTCEu.id("textures/capes/rainbow_cape.png"));
-        event.registerFreeCape(ACE_CAPE, GTCEu.id("textures/capes/ace_cape.png"));
-        event.registerFreeCape(AGENDER_CAPE, GTCEu.id("textures/capes/agender_cape.png"));
-        event.registerFreeCape(AROMANTIC_CAPE, GTCEu.id("textures/capes/aromantic_cape.png"));
-        event.registerFreeCape(BI_CAPE, GTCEu.id("textures/capes/bi_cape.png"));
-        event.registerFreeCape(GENDERFLUID_CAPE, GTCEu.id("textures/capes/genderfluid_cape.png"));
-        event.registerFreeCape(GENDERQUEER_CAPE, GTCEu.id("textures/capes/genderqueer_cape.png"));
-        event.registerFreeCape(INTERSEX_CAPE, GTCEu.id("textures/capes/intersex_cape.png"));
-        event.registerFreeCape(LESBIAN_CAPE, GTCEu.id("textures/capes/lesbian_cape.png"));
-        event.registerFreeCape(NONBINARY_CAPE, GTCEu.id("textures/capes/nonbinary_cape.png"));
-        event.registerFreeCape(PAN_CAPE, GTCEu.id("textures/capes/pan_cape.png"));
-        event.registerFreeCape(TRANS_CAPE, GTCEu.id("textures/capes/trans_cape.png"));
+        event.registerFreeCape(RAINBOW_CAPE, Gregtech.id("textures/capes/rainbow_cape.png"));
+        event.registerFreeCape(ACE_CAPE, Gregtech.id("textures/capes/ace_cape.png"));
+        event.registerFreeCape(AGENDER_CAPE, Gregtech.id("textures/capes/agender_cape.png"));
+        event.registerFreeCape(AROMANTIC_CAPE, Gregtech.id("textures/capes/aromantic_cape.png"));
+        event.registerFreeCape(BI_CAPE, Gregtech.id("textures/capes/bi_cape.png"));
+        event.registerFreeCape(GENDERFLUID_CAPE, Gregtech.id("textures/capes/genderfluid_cape.png"));
+        event.registerFreeCape(GENDERQUEER_CAPE, Gregtech.id("textures/capes/genderqueer_cape.png"));
+        event.registerFreeCape(INTERSEX_CAPE, Gregtech.id("textures/capes/intersex_cape.png"));
+        event.registerFreeCape(LESBIAN_CAPE, Gregtech.id("textures/capes/lesbian_cape.png"));
+        event.registerFreeCape(NONBINARY_CAPE, Gregtech.id("textures/capes/nonbinary_cape.png"));
+        event.registerFreeCape(PAN_CAPE, Gregtech.id("textures/capes/pan_cape.png"));
+        event.registerFreeCape(TRANS_CAPE, Gregtech.id("textures/capes/trans_cape.png"));
     }
 
     public static void giveDevCapes(RegisterGTCapesEvent event) {

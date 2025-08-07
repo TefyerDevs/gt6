@@ -1,5 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical.material;
 
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.registry.MaterialRegistry;
 
 import net.minecraft.resources.ResourceLocation;
@@ -69,7 +70,7 @@ public interface IMaterialRegistryManager {
      * Get a material from a String in formats:
      * <ul>
      * <li>{@code "modid:registry_name"}</li>
-     * <li>{@code "registry_name"} - where modid is inferred to be {@link com.gregtechceu.gt6.GTCEu#MOD_ID}</li>
+     * <li>{@code "registry_name"} - where modid is inferred to be {@link Gregtech#MOD_ID}</li>
      * </ul>
      *
      * Intended for use in reading/writing materials from/to NBT tags.

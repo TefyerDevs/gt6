@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.loader;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
@@ -53,7 +53,7 @@ public class BedrockOreLoader extends SimpleJsonResourceReloadListener {
         AddonFinder.getAddons().forEach(IGTAddon::registerBedrockOreVeins);
         ModLoader.get().postEvent(
                 new GTCEuAPI.RegisterEvent<>(GTRegistries.BEDROCK_ORE_DEFINITIONS, BedrockOreDefinition.class));
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             KJSCallWrapper.fireKJSEvent();
         }
 
@@ -77,7 +77,7 @@ public class BedrockOreLoader extends SimpleJsonResourceReloadListener {
             GTRegistries.BEDROCK_ORE_DEFINITIONS.freeze();
         }
 
-        if (GTCEu.getMinecraftServer() != null) {}
+        if (Gregtech.getMinecraftServer() != null) {}
     }
 
     public static BedrockOreDefinition fromJson(ResourceLocation id, JsonObject json, RegistryOps<JsonElement> ops) {

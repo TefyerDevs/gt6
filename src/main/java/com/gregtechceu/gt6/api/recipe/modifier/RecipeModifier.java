@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.modifier;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.recipe.GTRecipe;
 
@@ -51,7 +51,7 @@ public interface RecipeModifier {
      * @return {@link ModifierFunction#NULL}
      */
     static ModifierFunction nullWrongType(Class<?> type, MetaMachine actual) {
-        GTCEu.LOGGER.error("Incorrect use of modifier, expected machine of type {}, received {}", type.getSimpleName(),
+        Gregtech.LOGGER.error("Incorrect use of modifier, expected machine of type {}, received {}", type.getSimpleName(),
                 actual.getDefinition().getName());
         return ModifierFunction.NULL;
     }

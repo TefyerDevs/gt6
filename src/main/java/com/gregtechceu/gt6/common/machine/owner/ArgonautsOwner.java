@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.owner;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.network.chat.Component;
 import net.minecraftforge.server.ServerLifecycleHooks;
@@ -24,7 +24,7 @@ public non-sealed class ArgonautsOwner extends MachineOwner {
     }
 
     public @Nullable Guild getPlayerGuild(UUID playerUUID) {
-        if (GTCEu.isClientThread()) {
+        if (Gregtech.isClientThread()) {
             return GuildClientApi.API.getPlayerGuild(playerUUID);
         } else {
             return GuildApi.API.getPlayerGuild(ServerLifecycleHooks.getCurrentServer(), playerUUID);

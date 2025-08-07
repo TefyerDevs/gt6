@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.*;
 import com.gregtechceu.gt6.api.gui.SteamTexture;
 import com.gregtechceu.gt6.api.recipe.category.GTRecipeCategory;
@@ -249,11 +249,11 @@ public class GTRecipeType implements RecipeType<GTRecipe> {
     }
 
     public GTRecipeBuilder recipeBuilder(String id) {
-        return recipeBuilder(GTCEu.id(id));
+        return recipeBuilder(Gregtech.id(id));
     }
 
     public GTRecipeBuilder recipeBuilder(String id, Object... append) {
-        return recipeBuilder(GTCEu.id(id), append);
+        return recipeBuilder(Gregtech.id(id), append);
     }
 
     public GTRecipeBuilder copyFrom(GTRecipeBuilder builder) {

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.capability.IParallelHatch;
 import com.gregtechceu.gt6.api.machine.feature.IRecipeLogicMachine;
@@ -24,7 +24,7 @@ public class ParallelProvider implements IProbeInfoProvider {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("parallel");
+        return Gregtech.id("parallel");
     }
 
     @Override

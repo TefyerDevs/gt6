@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.rei.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gt6.client.ClientProxy;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 public class GTOreVeinDisplayCategory extends ModularUIDisplayCategory<GTOreVeinDisplay> {
 
     public static final CategoryIdentifier<GTOreVeinDisplay> CATEGORY = CategoryIdentifier
-            .of(GTCEu.id("ore_vein_diagram"));
+            .of(Gregtech.id("ore_vein_diagram"));
 
     private final Renderer icon;
 

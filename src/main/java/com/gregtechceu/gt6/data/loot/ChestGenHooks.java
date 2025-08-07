@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.loot;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.config.ConfigHolder;
 import com.gregtechceu.gt6.core.mixins.LootPoolAccessor;
@@ -67,7 +67,7 @@ public final class ChestGenHooks {
             List<GTLootEntryItem> entryItems = lootEntryItems.get(name);
             for (GTLootEntryItem entry : entryItems) {
                 if (ConfigHolder.INSTANCE.dev.debug) {
-                    GTCEu.LOGGER.info("adding {} to lootTable {}", entry, name);
+                    Gregtech.LOGGER.info("adding {} to lootTable {}", entry, name);
                 }
 
                 try {
@@ -75,7 +75,7 @@ public final class ChestGenHooks {
                     entries = ArrayUtils.add(entries, entry);
                     ((LootPoolAccessor) mainPool).setEntries(entries);
                 } catch (RuntimeException e) {
-                    GTCEu.LOGGER.error("Couldn't add {} to lootTable {}: {}", entry, name, e.getMessage());
+                    Gregtech.LOGGER.error("Couldn't add {} to lootTable {}: {}", entry, name, e.getMessage());
                 }
             }
         }
@@ -135,7 +135,7 @@ public final class ChestGenHooks {
     public static class RandomWeightLootFunction extends LootItemConditionalFunction implements LootItemFunction {
 
         public static final LootItemFunctionType TYPE = GTRegistries.register(BuiltInRegistries.LOOT_FUNCTION_TYPE,
-                GTCEu.id("random_weight"), new LootItemFunctionType(new Serializer()));
+                Gregtech.id("random_weight"), new LootItemFunctionType(new Serializer()));
 
         private final ItemStack stack;
         @Getter

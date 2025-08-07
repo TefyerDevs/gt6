@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.kjs;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.GTRegistry;
 import com.gregtechceu.gt6.integration.kjs.events.CraftingComponentsEventJS;
 import com.gregtechceu.gt6.integration.kjs.events.GTRegistryEventJS;
@@ -18,7 +18,7 @@ public interface GTCEuStartupEvents {
 
     private static boolean validateRegistry(Object o) {
         try {
-            var id = GTCEu.id(o.toString());
+            var id = Gregtech.id(o.toString());
             return GTRegistry.REGISTERED.containsKey(id) || GTRegistryInfo.EXTRA_IDS.contains(id);
         } catch (Exception ex) {
             return false;

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
@@ -24,7 +24,7 @@ import net.minecraftforge.gametest.PrefixGameTestTemplate;
 import static com.gregtechceu.gt6.common.data.GTRecipeTypes.LARGE_CHEMICAL_RECIPES;
 
 @PrefixGameTestTemplate(false)
-@GameTestHolder(GTCEu.MOD_ID)
+@GameTestHolder(Gregtech.MOD_ID)
 public class InputSeparationTest {
 
     @BeforeBatch(batch = "InputSeparation")
@@ -32,8 +32,8 @@ public class InputSeparationTest {
         // Force insert the recipe into the manager.
         LARGE_CHEMICAL_RECIPES.getLookup().removeAllRecipes();
         LARGE_CHEMICAL_RECIPES.getLookup().addRecipe(LARGE_CHEMICAL_RECIPES
-                .recipeBuilder(GTCEu.id("test-multiblock-input-separation"))
-                .id(GTCEu.id("test-multiblock-input-separation"))
+                .recipeBuilder(Gregtech.id("test-multiblock-input-separation"))
+                .id(Gregtech.id("test-multiblock-input-separation"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE), new ItemStack(Blocks.ACACIA_WOOD))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.HV]).duration(1)

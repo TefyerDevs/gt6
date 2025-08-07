@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
@@ -161,7 +161,7 @@ public class GTElements {
     public static void init() {
         AddonFinder.getAddons().forEach(IGTAddon::registerElements);
         ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.ELEMENTS, Element.class));
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             GTRegistryInfo.registerFor(GTRegistries.ELEMENTS.getRegistryName());
         }
         GTRegistries.ELEMENTS.freeze();

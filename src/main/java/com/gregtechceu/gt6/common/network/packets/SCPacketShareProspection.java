@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.network.packets;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.network.GTNetwork;
 import com.gregtechceu.gt6.integration.map.ClientCacheManager;
 
@@ -81,7 +81,7 @@ public class SCPacketShareProspection implements GTNetwork.INetPacket {
                     cacheName, key,
                     isDimCache, dimension,
                     data, first);
-            GTNetwork.sendToPlayer(GTCEu.getMinecraftServer().getPlayerList().getPlayer(receiver), newPacket);
+            GTNetwork.sendToPlayer(Gregtech.getMinecraftServer().getPlayerList().getPlayer(receiver), newPacket);
         }
     }
 }

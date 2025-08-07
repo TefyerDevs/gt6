@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
@@ -29,7 +29,7 @@ public class RecipeLogicInfoProvider extends CapabilityInfoProvider<RecipeLogic>
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("recipe_logic_provider");
+        return Gregtech.id("recipe_logic_provider");
     }
 
     @Nullable

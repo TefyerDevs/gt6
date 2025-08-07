@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.cosmetics;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.cosmetics.event.RegisterGTCapesEvent;
 import com.gregtechceu.gt6.common.network.GTNetwork;
 import com.gregtechceu.gt6.common.network.packets.SPacketNotifyCapeChange;
@@ -48,7 +48,7 @@ public class CapeRegistry extends SavedData {
     private static void initCapes() {
         RegisterGTCapesEvent event = new RegisterGTCapesEvent();
         MinecraftForge.EVENT_BUS.post(event);
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             KJSCallWrapper.fireKJSEvent(event);
         }
 

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.network.packets;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockore.BedrockOreDefinition;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.client.ClientProxy;
@@ -37,7 +37,7 @@ public class SPacketSyncBedrockOreVeins implements GTNetwork.INetPacket {
             ResourceLocation id = buf.readResourceLocation();
             CompoundTag tag = buf.readAnySizeNbt();
             BedrockOreDefinition def = BedrockOreDefinition.FULL_CODEC.parse(ops, tag).getOrThrow(false,
-                    GTCEu.LOGGER::error);
+                    Gregtech.LOGGER::error);
             return Map.entry(id, def);
         }).limit(buf.readVarInt()).forEach(entry -> veins.put(entry.getKey(), entry.getValue()));
     }
@@ -50,7 +50,7 @@ public class SPacketSyncBedrockOreVeins implements GTNetwork.INetPacket {
         for (var entry : veins.entrySet()) {
             buf.writeResourceLocation(entry.getKey());
             CompoundTag tag = (CompoundTag) BedrockOreDefinition.FULL_CODEC.encodeStart(ops, entry.getValue())
-                    .getOrThrow(false, GTCEu.LOGGER::error);
+                    .getOrThrow(false, Gregtech.LOGGER::error);
             buf.writeNbt(tag);
         }
     }

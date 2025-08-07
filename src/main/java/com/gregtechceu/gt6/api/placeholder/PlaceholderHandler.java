@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.placeholder;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.placeholder.exceptions.PlaceholderException;
 import com.gregtechceu.gt6.api.placeholder.exceptions.UnclosedBracketException;
 import com.gregtechceu.gt6.api.placeholder.exceptions.UnexpectedBracketException;
@@ -59,7 +59,7 @@ public class PlaceholderHandler {
 
     public static MultiLineComponent processPlaceholders(String s, PlaceholderContext ctx) {
         if (ctx.level().isClientSide)
-            GTCEu.LOGGER.warn("Placeholder processing is running on client instead of server!");
+            Gregtech.LOGGER.warn("Placeholder processing is running on client instead of server!");
         List<Exception> exceptions = new ArrayList<>();
         boolean escape = false;
         boolean escapeNext = false;

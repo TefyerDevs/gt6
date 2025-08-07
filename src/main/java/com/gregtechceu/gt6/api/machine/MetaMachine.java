@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.machine;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.IAppearance;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
 import com.gregtechceu.gt6.api.block.property.GTBlockStateProperties;
@@ -164,7 +164,7 @@ public class MetaMachine implements IEnhancedManaged, IToolable, ITickSubscripti
     }
 
     public boolean isRemote() {
-        return getLevel() == null ? GTCEu.isClientThread() : getLevel().isClientSide;
+        return getLevel() == null ? Gregtech.isClientThread() : getLevel().isClientSide;
     }
 
     public void notifyBlockUpdate() {
@@ -643,7 +643,7 @@ public class MetaMachine implements IEnhancedManaged, IToolable, ITickSubscripti
             return;
         }
         if (upwardsFacing.getAxis() == Direction.Axis.Y) {
-            GTCEu.LOGGER.error("Tried to set upwards facing to invalid facing {}! Skipping", upwardsFacing);
+            Gregtech.LOGGER.error("Tried to set upwards facing to invalid facing {}! Skipping", upwardsFacing);
             return;
         }
         var blockState = getBlockState();

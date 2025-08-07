@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.modifier;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.BiomeWeightModifier;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 
@@ -19,7 +19,7 @@ import java.util.stream.Stream;
 public class BiomePlacement extends PlacementModifier {
 
     public static final PlacementModifierType<BiomePlacement> BIOME_PLACEMENT = GTRegistries.register(
-            BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, GTCEu.id("biome_placement"), () -> BiomePlacement.CODEC);
+            BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, Gregtech.id("biome_placement"), () -> BiomePlacement.CODEC);
 
     public static final Codec<BiomePlacement> CODEC = BiomeWeightModifier.CODEC.listOf().fieldOf("modifiers")
             .xmap(BiomePlacement::new, placement -> placement.modifiers).codec();

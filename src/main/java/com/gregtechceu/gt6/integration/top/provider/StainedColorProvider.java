@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.IPaintable;
 
 import net.minecraft.network.chat.Component;
@@ -20,7 +20,7 @@ public class StainedColorProvider implements IProbeInfoProvider {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("stained_color");
+        return Gregtech.id("stained_color");
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.common.block.CableBlock;
 import com.gregtechceu.gt6.common.blockentity.CableBlockEntity;
@@ -67,6 +67,6 @@ public class CableBlockProvider implements IBlockComponentProvider, IServerDataP
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("cable_info");
+        return Gregtech.id("cable_info");
     }
 }

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.emi.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockfluid.BedrockFluidDefinition;
 import com.gregtechceu.gt6.client.ClientProxy;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -17,7 +17,7 @@ public class GTBedrockFluidEmiCategory extends EmiRecipeCategory {
     public static final GTBedrockFluidEmiCategory CATEGORY = new GTBedrockFluidEmiCategory();
 
     public GTBedrockFluidEmiCategory() {
-        super(GTCEu.id("bedrock_fluid_diagram"), EmiStack.of(GTMaterials.Oil.getFluid().getBucket().asItem()));
+        super(Gregtech.id("bedrock_fluid_diagram"), EmiStack.of(GTMaterials.Oil.getFluid().getBucket().asItem()));
     }
 
     public static void registerDisplays(EmiRegistry registry) {

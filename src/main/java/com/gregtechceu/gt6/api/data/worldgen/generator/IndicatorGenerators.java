@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.generator;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
@@ -16,10 +16,10 @@ import java.util.function.Function;
 
 public class IndicatorGenerators {
 
-    public static final Codec<NoopIndicatorGenerator> NO_OP = register(GTCEu.id("no_op"), NoopIndicatorGenerator.CODEC,
+    public static final Codec<NoopIndicatorGenerator> NO_OP = register(Gregtech.id("no_op"), NoopIndicatorGenerator.CODEC,
             entry -> NoopIndicatorGenerator.INSTANCE);
 
-    public static final Codec<SurfaceIndicatorGenerator> SURFACE = register(GTCEu.id("surface"),
+    public static final Codec<SurfaceIndicatorGenerator> SURFACE = register(Gregtech.id("surface"),
             SurfaceIndicatorGenerator.CODEC, SurfaceIndicatorGenerator::new);
 
     public static <T extends IndicatorGenerator> Codec<T> register(ResourceLocation id, Codec<T> codec,

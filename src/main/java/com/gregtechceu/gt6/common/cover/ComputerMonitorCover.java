@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.cover;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.ICoverable;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
 import com.gregtechceu.gt6.api.cover.CoverDefinition;
@@ -207,7 +207,7 @@ public class ComputerMonitorCover extends CoverBehavior
         ticksSincePlaced++;
         if (coverHolder.getOffsetTimer() % updateInterval == 0) {
             try {
-                if (GTCEu.Mods.isCreateLoaded())
+                if (Gregtech.Mods.isCreateLoaded())
                     GTCreateIntegration.TemporaryRedstoneLinkTransmitter.destroyAll();
                 setRedstoneSignalOutput(0);
                 text = getRenderedText();

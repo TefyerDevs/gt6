@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.laser;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.pipenet.IPipeType;
 
 import net.minecraft.resources.ResourceLocation;
@@ -12,7 +12,7 @@ public enum LaserPipeType implements IPipeType<LaserPipeProperties>, StringRepre
 
     NORMAL;
 
-    public static final ResourceLocation TYPE_ID = GTCEu.id("laser");
+    public static final ResourceLocation TYPE_ID = Gregtech.id("laser");
 
     @Override
     public float getThickness() {

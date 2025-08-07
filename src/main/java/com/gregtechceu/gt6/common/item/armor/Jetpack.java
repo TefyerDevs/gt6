@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.armor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
 import com.gregtechceu.gt6.api.item.armor.ArmorLogicSuite;
@@ -34,7 +34,7 @@ public class Jetpack extends ArmorLogicSuite implements IJetpack {
 
     public Jetpack(int energyPerUse, long capacity, int tier) {
         super(energyPerUse, capacity, tier, ArmorItem.Type.CHESTPLATE);
-        if (GTCEu.isClientSide() && this.shouldDrawHUD()) {
+        if (Gregtech.isClientSide() && this.shouldDrawHUD()) {
             // noinspection NewExpressionSideOnly
             HUD = new ArmorUtils.ModularHUD();
         }
@@ -114,7 +114,7 @@ public class Jetpack extends ArmorLogicSuite implements IJetpack {
 
     @Override
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return GTCEu.id("textures/armor/jetpack.png");
+        return Gregtech.id("textures/armor/jetpack.png");
     }
 
     /*

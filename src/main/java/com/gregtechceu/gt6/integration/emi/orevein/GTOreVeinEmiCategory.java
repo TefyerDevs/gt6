@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.emi.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gt6.client.ClientProxy;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -17,7 +17,7 @@ public class GTOreVeinEmiCategory extends EmiRecipeCategory {
     public static final GTOreVeinEmiCategory CATEGORY = new GTOreVeinEmiCategory();
 
     public GTOreVeinEmiCategory() {
-        super(GTCEu.id("ore_vein_diagram"), EmiStack.of(Items.RAW_IRON));
+        super(Gregtech.id("ore_vein_diagram"), EmiStack.of(Items.RAW_IRON));
     }
 
     public static void registerDisplays(EmiRegistry registry) {

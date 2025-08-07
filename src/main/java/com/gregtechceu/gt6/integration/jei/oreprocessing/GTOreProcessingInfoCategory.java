@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jei.oreprocessing;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
@@ -26,7 +26,7 @@ import static com.gregtechceu.gt6.common.data.GTMaterials.Iron;
 public class GTOreProcessingInfoCategory extends ModularUIRecipeCategory<GTOreProcessingInfoWrapper> {
 
     public final static RecipeType<GTOreProcessingInfoWrapper> RECIPE_TYPE = new RecipeType<>(
-            GTCEu.id("ore_processing_diagram"), GTOreProcessingInfoWrapper.class);
+            Gregtech.id("ore_processing_diagram"), GTOreProcessingInfoWrapper.class);
     private final IDrawable background;
     private final IDrawable icon;
 

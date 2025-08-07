@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.block.LampBlock;
 
 import com.lowdragmc.lowdraglib.client.model.custommodel.ICTMPredicate;
@@ -16,7 +16,7 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class LampRenderer extends IModelRenderer implements ICTMPredicate {
 
     public LampRenderer(LampBlock lamp, BlockState state) {
-        super(GTCEu.id("block/%s%s_lamp%s%s".formatted(
+        super(Gregtech.id("block/%s%s_lamp%s%s".formatted(
                 lamp.color,
                 lamp.bordered ? "" : "_borderless",
                 state.getValue(LampBlock.LIGHT) ? "" : "_off",

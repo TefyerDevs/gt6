@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.worldgen.ores.GeneratedVeinMetadata;
 import com.gregtechceu.gt6.api.gui.misc.ProspectorMode;
@@ -29,13 +29,13 @@ public class GroupingMapRenderer extends GenericMapRenderer {
     static {
         Map<String, GenericMapRenderer> renderers = new HashMap<>();
         var toggle = ConfigHolder.INSTANCE.compat.minimap.toggle;
-        if (toggle.journeyMapIntegration && GTCEu.isModLoaded(GTValues.MODID_JOURNEYMAP)) {
+        if (toggle.journeyMapIntegration && Gregtech.isModLoaded(GTValues.MODID_JOURNEYMAP)) {
             renderers.put(GTValues.MODID_JOURNEYMAP, new JourneymapRenderer());
         }
-        if (toggle.xaerosMapIntegration && GTCEu.isModLoaded(GTValues.MODID_XAEROS_MINIMAP)) {
+        if (toggle.xaerosMapIntegration && Gregtech.isModLoaded(GTValues.MODID_XAEROS_MINIMAP)) {
             renderers.put(GTValues.MODID_XAEROS_MINIMAP, new XaerosRenderer());
         }
-        if (toggle.ftbChunksIntegration && GTCEu.isModLoaded(GTValues.MODID_FTB_CHUNKS)) {
+        if (toggle.ftbChunksIntegration && Gregtech.isModLoaded(GTValues.MODID_FTB_CHUNKS)) {
             renderers.put(GTValues.MODID_FTB_CHUNKS, new FTBChunksRenderer());
         }
 

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.RecipeCapability;
 import com.gregtechceu.gt6.api.recipe.category.GTRecipeCategory;
 import com.gregtechceu.gt6.api.recipe.chance.logic.ChanceLogic;
@@ -29,7 +29,7 @@ import java.util.*;
 
 public class GTRecipeSerializer implements RecipeSerializer<GTRecipe> {
 
-    public static final Codec<GTRecipe> CODEC = makeCodec(GTCEu.Mods.isKubeJSLoaded());
+    public static final Codec<GTRecipe> CODEC = makeCodec(Gregtech.Mods.isKubeJSLoaded());
 
     public static final GTRecipeSerializer SERIALIZER = new GTRecipeSerializer();
 
@@ -60,7 +60,7 @@ public class GTRecipeSerializer implements RecipeSerializer<GTRecipe> {
 
     @Override
     public @NotNull GTRecipe fromJson(@NotNull ResourceLocation id, @NotNull JsonObject json) {
-        GTRecipe recipe = CODEC.parse(JsonOps.INSTANCE, json).getOrThrow(false, GTCEu.LOGGER::error);
+        GTRecipe recipe = CODEC.parse(JsonOps.INSTANCE, json).getOrThrow(false, Gregtech.LOGGER::error);
         recipe.setId(id);
         return recipe;
     }
@@ -124,7 +124,7 @@ public class GTRecipeSerializer implements RecipeSerializer<GTRecipe> {
         List<RecipeCondition> conditions = buf.readCollection(c -> new ArrayList<>(),
                 GTRecipeSerializer::conditionReader);
         List<?> ingredientActions = new ArrayList<>();
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             ingredientActions = KJSCallWrapper.getIngredientActions(buf);
         }
         CompoundTag data = buf.readNbt();
@@ -178,7 +178,7 @@ public class GTRecipeSerializer implements RecipeSerializer<GTRecipe> {
                 (buf1, logic) -> buf1.writeUtf(GTRegistries.CHANCE_LOGICS.getKey(logic)));
 
         buf.writeCollection(recipe.conditions, GTRecipeSerializer::conditionWriter);
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             KJSCallWrapper.writeIngredientActions(recipe.ingredientActions, buf);
         }
         buf.writeNbt(recipe.data);

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.common.data.GTBlocks;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -749,7 +749,7 @@ public class GTCraftingComponents {
                 .add(UHV, spring, Europium);
 
         MinecraftForge.EVENT_BUS.post(new CraftingComponentModificationEvent());
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             KJSCallWrapper.craftingComponentModification();
         }
     }

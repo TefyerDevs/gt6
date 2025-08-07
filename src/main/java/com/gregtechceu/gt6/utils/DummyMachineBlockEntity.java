@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.utils;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.api.machine.trait.RecipeHandlerList;
@@ -39,7 +39,7 @@ public class DummyMachineBlockEntity implements IMachineBlockEntity {
     public DummyMachineBlockEntity(int tier, GTRecipeType type, Int2IntFunction tankScalingFunction,
                                    Collection<RecipeHandlerList> handlers,
                                    Object... args) {
-        this.definition = new MachineDefinition(GTCEu.id("dummy"));
+        this.definition = new MachineDefinition(Gregtech.id("dummy"));
         this.definition.setRecipeTypes(new GTRecipeType[] { type });
         this.definition.setTier(tier);
 

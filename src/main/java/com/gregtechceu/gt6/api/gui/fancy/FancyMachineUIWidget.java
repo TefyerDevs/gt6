@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.gui.fancy;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
 import com.gregtechceu.gt6.config.ConfigHolder;
 
@@ -195,7 +195,7 @@ public class FancyMachineUIWidget extends WidgetGroup {
                 Math.max(86, page.getSize().height + border * 2));
         setSize(new Size(size.width,
                 size.height + (!showInventory || playerInventory == null ? 0 : playerInventory.getSize().height)));
-        if (GTCEu.isClientSide() && getGui() != null) {
+        if (Gregtech.isClientSide() && getGui() != null) {
             getGui().setSize(getSize().width, getSize().height);
         }
         this.sideTabsWidget.setSize(new Size(24, size.height));

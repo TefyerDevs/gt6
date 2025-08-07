@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.emi.multipage;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MultiblockMachineDefinition;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.common.data.machines.GTMultiMachines;
@@ -16,7 +16,7 @@ public class MultiblockInfoEmiCategory extends EmiRecipeCategory {
     public static final MultiblockInfoEmiCategory CATEGORY = new MultiblockInfoEmiCategory();
 
     private MultiblockInfoEmiCategory() {
-        super(GTCEu.id("multiblock_info"), EmiStack.of(GTMultiMachines.ELECTRIC_BLAST_FURNACE.getItem()));
+        super(Gregtech.id("multiblock_info"), EmiStack.of(GTMultiMachines.ELECTRIC_BLAST_FURNACE.getItem()));
     }
 
     public static void registerDisplays(EmiRegistry registry) {

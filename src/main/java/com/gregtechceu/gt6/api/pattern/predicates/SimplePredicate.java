@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.pattern.predicates;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
 import com.gregtechceu.gt6.api.pattern.MultiblockState;
 import com.gregtechceu.gt6.api.pattern.TraceabilityPredicate;
@@ -170,7 +170,7 @@ public class SimplePredicate {
     }
 
     public List<ItemStack> getCandidates() {
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             return candidates == null ? Collections.emptyList() :
                     Arrays.stream(this.candidates.get()).filter(info -> info.getBlockState().getBlock() != Blocks.AIR)
                             .map(blockInfo -> blockInfo.getItemStackForm(Minecraft.getInstance().level, BlockPos.ZERO))

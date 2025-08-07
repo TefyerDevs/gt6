@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.ores;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.common.data.GTOres;
@@ -122,7 +122,7 @@ public class OreVeinUtil {
         JsonElement codecInput = resolveBiomeCodecInput(biomes);
         return Suppliers.memoize(() -> RegistryCodecs.homogeneousList(Registries.BIOME)
                 .parse(registryOps, codecInput)
-                .getOrThrow(false, GTCEu.LOGGER::error));
+                .getOrThrow(false, Gregtech.LOGGER::error));
     }
 
     private static JsonElement resolveBiomeCodecInput(List<String> biomes) {

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map.journeymap;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialIconType;
@@ -60,7 +60,7 @@ public class JourneymapRenderer extends GenericMapRenderer {
     public boolean addMarker(String name, String id, ResourceKey<Level> dim, ChunkPos pos,
                              ProspectorMode.FluidInfo fluid) {
         IClientAPI api = JourneyMapPlugin.getJmApi();
-        if (!api.playerAccepts(GTCEu.MOD_ID, DisplayType.Image)) {
+        if (!api.playerAccepts(Gregtech.MOD_ID, DisplayType.Image)) {
             return false;
         }
         PolygonOverlay marker = createMarker(name, id, dim, pos, fluid);
@@ -70,7 +70,7 @@ public class JourneymapRenderer extends GenericMapRenderer {
                 api.show(marker);
             } catch (Exception e) {
                 // It never actually throws anything...
-                GTCEu.LOGGER.error("Failed to enable marker with name {}", name, e);
+                Gregtech.LOGGER.error("Failed to enable marker with name {}", name, e);
             }
         }
         return true;
@@ -79,7 +79,7 @@ public class JourneymapRenderer extends GenericMapRenderer {
     @Override
     public boolean addMarker(String name, ResourceKey<Level> dim, GeneratedVeinMetadata vein, String id) {
         IClientAPI api = JourneyMapPlugin.getJmApi();
-        if (!api.playerAccepts(GTCEu.MOD_ID, DisplayType.Image)) {
+        if (!api.playerAccepts(Gregtech.MOD_ID, DisplayType.Image)) {
             return false;
         }
         MarkerOverlay marker = createMarker(name, id, dim, vein);
@@ -89,7 +89,7 @@ public class JourneymapRenderer extends GenericMapRenderer {
                 api.show(marker);
             } catch (Exception e) {
                 // It never actually throws anything...
-                GTCEu.LOGGER.error("Failed to enable marker with name {}", name, e);
+                Gregtech.LOGGER.error("Failed to enable marker with name {}", name, e);
             }
         }
         return true;
@@ -132,7 +132,7 @@ public class JourneymapRenderer extends GenericMapRenderer {
                 .setDisplayWidth(ConfigHolder.INSTANCE.compat.minimap.oreIconSize)
                 .setDisplayHeight(ConfigHolder.INSTANCE.compat.minimap.oreIconSize);
 
-        MarkerOverlay overlay = new MarkerOverlay(GTCEu.MOD_ID, id, center, image);
+        MarkerOverlay overlay = new MarkerOverlay(Gregtech.MOD_ID, id, center, image);
 
         overlay.setDimension(dim);
         overlay.setLabel("")
@@ -230,7 +230,7 @@ public class JourneymapRenderer extends GenericMapRenderer {
                 .setImageLocation(texture);
 
         MapPolygon polygon = PolygonHelper.createChunkPolygon(pos.x, 0, pos.z);
-        var overlay = new PolygonOverlay(GTCEu.MOD_ID, id, dim, shapeProps, polygon);
+        var overlay = new PolygonOverlay(Gregtech.MOD_ID, id, dim, shapeProps, polygon);
 
         overlay.setDimension(dim);
         overlay.setLabel("")

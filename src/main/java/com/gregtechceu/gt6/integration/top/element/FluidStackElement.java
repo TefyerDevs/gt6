@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.element;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import com.lowdragmc.lowdraglib.gui.util.DrawerHelper;
 import com.lowdragmc.lowdraglib.gui.util.TextFormattingUtil;
@@ -84,6 +84,6 @@ public class FluidStackElement implements IElement {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("fluid_element");
+        return Gregtech.id("fluid_element");
     }
 }

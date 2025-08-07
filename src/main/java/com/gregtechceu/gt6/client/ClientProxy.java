@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockfluid.BedrockFluidDefinition;
@@ -64,7 +64,7 @@ public class ClientProxy extends CommonProxy {
     }
 
     public static void init() {
-        if (!GTCEu.isDataGen()) {
+        if (!Gregtech.isDataGen()) {
             ClientCacheManager.registerClientCache(GTClientCache.instance, "gt6");
             Layers.registerLayer(OreRenderLayer::new, "ore_veins");
             Layers.registerLayer(FluidRenderLayer::new, "bedrock_fluids");
@@ -127,21 +127,21 @@ public class ClientProxy extends CommonProxy {
     public void onClientSetup(FMLClientSetupEvent event) {
         MachineOwner.init();
         if (ConfigHolder.INSTANCE.compat.minimap.toggle.ftbChunksIntegration &&
-                GTCEu.isModLoaded(GTValues.MODID_FTB_CHUNKS)) {
+                Gregtech.isModLoaded(GTValues.MODID_FTB_CHUNKS)) {
             FTBChunksPlugin.addEventListeners();
         }
     }
 
     public static void initializeDynamicRenders() {
-        DynamicRenderManager.register(GTCEu.id("quantum_tank_fluid"), QuantumTankFluidRender.TYPE);
-        DynamicRenderManager.register(GTCEu.id("quantum_chest_item"), QuantumChestItemRender.TYPE);
+        DynamicRenderManager.register(Gregtech.id("quantum_tank_fluid"), QuantumTankFluidRender.TYPE);
+        DynamicRenderManager.register(Gregtech.id("quantum_chest_item"), QuantumChestItemRender.TYPE);
 
-        DynamicRenderManager.register(GTCEu.id("fusion_ring"), FusionRingRender.TYPE);
-        DynamicRenderManager.register(GTCEu.id("boiler_multi_parts"), BoilerMultiPartRender.TYPE);
+        DynamicRenderManager.register(Gregtech.id("fusion_ring"), FusionRingRender.TYPE);
+        DynamicRenderManager.register(Gregtech.id("boiler_multi_parts"), BoilerMultiPartRender.TYPE);
 
-        DynamicRenderManager.register(GTCEu.id("fluid_area"), FluidAreaRender.TYPE);
+        DynamicRenderManager.register(Gregtech.id("fluid_area"), FluidAreaRender.TYPE);
 
-        DynamicRenderManager.register(GTCEu.id("central_monitor"), CentralMonitorRender.TYPE);
+        DynamicRenderManager.register(Gregtech.id("central_monitor"), CentralMonitorRender.TYPE);
     }
 
     @SubscribeEvent

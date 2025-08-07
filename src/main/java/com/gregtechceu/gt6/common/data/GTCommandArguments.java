@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.GTRegistry;
 import com.gregtechceu.gt6.common.commands.arguments.GTRegistryArgument;
 import com.gregtechceu.gt6.common.commands.arguments.MaterialArgument;
@@ -20,7 +20,7 @@ import com.mojang.brigadier.arguments.ArgumentType;
 public class GTCommandArguments {
 
     private static final DeferredRegister<ArgumentTypeInfo<?, ?>> COMMAND_ARGUMENT_TYPES = DeferredRegister
-            .create(Registries.COMMAND_ARGUMENT_TYPE, GTCEu.MOD_ID);
+            .create(Registries.COMMAND_ARGUMENT_TYPE, Gregtech.MOD_ID);
 
     private static final RegistryObject<SingletonArgumentInfo<MaterialArgument>> MATERIAL_ARGUMENT_TYPE = COMMAND_ARGUMENT_TYPES
             .register(

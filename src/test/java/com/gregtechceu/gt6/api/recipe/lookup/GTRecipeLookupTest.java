@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.lookup;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
 import com.gregtechceu.gt6.api.capability.recipe.ItemRecipeCapability;
 import com.gregtechceu.gt6.api.recipe.GTRecipe;
@@ -27,7 +27,7 @@ import java.util.function.Predicate;
 import static com.gregtechceu.gt6.common.data.GTRecipeTypes.ELECTRIC;
 
 @PrefixGameTestTemplate(false)
-@GameTestHolder(GTCEu.MOD_ID)
+@GameTestHolder(Gregtech.MOD_ID)
 public class GTRecipeLookupTest {
 
     private static GTRecipeLookup lookup;
@@ -40,7 +40,7 @@ public class GTRecipeLookupTest {
         GTRegistries.RECIPE_TYPES.unfreeze();
         GTRegistries.RECIPE_CATEGORIES.unfreeze();
         RecipeType<?> proxyRecipes = RecipeType.SMELTING;
-        GTRecipeType type = new GTRecipeType(GTCEu.id("test_recipes"), ELECTRIC, proxyRecipes)
+        GTRecipeType type = new GTRecipeType(Gregtech.id("test_recipes"), ELECTRIC, proxyRecipes)
                 .setEUIO(IO.IN)
                 .setMaxIOSize(1, 1, 0, 0);
         lookup = new GTRecipeLookup(type);

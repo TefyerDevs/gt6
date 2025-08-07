@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.feature.IRecipeLogicMachine;
 import com.gregtechceu.gt6.api.recipe.GTRecipeType;
@@ -76,6 +76,6 @@ public class MachineModeProvider implements IBlockComponentProvider, IServerData
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("machine_mode");
+        return Gregtech.id("machine_mode");
     }
 }

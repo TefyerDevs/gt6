@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.electric;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.IMonitorComponent;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
@@ -38,7 +38,7 @@ public class HullMachine extends TieredPartMachine implements IMonitorComponent 
 
     public HullMachine(IMachineBlockEntity holder, int tier) {
         super(holder, tier);
-        if (GTCEu.Mods.isAE2Loaded()) {
+        if (Gregtech.Mods.isAE2Loaded()) {
             this.gridNodeHost = new GridNodeHostTrait(this);
         } else {
             this.gridNodeHost = null;
@@ -55,7 +55,7 @@ public class HullMachine extends TieredPartMachine implements IMonitorComponent 
     @Override
     public void onLoad() {
         super.onLoad();
-        if (GTCEu.Mods.isAE2Loaded() && gridNodeHost instanceof GridNodeHostTrait connectedBlockEntity &&
+        if (Gregtech.Mods.isAE2Loaded() && gridNodeHost instanceof GridNodeHostTrait connectedBlockEntity &&
                 getLevel() instanceof ServerLevel level) {
             level.getServer().tell(new TickTask(0, connectedBlockEntity::init));
         }
@@ -64,7 +64,7 @@ public class HullMachine extends TieredPartMachine implements IMonitorComponent 
     @Override
     public void onUnload() {
         super.onUnload();
-        if (GTCEu.Mods.isAE2Loaded() && gridNodeHost instanceof GridNodeHostTrait connectedBlockEntity) {
+        if (Gregtech.Mods.isAE2Loaded() && gridNodeHost instanceof GridNodeHostTrait connectedBlockEntity) {
             connectedBlockEntity.getMainNode().destroy();
         }
     }
@@ -73,7 +73,7 @@ public class HullMachine extends TieredPartMachine implements IMonitorComponent 
     public void setFrontFacing(Direction facing) {
         super.setFrontFacing(facing);
         if (isFacingValid(facing)) {
-            if (GTCEu.Mods.isAE2Loaded() && gridNodeHost instanceof GridNodeHostTrait connectedBlockEntity) {
+            if (Gregtech.Mods.isAE2Loaded() && gridNodeHost instanceof GridNodeHostTrait connectedBlockEntity) {
                 connectedBlockEntity.init();
             }
         }
@@ -87,7 +87,7 @@ public class HullMachine extends TieredPartMachine implements IMonitorComponent 
     @Override
     public void saveCustomPersistedData(@NotNull CompoundTag tag, boolean forDrop) {
         super.saveCustomPersistedData(tag, forDrop);
-        if (GTCEu.Mods.isAE2Loaded() && gridNodeHost instanceof IGridConnectedBlockEntity connectedBlockEntity) {
+        if (Gregtech.Mods.isAE2Loaded() && gridNodeHost instanceof IGridConnectedBlockEntity connectedBlockEntity) {
             CompoundTag nbt = new CompoundTag();
             connectedBlockEntity.getMainNode().saveToNBT(nbt);
             tag.put("grid_node", nbt);
@@ -97,7 +97,7 @@ public class HullMachine extends TieredPartMachine implements IMonitorComponent 
     @Override
     public void loadCustomPersistedData(@NotNull CompoundTag tag) {
         super.loadCustomPersistedData(tag);
-        if (GTCEu.Mods.isAE2Loaded() && gridNodeHost instanceof IGridConnectedBlockEntity connectedBlockEntity) {
+        if (Gregtech.Mods.isAE2Loaded() && gridNodeHost instanceof IGridConnectedBlockEntity connectedBlockEntity) {
             connectedBlockEntity.getMainNode().loadFromNBT(tag.getCompound("grid_node"));
         }
     }

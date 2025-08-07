@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.tag;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -50,7 +50,7 @@ public class TagUtil {
      * @return #gt6:path
      */
     public static <T> TagKey<T> createModTag(Registry<T> registry, String path) {
-        return optionalTag(registry, GTCEu.id(path));
+        return optionalTag(registry, Gregtech.id(path));
     }
 
     /**
@@ -59,7 +59,7 @@ public class TagUtil {
      * @return #gt6:path
      */
     public static <T> TagKey<T> createModTag(ResourceKey<? extends Registry<T>> registryKey, String path) {
-        return TagKey.create(registryKey, GTCEu.id(path));
+        return TagKey.create(registryKey, Gregtech.id(path));
     }
 
     /**

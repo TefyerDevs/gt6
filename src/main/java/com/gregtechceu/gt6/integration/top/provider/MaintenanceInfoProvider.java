@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.feature.multiblock.IMaintenanceMachine;
@@ -67,6 +67,6 @@ public class MaintenanceInfoProvider extends CapabilityInfoProvider<IMaintenance
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("maintenance_info");
+        return Gregtech.id("maintenance_info");
     }
 }

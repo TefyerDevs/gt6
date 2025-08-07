@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.modifier;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -24,7 +24,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 public class FrequencyModifier extends PlacementModifier {
 
     public static final PlacementModifierType<FrequencyModifier> FREQUENCY_MODIFIER = GTRegistries
-            .register(BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, GTCEu.id("frequency"), () -> FrequencyModifier.CODEC);
+            .register(BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, Gregtech.id("frequency"), () -> FrequencyModifier.CODEC);
 
     public static final Codec<FrequencyModifier> CODEC = ExtraCodecs.POSITIVE_FLOAT.fieldOf("chance")
             .xmap(FrequencyModifier::new, (modifier) -> modifier.frequency).codec();

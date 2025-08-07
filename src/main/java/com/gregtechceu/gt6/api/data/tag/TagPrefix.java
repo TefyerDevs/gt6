@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.tag;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
@@ -77,7 +77,7 @@ public class TagPrefix {
 
     public static void init() {
         AddonFinder.getAddons().forEach(IGTAddon::registerTagPrefixes);
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             GTRegistryInfo.registerFor(GTRegistryInfo.TAG_PREFIX.registryKey);
         }
     }
@@ -125,14 +125,14 @@ public class TagPrefix {
             .registerOre(() -> GTBlocks.RED_GRANITE.getDefaultState(), () -> GTMaterials.GraniteRed,
                     BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_RED).requiresCorrectToolForDrops()
                             .strength(3.0F, 3.0F),
-                    GTCEu.id("block/red_granite"));
+                    Gregtech.id("block/red_granite"));
 
     public static final TagPrefix oreMarble = oreTagPrefix("marble", BlockTags.MINEABLE_WITH_PICKAXE)
             .langValue("Marble %s Ore")
             .registerOre(
                     () -> GTBlocks.MARBLE.getDefaultState(), () -> GTMaterials.Marble, BlockBehaviour.Properties.of()
                             .mapColor(MapColor.QUARTZ).requiresCorrectToolForDrops().strength(3.0F, 3.0F),
-                    GTCEu.id("block/marble"));
+                    Gregtech.id("block/marble"));
 
     public static final TagPrefix oreDeepslate = oreTagPrefix("deepslate", BlockTags.MINEABLE_WITH_PICKAXE)
             .langValue("Deepslate %s Ore")
@@ -354,6 +354,18 @@ public class TagPrefix {
             .langValue("Small Pile of %s Dust")
             .materialAmount(GTValues.M / 4)
             .materialIconType(MaterialIconType.dustSmall)
+            .unificationEnabled(true)
+            .generateItem(true)
+            .generationCondition(hasDustProperty);
+
+    // 1/9th of a Dust.
+    public static final TagPrefix dustTwo = new TagPrefix("dustTwo")
+            .idPattern("%s_dust_two")
+            .defaultTagPath("dust_twos/%s")
+            .unformattedTagPath("dust_two")
+            .langValue("%s Dust 1/72")
+            .materialAmount(GTValues.M / 72)
+            .materialIconType(MaterialIconType.dustTwo)
             .unificationEnabled(true)
             .generateItem(true)
             .generationCondition(hasDustProperty);

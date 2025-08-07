@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.trait.miner;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.IMiner;
 import com.gregtechceu.gt6.api.capability.recipe.*;
 import com.gregtechceu.gt6.api.item.tool.GTToolType;
@@ -181,7 +181,7 @@ public class MinerLogic extends RecipeLogic implements IRecipeCapabilityHolder {
             return BlockStateParser.parseForBlock(level.holderLookup(Registries.BLOCK),
                     ConfigHolder.INSTANCE.machines.replaceMinedBlocksWith, false).blockState();
         } catch (CommandSyntaxException ignored) {
-            GTCEu.LOGGER.error("failed to parse replaceMinedBlocksWith, invalid BlockState: {}",
+            Gregtech.LOGGER.error("failed to parse replaceMinedBlocksWith, invalid BlockState: {}",
                     ConfigHolder.INSTANCE.machines.replaceMinedBlocksWith);
             return Blocks.COBBLESTONE.defaultBlockState();
         }

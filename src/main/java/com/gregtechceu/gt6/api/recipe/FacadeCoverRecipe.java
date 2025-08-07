@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -47,7 +47,7 @@ public class FacadeCoverRecipe implements CraftingRecipe {
         public void toNetwork(FriendlyByteBuf buffer, FacadeCoverRecipe recipe) {}
     };
 
-    public static ResourceLocation ID = GTCEu.id("crafting/facade_cover");
+    public static ResourceLocation ID = Gregtech.id("crafting/facade_cover");
 
     @Override
     public boolean matches(CraftingContainer container, Level level) {

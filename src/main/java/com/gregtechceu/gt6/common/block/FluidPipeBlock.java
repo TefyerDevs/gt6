@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.MaterialPipeBlock;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -118,7 +118,7 @@ public class FluidPipeBlock extends MaterialPipeBlock<FluidPipeType, FluidPipePr
         // dont apply damage if there is a frame box
         var pipeNode = getPipeTile(level, pos);
         if (pipeNode == null) {
-            GTCEu.LOGGER.error("Pipe was null");
+            Gregtech.LOGGER.error("Pipe was null");
             return;
         }
         if (!pipeNode.getFrameMaterial().isNull()) {

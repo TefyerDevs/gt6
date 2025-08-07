@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.pattern;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.ActiveBlock;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
@@ -112,7 +112,7 @@ public class MultiblockState {
             this.blockState = this.world.getBlockState(this.pos);
         }
         if (this.blockState == null) {
-            GTCEu.LOGGER.error("could not get BlockState at " + this.pos + " in MultiblockState");
+            Gregtech.LOGGER.error("could not get BlockState at " + this.pos + " in MultiblockState");
         }
         return this.blockState;
     }

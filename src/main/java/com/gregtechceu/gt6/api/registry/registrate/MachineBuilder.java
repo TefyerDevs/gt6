@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.registry.registrate;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.IMachineBlock;
 import com.gregtechceu.gt6.api.capability.recipe.RecipeCapability;
@@ -204,7 +204,7 @@ public class MachineBuilder<DEFINITION extends MachineDefinition> extends Builde
     public MachineBuilder<DEFINITION> recipeType(GTRecipeType type) {
         // noinspection ConstantValue
         if (type == null) {
-            GTCEu.LOGGER.error(
+            Gregtech.LOGGER.error(
                     "Tried to set null recipe type on machine {}. Did you create the recipe type before this machine?",
                     this.id);
             return this;
@@ -225,7 +225,7 @@ public class MachineBuilder<DEFINITION extends MachineDefinition> extends Builde
                 initRecipeMachineModelProperties(type);
                 typeList.add(type);
             } else {
-                GTCEu.LOGGER.error(
+                Gregtech.LOGGER.error(
                         "Tried to set null recipe type on machine {} (index {}). Did you create the recipe type before this machine?",
                         this.id, i);
             }
@@ -492,7 +492,7 @@ public class MachineBuilder<DEFINITION extends MachineDefinition> extends Builde
     public void generateLang(LangEventJS lang) {
         super.generateLang(lang);
         if (langValue() != null) {
-            lang.add(GTCEu.MOD_ID, value.getDescriptionId(), value.getLangValue());
+            lang.add(Gregtech.MOD_ID, value.getDescriptionId(), value.getLangValue());
         }
     }
 

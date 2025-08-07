@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.network.packets;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.client.ClientProxy;
@@ -37,7 +37,7 @@ public class SPacketSyncOreVeins implements GTNetwork.INetPacket {
         Stream.generate(() -> {
             ResourceLocation id = buf.readResourceLocation();
             CompoundTag tag = buf.readAnySizeNbt();
-            GTOreDefinition def = GTOreDefinition.FULL_CODEC.parse(ops, tag).getOrThrow(false, GTCEu.LOGGER::error);
+            GTOreDefinition def = GTOreDefinition.FULL_CODEC.parse(ops, tag).getOrThrow(false, Gregtech.LOGGER::error);
             return Map.entry(id, def);
         }).limit(buf.readVarInt()).forEach(entry -> veins.put(entry.getKey(), entry.getValue()));
     }
@@ -50,7 +50,7 @@ public class SPacketSyncOreVeins implements GTNetwork.INetPacket {
         for (var entry : veins.entrySet()) {
             buf.writeResourceLocation(entry.getKey());
             CompoundTag tag = (CompoundTag) GTOreDefinition.FULL_CODEC.encodeStart(ops, entry.getValue())
-                    .getOrThrow(false, GTCEu.LOGGER::error);
+                    .getOrThrow(false, Gregtech.LOGGER::error);
             buf.writeNbt(tag);
         }
     }

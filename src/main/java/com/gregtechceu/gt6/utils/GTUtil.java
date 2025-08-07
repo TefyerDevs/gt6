@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.utils;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.PropertyKey;
@@ -322,7 +322,7 @@ public class GTUtil {
     }
 
     public static boolean isShiftDown() {
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             var id = Minecraft.getInstance().getWindow().getWindow();
             return InputConstants.isKeyDown(id, GLFW.GLFW_KEY_LEFT_SHIFT) ||
                     InputConstants.isKeyDown(id, GLFW.GLFW_KEY_LEFT_SHIFT);
@@ -331,7 +331,7 @@ public class GTUtil {
     }
 
     public static boolean isCtrlDown() {
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             var id = Minecraft.getInstance().getWindow().getWindow();
             return InputConstants.isKeyDown(id, GLFW.GLFW_KEY_LEFT_CONTROL) ||
                     InputConstants.isKeyDown(id, GLFW.GLFW_KEY_RIGHT_CONTROL);
@@ -340,7 +340,7 @@ public class GTUtil {
     }
 
     public static boolean isAltDown() {
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             var id = Minecraft.getInstance().getWindow().getWindow();
             return InputConstants.isKeyDown(id, GLFW.GLFW_KEY_LEFT_ALT) ||
                     InputConstants.isKeyDown(id, GLFW.GLFW_KEY_RIGHT_ALT);
@@ -452,7 +452,7 @@ public class GTUtil {
         }
 
         ResourceLocation javdVoidBiome = new ResourceLocation("javd", "void");
-        if (GTCEu.Mods.isJAVDLoaded() &&
+        if (Gregtech.Mods.isJAVDLoaded() &&
                 world.registryAccess().registryOrThrow(Registries.BIOME).getKey(biome).equals(javdVoidBiome)) {
             return !world.isDay();
         } else return world.isDay();
@@ -540,7 +540,7 @@ public class GTUtil {
             }
             return stack;
         } catch (RuntimeException var2) {
-            GTCEu.LOGGER.debug("Tried to load invalid item: {}", compoundTag, var2);
+            Gregtech.LOGGER.debug("Tried to load invalid item: {}", compoundTag, var2);
             return ItemStack.EMPTY;
         }
     }

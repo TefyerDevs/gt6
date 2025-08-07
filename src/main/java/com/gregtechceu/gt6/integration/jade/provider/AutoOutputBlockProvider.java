@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.feature.IAutoOutputFluid;
 import com.gregtechceu.gt6.api.machine.feature.IAutoOutputItem;
@@ -63,7 +63,7 @@ public class AutoOutputBlockProvider implements IBlockComponentProvider, IServer
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("auto_output_info");
+        return Gregtech.id("auto_output_info");
     }
 
     private CompoundTag writeData(CompoundTag compoundTag, Direction direction, BlockAccessor blockAccessor,

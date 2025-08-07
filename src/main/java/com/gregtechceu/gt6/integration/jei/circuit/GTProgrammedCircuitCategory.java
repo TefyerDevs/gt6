@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jei.circuit;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.data.GTItems;
 import com.gregtechceu.gt6.integration.xei.widgets.GTProgrammedCircuitWidget;
 
@@ -18,7 +18,7 @@ public class GTProgrammedCircuitCategory extends
                                          ModularUIRecipeCategory<GTProgrammedCircuitCategory.GTProgrammedCircuitWrapper> {
 
     public final static RecipeType<GTProgrammedCircuitWrapper> RECIPE_TYPE = new RecipeType<>(
-            GTCEu.id("programmed_circuit"), GTProgrammedCircuitWrapper.class);
+            Gregtech.id("programmed_circuit"), GTProgrammedCircuitWrapper.class);
 
     private final IDrawable background;
     private final IDrawable icon;

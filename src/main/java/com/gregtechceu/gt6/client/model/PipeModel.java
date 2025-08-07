@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.model;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.client.util.ModelUtils;
 import com.gregtechceu.gt6.common.data.models.GTModels;
@@ -44,21 +44,21 @@ import java.util.function.Supplier;
 
 public class PipeModel {
 
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY = GTCEu.id("block/pipe/blocked/pipe_blocked");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UP = GTCEu.id("block/pipe/blocked/pipe_blocked_up");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_DOWN = GTCEu.id("block/pipe/blocked/pipe_blocked_down");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_LEFT = GTCEu.id("block/pipe/blocked/pipe_blocked_left");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_RIGHT = GTCEu.id("block/pipe/blocked/pipe_blocked_right");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_NU = GTCEu.id("block/pipe/blocked/pipe_blocked_nu");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_ND = GTCEu.id("block/pipe/blocked/pipe_blocked_nd");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_NL = GTCEu.id("block/pipe/blocked/pipe_blocked_nl");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_NR = GTCEu.id("block/pipe/blocked/pipe_blocked_nr");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UD = GTCEu.id("block/pipe/blocked/pipe_blocked_ud");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UL = GTCEu.id("block/pipe/blocked/pipe_blocked_ul");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UR = GTCEu.id("block/pipe/blocked/pipe_blocked_ur");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_DL = GTCEu.id("block/pipe/blocked/pipe_blocked_dl");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_DR = GTCEu.id("block/pipe/blocked/pipe_blocked_dr");
-    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_LR = GTCEu.id("block/pipe/blocked/pipe_blocked_lr");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY = Gregtech.id("block/pipe/blocked/pipe_blocked");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UP = Gregtech.id("block/pipe/blocked/pipe_blocked_up");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_DOWN = Gregtech.id("block/pipe/blocked/pipe_blocked_down");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_LEFT = Gregtech.id("block/pipe/blocked/pipe_blocked_left");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_RIGHT = Gregtech.id("block/pipe/blocked/pipe_blocked_right");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_NU = Gregtech.id("block/pipe/blocked/pipe_blocked_nu");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_ND = Gregtech.id("block/pipe/blocked/pipe_blocked_nd");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_NL = Gregtech.id("block/pipe/blocked/pipe_blocked_nl");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_NR = Gregtech.id("block/pipe/blocked/pipe_blocked_nr");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UD = Gregtech.id("block/pipe/blocked/pipe_blocked_ud");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UL = Gregtech.id("block/pipe/blocked/pipe_blocked_ul");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_UR = Gregtech.id("block/pipe/blocked/pipe_blocked_ur");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_DL = Gregtech.id("block/pipe/blocked/pipe_blocked_dl");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_DR = Gregtech.id("block/pipe/blocked/pipe_blocked_dr");
+    public static final ResourceLocation PIPE_BLOCKED_OVERLAY_LR = Gregtech.id("block/pipe/blocked/pipe_blocked_lr");
     private static final Int2ObjectMap<TextureAtlasSprite> RESTRICTOR_MAP = new Int2ObjectOpenHashMap<>();
     private static boolean isRestrictorInitialized;
 

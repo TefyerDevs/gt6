@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.api.data.worldgen.*;
@@ -701,7 +701,7 @@ public class GTOres {
                     .radius(3)));
 
     private static GTOreDefinition create(String name, Consumer<GTOreDefinition> config) {
-        return create(GTCEu.id(name), config);
+        return create(Gregtech.id(name), config);
     }
 
     public static GTOreDefinition create(ResourceLocation name, Consumer<GTOreDefinition> config) {

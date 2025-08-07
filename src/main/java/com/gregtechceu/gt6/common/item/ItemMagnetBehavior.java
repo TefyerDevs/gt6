@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
@@ -248,7 +248,7 @@ public class ItemMagnetBehavior implements IInteractionItem, IItemLifeCycle, IAd
             }
         }
 
-        if (!GTCEu.Mods.isCuriosLoaded()) {
+        if (!Gregtech.Mods.isCuriosLoaded()) {
             return false;
         }
         return CuriosUtils.hasMagnetCurios(player);

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.modifier;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 
 import net.minecraft.core.BlockPos;
@@ -20,7 +20,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 public class DimensionFilter extends PlacementFilter {
 
     public static final PlacementModifierType<DimensionFilter> DIMENSION_FILTER = GTRegistries
-            .register(BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, GTCEu.id("dimension"), () -> DimensionFilter.CODEC);
+            .register(BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, Gregtech.id("dimension"), () -> DimensionFilter.CODEC);
 
     public static final Codec<DimensionFilter> CODEC = RecordCodecBuilder.create(instance -> instance.group(
             RegistryCodecs.homogeneousList(Registries.DIMENSION_TYPE).fieldOf("dimension_id")

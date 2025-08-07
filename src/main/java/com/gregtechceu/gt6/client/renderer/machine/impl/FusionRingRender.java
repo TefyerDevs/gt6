@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.machine.impl;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.pattern.util.RelativeDirection;
 import com.gregtechceu.gt6.client.renderer.GTRenderTypes;
 import com.gregtechceu.gt6.client.renderer.machine.DynamicRender;
@@ -56,7 +56,7 @@ public class FusionRingRender extends DynamicRender<FusionReactorMachine, Fusion
         if (!machine.recipeLogic.isWorking() && delta <= 0) {
             return;
         }
-        if (GTCEu.Mods.isShimmerLoaded()) {
+        if (Gregtech.Mods.isShimmerLoaded()) {
             PoseStack finalStack = RenderUtils.copyPoseStack(poseStack);
             BloomUtils.entityBloom(source -> renderLightRing(machine, partialTick, finalStack,
                     source.getBuffer(GTRenderTypes.getLightRing())));

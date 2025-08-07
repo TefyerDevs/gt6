@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data.models;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.IMachineBlock;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -44,25 +44,25 @@ public class GTMachineModels {
     public static final String EMISSIVE_SUFFIX = "_emissive";
 
     // spotless:off
-    public static final ResourceLocation SIDED_SIDED_OVERLAY_MODEL = GTCEu.id("block/machine/template/sided/sided");
-    public static final ResourceLocation SIDED_SINGLE_OVERLAY_MODEL = GTCEu.id("block/machine/template/sided/single");
-    public static final ResourceLocation CUBE_ALL_SIDED_OVERLAY_MODEL = GTCEu.id("block/machine/template/cube_all/sided");
-    public static final ResourceLocation CUBE_ALL_SINGLE_OVERLAY_MODEL = GTCEu.id("block/machine/template/cube_all/single");
+    public static final ResourceLocation SIDED_SIDED_OVERLAY_MODEL = Gregtech.id("block/machine/template/sided/sided");
+    public static final ResourceLocation SIDED_SINGLE_OVERLAY_MODEL = Gregtech.id("block/machine/template/sided/single");
+    public static final ResourceLocation CUBE_ALL_SIDED_OVERLAY_MODEL = Gregtech.id("block/machine/template/cube_all/sided");
+    public static final ResourceLocation CUBE_ALL_SINGLE_OVERLAY_MODEL = Gregtech.id("block/machine/template/cube_all/single");
 
     public static final Int2ObjectMap<ResourceLocation> TIERED_HULL_MODELS = Util.make(new Int2ObjectOpenHashMap<>(), map -> {
         for (int tier : GTValues.ALL_TIERS) {
             String vn = GTValues.VN[tier].toLowerCase(Locale.ROOT);
-            map.put(tier, GTCEu.id("block/casings/voltage/" + vn));
+            map.put(tier, Gregtech.id("block/casings/voltage/" + vn));
         }
-        map.defaultReturnValue(GTCEu.id("block/casings/voltage/lv"));
+        map.defaultReturnValue(Gregtech.id("block/casings/voltage/lv"));
     });
-    public static final ResourceLocation LP_STEAM_HULL_MODEL = GTCEu.id("block/casings/steam/bricked_bronze");
-    public static final ResourceLocation HP_STEAM_HULL_MODEL = GTCEu.id("block/casings/steam/bricked_steel");
+    public static final ResourceLocation LP_STEAM_HULL_MODEL = Gregtech.id("block/casings/steam/bricked_bronze");
+    public static final ResourceLocation HP_STEAM_HULL_MODEL = Gregtech.id("block/casings/steam/bricked_steel");
 
-    public static final ResourceLocation HATCH_PART_MODEL = GTCEu.id("block/machine/template/part/hatch_machine");
-    public static final ResourceLocation HATCH_PART_COLOR_RING_MODEL = GTCEu.id("block/machine/template/part/hatch_machine_color_ring");
-    public static final ResourceLocation HATCH_PART_EMISSIVE_MODEL = GTCEu.id("block/machine/template/part/hatch_machine_emissive");
-    public static final ResourceLocation HATCH_PART_EMISSIVE_COLOR_RING_MODEL = GTCEu.id("block/machine/template/part/hatch_machine_emissive_color_ring");
+    public static final ResourceLocation HATCH_PART_MODEL = Gregtech.id("block/machine/template/part/hatch_machine");
+    public static final ResourceLocation HATCH_PART_COLOR_RING_MODEL = Gregtech.id("block/machine/template/part/hatch_machine_color_ring");
+    public static final ResourceLocation HATCH_PART_EMISSIVE_MODEL = Gregtech.id("block/machine/template/part/hatch_machine_emissive");
+    public static final ResourceLocation HATCH_PART_EMISSIVE_COLOR_RING_MODEL = Gregtech.id("block/machine/template/part/hatch_machine_emissive_color_ring");
     // spotless:on
 
     // region generic models
@@ -186,7 +186,7 @@ public class GTMachineModels {
         };
     }
 
-    public static final ResourceLocation VENT_OVERLAY = GTCEu.id("block/overlay/machine/overlay_steam_vent");
+    public static final ResourceLocation VENT_OVERLAY = Gregtech.id("block/overlay/machine/overlay_steam_vent");
 
     // spotless:off
     public static MachineBuilder.ModelInitializer createWorkableSteamHullMachineModel(boolean highPressure, ResourceLocation overlayDir) {
@@ -287,7 +287,7 @@ public class GTMachineModels {
     public static final String OVERLAY_ITEM_HATCH = "overlay_item_hatch";
     // spotless:on
 
-    public static final ResourceLocation GENERATOR_MODEL = GTCEu.id("block/machine/template/generator_machine");
+    public static final ResourceLocation GENERATOR_MODEL = Gregtech.id("block/machine/template/generator_machine");
 
     public static MachineBuilder.ModelInitializer createSimpleGeneratorModel(ResourceLocation overlayDir) {
         return (ctx, prov, builder) -> {
@@ -321,11 +321,11 @@ public class GTMachineModels {
     }
 
     // spotless:off
-    public static final ResourceLocation CHARGER_IDLE = GTCEu.id("block/machines/charger/overlay_charger_idle");
-    public static final ResourceLocation CHARGER_RUNNING = GTCEu.id("block/machines/charger/overlay_charger_running");
-    public static final ResourceLocation CHARGER_RUNNING_EMISSIVE = GTCEu.id("block/machines/charger/overlay_charger_running_emissive");
-    public static final ResourceLocation CHARGER_FINISHED = GTCEu.id("block/machines/charger/overlay_charger_finished");
-    public static final ResourceLocation CHARGER_FINISHED_EMISSIVE = GTCEu.id("block/machines/charger/overlay_charger_finished_emissive");
+    public static final ResourceLocation CHARGER_IDLE = Gregtech.id("block/machines/charger/overlay_charger_idle");
+    public static final ResourceLocation CHARGER_RUNNING = Gregtech.id("block/machines/charger/overlay_charger_running");
+    public static final ResourceLocation CHARGER_RUNNING_EMISSIVE = Gregtech.id("block/machines/charger/overlay_charger_running_emissive");
+    public static final ResourceLocation CHARGER_FINISHED = Gregtech.id("block/machines/charger/overlay_charger_finished");
+    public static final ResourceLocation CHARGER_FINISHED_EMISSIVE = Gregtech.id("block/machines/charger/overlay_charger_finished_emissive");
     
     public static MachineBuilder.ModelInitializer createChargerModel() {
         return (ctx, prov, builder) -> {
@@ -355,14 +355,14 @@ public class GTMachineModels {
     }
     // spotless:on
 
-    public static final ResourceLocation TRANSFORMER_LIKE = GTCEu.id("block/machine/template/transformer_like_machine");
+    public static final ResourceLocation TRANSFORMER_LIKE = Gregtech.id("block/machine/template/transformer_like_machine");
 
-    public static final ResourceLocation CONVERTER_FE_IN = GTCEu.id("block/overlay/converter/converter_native_in");
-    public static final ResourceLocation CONVERTER_FE_OUT = GTCEu.id("block/overlay/converter/converter_native_out");
+    public static final ResourceLocation CONVERTER_FE_IN = Gregtech.id("block/overlay/converter/converter_native_in");
+    public static final ResourceLocation CONVERTER_FE_OUT = Gregtech.id("block/overlay/converter/converter_native_out");
 
-    public static final ResourceLocation CONVERTER_FE_IN_EMISSIVE = GTCEu
+    public static final ResourceLocation CONVERTER_FE_IN_EMISSIVE = Gregtech
             .id("block/overlay/converter/converter_native_in_emissive");
-    public static final ResourceLocation CONVERTER_FE_OUT_EMISSIVE = GTCEu
+    public static final ResourceLocation CONVERTER_FE_OUT_EMISSIVE = Gregtech
             .id("block/overlay/converter/converter_native_out_emissive");
 
     public static MachineBuilder.ModelInitializer createConverterModel(int amperage) {
@@ -401,8 +401,8 @@ public class GTMachineModels {
     public static MachineBuilder.ModelInitializer createCrateModel(boolean wooden) {
         return (ctx, prov, builder) -> {
             String modelPath = "block/machine/template/crate/" + (wooden ? "wooden" : "metal") + "_crate";
-            ModelFile baseModel = prov.models().getExistingFile(GTCEu.id(modelPath));
-            ModelFile tapedModel = prov.models().getExistingFile(GTCEu.id(modelPath + "_taped"));
+            ModelFile baseModel = prov.models().getExistingFile(Gregtech.id(modelPath));
+            ModelFile tapedModel = prov.models().getExistingFile(Gregtech.id(modelPath + "_taped"));
 
             builder.forAllStatesModels(state -> {
                 if (state.getOptionalValue(IS_TAPED).orElse(false)) {
@@ -460,10 +460,10 @@ public class GTMachineModels {
     }
 
     // spotless:off
-    public static final ResourceLocation ROTOR_HOLDER_BLOCK = GTCEu.id("block/machine/template/rotor_holder/block");
-    public static final ResourceLocation ROTOR_HOLDER_OVERLAY = GTCEu.id("block/machine/template/rotor_holder/overlay");
-    public static final ResourceLocation ROTOR_HOLDER_ROTOR_IDLE = GTCEu.id("block/machine/template/rotor_holder/rotor_idle");
-    public static final ResourceLocation ROTOR_HOLDER_ROTOR_SPINNING = GTCEu.id("block/machine/template/rotor_holder/rotor_spinning");
+    public static final ResourceLocation ROTOR_HOLDER_BLOCK = Gregtech.id("block/machine/template/rotor_holder/block");
+    public static final ResourceLocation ROTOR_HOLDER_OVERLAY = Gregtech.id("block/machine/template/rotor_holder/overlay");
+    public static final ResourceLocation ROTOR_HOLDER_ROTOR_IDLE = Gregtech.id("block/machine/template/rotor_holder/rotor_idle");
+    public static final ResourceLocation ROTOR_HOLDER_ROTOR_SPINNING = Gregtech.id("block/machine/template/rotor_holder/rotor_spinning");
     // spotless:on
 
     public static MachineBuilder.ModelInitializer createRotorHolderModel() {
@@ -498,15 +498,15 @@ public class GTMachineModels {
 
     public static final ImmutableMap<Material, ResourceLocation> MATERIALS_TO_CASING_TEXTURES = Util.make(() -> {
         ImmutableMap.Builder<Material, ResourceLocation> builder = ImmutableMap.builder();
-        builder.put(GTMaterials.Bronze, GTCEu.id("block/casings/solid/machine_casing_bronze_plated_bricks"));
-        builder.put(GTMaterials.Invar, GTCEu.id("block/casings/solid/machine_casing_heatproof"));
-        builder.put(GTMaterials.Aluminium, GTCEu.id("block/casings/solid/machine_casing_frost_proof"));
-        builder.put(GTMaterials.Steel, GTCEu.id("block/casings/solid/machine_casing_solid_steel"));
-        builder.put(GTMaterials.StainlessSteel, GTCEu.id("block/casings/solid/machine_casing_clean_stainless_steel"));
-        builder.put(GTMaterials.Titanium, GTCEu.id("block/casings/solid/machine_casing_stable_titanium"));
-        builder.put(GTMaterials.TungstenSteel, GTCEu.id("block/casings/solid/machine_casing_robust_tungstensteel"));
-        builder.put(GTMaterials.Polytetrafluoroethylene, GTCEu.id("block/casings/solid/machine_casing_inert_ptfe"));
-        builder.put(GTMaterials.HSSE, GTCEu.id("block/casings/solid/machine_casing_sturdy_hsse"));
+        builder.put(GTMaterials.Bronze, Gregtech.id("block/casings/solid/machine_casing_bronze_plated_bricks"));
+        builder.put(GTMaterials.Invar, Gregtech.id("block/casings/solid/machine_casing_heatproof"));
+        builder.put(GTMaterials.Aluminium, Gregtech.id("block/casings/solid/machine_casing_frost_proof"));
+        builder.put(GTMaterials.Steel, Gregtech.id("block/casings/solid/machine_casing_solid_steel"));
+        builder.put(GTMaterials.StainlessSteel, Gregtech.id("block/casings/solid/machine_casing_clean_stainless_steel"));
+        builder.put(GTMaterials.Titanium, Gregtech.id("block/casings/solid/machine_casing_stable_titanium"));
+        builder.put(GTMaterials.TungstenSteel, Gregtech.id("block/casings/solid/machine_casing_robust_tungstensteel"));
+        builder.put(GTMaterials.Polytetrafluoroethylene, Gregtech.id("block/casings/solid/machine_casing_inert_ptfe"));
+        builder.put(GTMaterials.HSSE, Gregtech.id("block/casings/solid/machine_casing_sturdy_hsse"));
 
         return builder.build();
     });
@@ -538,7 +538,7 @@ public class GTMachineModels {
         };
     }
 
-    public static final ResourceLocation MAINTENANCE_TAPED_OVERLAY = GTCEu.id("block/overlay/machine/overlay_maintenance_taped");
+    public static final ResourceLocation MAINTENANCE_TAPED_OVERLAY = Gregtech.id("block/overlay/machine/overlay_maintenance_taped");
     // spotless:on
 
     public static MachineBuilder.ModelInitializer createMaintenanceModel(ResourceLocation overlayModel) {
@@ -559,9 +559,9 @@ public class GTMachineModels {
     }
 
     // spotless:off
-    public static final ResourceLocation HPCA_PART_MODEL = GTCEu.id("block/machine/template/part/hpca_part_machine");
-    public static final ResourceLocation COMPUTER_CASING_TEXTURE = GTCEu.id("block/casings/hpca/computer_casing/");
-    public static final ResourceLocation ADVANCED_COMPUTER_CASING_TEXTURE = GTCEu.id("block/casings/hpca/advanced_computer_casing/");
+    public static final ResourceLocation HPCA_PART_MODEL = Gregtech.id("block/machine/template/part/hpca_part_machine");
+    public static final ResourceLocation COMPUTER_CASING_TEXTURE = Gregtech.id("block/casings/hpca/computer_casing/");
+    public static final ResourceLocation ADVANCED_COMPUTER_CASING_TEXTURE = Gregtech.id("block/casings/hpca/advanced_computer_casing/");
 
     public static MachineBuilder.ModelInitializer createHPCAPartModel(boolean advanced,
                                                                       ResourceLocation normalTexture,
@@ -588,13 +588,13 @@ public class GTMachineModels {
         };
     }
 
-    public static final ResourceLocation OVERLAY_SCREEN_TEXTURE = GTCEu.id("block/overlay/machine/overlay_screen");
-    public static final ResourceLocation OVERLAY_QTANK_EMISSIVE_TEXTURE = GTCEu.id("block/overlay/machine/overlay_qtank_emissive");
+    public static final ResourceLocation OVERLAY_SCREEN_TEXTURE = Gregtech.id("block/overlay/machine/overlay_screen");
+    public static final ResourceLocation OVERLAY_QTANK_EMISSIVE_TEXTURE = Gregtech.id("block/overlay/machine/overlay_qtank_emissive");
 
     public static MachineBuilder.ModelInitializer createFisherModel() {
         return (ctx, prov, builder) -> {
             BlockModelBuilder model = prov.models().nested()
-                    .parent(prov.models().getExistingFile(GTCEu.id("block/overlay/2_layer/top_emissive")))
+                    .parent(prov.models().getExistingFile(Gregtech.id("block/overlay/2_layer/top_emissive")))
                     .texture("overlay", OVERLAY_SCREEN_TEXTURE)
                     .texture("overlay_emissive", OVERLAY_QTANK_EMISSIVE_TEXTURE);
             tieredHullTextures(model, builder.getOwner().getTier());
@@ -709,7 +709,7 @@ public class GTMachineModels {
     }
 
     public static ResourceLocation getTieredHullTexture(int tier) {
-        return GTCEu.id("block/casings/voltage/%s/".formatted(GTValues.VN[tier].toLowerCase(Locale.ROOT)));
+        return Gregtech.id("block/casings/voltage/%s/".formatted(GTValues.VN[tier].toLowerCase(Locale.ROOT)));
     }
 
     public static BlockModelBuilder tieredHullTextures(BlockModelBuilder model, int tier) {
@@ -717,7 +717,7 @@ public class GTMachineModels {
     }
 
     public static ResourceLocation getSteamCasingTexture(boolean steel) {
-        return GTCEu.id("block/casings/steam/%s/".formatted(steel ? "steel" : "bronze"));
+        return Gregtech.id("block/casings/steam/%s/".formatted(steel ? "steel" : "bronze"));
     }
 
     public static BlockModelBuilder steamCasingTextures(BlockModelBuilder model, boolean steel) {

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical.material.registry;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -24,7 +24,7 @@ public abstract class MaterialRegistry extends GTRegistry.String<Material> {
         super(new ResourceLocation(modId, "material"));
         IGTAddon addon = AddonFinder.getAddon(modId);
         this.registrate = addon != null ? addon.getRegistrate() :
-                GTCEu.MOD_ID.equals(modId) ? GTRegistration.REGISTRATE : GTRegistrate.create(modId);
+                Gregtech.MOD_ID.equals(modId) ? GTRegistration.REGISTRATE : GTRegistrate.create(modId);
     }
 
     public abstract void register(Material material);

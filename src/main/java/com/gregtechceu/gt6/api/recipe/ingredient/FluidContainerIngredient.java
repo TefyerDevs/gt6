@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.ingredient;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.tag.TagUtil;
 
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -32,7 +32,7 @@ import javax.annotation.Nonnull;
 
 public class FluidContainerIngredient extends Ingredient {
 
-    public static final ResourceLocation TYPE = GTCEu.id("fluid_container");
+    public static final ResourceLocation TYPE = Gregtech.id("fluid_container");
 
     public static final Codec<FluidContainerIngredient> CODEC = FluidIngredient.CODEC.xmap(
             FluidContainerIngredient::new, FluidContainerIngredient::getFluid);

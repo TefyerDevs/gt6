@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.core.mixins;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.core.MixinHelpers;
 
 import net.minecraft.resources.ResourceLocation;
@@ -21,7 +21,7 @@ public abstract class LootDataManagerMixin {
     @Inject(method = "apply",
             at = @At(value = "HEAD"))
     public void gt6$injectLootTables(Map<LootDataType<?>, Map<ResourceLocation, ?>> allElements, CallbackInfo ci) {
-        if (GTCEu.isDataGen()) return;
+        if (Gregtech.isDataGen()) return;
 
         Map<ResourceLocation, LootTable> lootTables = (Map<ResourceLocation, LootTable>) allElements
                 .get(LootDataType.TABLE);

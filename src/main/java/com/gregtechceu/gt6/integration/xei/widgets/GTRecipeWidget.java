@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.xei.widgets;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.recipe.CWURecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
@@ -235,7 +235,7 @@ public class GTRecipeWidget extends WidgetGroup {
             case IV -> 12;
             default -> 14;
         };
-        if (!GTCEu.Mods.isEMILoaded()) {
+        if (!Gregtech.Mods.isEMILoaded()) {
             x -= 3;
         }
         return x;

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
@@ -49,18 +49,18 @@ public class GTCovers {
 
     public final static CoverDefinition[] CONVEYORS = registerTiered("conveyor", ConveyorCover::new,
             () -> tier -> new IOCoverRenderer(
-                    GTCEu.id("block/cover/conveyor"),
+                    Gregtech.id("block/cover/conveyor"),
                     null,
-                    GTCEu.id("block/cover/conveyor_emissive"),
-                    GTCEu.id("block/cover/conveyor_inverted_emissive")),
+                    Gregtech.id("block/cover/conveyor_emissive"),
+                    Gregtech.id("block/cover/conveyor_inverted_emissive")),
             ALL_TIERS);
 
     public final static CoverDefinition[] ROBOT_ARMS = registerTiered("robot_arm", RobotArmCover::new,
             () -> tier -> new IOCoverRenderer(
-                    GTCEu.id("block/cover/arm"),
+                    Gregtech.id("block/cover/arm"),
                     null,
-                    GTCEu.id("block/cover/arm_emissive"),
-                    GTCEu.id("block/cover/arm_inverted_emissive")),
+                    Gregtech.id("block/cover/arm_emissive"),
+                    Gregtech.id("block/cover/arm_inverted_emissive")),
             ALL_TIERS);
 
     public final static CoverDefinition[] PUMPS = registerTiered("pump", PumpCover::new,
@@ -76,7 +76,7 @@ public class GTCovers {
     public final static CoverDefinition WIRELESS_TRANSMITTER = register(
             "wireless_transmitter",
             WirelessTransmitterCover::new,
-            () -> () -> new SimpleCoverRenderer(GTCEu.id("block/cover/wireless_transmitter")));
+            () -> () -> new SimpleCoverRenderer(Gregtech.id("block/cover/wireless_transmitter")));
 
     // Voiding
     public final static CoverDefinition ITEM_VOIDING = register("item_voiding", ItemVoidingCover::new);
@@ -105,19 +105,19 @@ public class GTCovers {
     // Solar Panels
     public final static CoverDefinition SOLAR_PANEL_BASIC = register("solar_panel", CoverSolarPanel::new);
     public final static CoverDefinition[] SOLAR_PANEL = registerTiered("solar_panel", CoverSolarPanel::new,
-            () -> tier -> new SimpleCoverRenderer(GTCEu.id("block/cover/solar_panel")), ALL_TIERS_WITH_ULV);
+            () -> tier -> new SimpleCoverRenderer(Gregtech.id("block/cover/solar_panel")), ALL_TIERS_WITH_ULV);
 
     ///////////////////////////////////////////////
     // *********** UTIL METHODS ***********//
     ///////////////////////////////////////////////
 
     private static CoverDefinition register(String id, CoverDefinition.CoverBehaviourProvider behaviorCreator) {
-        return register(id, behaviorCreator, () -> () -> new SimpleCoverRenderer(GTCEu.id("block/cover/" + id)));
+        return register(id, behaviorCreator, () -> () -> new SimpleCoverRenderer(Gregtech.id("block/cover/" + id)));
     }
 
     private static CoverDefinition register(String id, CoverDefinition.CoverBehaviourProvider behaviorCreator,
                                             Supplier<Supplier<ICoverRenderer>> coverRenderer) {
-        return register(GTCEu.id(id), behaviorCreator, coverRenderer);
+        return register(Gregtech.id(id), behaviorCreator, coverRenderer);
     }
 
     public static CoverDefinition register(ResourceLocation id, CoverDefinition.CoverBehaviourProvider behaviorCreator,

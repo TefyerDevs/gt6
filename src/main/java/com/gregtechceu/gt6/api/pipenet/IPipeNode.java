@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.pipenet;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.PipeBlock;
 import com.gregtechceu.gt6.api.blockentity.IPaintable;
 import com.gregtechceu.gt6.api.blockentity.ITickSubscription;
@@ -107,7 +107,7 @@ public interface IPipeNode<PipeType extends Enum<PipeType> & IPipeType<NodeDataT
     default boolean isRemote() {
         var level = getPipeLevel();
         if (level == null) {
-            return GTCEu.isClientThread();
+            return Gregtech.isClientThread();
         }
         return level.isClientSide;
     }

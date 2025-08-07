@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.emi.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.api.recipe.GTRecipeType;
 import com.gregtechceu.gt6.api.recipe.category.GTRecipeCategory;
@@ -46,7 +46,7 @@ public class GTRecipeEMICategory extends EmiRecipeCategory {
         for (MachineDefinition machine : GTRegistries.MACHINES) {
             for (GTRecipeType type : machine.getRecipeTypes()) {
                 for (GTRecipeCategory category : type.getCategories()) {
-                    if (!category.isXEIVisible() && !GTCEu.isDev()) continue;
+                    if (!category.isXEIVisible() && !Gregtech.isDev()) continue;
                     registry.addWorkstation(machineCategory(category), EmiStack.of(machine.asStack()));
                 }
             }

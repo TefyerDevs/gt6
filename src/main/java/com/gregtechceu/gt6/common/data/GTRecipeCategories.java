@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
 import com.gregtechceu.gt6.api.recipe.GTRecipeType;
@@ -39,7 +39,7 @@ public class GTRecipeCategories {
     }
 
     public static void init() {
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             GTRegistryInfo.registerFor(GTRegistries.RECIPE_CATEGORIES.getRegistryName());
         }
         ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.RECIPE_CATEGORIES, GTRecipeCategory.class));
@@ -47,6 +47,6 @@ public class GTRecipeCategories {
     }
 
     public static GTRecipeCategory get(String name) {
-        return GTRegistries.RECIPE_CATEGORIES.get(GTCEu.id(name));
+        return GTRegistries.RECIPE_CATEGORIES.get(Gregtech.id(name));
     }
 }

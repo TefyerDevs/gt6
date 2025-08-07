@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.common.machine.electric.ConverterMachine;
 
@@ -38,6 +38,6 @@ public class EnergyConverterModeProvider implements IBlockComponentProvider, ISe
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("energy_converter_provider");
+        return Gregtech.id("energy_converter_provider");
     }
 }

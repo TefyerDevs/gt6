@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.emi.oreprocessing;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialFlags;
@@ -26,7 +26,7 @@ public class GTOreProcessingEmiCategory extends EmiRecipeCategory {
     public static final GTOreProcessingEmiCategory CATEGORY = new GTOreProcessingEmiCategory();
 
     public GTOreProcessingEmiCategory() {
-        super(GTCEu.id("ore_processing_diagram"), EmiStack.of(Items.RAW_IRON));
+        super(Gregtech.id("ore_processing_diagram"), EmiStack.of(Items.RAW_IRON));
     }
 
     public static void registerDisplays(EmiRegistry registry) {

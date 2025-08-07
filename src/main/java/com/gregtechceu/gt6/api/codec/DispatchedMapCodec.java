@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.codec;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import com.mojang.datafixers.util.Pair;
 import com.mojang.datafixers.util.Unit;
@@ -59,7 +59,7 @@ public record DispatchedMapCodec<K, V>(
                 .flatMap(valueCodec -> valueCodec.parse(ops, input.getSecond()).map(Function.identity()));
         final DataResult<Pair<K, V>> entryResult = keyResult.apply2stable(Pair::of, valueResult);
 
-        final Optional<Pair<K, V>> entry = entryResult.resultOrPartial(GTCEu.LOGGER::error);
+        final Optional<Pair<K, V>> entry = entryResult.resultOrPartial(Gregtech.LOGGER::error);
         if (entry.isPresent()) {
             final K key = entry.get().getFirst();
             final V value = entry.get().getSecond();

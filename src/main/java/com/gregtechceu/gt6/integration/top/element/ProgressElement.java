@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.element;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
@@ -116,7 +116,7 @@ public class ProgressElement implements IElement {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("progress");
+        return Gregtech.id("progress");
     }
 
     public static class Factory implements IElementFactory {
@@ -128,7 +128,7 @@ public class ProgressElement implements IElement {
 
         @Override
         public ResourceLocation getId() {
-            return GTCEu.id("progress");
+            return Gregtech.id("progress");
         }
     }
 }

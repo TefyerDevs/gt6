@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.ingredient;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.data.GTItems;
 import com.gregtechceu.gt6.common.item.IntCircuitBehaviour;
 import com.gregtechceu.gt6.core.mixins.forge.StrictNBTIngredientAccessor;
@@ -19,7 +19,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class IntCircuitIngredient extends StrictNBTIngredient {
 
-    public static final ResourceLocation TYPE = GTCEu.id("circuit");
+    public static final ResourceLocation TYPE = Gregtech.id("circuit");
 
     public static final int CIRCUIT_MIN = 0;
     public static final int CIRCUIT_MAX = 32;

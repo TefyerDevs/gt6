@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.gui.factory;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.feature.IUIMachine;
@@ -20,7 +20,7 @@ public class MachineUIFactory extends UIFactory<MetaMachine> {
     public static final MachineUIFactory INSTANCE = new MachineUIFactory();
 
     public MachineUIFactory() {
-        super(GTCEu.id("machine"));
+        super(Gregtech.id("machine"));
     }
 
     @Override

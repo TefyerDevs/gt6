@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.misc;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.ItemMaterialData;
 import com.gregtechceu.gt6.api.data.chemical.material.stack.ItemMaterialInfo;
@@ -524,7 +524,7 @@ public class StoneMachineRecipes {
 
     public static void registerStoneTypeRecipes(Consumer<FinishedRecipe> provider, @NotNull StoneTypeEntry entry) {
         if (entry.stone == null) {
-            GTCEu.LOGGER.error("could not find stone form of StoneTypeEntry, id: {}", entry.stoneName);
+            Gregtech.LOGGER.error("could not find stone form of StoneTypeEntry, id: {}", entry.stoneName);
             return;
         }
 

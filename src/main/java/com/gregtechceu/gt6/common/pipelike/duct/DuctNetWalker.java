@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.duct;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.IHazardParticleContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.pipenet.PipeNetWalker;
@@ -30,7 +30,7 @@ public class DuctNetWalker extends PipeNetWalker<DuctPipeBlockEntity, DuctPipePr
             walker.traversePipeNet();
             return walker.inventories;
         } catch (Exception e) {
-            GTCEu.LOGGER.error("error while create net data for DuctPipeNet", e);
+            Gregtech.LOGGER.error("error while create net data for DuctPipeNet", e);
         }
         return null;
     }

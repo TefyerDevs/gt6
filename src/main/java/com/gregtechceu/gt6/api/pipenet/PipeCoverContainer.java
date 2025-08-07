@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.pipenet;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.ICoverable;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
 import com.gregtechceu.gt6.api.cover.CoverDefinition;
@@ -221,7 +221,7 @@ public class PipeCoverContainer implements ICoverable, IEnhancedManaged {
         if (definition != null) {
             return definition.createCoverBehavior(this, side);
         }
-        GTCEu.LOGGER.error("couldn't find cover definition {}", definitionId);
+        Gregtech.LOGGER.error("couldn't find cover definition {}", definitionId);
         throw new RuntimeException();
     }
 }

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.lookup;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.*;
 import com.gregtechceu.gt6.api.machine.trait.RecipeHandlerList;
 import com.gregtechceu.gt6.api.recipe.GTRecipe;
@@ -521,17 +521,17 @@ public class GTRecipeLookup {
                         // handle the existing branch
                         if (v.left().isEmpty() || v.left().get() != recipe) {
                             // the recipe already there was not the one being added, so there is a conflict
-                            if (ConfigHolder.INSTANCE.dev.debug || GTCEu.isDev()) {
-                                GTCEu.LOGGER.warn(
+                            if (ConfigHolder.INSTANCE.dev.debug || Gregtech.isDev()) {
+                                Gregtech.LOGGER.warn(
                                         "Recipe duplicate or conflict found in GTRecipeType {} and was not added. See next lines for details",
                                         BuiltInRegistries.RECIPE_TYPE.getKey(this.recipeType));
 
-                                GTCEu.LOGGER.warn("Attempted to add GTRecipe: {}", recipe.getId());
+                                Gregtech.LOGGER.warn("Attempted to add GTRecipe: {}", recipe.getId());
 
                                 if (v.left().isPresent()) {
-                                    GTCEu.LOGGER.warn("Which conflicts with: {}", v.left().get().getId());
+                                    Gregtech.LOGGER.warn("Which conflicts with: {}", v.left().get().getId());
                                 } else {
-                                    GTCEu.LOGGER.warn("Could not find exact duplicate/conflict.");
+                                    Gregtech.LOGGER.warn("Could not find exact duplicate/conflict.");
                                 }
                             }
                         }

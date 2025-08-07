@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.registry.registrate;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.IMachineBlock;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
@@ -158,7 +158,7 @@ public class GTRegistrate extends AbstractRegistrate<GTRegistrate> {
     }
 
     public SoundEntryBuilder sound(String name) {
-        return new SoundEntryBuilder(GTCEu.id(name));
+        return new SoundEntryBuilder(Gregtech.id(name));
     }
 
     public SoundEntryBuilder sound(ResourceLocation name) {

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.common.blockentity.FluidPipeBlockEntity;
 import com.gregtechceu.gt6.common.data.GTMaterialItems;
@@ -43,7 +43,7 @@ public class GTJadePlugin implements IWailaPlugin {
         registration.registerBlockDataProvider(new TransformerBlockProvider(), BlockEntity.class);
         registration.registerBlockDataProvider(new PrimitivePumpBlockProvider(), BlockEntity.class);
         registration.registerBlockDataProvider(new EnergyConverterModeProvider(), BlockEntity.class);
-        if (GTCEu.Mods.isAE2Loaded()) {
+        if (Gregtech.Mods.isAE2Loaded()) {
             registration.registerBlockDataProvider(new MEPatternBufferProvider(), BlockEntity.class);
             registration.registerBlockDataProvider(new MEPatternBufferProxyProvider(), BlockEntity.class);
         }
@@ -73,7 +73,7 @@ public class GTJadePlugin implements IWailaPlugin {
         registration.registerBlockComponent(new TransformerBlockProvider(), Block.class);
         registration.registerBlockComponent(new PrimitivePumpBlockProvider(), Block.class);
         registration.registerBlockComponent(new EnergyConverterModeProvider(), Block.class);
-        if (GTCEu.Mods.isAE2Loaded()) {
+        if (Gregtech.Mods.isAE2Loaded()) {
             registration.registerBlockComponent(new MEPatternBufferProvider(), Block.class);
             registration.registerBlockComponent(new MEPatternBufferProxyProvider(), Block.class);
         }

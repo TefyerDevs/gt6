@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.armor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
 import com.gregtechceu.gt6.api.item.armor.ArmorComponentItem;
@@ -228,7 +228,7 @@ public class AdvancedNanoMuscleSuite extends NanoMuscleSuite implements IJetpack
 
     @Override
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return GTCEu.id("textures/armor/advanced_nano_muscle_suite_1.png");
+        return Gregtech.id("textures/armor/advanced_nano_muscle_suite_1.png");
     }
 
     @Override

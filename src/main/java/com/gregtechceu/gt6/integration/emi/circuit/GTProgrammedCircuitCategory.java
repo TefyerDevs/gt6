@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.emi.circuit;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.data.GTItems;
 import com.gregtechceu.gt6.common.item.IntCircuitBehaviour;
 import com.gregtechceu.gt6.integration.xei.widgets.GTProgrammedCircuitWidget;
@@ -23,7 +23,7 @@ public class GTProgrammedCircuitCategory extends EmiRecipeCategory {
     public static final GTProgrammedCircuitCategory CATEGORY = new GTProgrammedCircuitCategory();
 
     public GTProgrammedCircuitCategory() {
-        super(GTCEu.id("programmed_circuit"), EmiStack.of(GTItems.PROGRAMMED_CIRCUIT.asItem()));
+        super(Gregtech.id("programmed_circuit"), EmiStack.of(GTItems.PROGRAMMED_CIRCUIT.asItem()));
     }
 
     public static void registerDisplays(EmiRegistry registry) {
@@ -53,7 +53,7 @@ public class GTProgrammedCircuitCategory extends EmiRecipeCategory {
 
         @Override
         public @Nullable ResourceLocation getId() {
-            return GTCEu.id("programmed_circuit");
+            return Gregtech.id("programmed_circuit");
         }
 
         @Override

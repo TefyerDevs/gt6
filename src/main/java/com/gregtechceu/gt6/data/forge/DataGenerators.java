@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.forge;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.registrate.SoundEntryBuilder;
 import com.gregtechceu.gt6.common.data.GTBiomeModifiers;
 import com.gregtechceu.gt6.common.data.GTConfiguredFeatures;
@@ -33,10 +33,10 @@ public class DataGenerators {
         ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
         var registries = event.getLookupProvider();
         if (event.includeClient()) {
-            generator.addProvider(true, new SoundEntryBuilder.SoundEntryProvider(packOutput, GTCEu.MOD_ID));
+            generator.addProvider(true, new SoundEntryBuilder.SoundEntryProvider(packOutput, Gregtech.MOD_ID));
         }
         if (event.includeServer()) {
-            var set = Set.of(GTCEu.MOD_ID);
+            var set = Set.of(Gregtech.MOD_ID);
             generator.addProvider(true, new BiomeTagsLoader(packOutput, registries, existingFileHelper));
             DatapackBuiltinEntriesProvider provider = generator.addProvider(true, new DatapackBuiltinEntriesProvider(
                     packOutput, registries, new RegistrySetBuilder()

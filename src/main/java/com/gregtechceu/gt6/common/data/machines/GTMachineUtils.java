@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data.machines;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
@@ -177,10 +177,10 @@ public class GTMachineUtils {
                     }
                     return builder
                             .langValue("%s %s %s".formatted(VLVH[tier], toEnglishName(name), VLVT[tier]))
-                            .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id(name), recipeType))
+                            .editableUI(SimpleTieredMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id(name), recipeType))
                             .rotationState(RotationState.NON_Y_AXIS)
                             .recipeType(recipeType)
-                            .workableTieredHullModel(GTCEu.id("block/machines/" + name))
+                            .workableTieredHullModel(Gregtech.id("block/machines/" + name))
                             .tooltips(workableTiered(tier, GTValues.V[tier], GTValues.V[tier] * 64, recipeType,
                                     tankScalingFunction.applyAsInt(tier), true))
                             .register();
@@ -331,13 +331,13 @@ public class GTMachineUtils {
                         tankScalingFunction),
                 (tier, builder) -> builder
                         .langValue("%s %s Generator %s".formatted(VLVH[tier], toEnglishName(name), VLVT[tier]))
-                        .editableUI(SimpleGeneratorMachine.EDITABLE_UI_CREATOR.apply(GTCEu.id(name), recipeType))
+                        .editableUI(SimpleGeneratorMachine.EDITABLE_UI_CREATOR.apply(Gregtech.id(name), recipeType))
                         .rotationState(RotationState.ALL)
                         .recipeType(recipeType)
                         .recipeModifier(SimpleGeneratorMachine::recipeModifier, true)
                         .addOutputLimit(ItemRecipeCapability.CAP, 0)
                         .addOutputLimit(FluidRecipeCapability.CAP, 0)
-                        .simpleGeneratorModel(GTCEu.id("block/generators/" + name))
+                        .simpleGeneratorModel(Gregtech.id("block/generators/" + name))
                         .tooltips(workableTiered(tier, GTValues.V[tier], GTValues.V[tier] * 64, recipeType,
                                 tankScalingFunction.applyAsInt(tier), false))
                         .register(),
@@ -358,7 +358,7 @@ public class GTMachineUtils {
                         .recipeType(recipeType)
                         .recipeModifier(SimpleSteamMachine::recipeModifier)
                         .modelProperty(GTMachineModelProperties.VENT_DIRECTION, RelativeDirection.BACK)
-                        .workableSteamHullModel(pressure, GTCEu.id("block/machines/" + name))
+                        .workableSteamHullModel(pressure, Gregtech.id("block/machines/" + name))
                         .register());
     }
 
@@ -511,7 +511,7 @@ public class GTMachineUtils {
                         MetaMachineBlockEntity::new)
                 .langValue(lang)
                 .rotationState(RotationState.NONE)
-                .simpleModel(GTCEu.id("block/machine/template/drum/" + (wooden ? "wooden" : "metal") + "_drum"))
+                .simpleModel(Gregtech.id("block/machine/template/drum/" + (wooden ? "wooden" : "metal") + "_drum"))
                 .tooltipBuilder((stack, list) -> {
                     TANK_TOOLTIPS.accept(stack, list);
                     if (material.hasProperty(PropertyKey.FLUID_PIPE)) {
@@ -546,7 +546,7 @@ public class GTMachineUtils {
                     .blockProp(BlockBehaviour.Properties::dynamicShape)
                     .rotationState(RotationState.ALL)
                     .allowExtendedFacing(true)
-                    .model(createTieredHullMachineModel(GTCEu.id("block/machine/template/quantum/quantum_tank"))
+                    .model(createTieredHullMachineModel(Gregtech.id("block/machine/template/quantum/quantum_tank"))
                             .andThen(b -> b.addDynamicRenderer(DynamicRenderHelper::createQuantumTankRender)))
                     .hasBER(true)
                     .tooltipBuilder(TANK_TOOLTIPS)
@@ -573,7 +573,7 @@ public class GTMachineUtils {
                         .blockProp(BlockBehaviour.Properties::dynamicShape)
                         .rotationState(RotationState.ALL)
                         .allowExtendedFacing(true)
-                        .model(createTieredHullMachineModel(GTCEu.id("block/machine/template/quantum/quantum_chest"))
+                        .model(createTieredHullMachineModel(Gregtech.id("block/machine/template/quantum/quantum_chest"))
                                 .andThen(
                                         b -> b.addDynamicRenderer(DynamicRenderHelper::createQuantumChestRender)))
                         .hasBER(true)
@@ -625,7 +625,7 @@ public class GTMachineUtils {
                         .where('#', air())
                         .build())
                 .appearanceBlock(casing);
-        rendererSetup.accept(builder, GTCEu.id("block/multiblock/multiblock_tank"));
+        rendererSetup.accept(builder, Gregtech.id("block/multiblock/multiblock_tank"));
         return builder.register();
     }
 
@@ -643,7 +643,7 @@ public class GTMachineUtils {
                 .tooltips(Component.translatable("gt6.machine.tank_valve.tooltip"),
                         Component.translatable("gt6.part_sharing.disabled"))
                 .rotationState(RotationState.ALL);
-        rendererSetup.accept(builder, GTCEu.id("block/multiblock/tank_valve"));
+        rendererSetup.accept(builder, Gregtech.id("block/multiblock/tank_valve"));
         return builder.register();
     }
 
@@ -726,7 +726,7 @@ public class GTMachineUtils {
                                 GTMaterialItems.MATERIAL_ITEMS.get(TagPrefix.dustTiny, GTMaterials.Ash).get() })
                 .modelProperty(GTMachineModelProperties.RECIPE_LOGIC_STATUS, RecipeLogic.Status.IDLE)
                 .model(createWorkableCasingMachineModel(texture,
-                        GTCEu.id("block/multiblock/generator/large_%s_boiler".formatted(name)))
+                        Gregtech.id("block/multiblock/generator/large_%s_boiler".formatted(name)))
                         .andThen(b -> b.addDynamicRenderer(() -> DynamicRenderHelper.makeBoilerPartRender(firebox, casing))))
                 .tooltips(
                         Component.translatable("gt6.multiblock.large_boiler.max_temperature", maxTemperature + 274,

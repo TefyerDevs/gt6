@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.ores;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gt6.api.data.worldgen.IWorldGenLayer;
 import com.gregtechceu.gt6.api.data.worldgen.WorldGeneratorUtils;
@@ -169,7 +169,7 @@ public class OreGenerator {
 
     private static VeinConfiguration logVeinGeneration(VeinConfiguration config) {
         if (ConfigHolder.INSTANCE.dev.debugWorldgen) {
-            GTCEu.LOGGER.debug("Generating vein {} at {}", config.data.id(), config.data.center());
+            Gregtech.LOGGER.debug("Generating vein {} at {}", config.data.id(), config.data.center());
         }
 
         return config;
@@ -177,7 +177,7 @@ public class OreGenerator {
 
     private static void logEmptyVein(VeinConfiguration config) {
         if (ConfigHolder.INSTANCE.dev.debugWorldgen) {
-            GTCEu.LOGGER.debug("No blocks generated for vein {} at {}", config.data.id(), config.data.center());
+            Gregtech.LOGGER.debug("No blocks generated for vein {} at {}", config.data.id(), config.data.center());
         }
     }
 }

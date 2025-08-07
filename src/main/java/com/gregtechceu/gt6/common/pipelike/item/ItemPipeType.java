@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.item;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.ItemPipeProperties;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.PropertyKey;
@@ -24,7 +24,7 @@ public enum ItemPipeType implements IMaterialPipeType<ItemPipeProperties> {
     RESTRICTIVE_LARGE("large_restrictive", 0.625f, TagPrefix.pipeLargeRestrictive, 2f, 75f),
     RESTRICTIVE_HUGE("huge_restrictive", 0.75f, TagPrefix.pipeHugeRestrictive, 4f, 50f);
 
-    public static final ResourceLocation TYPE_ID = GTCEu.id("item");
+    public static final ResourceLocation TYPE_ID = Gregtech.id("item");
     public static final ItemPipeType[] VALUES = values();
 
     @Getter
@@ -75,13 +75,13 @@ public enum ItemPipeType implements IMaterialPipeType<ItemPipeProperties> {
     public PipeModel createPipeModel(Material material) {
         PipeModel model;
         if (material.hasProperty(PropertyKey.WOOD)) {
-            model = new PipeModel(thickness, () -> GTCEu.id("block/pipe/pipe_side_wood"),
-                    () -> GTCEu.id("block/pipe/pipe_%s_in_wood"
+            model = new PipeModel(thickness, () -> Gregtech.id("block/pipe/pipe_side_wood"),
+                    () -> Gregtech.id("block/pipe/pipe_%s_in_wood"
                             .formatted(this.isRestrictive() ? values()[this.ordinal() - 4].name : name)),
                     null, null);
         } else {
-            model = new PipeModel(thickness, () -> GTCEu.id("block/pipe/pipe_side"),
-                    () -> GTCEu.id("block/pipe/pipe_%s_in"
+            model = new PipeModel(thickness, () -> Gregtech.id("block/pipe/pipe_side"),
+                    () -> Gregtech.id("block/pipe/pipe_%s_in"
                             .formatted(this.isRestrictive() ? values()[this.ordinal() - 4].name : name)),
                     null, null/*
                                * () -> GTCEu.id("block/pipe/pipe_side_secondary"), () ->
@@ -90,7 +90,7 @@ public enum ItemPipeType implements IMaterialPipeType<ItemPipeProperties> {
                                */);
         }
         if (isRestrictive()) {
-            model.setSideOverlayTexture(GTCEu.id("block/pipe/pipe_restrictive"));
+            model.setSideOverlayTexture(Gregtech.id("block/pipe/pipe_restrictive"));
         }
         return model;
     }

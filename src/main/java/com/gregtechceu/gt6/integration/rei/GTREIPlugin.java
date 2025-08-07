@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.rei;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.api.item.tool.GTToolType;
 import com.gregtechceu.gt6.api.recipe.category.GTRecipeCategory;
@@ -89,7 +89,7 @@ public class GTREIPlugin implements REIClientPlugin {
     @SuppressWarnings("UnstableApiUsage")
     public void registerCollapsibleEntries(CollapsibleEntryRegistry registry) {
         for (GTToolType toolType : GTToolType.getTypes().values()) {
-            registry.group(GTCEu.id("tool/" + toolType.name),
+            registry.group(Gregtech.id("tool/" + toolType.name),
                     Component.translatable("gt6.tool.class." + toolType.name),
                     EntryIngredients.ofItemTag(toolType.itemTags.get(0)));
             // EntryIngredients.ofItemStacks(GTItems.TOOL_ITEMS.column(toolType).values().stream().filter(Objects::nonNull).map(ItemProviderEntry::get).map(IGTTool::get).collect(Collectors.toSet()))
@@ -113,7 +113,7 @@ public class GTREIPlugin implements REIClientPlugin {
 
             var name = material.getName();
             var label = toUpperAllWords(name.replace("_", " "));
-            registry.group(GTCEu.id("ore/" + name), Component.translatable("tagprefix.stone", label),
+            registry.group(Gregtech.id("ore/" + name), Component.translatable("tagprefix.stone", label),
                     EntryIngredients.ofItems(items));
         }
 
@@ -123,7 +123,7 @@ public class GTREIPlugin implements REIClientPlugin {
             stacks.add(EntryStacks
                     .of(dev.architectury.fluid.FluidStack.create(stack.getFluid(), stack.getAmount(), stack.getTag())));
         }
-        registry.group(GTCEu.id("potion_fluids"), Component.translatable("gt6.rei.group.potion_fluids"), stacks);
+        registry.group(Gregtech.id("potion_fluids"), Component.translatable("gt6.rei.group.potion_fluids"), stacks);
     }
 
     @Override

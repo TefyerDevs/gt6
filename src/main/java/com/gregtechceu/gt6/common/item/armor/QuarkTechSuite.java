@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.armor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
 import com.gregtechceu.gt6.api.item.armor.ArmorLogicSuite;
@@ -62,7 +62,7 @@ public class QuarkTechSuite extends ArmorLogicSuite implements IStepAssist {
         // potionRemovalCost.put(MobEffects.BAD_OMEN, 30000);
         potionRemovalCost.put(MobEffects.MOVEMENT_SLOWDOWN, 9000);
         potionRemovalCost.put(MobEffects.UNLUCK, 5000);
-        if (GTCEu.isClientSide() && this.shouldDrawHUD()) {
+        if (Gregtech.isClientSide() && this.shouldDrawHUD()) {
             HUD = new ArmorUtils.ModularHUD();
         }
     }
@@ -314,8 +314,8 @@ public class QuarkTechSuite extends ArmorLogicSuite implements IStepAssist {
         String armorTexture = "quark_tech_suite";
         if (currentChest.is(GTItems.QUANTUM_CHESTPLATE_ADVANCED.get())) armorTexture = "advanced_quark_tech_suite";
         return slot != EquipmentSlot.LEGS ?
-                GTCEu.id(String.format("textures/armor/%s_1.png", armorTexture)) :
-                GTCEu.id(String.format("textures/armor/%s_2.png", armorTexture));
+                Gregtech.id(String.format("textures/armor/%s_1.png", armorTexture)) :
+                Gregtech.id(String.format("textures/armor/%s_2.png", armorTexture));
     }
 
     @Override

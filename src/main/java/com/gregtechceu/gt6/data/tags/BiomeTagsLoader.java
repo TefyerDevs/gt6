@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.tags;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.data.recipe.CustomTags;
 
 import net.minecraft.core.HolderLookup;
@@ -19,7 +19,7 @@ public class BiomeTagsLoader extends BiomeTagsProvider {
 
     public BiomeTagsLoader(PackOutput arg, CompletableFuture<HolderLookup.Provider> completableFuture,
                            @Nullable ExistingFileHelper existingFileHelper) {
-        super(arg, completableFuture, GTCEu.MOD_ID, existingFileHelper);
+        super(arg, completableFuture, Gregtech.MOD_ID, existingFileHelper);
     }
 
     @Override

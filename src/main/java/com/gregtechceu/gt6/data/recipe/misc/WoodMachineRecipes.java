@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.misc;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.ItemMaterialData;
@@ -266,7 +266,7 @@ public class WoodMachineRecipes {
                             .pressurePlate(Items.WARPED_PRESSURE_PLATE, "warped_pressure_plate")
                             .registerAllMaterialInfo()
                             .build(),
-                    new WoodTypeEntry.Builder(GTCEu.MOD_ID, "rubber")
+                    new WoodTypeEntry.Builder(Gregtech.MOD_ID, "rubber")
                             .planks(GTBlocks.RUBBER_PLANK.asItem(), null)
                             .log(GTBlocks.RUBBER_LOG.asItem()).addCharcoalRecipe()
                             .strippedLog(GTBlocks.STRIPPED_RUBBER_LOG.asItem())
@@ -287,7 +287,7 @@ public class WoodMachineRecipes {
                             .registerAllTags()
                             .registerAllMaterialInfo()
                             .build(),
-                    new WoodTypeEntry.Builder(GTCEu.MOD_ID, "treated")
+                    new WoodTypeEntry.Builder(Gregtech.MOD_ID, "treated")
                             .planks(GTBlocks.TREATED_WOOD_PLANK.asItem(), null)
                             .door(GTBlocks.TREATED_WOOD_DOOR.asItem(), null)
                             .trapdoor(GTBlocks.TREATED_WOOD_TRAPDOOR.asItem(), null)

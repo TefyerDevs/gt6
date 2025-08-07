@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.ICoverable;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
@@ -20,7 +20,7 @@ public class CoverProvider extends CapabilityInfoProvider<ICoverable> {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("coverable_provider");
+        return Gregtech.id("coverable_provider");
     }
 
     // /**

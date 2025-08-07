@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -37,8 +37,8 @@ import java.util.function.Consumer;
 @OnlyIn(Dist.CLIENT)
 public class TooltipsHandler {
 
-    private static final String ITEM_PREFIX = "item." + GTCEu.MOD_ID;
-    private static final String BLOCK_PREFIX = "block." + GTCEu.MOD_ID;
+    private static final String ITEM_PREFIX = "item." + Gregtech.MOD_ID;
+    private static final String BLOCK_PREFIX = "block." + Gregtech.MOD_ID;
 
     public static void appendTooltips(ItemStack stack, TooltipFlag flag, List<Component> tooltips) {
         // Formula

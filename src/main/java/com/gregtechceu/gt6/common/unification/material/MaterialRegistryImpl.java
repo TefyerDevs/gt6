@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.unification.material;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.registry.MaterialRegistry;
 import com.gregtechceu.gt6.common.data.GTMaterials;
@@ -34,7 +34,7 @@ public class MaterialRegistryImpl extends MaterialRegistry {
     @Override
     public <T extends Material> T register(@NotNull java.lang.String key, @NotNull T value) {
         if (isRegistryClosed) {
-            GTCEu.LOGGER.error(
+            Gregtech.LOGGER.error(
                     "Materials cannot be registered in the PostMaterialEvent (or after)! Must be added in the MaterialEvent. Skipping material {}...",
                     key);
             return null;

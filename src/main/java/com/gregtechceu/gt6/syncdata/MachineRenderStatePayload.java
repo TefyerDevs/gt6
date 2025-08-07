@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.syncdata;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.client.model.machine.MachineRenderState;
 
@@ -30,12 +30,12 @@ public class MachineRenderStatePayload extends ObjectTypedPayload<MachineRenderS
     @Override
     public Tag serializeNBT() {
         return MachineRenderState.CODEC.encodeStart(NbtOps.INSTANCE, payload)
-                .getOrThrow(false, GTCEu.LOGGER::error);
+                .getOrThrow(false, Gregtech.LOGGER::error);
     }
 
     @Override
     public void deserializeNBT(Tag tag) {
         payload = MachineRenderState.CODEC.parse(NbtOps.INSTANCE, tag)
-                .getOrThrow(false, GTCEu.LOGGER::error);
+                .getOrThrow(false, Gregtech.LOGGER::error);
     }
 }

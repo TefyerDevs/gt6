@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.fluidpipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.FluidPipeProperties;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.PropertyKey;
@@ -24,7 +24,7 @@ public enum FluidPipeType implements IMaterialPipeType<FluidPipeProperties> {
     QUADRUPLE("quadruple", 0.875f, 2, pipeQuadrupleFluid, 4),
     NONUPLE("nonuple", 0.875f, 2, pipeNonupleFluid, 9);
 
-    public static final ResourceLocation TYPE_ID = GTCEu.id("fluid");
+    public static final ResourceLocation TYPE_ID = Gregtech.id("fluid");
 
     public final String name;
     public final float thickness;
@@ -74,20 +74,20 @@ public enum FluidPipeType implements IMaterialPipeType<FluidPipeProperties> {
 
     public PipeModel createPipeModel(Material material) {
         if (material.hasProperty(PropertyKey.WOOD)) {
-            return new PipeModel(thickness, () -> GTCEu.id("block/pipe/pipe_side_wood"),
-                    () -> GTCEu.id("block/pipe/pipe_%s_in_wood".formatted(name)), null, null);
+            return new PipeModel(thickness, () -> Gregtech.id("block/pipe/pipe_side_wood"),
+                    () -> Gregtech.id("block/pipe/pipe_%s_in_wood".formatted(name)), null, null);
         }
         if (channels == 9) {
-            return new PipeModel(thickness, () -> GTCEu.id("block/pipe/pipe_non_side"),
-                    () -> GTCEu.id("block/pipe/pipe_%s_in".formatted(name)),
+            return new PipeModel(thickness, () -> Gregtech.id("block/pipe/pipe_non_side"),
+                    () -> Gregtech.id("block/pipe/pipe_%s_in".formatted(name)),
                     null, null);
         } else if (channels == 4) {
-            return new PipeModel(thickness, () -> GTCEu.id("block/pipe/pipe_quad_side"),
-                    () -> GTCEu.id("block/pipe/pipe_%s_in".formatted(name)),
+            return new PipeModel(thickness, () -> Gregtech.id("block/pipe/pipe_quad_side"),
+                    () -> Gregtech.id("block/pipe/pipe_%s_in".formatted(name)),
                     null, null);
         }
-        return new PipeModel(thickness, () -> GTCEu.id("block/pipe/pipe_side"),
-                () -> GTCEu.id("block/pipe/pipe_%s_in".formatted(name)),
+        return new PipeModel(thickness, () -> Gregtech.id("block/pipe/pipe_side"),
+                () -> Gregtech.id("block/pipe/pipe_%s_in".formatted(name)),
                 null, null/*
                            * () -> GTCEu.id("block/pipe/pipe_side_secondary"), () ->
                            * GTCEu.id("block/pipe/pipe_%s_in_secondary".formatted(name)) TODO enable once the textures

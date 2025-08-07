@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.util;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.misc.ImageCache;
 import com.gregtechceu.gt6.common.network.GTNetwork;
 import com.gregtechceu.gt6.common.network.packets.CPacketImageRequest;
@@ -37,21 +37,21 @@ public class ClientImageCache {
     private static boolean downloading = false;
     // TODO make some kind of loading icon for this
     private static final AbstractTexture LOADING_TEXTURE_MARKER = new SimpleTexture(
-            GTCEu.id("textures/block/void.png"));
+            Gregtech.id("textures/block/void.png"));
     private static final LoadingCache<String, AbstractTexture> CACHE = CacheBuilder.newBuilder()
             .refreshAfterWrite(ImageCache.REFRESH_SECS, TimeUnit.SECONDS)
             .expireAfterAccess(ImageCache.EXPIRE_SECS, TimeUnit.SECONDS)
             .build(CacheLoader.from(url -> {
                 if (!downloading) {
                     downloading = true;
-                    GTCEu.LOGGER.debug("Requesting image {}", url);
+                    Gregtech.LOGGER.debug("Requesting image {}", url);
                     GTNetwork.sendToServer(new CPacketImageRequest(url));
                 }
                 return LOADING_TEXTURE_MARKER;
             }));
 
     private static @NotNull ResourceLocation getUrlTextureId(String url) {
-        return GTCEu.id("textures/central_monitor/image_" + url.hashCode());
+        return Gregtech.id("textures/central_monitor/image_" + url.hashCode());
     }
 
     public static @Nullable ResourceLocation getOrLoadTexture(String url) {
@@ -64,7 +64,7 @@ public class ClientImageCache {
             if (t.getCause() != null) {
                 t = t.getCause();
             }
-            GTCEu.LOGGER.error("Could not load image {}", url, t);
+            Gregtech.LOGGER.error("Could not load image {}", url, t);
         }
         if (texture == null || texture == LOADING_TEXTURE_MARKER) {
             return null;

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.ingredient;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 
 import net.minecraft.nbt.CompoundTag;
@@ -98,7 +98,7 @@ public class IntProviderFluidIngredient extends FluidIngredient {
     public @NotNull JsonElement toJson() {
         JsonObject json = new JsonObject();
         json.add("count_provider", IntProvider.CODEC.encodeStart(JsonOps.INSTANCE, countProvider)
-                .getOrThrow(false, GTCEu.LOGGER::error));
+                .getOrThrow(false, Gregtech.LOGGER::error));
         json.add("inner", inner.toJson());
         return json;
     }
@@ -109,7 +109,7 @@ public class IntProviderFluidIngredient extends FluidIngredient {
         }
         JsonObject jsonObject = GsonHelper.convertToJsonObject(json, "ingredient");
         IntProvider amount = IntProvider.CODEC.parse(JsonOps.INSTANCE, jsonObject.get("count_provider"))
-                .getOrThrow(false, GTCEu.LOGGER::error);
+                .getOrThrow(false, Gregtech.LOGGER::error);
         FluidIngredient inner = FluidIngredient.fromJson(jsonObject.get("inner"));
         return new IntProviderFluidIngredient(inner, amount);
     }

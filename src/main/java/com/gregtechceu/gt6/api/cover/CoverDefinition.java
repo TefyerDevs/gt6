@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.cover;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.ICoverable;
 import com.gregtechceu.gt6.client.renderer.cover.ICoverRenderer;
 
@@ -34,7 +34,7 @@ public final class CoverDefinition {
                            Supplier<Supplier<ICoverRenderer>> coverRenderer) {
         this.behaviorCreator = behaviorCreator;
         this.id = id;
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             this.coverRenderer = ClientHelper.initRenderer(coverRenderer);
         } else {
             this.coverRenderer = null;

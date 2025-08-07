@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.valueprovider.AddedFloat;
 import com.gregtechceu.gt6.common.valueprovider.CastedFloat;
 import com.gregtechceu.gt6.common.valueprovider.FlooredInt;
@@ -17,10 +17,10 @@ public class GTValueProviderTypes {
 
     public static final DeferredRegister<IntProviderType<?>> INT_PROVIDER_TYPE_REGISTER = DeferredRegister.create(
             Registries.INT_PROVIDER_TYPE,
-            GTCEu.MOD_ID);
+            Gregtech.MOD_ID);
     public static final DeferredRegister<FloatProviderType<?>> FLOAT_PROVIDER_TYPE_REGISTER = DeferredRegister.create(
             Registries.FLOAT_PROVIDER_TYPE,
-            GTCEu.MOD_ID);
+            Gregtech.MOD_ID);
 
     public static final RegistryObject<IntProviderType<FlooredInt>> FLOORED = INT_PROVIDER_TYPE_REGISTER.register(
             "floored",

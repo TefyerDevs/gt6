@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.machine.trait;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.IOpticalComputationHatch;
 import com.gregtechceu.gt6.api.capability.IOpticalComputationProvider;
 import com.gregtechceu.gt6.api.capability.IOpticalComputationReceiver;
@@ -73,11 +73,11 @@ public class NotifiableComputationContainer extends NotifiableRecipeHandlerTrait
                             }
                         }
                     }
-                    GTCEu.LOGGER
+                    Gregtech.LOGGER
                             .error("NotifiableComputationContainer could request CWU/t from its machine's controller!");
                     return 0;
                 } else {
-                    GTCEu.LOGGER.error("NotifiableComputationContainer could request CWU/t from its machine!");
+                    Gregtech.LOGGER.error("NotifiableComputationContainer could request CWU/t from its machine!");
                     return 0;
                 }
             } else {
@@ -117,11 +117,11 @@ public class NotifiableComputationContainer extends NotifiableRecipeHandlerTrait
                             }
                         }
                     }
-                    GTCEu.LOGGER.error(
+                    Gregtech.LOGGER.error(
                             "NotifiableComputationContainer could not get maximum CWU/t from its machine's controller!");
                     return 0;
                 } else {
-                    GTCEu.LOGGER.error("NotifiableComputationContainer could not get maximum CWU/t from its machine!");
+                    Gregtech.LOGGER.error("NotifiableComputationContainer could not get maximum CWU/t from its machine!");
                     return 0;
                 }
             } else {
@@ -160,11 +160,11 @@ public class NotifiableComputationContainer extends NotifiableRecipeHandlerTrait
                             }
                         }
                     }
-                    GTCEu.LOGGER.error(
+                    Gregtech.LOGGER.error(
                             "NotifiableComputationContainer could not test bridge status of its machine's controller!");
                     return false;
                 } else {
-                    GTCEu.LOGGER.error("NotifiableComputationContainer could not test bridge status of its machine!");
+                    Gregtech.LOGGER.error("NotifiableComputationContainer could not test bridge status of its machine!");
                     return false;
                 }
             } else {

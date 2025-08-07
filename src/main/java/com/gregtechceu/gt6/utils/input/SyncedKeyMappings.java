@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.utils.input;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
@@ -22,7 +22,7 @@ public class SyncedKeyMappings {
             .createFromMC(() -> () -> Minecraft.getInstance().options.keyRight);
 
     public static void init() {
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             MinecraftForge.EVENT_BUS.register(SyncedKeyMapping.class);
         }
         ModLoader.get().postEvent(new SyncedKeyMappingEvent());

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.kjs;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.recipe.RecipeCapability;
@@ -253,8 +253,8 @@ public class GregTechKubeJSPlugin extends KubeJSPlugin {
         for (var entry : GTRegistries.RECIPE_TYPES.entries()) {
             event.register(entry.getKey(), GTRecipeSchema.SCHEMA);
         }
-        var ns = event.namespace(GTCEu.MOD_ID);
-        ns.put("shaped", new WrappingRecipeSchemaType(ns, GTCEu.id("shaped"),
+        var ns = event.namespace(Gregtech.MOD_ID);
+        ns.put("shaped", new WrappingRecipeSchemaType(ns, Gregtech.id("shaped"),
                 GTShapedRecipeSchema.SCHEMA, KubeJSRecipeEventHandler.SHAPED.get()));
     }
 
@@ -289,7 +289,7 @@ public class GregTechKubeJSPlugin extends KubeJSPlugin {
     public void registerBindings(BindingsEvent event) {
         super.registerBindings(event);
         // Mod related
-        event.add("GTCEu", GTCEu.class);
+        event.add("GTCEu", Gregtech.class);
         event.add("GTCEuAPI", GTCEuAPI.class);
         event.add("GTRegistries", GTRegistries.class);
         event.add("GTValues", GTValues.class);

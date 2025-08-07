@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.rei.circuit;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.data.GTItems;
 import com.gregtechceu.gt6.integration.xei.widgets.GTProgrammedCircuitWidget;
 
@@ -24,7 +24,7 @@ public class GTProgrammedCircuitCategory extends
                                          ModularUIDisplayCategory<GTProgrammedCircuitCategory.GTProgrammedCircuitDisplay> {
 
     public static CategoryIdentifier<GTProgrammedCircuitDisplay> CATEGORY = CategoryIdentifier
-            .of(GTCEu.id("programmed_circuit"));
+            .of(Gregtech.id("programmed_circuit"));
 
     @Getter
     private final Renderer icon;
@@ -64,7 +64,7 @@ public class GTProgrammedCircuitCategory extends
 
         @Override
         public Optional<ResourceLocation> getDisplayLocation() {
-            return Optional.of(GTCEu.id("programmed_circuit"));
+            return Optional.of(Gregtech.id("programmed_circuit"));
         }
     }
 }

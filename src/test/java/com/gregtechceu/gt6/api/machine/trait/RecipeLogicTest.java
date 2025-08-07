@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.machine.trait;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
@@ -22,7 +22,7 @@ import net.minecraftforge.gametest.GameTestHolder;
 import net.minecraftforge.gametest.PrefixGameTestTemplate;
 
 @PrefixGameTestTemplate(false)
-@GameTestHolder(GTCEu.MOD_ID)
+@GameTestHolder(Gregtech.MOD_ID)
 public class RecipeLogicTest {
 
     public static NotifiableItemStackHandler getInputSlot(IRecipeLogicMachine recipeLogicMachine) {
@@ -77,8 +77,8 @@ public class RecipeLogicTest {
         GTRecipeType type = recipeLogicMachine.getRecipeType();
         type.getLookup().removeAllRecipes();
         type.getLookup().addRecipe(type
-                .recipeBuilder(GTCEu.id("test-multiblock-recipelogic"))
-                .id(GTCEu.id("test-multiblock-recipelogic"))
+                .recipeBuilder(Gregtech.id("test-multiblock-recipelogic"))
+                .id(Gregtech.id("test-multiblock-recipelogic"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(GTValues.VA[GTValues.UV]).duration(1)
@@ -166,8 +166,8 @@ public class RecipeLogicTest {
         GTRecipeType type = recipeLogicMachine.getRecipeType();
         type.getLookup().removeAllRecipes();
         type.getLookup().addRecipe(type
-                .recipeBuilder(GTCEu.id("test-singleblock"))
-                .id(GTCEu.id("test-singleblock"))
+                .recipeBuilder(Gregtech.id("test-singleblock"))
+                .id(Gregtech.id("test-singleblock"))
                 .inputItems(new ItemStack(Blocks.COBBLESTONE))
                 .outputItems(new ItemStack(Blocks.STONE))
                 .EUt(512).duration(1)

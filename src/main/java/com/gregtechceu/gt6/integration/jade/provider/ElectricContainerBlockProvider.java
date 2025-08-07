@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
 import com.gregtechceu.gt6.utils.FormattingUtil;
@@ -27,7 +27,7 @@ import java.math.MathContext;
 public class ElectricContainerBlockProvider extends CapabilityBlockProvider<IEnergyInfoProvider> {
 
     public ElectricContainerBlockProvider() {
-        super(GTCEu.id("electric_container_provider"));
+        super(Gregtech.id("electric_container_provider"));
     }
 
     @Override

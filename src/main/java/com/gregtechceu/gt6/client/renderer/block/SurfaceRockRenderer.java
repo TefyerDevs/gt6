@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.data.pack.GTDynamicResourcePack;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -35,7 +35,7 @@ public class SurfaceRockRenderer {
             ResourceLocation blockId = BuiltInRegistries.BLOCK.getKey(model.block);
             ResourceLocation modelId = blockId.withPrefix("block/");
 
-            GTDynamicResourcePack.addBlockModel(blockId, new DelegatedModel(GTCEu.id("block/surface_rock")));
+            GTDynamicResourcePack.addBlockModel(blockId, new DelegatedModel(Gregtech.id("block/surface_rock")));
             GTDynamicResourcePack.addBlockState(blockId, MultiVariantGenerator
                     .multiVariant(model.block, Variant.variant().with(VariantProperties.MODEL, modelId))
                     .with(PropertyDispatch.property(BlockStateProperties.FACING)

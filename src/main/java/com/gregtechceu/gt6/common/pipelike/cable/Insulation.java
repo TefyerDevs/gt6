@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.cable;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialIconType;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.WireProperties;
@@ -31,7 +31,7 @@ public enum Insulation implements IMaterialPipeType<WireProperties> {
     CABLE_OCTAL("octal_cable", 0.625f, 8, 1, cableGtOctal, 3, true),
     CABLE_HEX("hex_cable", 0.875f, 16, 1, cableGtHex, 4, true);
 
-    public static final ResourceLocation TYPE_ID = GTCEu.id("insulation");
+    public static final ResourceLocation TYPE_ID = Gregtech.id("insulation");
 
     public final String name;
     public final float thickness;
@@ -93,10 +93,10 @@ public enum Insulation implements IMaterialPipeType<WireProperties> {
         Supplier<@Nullable ResourceLocation> wireEndOverlayTexturePath = () -> MaterialIconType.wire
                 .getBlockTexturePath(material.getMaterialIconSet(), "end_overlay", true);
         PipeModel model = new PipeModel(thickness,
-                isCable ? () -> GTCEu.id("block/cable/insulation_5") : wireSideTexturePath, wireEndTexturePath,
+                isCable ? () -> Gregtech.id("block/cable/insulation_5") : wireSideTexturePath, wireEndTexturePath,
                 wireSideOverlayTexturePath, wireEndOverlayTexturePath);
         if (isCable) {
-            model.setEndOverlayTexture(GTCEu.id("block/cable/insulation_%s".formatted(insulationLevel)));
+            model.setEndOverlayTexture(Gregtech.id("block/cable/insulation_%s".formatted(insulationLevel)));
         }
         return model;
     }

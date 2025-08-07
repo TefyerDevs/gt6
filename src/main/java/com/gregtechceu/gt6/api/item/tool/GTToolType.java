@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.item.tool;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.item.IGTTool;
@@ -551,7 +551,7 @@ public class GTToolType {
         public Builder(String name) {
             this.name = name;
             this.idFormat = "%s_" + name;
-            this.modelLocation = GTCEu.id("item/tools/" + name);
+            this.modelLocation = Gregtech.id("item/tools/" + name);
         }
 
         @SafeVarargs

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.model.machine.overlays;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.Util;
 import net.minecraft.resources.ResourceLocation;
@@ -79,8 +79,8 @@ public class EnergyIOOverlay {
     private final ResourceLocation ioPartEmissive;
 
     public EnergyIOOverlay(String tintedPart, String ioPart, String ioPartEmissive) {
-        this.tintedPart = GTCEu.id(tintedPart);
-        this.ioPart = GTCEu.id(ioPart);
-        this.ioPartEmissive = GTCEu.id(ioPartEmissive);
+        this.tintedPart = Gregtech.id(tintedPart);
+        this.ioPart = Gregtech.id(ioPart);
+        this.ioPartEmissive = Gregtech.id(ioPartEmissive);
     }
 }

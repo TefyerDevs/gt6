@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.MaterialPipeBlock;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
@@ -118,7 +118,7 @@ public class CableBlock extends MaterialPipeBlock<Insulation, WireProperties, Le
         // dont apply damage if there is a frame box
         var pipeNode = getPipeTile(level, pos);
         if (pipeNode == null) {
-            GTCEu.LOGGER.error("Pipe was null");
+            Gregtech.LOGGER.error("Pipe was null");
             return;
         }
         if (!pipeNode.getFrameMaterial().isNull()) {

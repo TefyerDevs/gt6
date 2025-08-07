@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.cover;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.ICoverable;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
@@ -36,7 +36,7 @@ public interface ICoverableRenderer {
 
     @OnlyIn(Dist.CLIENT)
     static void initSprites(TextureAtlas atlas) {
-        COVER_BACK_PLATE[0] = atlas.getSprite(GTCEu.id("block/material_sets/dull/wire_side"));
+        COVER_BACK_PLATE[0] = atlas.getSprite(Gregtech.id("block/material_sets/dull/wire_side"));
     }
 
     @OnlyIn(Dist.CLIENT)

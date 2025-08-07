@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.recipe.FluidRecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.ItemRecipeCapability;
@@ -47,7 +47,7 @@ import java.util.List;
 public class RecipeOutputProvider extends CapabilityBlockProvider<RecipeLogic> {
 
     public RecipeOutputProvider() {
-        super(GTCEu.id("recipe_output_info"));
+        super(Gregtech.id("recipe_output_info"));
     }
 
     @Override

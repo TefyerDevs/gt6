@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.registry;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.RecipeCapability;
 import com.gregtechceu.gt6.api.cover.CoverDefinition;
 import com.gregtechceu.gt6.api.data.DimensionMarker;
@@ -39,34 +39,34 @@ import org.jetbrains.annotations.ApiStatus;
 public final class GTRegistries {
 
     // GT Registry
-    public static final GTRegistry.String<Element> ELEMENTS = new GTRegistry.String<>(GTCEu.id("element"));
+    public static final GTRegistry.String<Element> ELEMENTS = new GTRegistry.String<>(Gregtech.id("element"));
 
-    public static final GTRegistry.RL<GTRecipeType> RECIPE_TYPES = new GTRegistry.RL<>(GTCEu.id("recipe_type"));
+    public static final GTRegistry.RL<GTRecipeType> RECIPE_TYPES = new GTRegistry.RL<>(Gregtech.id("recipe_type"));
     public static final GTRegistry.RL<GTRecipeCategory> RECIPE_CATEGORIES = new GTRegistry.RL<>(
-            GTCEu.id("recipe_category"));
-    public static final GTRegistry.RL<CoverDefinition> COVERS = new GTRegistry.RL<>(GTCEu.id("cover"));
+            Gregtech.id("recipe_category"));
+    public static final GTRegistry.RL<CoverDefinition> COVERS = new GTRegistry.RL<>(Gregtech.id("cover"));
 
-    public static final GTRegistry.RL<MachineDefinition> MACHINES = new GTRegistry.RL<>(GTCEu.id("machine"));
+    public static final GTRegistry.RL<MachineDefinition> MACHINES = new GTRegistry.RL<>(Gregtech.id("machine"));
     public static final GTRegistry.String<RecipeCapability<?>> RECIPE_CAPABILITIES = new GTRegistry.String<>(
-            GTCEu.id("recipe_capability"));
+            Gregtech.id("recipe_capability"));
     public static final GTRegistry.String<RecipeConditionType<?>> RECIPE_CONDITIONS = new GTRegistry.String<>(
-            GTCEu.id("recipe_condition"));
+            Gregtech.id("recipe_condition"));
     public static final GTRegistry.String<ChanceLogic> CHANCE_LOGICS = new GTRegistry.String<>(
-            GTCEu.id("chance_logic"));
-    public static final GTRegistry.RL<SoundEntry> SOUNDS = new GTRegistry.RL<>(GTCEu.id("sound"));
+            Gregtech.id("chance_logic"));
+    public static final GTRegistry.RL<SoundEntry> SOUNDS = new GTRegistry.RL<>(Gregtech.id("sound"));
     public static final GTRegistry.RL<BedrockFluidDefinition> BEDROCK_FLUID_DEFINITIONS = new GTRegistry.RL<>(
-            GTCEu.id("bedrock_fluid"));
+            Gregtech.id("bedrock_fluid"));
     public static final GTRegistry.RL<BedrockOreDefinition> BEDROCK_ORE_DEFINITIONS = new GTRegistry.RL<>(
-            GTCEu.id("bedrock_ore"));
-    public static final GTRegistry.RL<GTOreDefinition> ORE_VEINS = new GTRegistry.RL<>(GTCEu.id("ore_vein"));
+            Gregtech.id("bedrock_ore"));
+    public static final GTRegistry.RL<GTOreDefinition> ORE_VEINS = new GTRegistry.RL<>(Gregtech.id("ore_vein"));
     public static final GTRegistry.RL<DimensionMarker> DIMENSION_MARKERS = new GTRegistry.RL<>(
-            GTCEu.id("dimension_marker"));
+            Gregtech.id("dimension_marker"));
     public static final DeferredRegister<TrunkPlacerType<?>> TRUNK_PLACER_TYPE = DeferredRegister
-            .create(Registries.TRUNK_PLACER_TYPE, GTCEu.MOD_ID);
+            .create(Registries.TRUNK_PLACER_TYPE, Gregtech.MOD_ID);
     public static final DeferredRegister<PlacementModifierType<?>> PLACEMENT_MODIFIER = DeferredRegister
-            .create(Registries.PLACEMENT_MODIFIER_TYPE, GTCEu.MOD_ID);
+            .create(Registries.PLACEMENT_MODIFIER_TYPE, Gregtech.MOD_ID);
     public static final DeferredRegister<Codec<? extends IGlobalLootModifier>> GLOBAL_LOOT_MODIFIES = DeferredRegister
-            .create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, GTCEu.MOD_ID);
+            .create(ForgeRegistries.Keys.GLOBAL_LOOT_MODIFIER_SERIALIZERS, Gregtech.MOD_ID);
 
     public static <V, T extends V> T register(Registry<V> registry, ResourceLocation name, T value) {
         ResourceKey<?> registryKey = registry.key();
@@ -110,7 +110,7 @@ public final class GTRegistries {
     }
 
     public static RegistryAccess builtinRegistry() {
-        if (GTCEu.isClientThread()) {
+        if (Gregtech.isClientThread()) {
             return ClientHelpers.getClientRegistries();
         }
         return FROZEN;

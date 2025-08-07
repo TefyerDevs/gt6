@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.ItemMaterialData;
 import com.gregtechceu.gt6.api.data.chemical.material.MarkerMaterial;
@@ -32,7 +32,7 @@ public class VanillaRecipeHelper {
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, TagKey<Item> input,
                                          ItemStack output) {
-        addSmeltingRecipe(provider, GTCEu.id(regName), input, output);
+        addSmeltingRecipe(provider, Gregtech.id(regName), input, output);
     }
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull ResourceLocation regName,
@@ -42,12 +42,12 @@ public class VanillaRecipeHelper {
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, TagKey<Item> input,
                                          ItemStack output, float experience) {
-        addSmeltingRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addSmeltingRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, Ingredient input,
                                          ItemStack output, float experience) {
-        addSmeltingRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addSmeltingRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull ResourceLocation regName,
@@ -64,12 +64,12 @@ public class VanillaRecipeHelper {
 
     public static void addBlastingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, TagKey<Item> input,
                                          ItemStack output, float experience) {
-        addBlastingRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addBlastingRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addBlastingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, Ingredient input,
                                          ItemStack output, float experience) {
-        addBlastingRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addBlastingRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addBlastingRecipe(Consumer<FinishedRecipe> provider, @NotNull ResourceLocation regName,
@@ -86,22 +86,22 @@ public class VanillaRecipeHelper {
 
     public static void addSmokingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, TagKey<Item> input,
                                         ItemStack output, float experience) {
-        addSmokingRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addSmokingRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addSmokingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, ItemStack input,
                                         ItemStack output, float experience) {
-        addSmokingRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addSmokingRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addSmokingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, TagKey<Item> input,
                                         ItemStack output) {
-        addSmokingRecipe(provider, GTCEu.id(regName), input, output, 0);
+        addSmokingRecipe(provider, Gregtech.id(regName), input, output, 0);
     }
 
     public static void addSmokingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, ItemStack input,
                                         ItemStack output) {
-        addSmokingRecipe(provider, GTCEu.id(regName), input, output, 0);
+        addSmokingRecipe(provider, Gregtech.id(regName), input, output, 0);
     }
 
     public static void addSmokingRecipe(Consumer<FinishedRecipe> provider, @NotNull ResourceLocation regName,
@@ -118,12 +118,12 @@ public class VanillaRecipeHelper {
 
     public static void addCampfireRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, ItemStack input,
                                          ItemStack output, float experience) {
-        addCampfireRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addCampfireRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addCampfireRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, ItemStack input,
                                          ItemStack output) {
-        addCampfireRecipe(provider, GTCEu.id(regName), input, output, 0);
+        addCampfireRecipe(provider, Gregtech.id(regName), input, output, 0);
     }
 
     public static void addCampfireRecipe(Consumer<FinishedRecipe> provider, @NotNull ResourceLocation regName,
@@ -134,12 +134,12 @@ public class VanillaRecipeHelper {
 
     public static void addCampfireRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, TagKey<Item> input,
                                          ItemStack output, float experience) {
-        addCampfireRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addCampfireRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addCampfireRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, TagKey<Item> input,
                                          ItemStack output) {
-        addCampfireRecipe(provider, GTCEu.id(regName), input, output, 0);
+        addCampfireRecipe(provider, Gregtech.id(regName), input, output, 0);
     }
 
     public static void addCampfireRecipe(Consumer<FinishedRecipe> provider, @NotNull ResourceLocation regName,
@@ -150,23 +150,23 @@ public class VanillaRecipeHelper {
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, ItemStack input,
                                          ItemStack output) {
-        addSmeltingRecipe(provider, GTCEu.id(regName), input, output, 0.0f);
+        addSmeltingRecipe(provider, Gregtech.id(regName), input, output, 0.0f);
     }
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, Item input,
                                          Item output) {
-        addSmeltingRecipe(provider, GTCEu.id(regName), input.getDefaultInstance(), output.getDefaultInstance(), 0.0f);
+        addSmeltingRecipe(provider, Gregtech.id(regName), input.getDefaultInstance(), output.getDefaultInstance(), 0.0f);
     }
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, Item input,
                                          Item output, float experience) {
-        addSmeltingRecipe(provider, GTCEu.id(regName), input.getDefaultInstance(), output.getDefaultInstance(),
+        addSmeltingRecipe(provider, Gregtech.id(regName), input.getDefaultInstance(), output.getDefaultInstance(),
                 experience);
     }
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName, ItemStack input,
                                          ItemStack output, float experience) {
-        addSmeltingRecipe(provider, GTCEu.id(regName), input, output, experience);
+        addSmeltingRecipe(provider, Gregtech.id(regName), input, output, experience);
     }
 
     public static void addSmeltingRecipe(Consumer<FinishedRecipe> provider, @NotNull ResourceLocation regName,
@@ -190,7 +190,7 @@ public class VanillaRecipeHelper {
      */
     public static void addShapedRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName,
                                        @NotNull ItemStack result, @NotNull Object... recipe) {
-        addShapedRecipe(provider, GTCEu.id(regName), result, recipe);
+        addShapedRecipe(provider, Gregtech.id(regName), result, recipe);
     }
 
     /**
@@ -206,7 +206,7 @@ public class VanillaRecipeHelper {
      */
     public static void addStrictShapedRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName,
                                              @NotNull ItemStack result, @NotNull Object... recipe) {
-        addStrictShapedRecipe(provider, GTCEu.id(regName), result, recipe);
+        addStrictShapedRecipe(provider, Gregtech.id(regName), result, recipe);
     }
 
     /**
@@ -311,7 +311,7 @@ public class VanillaRecipeHelper {
      */
     public static void addShapedRecipe(Consumer<FinishedRecipe> provider, boolean setMaterialInfoData,
                                        @NotNull String regName, @NotNull ItemStack result, @NotNull Object... recipe) {
-        addShapedRecipe(provider, setMaterialInfoData, GTCEu.id(regName), result, recipe);
+        addShapedRecipe(provider, setMaterialInfoData, Gregtech.id(regName), result, recipe);
     }
 
     /**
@@ -334,7 +334,7 @@ public class VanillaRecipeHelper {
 
     public static void addShapelessRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName,
                                           @NotNull ItemStack result, @NotNull Object... recipe) {
-        addShapelessRecipe(provider, GTCEu.id(regName), result, recipe);
+        addShapelessRecipe(provider, Gregtech.id(regName), result, recipe);
     }
 
     public static void addShapedEnergyTransferRecipe(Consumer<FinishedRecipe> provider, boolean setMaterialInfoData,
@@ -403,7 +403,7 @@ public class VanillaRecipeHelper {
                                                      @NotNull String regName, @NotNull Ingredient chargeIngredient,
                                                      @NotNull ItemStack result, @NotNull Object... recipe) {
         addShapedEnergyTransferRecipe(provider, setMaterialInfoData, overrideCharge, transferMaxCharge,
-                GTCEu.id(regName), chargeIngredient, result, recipe);
+                Gregtech.id(regName), chargeIngredient, result, recipe);
     }
 
     public static void addShapedFluidContainerRecipe(Consumer<FinishedRecipe> provider, boolean setMaterialInfoData,
@@ -474,7 +474,7 @@ public class VanillaRecipeHelper {
     public static void addShapedFluidContainerRecipe(Consumer<FinishedRecipe> provider, boolean setMaterialInfoData,
                                                      @NotNull String regName, @NotNull ItemStack result,
                                                      @NotNull Object... recipe) {
-        addShapedFluidContainerRecipe(provider, setMaterialInfoData, GTCEu.id(regName), result, recipe);
+        addShapedFluidContainerRecipe(provider, setMaterialInfoData, Gregtech.id(regName), result, recipe);
     }
 
     public static void addShapedFluidContainerRecipe(Consumer<FinishedRecipe> provider, boolean setMaterialInfoData,
@@ -487,7 +487,7 @@ public class VanillaRecipeHelper {
     public static void addShapedFluidContainerRecipe(Consumer<FinishedRecipe> provider, @NotNull String regName,
                                                      @NotNull ItemStack result,
                                                      @NotNull Object... recipe) {
-        addShapedFluidContainerRecipe(provider, GTCEu.id(regName), result, recipe);
+        addShapedFluidContainerRecipe(provider, Gregtech.id(regName), result, recipe);
     }
 
     public static void addShapedFluidContainerRecipe(Consumer<FinishedRecipe> provider,

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.misc.virtualregistry;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.level.saveddata.SavedData;
@@ -17,7 +17,7 @@ import java.util.function.Predicate;
 
 public class VirtualEnderRegistry extends SavedData {
 
-    private static final String DATA_ID = GTCEu.MOD_ID + ".virtual_entry_data";
+    private static final String DATA_ID = Gregtech.MOD_ID + ".virtual_entry_data";
     private static final String PUBLIC_KEY = "Public";
     private static final String PRIVATE_KEY = "Private";
     private static volatile VirtualEnderRegistry data;
@@ -47,7 +47,7 @@ public class VirtualEnderRegistry extends SavedData {
     public static void release() {
         if (data != null) {
             data = null;
-            GTCEu.LOGGER.debug("VirtualEnderRegistry has been unloaded");
+            Gregtech.LOGGER.debug("VirtualEnderRegistry has been unloaded");
         }
     }
 
@@ -81,7 +81,7 @@ public class VirtualEnderRegistry extends SavedData {
             registry.deleteEntry(type, name);
             return;
         }
-        GTCEu.LOGGER.warn("Attempted to delete {} entry {} of type {}, which does not exist",
+        Gregtech.LOGGER.warn("Attempted to delete {} entry {} of type {}, which does not exist",
                 owner == null ? "public" : String.format("private [%s]", owner), name, type);
     }
 

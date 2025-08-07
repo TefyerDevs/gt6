@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.electric;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
@@ -264,7 +264,7 @@ public class WorldAcceleratorMachine extends TieredEnergyMachine implements ICon
                     try {
                         blacklistedClasses.put(name, Class.forName(name));
                     } catch (ClassNotFoundException ignored) {
-                        GTCEu.LOGGER.warn("Could not find class {} for World Accelerator Blacklist!", name);
+                        Gregtech.LOGGER.warn("Could not find class {} for World Accelerator Blacklist!", name);
                     }
                 }
             }

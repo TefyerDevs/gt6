@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical.material.info;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.common.data.models.GTModels;
 import com.gregtechceu.gt6.integration.kjs.GTRegistryInfo;
 
@@ -23,6 +23,7 @@ public record MaterialIconType(String name) {
 
     public static final Map<String, MaterialIconType> ICON_TYPES = new HashMap<>();
 
+    public static MaterialIconType dustTwo = new MaterialIconType("dustTwo");
     public static final MaterialIconType dustTiny = new MaterialIconType("dustTiny");
     public static final MaterialIconType dustSmall = new MaterialIconType("dustSmall");
     public static final MaterialIconType dust = new MaterialIconType("dust");
@@ -127,7 +128,7 @@ public record MaterialIconType(String name) {
     }
 
     public static void init() {
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             GTRegistryInfo.registerFor(GTRegistryInfo.MATERIAL_ICON_TYPE.registryKey);
         }
     }
@@ -156,12 +157,12 @@ public record MaterialIconType(String name) {
 
         MaterialIconSet iconSet = materialIconSet;
         // noinspection ConstantConditions
-        if (!GTCEu.isClientSide() || Minecraft.getInstance() == null ||
+        if (!Gregtech.isClientSide() || Minecraft.getInstance() == null ||
                 Minecraft.getInstance().getResourceManager() == null)
             return GTModels.BLANK_TEXTURE; // check minecraft for null for CI environments
         if (!iconSet.isRootIconset) {
             while (!iconSet.isRootIconset) {
-                ResourceLocation location = GTCEu
+                ResourceLocation location = Gregtech
                         .id(String.format("textures/block/material_sets/%s/%s%s.png", iconSet.name, this.name, suffix));
                 if (ResourceHelper.isResourceExist(location) || ResourceHelper.isResourceExistRaw(location))
                     break;
@@ -169,13 +170,13 @@ public record MaterialIconType(String name) {
             }
         }
 
-        ResourceLocation location = GTCEu
+        ResourceLocation location = Gregtech
                 .id(String.format("textures/block/material_sets/%s/%s%s.png", iconSet.name, this.name, suffix));
         if (!suffix.isEmpty() && !ResourceHelper.isResourceExist(location) &&
                 !ResourceHelper.isResourceExistRaw(location)) {
             return GTModels.BLANK_TEXTURE;
         }
-        location = GTCEu.id(String.format("block/material_sets/%s/%s%s", iconSet.name, this.name, suffix));
+        location = Gregtech.id(String.format("block/material_sets/%s/%s%s", iconSet.name, this.name, suffix));
         if (suffix.isEmpty()) {
             BLOCK_TEXTURE_CACHE.put(this, materialIconSet, location);
         } else {
@@ -195,10 +196,10 @@ public record MaterialIconType(String name) {
 
         MaterialIconSet iconSet = materialIconSet;
         // noinspection ConstantConditions
-        if (!iconSet.isRootIconset && GTCEu.isClientSide() && Minecraft.getInstance() != null &&
+        if (!iconSet.isRootIconset && Gregtech.isClientSide() && Minecraft.getInstance() != null &&
                 Minecraft.getInstance().getResourceManager() != null) { // check minecraft for null for CI environments
             while (!iconSet.isRootIconset) {
-                ResourceLocation location = GTCEu
+                ResourceLocation location = Gregtech
                         .id(String.format("models/block/material_sets/%s/%s.json", iconSet.name, this.name));
                 if (ResourceHelper.isResourceExist(location) || ResourceHelper.isResourceExistRaw(location))
                     break;
@@ -206,7 +207,7 @@ public record MaterialIconType(String name) {
             }
         }
 
-        ResourceLocation location = GTCEu.id(String.format("block/material_sets/%s/%s", iconSet.name, this.name));
+        ResourceLocation location = Gregtech.id(String.format("block/material_sets/%s/%s", iconSet.name, this.name));
         ITEM_MODEL_CACHE.put(this, materialIconSet, location);
 
         return location;
@@ -222,10 +223,10 @@ public record MaterialIconType(String name) {
 
         MaterialIconSet iconSet = materialIconSet;
         // noinspection ConstantConditions
-        if (!iconSet.isRootIconset && GTCEu.isClientSide() && Minecraft.getInstance() != null &&
+        if (!iconSet.isRootIconset && Gregtech.isClientSide() && Minecraft.getInstance() != null &&
                 Minecraft.getInstance().getResourceManager() != null) { // check minecraft for null for CI environments
             while (!iconSet.isRootIconset) {
-                ResourceLocation location = GTCEu
+                ResourceLocation location = Gregtech
                         .id(String.format("models/item/material_sets/%s/%s.json", iconSet.name, this.name));
                 if (ResourceHelper.isResourceExist(location) || ResourceHelper.isResourceExistRaw(location))
                     break;
@@ -233,7 +234,7 @@ public record MaterialIconType(String name) {
             }
         }
 
-        ResourceLocation location = GTCEu.id(String.format("item/material_sets/%s/%s", iconSet.name, this.name));
+        ResourceLocation location = Gregtech.id(String.format("item/material_sets/%s/%s", iconSet.name, this.name));
         ITEM_MODEL_CACHE.put(this, materialIconSet, location);
 
         return location;
@@ -261,10 +262,10 @@ public record MaterialIconType(String name) {
 
         MaterialIconSet iconSet = materialIconSet;
         // noinspection ConstantConditions
-        if (!iconSet.isRootIconset && GTCEu.isClientSide() && Minecraft.getInstance() != null &&
+        if (!iconSet.isRootIconset && Gregtech.isClientSide() && Minecraft.getInstance() != null &&
                 Minecraft.getInstance().getResourceManager() != null) { // check minecraft for null for CI environments
             while (!iconSet.isRootIconset) {
-                ResourceLocation location = GTCEu
+                ResourceLocation location = Gregtech
                         .id(String.format("textures/item/material_sets/%s/%s%s.png", iconSet.name, this.name, suffix));
                 if (ResourceHelper.isResourceExist(location) || ResourceHelper.isResourceExistRaw(location))
                     break;
@@ -272,13 +273,13 @@ public record MaterialIconType(String name) {
             }
         }
 
-        ResourceLocation location = GTCEu
+        ResourceLocation location = Gregtech
                 .id(String.format("textures/item/material_sets/%s/%s%s.png", iconSet.name, this.name, suffix));
         if (!suffix.isEmpty() && !ResourceHelper.isResourceExist(location) &&
                 !ResourceHelper.isResourceExistRaw(location)) {
             return null;
         }
-        location = GTCEu.id(String.format("item/material_sets/%s/%s%s", iconSet.name, this.name, suffix));
+        location = Gregtech.id(String.format("item/material_sets/%s/%s%s", iconSet.name, this.name, suffix));
         if (suffix.isEmpty()) {
             ITEM_TEXTURE_CACHE.put(this, materialIconSet, location);
         } else {

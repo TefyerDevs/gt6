@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.forge;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
@@ -109,16 +109,16 @@ import java.util.regex.Pattern;
 
 import static com.gregtechceu.gt6.utils.FormattingUtil.toLowerCaseUnderscore;
 
-@Mod.EventBusSubscriber(modid = GTCEu.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = Gregtech.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ForgeCommonEventListener {
 
     @SubscribeEvent
     public static void registerItemStackCapabilities(AttachCapabilitiesEvent<ItemStack> event) {
         final ItemStack itemStack = event.getObject();
         if (itemStack.getItem() instanceof PotionItem) {
-            event.addCapability(GTCEu.id("potion_item_handler"), new PotionItemFluidHandler(itemStack));
+            event.addCapability(Gregtech.id("potion_item_handler"), new PotionItemFluidHandler(itemStack));
         } else if (itemStack.is(Items.GLASS_BOTTLE)) {
-            event.addCapability(GTCEu.id("bottle_item_handler"), new BottleItemFluidHandler(itemStack));
+            event.addCapability(Gregtech.id("bottle_item_handler"), new BottleItemFluidHandler(itemStack));
         }
     }
 
@@ -126,7 +126,7 @@ public class ForgeCommonEventListener {
     public static void registerEntityCapabilities(AttachCapabilitiesEvent<Entity> event) {
         if (event.getObject() instanceof Player entity) {
             final MedicalConditionTracker tracker = new MedicalConditionTracker(entity);
-            event.addCapability(GTCEu.id("medical_condition_tracker"), new ICapabilitySerializable<CompoundTag>() {
+            event.addCapability(Gregtech.id("medical_condition_tracker"), new ICapabilitySerializable<CompoundTag>() {
 
                 @Override
                 public CompoundTag serializeNBT() {
@@ -150,7 +150,7 @@ public class ForgeCommonEventListener {
 
     @SubscribeEvent
     public static void registerBlockEntityCapabilities(AttachCapabilitiesEvent<BlockEntity> event) {
-        event.addCapability(GTCEu.id("fe_capability"), new EUToFEProvider(event.getObject()));
+        event.addCapability(Gregtech.id("fe_capability"), new EUToFEProvider(event.getObject()));
     }
 
     @SubscribeEvent
@@ -461,25 +461,25 @@ public class ForgeCommonEventListener {
 
     @SubscribeEvent
     public static void remapIds(MissingMappingsEvent event) {
-        event.getMappings(Registries.BLOCK, GTCEu.MOD_ID).forEach(mapping -> {
-            if (mapping.getKey().equals(GTCEu.id("tungstensteel_coil_block"))) {
+        event.getMappings(Registries.BLOCK, Gregtech.MOD_ID).forEach(mapping -> {
+            if (mapping.getKey().equals(Gregtech.id("tungstensteel_coil_block"))) {
                 mapping.remap(GTBlocks.COIL_RTMALLOY.get());
             }
-            if (mapping.getKey().equals(GTCEu.id("steam_miner"))) {
+            if (mapping.getKey().equals(Gregtech.id("steam_miner"))) {
                 mapping.remap(GTMachines.STEAM_MINER.first().getBlock());
             }
         });
-        event.getMappings(Registries.ITEM, GTCEu.MOD_ID).forEach(mapping -> {
-            if (mapping.getKey().equals(GTCEu.id("tungstensteel_coil_block"))) {
+        event.getMappings(Registries.ITEM, Gregtech.MOD_ID).forEach(mapping -> {
+            if (mapping.getKey().equals(Gregtech.id("tungstensteel_coil_block"))) {
                 mapping.remap(GTBlocks.COIL_RTMALLOY.get().asItem());
             }
-            if (mapping.getKey().equals(GTCEu.id("steam_miner"))) {
+            if (mapping.getKey().equals(Gregtech.id("steam_miner"))) {
                 mapping.remap(GTMachines.STEAM_MINER.first().getItem());
             }
-            if (mapping.getKey().equals(GTCEu.id("tungstensteel_fluid_cell"))) {
+            if (mapping.getKey().equals(Gregtech.id("tungstensteel_fluid_cell"))) {
                 mapping.remap(GTItems.FLUID_CELL_LARGE_TUNGSTEN_STEEL.get().asItem());
             }
-            if (mapping.getKey().equals(GTCEu.id("avanced_nanomuscle_chestplate"))) {
+            if (mapping.getKey().equals(Gregtech.id("avanced_nanomuscle_chestplate"))) {
                 mapping.remap(GTItems.NANO_CHESTPLATE_ADVANCED.get());
             }
             String path = mapping.getKey().getPath();
@@ -502,8 +502,8 @@ public class ForgeCommonEventListener {
                 mapping.remap(tool.asItem());
             }
         });
-        event.getMappings(Registries.BLOCK_ENTITY_TYPE, GTCEu.MOD_ID).forEach(mapping -> {
-            if (mapping.getKey().equals(GTCEu.id("steam_miner"))) {
+        event.getMappings(Registries.BLOCK_ENTITY_TYPE, Gregtech.MOD_ID).forEach(mapping -> {
+            if (mapping.getKey().equals(Gregtech.id("steam_miner"))) {
                 mapping.remap(GTMachines.STEAM_MINER.first().getBlockEntityType());
             }
         });
@@ -519,14 +519,14 @@ public class ForgeCommonEventListener {
                 case "crafting_io_slave" -> mapping.remap(GTAEMachines.ME_PATTERN_BUFFER_PROXY.getBlock());
             }
             if (path.contains("input_buffer")) {
-                ResourceLocation newName = GTCEu.id(path.replace("input_buffer", "dual_input_hatch"));
+                ResourceLocation newName = Gregtech.id(path.replace("input_buffer", "dual_input_hatch"));
                 if (mapping.getRegistry().containsKey(newName)) {
                     mapping.remap(mapping.getRegistry().getValue(newName));
                 } else {
                     mapping.remap(GTMachines.DUAL_IMPORT_HATCH[GTValues.LuV].getBlock());
                 }
             } else if (path.contains("output_buffer")) {
-                ResourceLocation newName = GTCEu.id(path.replace("output_buffer", "dual_output_hatch"));
+                ResourceLocation newName = Gregtech.id(path.replace("output_buffer", "dual_output_hatch"));
                 if (mapping.getRegistry().containsKey(newName)) {
                     mapping.remap(mapping.getRegistry().getValue(newName));
                 } else {
@@ -545,14 +545,14 @@ public class ForgeCommonEventListener {
                 case "crafting_io_slave" -> mapping.remap(GTAEMachines.ME_PATTERN_BUFFER_PROXY.getBlockEntityType());
             }
             if (path.contains("input_buffer")) {
-                ResourceLocation newName = GTCEu.id(path.replace("input_buffer", "dual_input_hatch"));
+                ResourceLocation newName = Gregtech.id(path.replace("input_buffer", "dual_input_hatch"));
                 if (mapping.getRegistry().containsKey(newName)) {
                     mapping.remap(mapping.getRegistry().getValue(newName));
                 } else {
                     mapping.remap(GTMachines.DUAL_IMPORT_HATCH[GTValues.LuV].getBlockEntityType());
                 }
             } else if (path.contains("output_buffer")) {
-                ResourceLocation newName = GTCEu.id(path.replace("output_buffer", "dual_output_hatch"));
+                ResourceLocation newName = Gregtech.id(path.replace("output_buffer", "dual_output_hatch"));
                 if (mapping.getRegistry().containsKey(newName)) {
                     mapping.remap(mapping.getRegistry().getValue(newName));
                 } else {
@@ -570,14 +570,14 @@ public class ForgeCommonEventListener {
                 case "crafting_io_slave" -> mapping.remap(GTAEMachines.ME_PATTERN_BUFFER_PROXY.getItem());
             }
             if (path.contains("input_buffer")) {
-                ResourceLocation newName = GTCEu.id(path.replace("input_buffer", "dual_input_hatch"));
+                ResourceLocation newName = Gregtech.id(path.replace("input_buffer", "dual_input_hatch"));
                 if (mapping.getRegistry().containsKey(newName)) {
                     mapping.remap(mapping.getRegistry().getValue(newName));
                 } else {
                     mapping.remap(GTMachines.DUAL_IMPORT_HATCH[GTValues.LuV].getItem());
                 }
             } else if (path.contains("output_buffer")) {
-                ResourceLocation newName = GTCEu.id(path.replace("output_buffer", "dual_output_hatch"));
+                ResourceLocation newName = Gregtech.id(path.replace("output_buffer", "dual_output_hatch"));
                 if (mapping.getRegistry().containsKey(newName)) {
                     mapping.remap(mapping.getRegistry().getValue(newName));
                 } else {
@@ -590,26 +590,26 @@ public class ForgeCommonEventListener {
             String first = prefix.invertedName ? toLowerCaseUnderscore(prefix.name) : "(.+?)";
             String last = prefix.invertedName ? "(.+?)" : toLowerCaseUnderscore(prefix.name);
             Pattern idPattern = Pattern.compile(first + "_" + last);
-            event.getMappings(Registries.BLOCK, GTCEu.MOD_ID).forEach(mapping -> {
+            event.getMappings(Registries.BLOCK, Gregtech.MOD_ID).forEach(mapping -> {
                 Matcher matcher = idPattern.matcher(mapping.getKey().getPath());
                 if (matcher.matches()) {
                     BlockEntry<? extends Block> block = GTMaterialBlocks.MATERIAL_BLOCKS.get(prefix,
-                            GTCEuAPI.materialManager.getRegistry(GTCEu.MOD_ID).get(matcher.group(1)));
+                            GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
                     if (block != null && block.isPresent()) {
                         mapping.remap(block.get());
                     }
                 }
             });
-            event.getMappings(Registries.ITEM, GTCEu.MOD_ID).forEach(mapping -> {
+            event.getMappings(Registries.ITEM, Gregtech.MOD_ID).forEach(mapping -> {
                 Matcher matcher = idPattern.matcher(mapping.getKey().getPath());
                 if (matcher.matches()) {
                     BlockEntry<? extends Block> block = GTMaterialBlocks.MATERIAL_BLOCKS.get(prefix,
-                            GTCEuAPI.materialManager.getRegistry(GTCEu.MOD_ID).get(matcher.group(1)));
+                            GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
                     if (block != null && block.isPresent()) {
                         mapping.remap(block.asItem());
                     } else {
                         ItemEntry<? extends Item> item = GTMaterialItems.MATERIAL_ITEMS.get(prefix,
-                                GTCEuAPI.materialManager.getRegistry(GTCEu.MOD_ID).get(matcher.group(1)));
+                                GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
                         if (item != null && item.isPresent()) {
                             mapping.remap(item.asItem());
                         }

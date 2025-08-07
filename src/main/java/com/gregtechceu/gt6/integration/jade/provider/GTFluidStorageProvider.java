@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.common.machine.storage.CreativeTankMachine;
@@ -45,7 +45,7 @@ public enum GTFluidStorageProvider implements IServerExtensionProvider<MetaMachi
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("custom_fluid_storage");
+        return Gregtech.id("custom_fluid_storage");
     }
 
     @Override
@@ -64,7 +64,7 @@ public enum GTFluidStorageProvider implements IServerExtensionProvider<MetaMachi
             tag.putBoolean("special", true);
             tag.putLong("amount", qtm.getStoredAmount());
             return List.of(new ViewGroup<>(List.of(tag)));
-        } else if (GTCEu.Mods.isAE2Loaded() && machine instanceof MEPatternBufferPartMachine buffer) {
+        } else if (Gregtech.Mods.isAE2Loaded() && machine instanceof MEPatternBufferPartMachine buffer) {
             var tank = buffer.getShareTank();
             List<CompoundTag> list = new ArrayList<>(tank.getTanks());
             for (var storage : tank.getStorages()) {
@@ -74,7 +74,7 @@ public enum GTFluidStorageProvider implements IServerExtensionProvider<MetaMachi
                 list.add(JadeForgeUtils.fromFluidStack(stack, capacity));
             }
             return list.isEmpty() ? List.of() : List.of(new ViewGroup<>(list));
-        } else if (GTCEu.Mods.isAE2Loaded() && machine instanceof MEPatternBufferProxyPartMachine proxy) {
+        } else if (Gregtech.Mods.isAE2Loaded() && machine instanceof MEPatternBufferProxyPartMachine proxy) {
             var buffer = proxy.getBuffer();
             if (buffer == null) return Collections.emptyList();
             return FluidStorageProvider.INSTANCE.getGroups(serverPlayer, serverLevel, buffer.holder, b);

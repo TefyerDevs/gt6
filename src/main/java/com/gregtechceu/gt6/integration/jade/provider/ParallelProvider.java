@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.capability.IParallelHatch;
 import com.gregtechceu.gt6.api.machine.feature.IRecipeLogicMachine;
@@ -56,6 +56,6 @@ public class ParallelProvider implements IBlockComponentProvider, IServerDataPro
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("parallel_info");
+        return Gregtech.id("parallel_info");
     }
 }

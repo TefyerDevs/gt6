@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.pack;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.common.data.GTRecipes;
@@ -45,7 +45,7 @@ public class GTDynamicDataPack implements PackResources {
     private final String name;
 
     static {
-        SERVER_DOMAINS.addAll(Sets.newHashSet(GTCEu.MOD_ID, "minecraft", "forge", "c"));
+        SERVER_DOMAINS.addAll(Sets.newHashSet(Gregtech.MOD_ID, "minecraft", "forge", "c"));
     }
 
     public GTDynamicDataPack(String name) {
@@ -68,7 +68,7 @@ public class GTDynamicDataPack implements PackResources {
     public static void addRecipe(FinishedRecipe recipe) {
         JsonObject recipeJson = recipe.serializeRecipe();
         byte[] recipeBytes = recipeJson.toString().getBytes(StandardCharsets.UTF_8);
-        Path parent = GTCEu.getGameDir().resolve("gt6/dumped/data");
+        Path parent = Gregtech.getGameDir().resolve("gt6/dumped/data");
         ResourceLocation recipeId = recipe.getId();
         if (ConfigHolder.INSTANCE.dev.dumpRecipes) {
             writeJson(recipeId, "recipes", parent, recipeBytes);
@@ -110,7 +110,7 @@ public class GTDynamicDataPack implements PackResources {
                 output.write(json);
             }
         } catch (IOException e) {
-            GTCEu.LOGGER.error("Failed to write JSON export for file {}", id, e);
+            Gregtech.LOGGER.error("Failed to write JSON export for file {}", id, e);
         }
     }
 
@@ -123,7 +123,7 @@ public class GTDynamicDataPack implements PackResources {
     @Override
     public IoSupplier<InputStream> getRootResource(String... elements) {
         if (elements.length > 0 && elements[0].equals("pack.png")) {
-            return () -> GTCEu.class.getResourceAsStream("/icon.png");
+            return () -> Gregtech.class.getResourceAsStream("/icon.png");
         }
         return null;
     }

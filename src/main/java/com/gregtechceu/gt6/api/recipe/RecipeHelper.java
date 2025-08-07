@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.*;
 import com.gregtechceu.gt6.api.machine.trait.RecipeHandlerGroup;
 import com.gregtechceu.gt6.api.machine.trait.RecipeHandlerGroupColor;
@@ -224,7 +224,7 @@ public class RecipeHelper {
         if (result.isSuccess() || result.capability() == null) return result;
 
         if (!simulated && ConfigHolder.INSTANCE.dev.debug) {
-            GTCEu.LOGGER.warn("IO {} Error while handling recipe {} outputs for {}",
+            Gregtech.LOGGER.warn("IO {} Error while handling recipe {} outputs for {}",
                     Component.translatable(io.tooltip).getString(), recipe, holder);
         }
         String key = "gt6.recipe_logic.insufficient_" + (io == IO.IN ? "in" : "out");

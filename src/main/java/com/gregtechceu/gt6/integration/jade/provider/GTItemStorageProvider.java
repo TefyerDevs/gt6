@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.common.machine.storage.CreativeChestMachine;
@@ -38,7 +38,7 @@ public enum GTItemStorageProvider implements IServerExtensionProvider<MetaMachin
 
     @Override
     public ResourceLocation getUid() {
-        return GTCEu.id("custom_item_storage");
+        return Gregtech.id("custom_item_storage");
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.armor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
@@ -62,6 +62,6 @@ public class AdvancedJetpack extends Jetpack {
 
     @Override
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return GTCEu.id("textures/armor/advanced_jetpack.png");
+        return Gregtech.id("textures/armor/advanced_jetpack.png");
     }
 }

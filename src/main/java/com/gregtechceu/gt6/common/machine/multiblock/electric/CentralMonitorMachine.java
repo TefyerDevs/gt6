@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.multiblock.electric;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IMonitorComponent;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
@@ -658,7 +658,7 @@ public class CentralMonitorMachine extends WorkableElectricMultiblockMachine
 
     @Override
     public IGuiTexture getComponentIcon() {
-        return ResourceTexture.fromSpirit(GTCEu.id("block/multiblock/network_switch/overlay_front_active"));
+        return ResourceTexture.fromSpirit(Gregtech.id("block/multiblock/network_switch/overlay_front_active"));
     }
 
     @Override

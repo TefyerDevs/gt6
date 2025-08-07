@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.commands;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.cosmetics.CapeRegistry;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockfluid.BedrockFluidDefinition;
@@ -293,12 +293,12 @@ public class GTCommands {
 
     private static <T> int dumpDataRegistry(CommandContext<CommandSourceStack> context,
                                             GTRegistry<ResourceLocation, T> registry, Codec<T> codec, String folder) {
-        Path parent = GTCEu.getGameDir().resolve("gt6/dumped/data");
+        Path parent = Gregtech.getGameDir().resolve("gt6/dumped/data");
         var ops = RegistryOps.create(JsonOps.INSTANCE, context.getSource().registryAccess());
         int dumpedCount = 0;
         for (ResourceLocation id : registry.keys()) {
             T entry = registry.get(id);
-            JsonElement json = codec.encodeStart(ops, entry).getOrThrow(false, GTCEu.LOGGER::error);
+            JsonElement json = codec.encodeStart(ops, entry).getOrThrow(false, Gregtech.LOGGER::error);
             GTDynamicDataPack.writeJson(id, folder, parent, json.toString().getBytes(StandardCharsets.UTF_8));
             dumpedCount++;
         }

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical.material.info;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.PropertyKey;
 
@@ -29,7 +29,7 @@ public class MaterialFlag {
     protected Set<MaterialFlag> verifyFlag(Material material) {
         requiredProperties.forEach(key -> {
             if (!material.hasProperty(key)) {
-                GTCEu.LOGGER.warn("Material {} does not have required property {} for flag {}!",
+                Gregtech.LOGGER.warn("Material {} does not have required property {} for flag {}!",
                         material.getUnlocalizedName(), key.toString(), this.name);
             }
         });

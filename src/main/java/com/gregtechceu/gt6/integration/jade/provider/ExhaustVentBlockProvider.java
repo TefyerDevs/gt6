@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.feature.IExhaustVentMachine;
 
@@ -24,7 +24,7 @@ import snownee.jade.api.config.IPluginConfig;
 public class ExhaustVentBlockProvider extends BlockInfoProvider<IExhaustVentMachine> {
 
     public ExhaustVentBlockProvider() {
-        super(GTCEu.id("exhaust_vent_info"));
+        super(Gregtech.id("exhaust_vent_info"));
     }
 
     @Nullable

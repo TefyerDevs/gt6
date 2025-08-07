@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.item.tool;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.config.ConfigHolder;
 
 import net.minecraft.core.BlockPos;
@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 import static com.gregtechceu.gt6.api.item.tool.ToolHelper.*;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, modid = GTCEu.MOD_ID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.FORGE, modid = Gregtech.MOD_ID)
 public class TreeFellingHelper {
 
     private final ServerPlayer player;

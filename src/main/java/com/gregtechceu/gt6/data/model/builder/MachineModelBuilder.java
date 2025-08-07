@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.model.builder;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.api.registry.registrate.provider.GTBlockstateProvider;
 import com.gregtechceu.gt6.client.model.machine.MachineModelLoader;
@@ -97,7 +97,7 @@ public class MachineModelBuilder<T extends ModelBuilder<T>> extends CustomLoader
             JsonArray dynamicRenders = new JsonArray();
             for (DynamicRender<?, ?> render : this.dynamicRenders) {
                 JsonElement serialized = DynamicRender.CODEC.encodeStart(JsonOps.INSTANCE, render)
-                        .getOrThrow(false, GTCEu.LOGGER::error);
+                        .getOrThrow(false, Gregtech.LOGGER::error);
                 dynamicRenders.add(serialized);
             }
             json.add("dynamic_renders", dynamicRenders);

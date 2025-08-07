@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.item.component.IEnchantableItem;
 import com.gregtechceu.gt6.api.item.component.IItemAttributes;
 import com.gregtechceu.gt6.config.ConfigHolder;
@@ -21,7 +21,7 @@ import com.google.common.collect.Multimap;
 
 public class NanoSaberBehavior extends ToggleEnergyConsumerBehavior implements IItemAttributes, IEnchantableItem {
 
-    public static final ResourceLocation OVERRIDE_KEY_LOCATION = GTCEu.id("nano_saber_active");
+    public static final ResourceLocation OVERRIDE_KEY_LOCATION = Gregtech.id("nano_saber_active");
 
     private final double baseAttackDamage;
     private final double additionalAttackDamage;

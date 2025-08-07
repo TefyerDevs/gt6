@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.armor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.item.armor.ArmorComponentItem;
 import com.gregtechceu.gt6.api.item.armor.ArmorUtils;
 import com.gregtechceu.gt6.api.item.armor.IArmorLogic;
@@ -54,7 +54,7 @@ public class PowerlessJetpack implements IArmorLogic, IJetpack, IItemHUDProvider
     private ArmorUtils.ModularHUD HUD;
 
     public PowerlessJetpack() {
-        if (GTCEu.isClientSide())
+        if (Gregtech.isClientSide())
             HUD = new ArmorUtils.ModularHUD();
     }
 
@@ -120,7 +120,7 @@ public class PowerlessJetpack implements IArmorLogic, IJetpack, IItemHUDProvider
 
     @Override
     public ResourceLocation getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-        return GTCEu.id("textures/armor/liquid_fuel_jetpack.png");
+        return Gregtech.id("textures/armor/liquid_fuel_jetpack.png");
     }
 
     @OnlyIn(Dist.CLIENT)

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.multiblock.electric;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.*;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.feature.IRecipeLogicMachine;
@@ -106,7 +106,7 @@ public class DistillationTowerMachine extends WorkableElectricMultiblockMachine
                 } else if (part.self().getPos().getY() > y) {
                     fluidOutputs.add(VoidFluidHandler.INSTANCE);
                 } else {
-                    GTCEu.LOGGER.error(
+                    Gregtech.LOGGER.error(
                             "The Distillation Tower at {} has a fluid export hatch with an unexpected Y position",
                             getPos());
                     onStructureInvalid();

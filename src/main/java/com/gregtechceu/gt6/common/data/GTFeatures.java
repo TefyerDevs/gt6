@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.modifier.BiomePlacement;
 import com.gregtechceu.gt6.api.data.worldgen.modifier.DimensionFilter;
 import com.gregtechceu.gt6.api.data.worldgen.modifier.FrequencyModifier;
@@ -17,11 +17,11 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class GTFeatures {
 
-    public static final ResourceLocation NEW_ORE_VEIN_TOGGLE = GTCEu.id("vein_toggle");
-    public static final ResourceLocation NEW_ORE_VEIN_RIDGED = GTCEu.id("vein_ridged");
+    public static final ResourceLocation NEW_ORE_VEIN_TOGGLE = Gregtech.id("vein_toggle");
+    public static final ResourceLocation NEW_ORE_VEIN_RIDGED = Gregtech.id("vein_ridged");
 
     public static final DeferredRegister<Feature<?>> FEATURE_REGISTER = DeferredRegister.create(Registries.FEATURE,
-            GTCEu.MOD_ID);
+            Gregtech.MOD_ID);
 
     public static final RegistryObject<StoneBlobFeature> STONE_BLOB = FEATURE_REGISTER.register("stone_blob",
             StoneBlobFeature::new);

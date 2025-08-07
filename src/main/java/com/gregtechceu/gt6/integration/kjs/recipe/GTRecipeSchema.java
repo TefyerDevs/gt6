@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.kjs.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.recipe.*;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
@@ -872,7 +872,7 @@ public interface GTRecipeSchema {
         }
 
         public GTRecipeJS heraclesQuest(String questId, boolean isReverse) {
-            if (!GTCEu.Mods.isHeraclesLoaded()) {
+            if (!Gregtech.Mods.isHeraclesLoaded()) {
                 throw new RecipeExceptionJS("Heracles not loaded!");
             }
             if (questId.isEmpty()) {
@@ -890,14 +890,14 @@ public interface GTRecipeSchema {
         }
 
         public GTRecipeJS gameStage(String stageName, boolean isReverse) {
-            if (!GTCEu.Mods.isGameStagesLoaded()) {
+            if (!Gregtech.Mods.isGameStagesLoaded()) {
                 throw new RecipeExceptionJS("GameStages is not loaded, ignoring recipe condition");
             }
             return addCondition(new GameStageCondition(isReverse, stageName));
         }
 
         public GTRecipeJS ftbQuest(String questId, boolean isReverse) {
-            if (!GTCEu.Mods.isFTBQuestsLoaded()) {
+            if (!Gregtech.Mods.isFTBQuestsLoaded()) {
                 throw new RecipeExceptionJS("FTBQuests is not loaded!");
             }
             if (questId.isEmpty()) {

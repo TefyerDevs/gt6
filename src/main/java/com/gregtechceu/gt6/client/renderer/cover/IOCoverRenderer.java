@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.cover;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
 import com.gregtechceu.gt6.api.cover.IIOCover;
@@ -29,8 +29,8 @@ import java.util.List;
 public class IOCoverRenderer implements ICoverRenderer {
 
     public static final IOCoverRenderer PUMP_LIKE_COVER_RENDERER = new IOCoverRenderer(
-            GTCEu.id("block/cover/pump"),
-            GTCEu.id("block/cover/pump_inverted"),
+            Gregtech.id("block/cover/pump"),
+            Gregtech.id("block/cover/pump_inverted"),
             null, null);
 
     @OnlyIn(Dist.CLIENT)

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.BiomeWeightModifier;
 import com.gregtechceu.gt6.api.data.worldgen.modifier.BiomePlacement;
 import com.gregtechceu.gt6.common.worldgen.modifier.RubberTreeChancePlacement;
@@ -21,13 +21,13 @@ import java.util.List;
 public class GTPlacements {
 
     public static final ResourceKey<PlacedFeature> RUBBER_CHECKED = ResourceKey.create(Registries.PLACED_FEATURE,
-            GTCEu.id("rubber_checked"));
+            Gregtech.id("rubber_checked"));
     public static final ResourceKey<PlacedFeature> RED_GRANITE_BLOB = ResourceKey.create(Registries.PLACED_FEATURE,
-            GTCEu.id("red_granite_blob"));
+            Gregtech.id("red_granite_blob"));
     public static final ResourceKey<PlacedFeature> MARBLE_BLOB = ResourceKey.create(Registries.PLACED_FEATURE,
-            GTCEu.id("marble_blob"));
+            Gregtech.id("marble_blob"));
     public static final ResourceKey<PlacedFeature> RAW_OIL_SPROUT = ResourceKey.create(Registries.PLACED_FEATURE,
-            GTCEu.id("raw_oil_sprout"));
+            Gregtech.id("raw_oil_sprout"));
 
     public static void bootstrap(BootstapContext<PlacedFeature> ctx) {
         HolderGetter<ConfiguredFeature<?, ?>> featureLookup = ctx.lookup(Registries.CONFIGURED_FEATURE);

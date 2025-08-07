@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.builder;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.recipe.*;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
@@ -142,11 +142,11 @@ public class GTRecipeBuilder {
     }
 
     public static GTRecipeBuilder ofRaw() {
-        return new GTRecipeBuilder(GTCEu.id("raw"), GTRecipeTypes.DUMMY_RECIPES);
+        return new GTRecipeBuilder(Gregtech.id("raw"), GTRecipeTypes.DUMMY_RECIPES);
     }
 
     public GTRecipeBuilder copy(String id) {
-        return copy(GTCEu.id(id));
+        return copy(Gregtech.id(id));
     }
 
     public GTRecipeBuilder copy(ResourceLocation id) {
@@ -228,10 +228,10 @@ public class GTRecipeBuilder {
 
     public GTRecipeBuilder EUt(long voltage, long amperage) {
         if (voltage == 0) {
-            GTCEu.LOGGER.error("EUt can't be explicitly set to 0, id: {}", id);
+            Gregtech.LOGGER.error("EUt can't be explicitly set to 0, id: {}", id);
         }
         if (amperage < 1) {
-            GTCEu.LOGGER.error("Amperage must be a positive integer, id: {}", id);
+            Gregtech.LOGGER.error("Amperage must be a positive integer, id: {}", id);
         }
         var lastPerTick = perTick;
         perTick = true;
@@ -260,7 +260,7 @@ public class GTRecipeBuilder {
 
     public GTRecipeBuilder CWUt(int cwu) {
         if (cwu == 0) {
-            GTCEu.LOGGER.error("CWUt can't be explicitly set to 0, id: {}", id);
+            Gregtech.LOGGER.error("CWUt can't be explicitly set to 0, id: {}", id);
         }
         var lastPerTick = perTick;
         perTick = true;
@@ -302,7 +302,7 @@ public class GTRecipeBuilder {
         } else if (input instanceof MachineDefinition machine) {
             return inputItems(machine);
         } else {
-            GTCEu.LOGGER.error("""
+            Gregtech.LOGGER.error("""
                     Input item is not one of:
                     Item, Supplier<Item>, ItemStack, Ingredient, MaterialEntry, TagKey<Item>, MachineDefinition
                     id: {}""", id);
@@ -326,7 +326,7 @@ public class GTRecipeBuilder {
         } else if (input instanceof MachineDefinition machine) {
             return inputItems(machine, count);
         } else {
-            GTCEu.LOGGER.error("""
+            Gregtech.LOGGER.error("""
                     Input item is not one of:
                     Item, Supplier<Item>, ItemStack, Ingredient, MaterialEntry, TagKey<Item>, MachineDefinition
                     id: {}""", id);
@@ -451,7 +451,7 @@ public class GTRecipeBuilder {
 
     public GTRecipeBuilder inputItems(TagPrefix tagPrefix, @NotNull Material material, int count) {
         if (tagPrefix.isEmpty() || material.isNull()) {
-            GTCEu.LOGGER.error(
+            Gregtech.LOGGER.error(
                     "Tried to set input item stack that doesn't exist, id: {}, TagPrefix: {}, Material: {}, Count: {}",
                     id, tagPrefix, material, count);
             return this;
@@ -465,7 +465,7 @@ public class GTRecipeBuilder {
         } else {
             var item = ChemicalHelper.get(tagPrefix, material, count);
             if (item.isEmpty()) {
-                GTCEu.LOGGER.error(
+                Gregtech.LOGGER.error(
                         "Tried to set input item stack that doesn't exist, id: {}, TagPrefix: {}, Material: {}, Count: {}",
                         id, tagPrefix, material, count);
             }
@@ -493,7 +493,7 @@ public class GTRecipeBuilder {
         } else if (output instanceof MachineDefinition machine) {
             return outputItems(machine);
         } else {
-            GTCEu.LOGGER.error("""
+            Gregtech.LOGGER.error("""
                     Output item is not one of:
                     Item, Supplier<Item>, ItemStack, MaterialEntry, MachineDefinition
                     id: {}""", id);
@@ -513,7 +513,7 @@ public class GTRecipeBuilder {
         } else if (output instanceof MachineDefinition machine) {
             return outputItems(machine, count);
         } else {
-            GTCEu.LOGGER.error("""
+            Gregtech.LOGGER.error("""
                     Output item is not one of:
                     Item, Supplier<Item>, ItemStack, MaterialEntry, MachineDefinition
                     id: {}""", id);
@@ -563,14 +563,14 @@ public class GTRecipeBuilder {
 
     public GTRecipeBuilder outputItems(TagPrefix orePrefix, @NotNull Material material, int count) {
         if (orePrefix.isEmpty() || material.isNull()) {
-            GTCEu.LOGGER.error(
+            Gregtech.LOGGER.error(
                     "Tried to set output item stack that doesn't exist, id: {}, TagPrefix: {}, Material: {}, Count: {}",
                     id, orePrefix, material, count);
             return this;
         }
         var item = ChemicalHelper.get(orePrefix, material, count);
         if (item.isEmpty()) {
-            GTCEu.LOGGER.error(
+            Gregtech.LOGGER.error(
                     "Tried to set output item stack that doesn't exist, id: {}, TagPrefix: {}, Material: {}, Count: {}",
                     id, orePrefix, material, count);
             return this;
@@ -613,7 +613,7 @@ public class GTRecipeBuilder {
     public GTRecipeBuilder outputItemsRanged(TagPrefix orePrefix, Material material, IntProvider intProvider) {
         var item = ChemicalHelper.get(orePrefix, material, 1);
         if (item.isEmpty()) {
-            GTCEu.LOGGER.error("Tried to set output ranged item stack that doesn't exist, TagPrefix: {}, Material: {}",
+            Gregtech.LOGGER.error("Tried to set output ranged item stack that doesn't exist, TagPrefix: {}, Material: {}",
                     orePrefix, material);
         }
         return outputItemsRanged(item, intProvider);
@@ -686,7 +686,7 @@ public class GTRecipeBuilder {
 
     public GTRecipeBuilder circuitMeta(int configuration) {
         if (configuration < 0 || configuration > IntCircuitBehaviour.CIRCUIT_MAX) {
-            GTCEu.LOGGER.error("Circuit configuration must be in the bounds 0 - 32");
+            Gregtech.LOGGER.error("Circuit configuration must be in the bounds 0 - 32");
         }
         return notConsumable(IntCircuitIngredient.of(configuration));
     }
@@ -762,7 +762,7 @@ public class GTRecipeBuilder {
 
         String[] split = fraction.split("/");
         if (split.length != 2) {
-            GTCEu.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
+            Gregtech.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
                     fraction, new Throwable());
             return this;
         }
@@ -773,18 +773,18 @@ public class GTRecipeBuilder {
             chance = Integer.parseInt(split[0]);
             maxChance = Integer.parseInt(split[1]);
         } catch (NumberFormatException e) {
-            GTCEu.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
+            Gregtech.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
                     fraction, new Throwable());
             return this;
         }
 
         if (0 >= chance || chance > ChanceLogic.getMaxChancedValue()) {
-            GTCEu.LOGGER.error("Chance cannot be less or equal to 0 or more than {}. Actual: {}.",
+            Gregtech.LOGGER.error("Chance cannot be less or equal to 0 or more than {}. Actual: {}.",
                     ChanceLogic.getMaxChancedValue(), chance, new Throwable());
             return this;
         }
         if (chance >= maxChance || maxChance > ChanceLogic.getMaxChancedValue()) {
-            GTCEu.LOGGER.error("Max Chance cannot be less or equal to Chance or more than {}. Actual: {}.",
+            Gregtech.LOGGER.error("Max Chance cannot be less or equal to Chance or more than {}. Actual: {}.",
                     ChanceLogic.getMaxChancedValue(), maxChance, new Throwable());
             return this;
         }
@@ -831,7 +831,7 @@ public class GTRecipeBuilder {
 
         String[] split = fraction.split("/");
         if (split.length != 2) {
-            GTCEu.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
+            Gregtech.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
                     fraction, new Throwable());
             return this;
         }
@@ -842,18 +842,18 @@ public class GTRecipeBuilder {
             chance = Integer.parseInt(split[0]);
             maxChance = Integer.parseInt(split[1]);
         } catch (NumberFormatException e) {
-            GTCEu.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
+            Gregtech.LOGGER.error("Fraction was not parsed correctly! Expected format is \"1/3\". Actual: \"{}\".",
                     fraction, new Throwable());
             return this;
         }
 
         if (0 >= chance || chance > ChanceLogic.getMaxChancedValue()) {
-            GTCEu.LOGGER.error("Chance cannot be less or equal to 0 or more than {}. Actual: {}.",
+            Gregtech.LOGGER.error("Chance cannot be less or equal to 0 or more than {}. Actual: {}.",
                     ChanceLogic.getMaxChancedValue(), chance, new Throwable());
             return this;
         }
         if (chance >= maxChance || maxChance > ChanceLogic.getMaxChancedValue()) {
-            GTCEu.LOGGER.error("Max Chance cannot be less or equal to Chance or more than {}. Actual: {}.",
+            Gregtech.LOGGER.error("Max Chance cannot be less or equal to Chance or more than {}. Actual: {}.",
                     ChanceLogic.getMaxChancedValue(), maxChance, new Throwable());
             return this;
         }
@@ -1125,12 +1125,12 @@ public class GTRecipeBuilder {
     }
 
     public GTRecipeBuilder heraclesQuest(String questId, boolean isReverse) {
-        if (!GTCEu.Mods.isHeraclesLoaded()) {
-            GTCEu.LOGGER.error("Heracles not loaded!");
+        if (!Gregtech.Mods.isHeraclesLoaded()) {
+            Gregtech.LOGGER.error("Heracles not loaded!");
             return this;
         }
         if (questId.isEmpty()) {
-            GTCEu.LOGGER.error("Quest ID cannot be empty for recipe {}", this.id);
+            Gregtech.LOGGER.error("Quest ID cannot be empty for recipe {}", this.id);
             return this;
         }
         return addCondition(new HeraclesQuestCondition(isReverse, questId));
@@ -1145,25 +1145,25 @@ public class GTRecipeBuilder {
     }
 
     public GTRecipeBuilder gameStage(String stageName, boolean isReverse) {
-        if (!GTCEu.Mods.isGameStagesLoaded()) {
-            GTCEu.LOGGER.warn("GameStages is not loaded, ignoring recipe condition");
+        if (!Gregtech.Mods.isGameStagesLoaded()) {
+            Gregtech.LOGGER.warn("GameStages is not loaded, ignoring recipe condition");
             return this;
         }
         return addCondition(new GameStageCondition(isReverse, stageName));
     }
 
     public GTRecipeBuilder ftbQuest(String questId, boolean isReverse) {
-        if (!GTCEu.Mods.isFTBQuestsLoaded()) {
-            GTCEu.LOGGER.error("FTBQuests is not loaded!");
+        if (!Gregtech.Mods.isFTBQuestsLoaded()) {
+            Gregtech.LOGGER.error("FTBQuests is not loaded!");
             return this;
         }
         if (questId.isEmpty()) {
-            GTCEu.LOGGER.error("Quest ID cannot be empty for recipe {}", this.id);
+            Gregtech.LOGGER.error("Quest ID cannot be empty for recipe {}", this.id);
             return this;
         }
         long qID = QuestObjectBase.parseCodeString(questId);
         if (qID == 0L) {
-            GTCEu.LOGGER.error("Quest {} not found for recipe {}", questId, this.id);
+            Gregtech.LOGGER.error("Quest {} not found for recipe {}", questId, this.id);
             return this;
         }
         return addCondition(new FTBQuestCondition(isReverse, qID));
@@ -1176,12 +1176,12 @@ public class GTRecipeBuilder {
     private boolean applyResearchProperty(ResearchData.ResearchEntry researchEntry) {
         if (!ConfigHolder.INSTANCE.machines.enableResearch) return false;
         if (researchEntry == null) {
-            GTCEu.LOGGER.error("Research Entry cannot be empty.", new IllegalArgumentException());
+            Gregtech.LOGGER.error("Research Entry cannot be empty.", new IllegalArgumentException());
             return false;
         }
 
         if (!generatingRecipes) {
-            GTCEu.LOGGER.error("Cannot generate recipes when using researchWithoutRecipe()",
+            Gregtech.LOGGER.error("Cannot generate recipes when using researchWithoutRecipe()",
                     new IllegalArgumentException());
             return false;
         }
@@ -1381,9 +1381,9 @@ public class GTRecipeBuilder {
 
         if (recipeType != null) {
             if (recipeCategory == null) {
-                GTCEu.LOGGER.error("Recipes must have a category", new IllegalArgumentException());
+                Gregtech.LOGGER.error("Recipes must have a category", new IllegalArgumentException());
             } else if (recipeCategory != GTRecipeCategory.DEFAULT && recipeCategory.getRecipeType() != recipeType) {
-                GTCEu.LOGGER.error("Cannot apply Category with incompatible RecipeType",
+                Gregtech.LOGGER.error("Cannot apply Category with incompatible RecipeType",
                         new IllegalArgumentException());
             }
         }
@@ -1509,7 +1509,7 @@ public class GTRecipeBuilder {
         int max = recipeCapabilityMax.getInt(capability);
         if (table.getOrDefault(capability, List.of()).size() + addedEntries > max) {
             String io = isInput ? "inputs" : "outputs";
-            GTCEu.LOGGER.warn("Recipe {} is trying to add more {} than its recipe type can support, Max {} {}: {}",
+            Gregtech.LOGGER.warn("Recipe {} is trying to add more {} than its recipe type can support, Max {} {}: {}",
                     id, io, capability.name, io, max);
         }
     }
@@ -1517,7 +1517,7 @@ public class GTRecipeBuilder {
     protected boolean intProviderInputError(Ingredient ingredient, int index) {
         if (ingredient instanceof IntProviderIngredient) {
             int size = (perTick ? tickOutput : output).getOrDefault(ItemRecipeCapability.CAP, List.of()).size();
-            GTCEu.LOGGER.error("Using int provider ingredients as inputs is not supported!" +
+            Gregtech.LOGGER.error("Using int provider ingredients as inputs is not supported!" +
                     "Input {} in recipe {} will be skipped.", size + index, id);
             return true;
         }
@@ -1532,7 +1532,7 @@ public class GTRecipeBuilder {
                 io = "Tick " + io.toLowerCase(Locale.ROOT);
             }
             int size = (perTick ? tickOutput : output).getOrDefault(cap, List.of()).size();
-            GTCEu.LOGGER.error("{} {} {} of recipe {} is empty", io, cap.name, size + index, id);
+            Gregtech.LOGGER.error("{} {} {} of recipe {} is empty", io, cap.name, size + index, id);
             return true;
         }
         return false;
@@ -1540,7 +1540,7 @@ public class GTRecipeBuilder {
 
     protected boolean checkChanceAndPrintError(int chance) {
         if (0 >= chance || chance > ChanceLogic.getMaxChancedValue()) {
-            GTCEu.LOGGER.error("Chance cannot be less or equal to 0 or more than {}. Actual: {}.",
+            Gregtech.LOGGER.error("Chance cannot be less or equal to 0 or more than {}. Actual: {}.",
                     ChanceLogic.getMaxChancedValue(), chance, new Throwable());
             return true;
         }

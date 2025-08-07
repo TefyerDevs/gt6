@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.ICoilType;
@@ -647,7 +647,7 @@ public class GTRecipeTypes {
             .setXEIVisible(false);
 
     public static GTRecipeType register(String name, String group, RecipeType<?>... proxyRecipes) {
-        var recipeType = new GTRecipeType(GTCEu.id(name), group, proxyRecipes);
+        var recipeType = new GTRecipeType(Gregtech.id(name), group, proxyRecipes);
         GTRegistries.register(BuiltInRegistries.RECIPE_TYPE, recipeType.registryName, recipeType);
         GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, recipeType.registryName, new GTRecipeSerializer());
         GTRegistries.RECIPE_TYPES.register(recipeType.registryName, recipeType);
@@ -656,27 +656,27 @@ public class GTRecipeTypes {
 
     public static void init() {
         GCYMRecipeTypes.init();
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             GTRegistryInfo.registerFor(GTRegistries.RECIPE_TYPES.getRegistryName());
         }
         ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.RECIPE_TYPES, GTRecipeType.class));
         GTRegistries.RECIPE_TYPES.freeze();
 
-        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, GTCEu.id("machine"),
+        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, Gregtech.id("machine"),
                 GTRecipeSerializer.SERIALIZER);
-        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, GTCEu.id("crafting_facade_cover"),
+        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, Gregtech.id("crafting_facade_cover"),
                 FacadeCoverRecipe.SERIALIZER);
-        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, GTCEu.id("crafting_shaped_strict"),
+        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, Gregtech.id("crafting_shaped_strict"),
                 StrictShapedRecipe.SERIALIZER);
-        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, GTCEu.id("crafting_shaped_energy_transfer"),
+        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, Gregtech.id("crafting_shaped_energy_transfer"),
                 ShapedEnergyTransferRecipe.SERIALIZER);
-        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, GTCEu.id("crafting_tool_head_replace"),
+        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, Gregtech.id("crafting_tool_head_replace"),
                 ToolHeadReplaceRecipe.SERIALIZER);
-        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, GTCEu.id("crafting_shaped_fluid_container"),
+        GTRegistries.register(BuiltInRegistries.RECIPE_SERIALIZER, Gregtech.id("crafting_shaped_fluid_container"),
                 ShapedFluidContainerRecipe.SERIALIZER);
     }
 
     public static GTRecipeType get(String name) {
-        return GTRegistries.RECIPE_TYPES.get(GTCEu.id(name));
+        return GTRegistries.RECIPE_TYPES.get(Gregtech.id(name));
     }
 }

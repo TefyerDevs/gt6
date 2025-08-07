@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.PropertyKey;
@@ -24,7 +24,7 @@ import static com.gregtechceu.gt6.common.registry.GTRegistration.REGISTRATE;
 public class GTFluids {
 
     public static final FluidEntry<PotionFluid> POTION = REGISTRATE
-            .fluid("potion", GTCEu.id("block/fluids/fluid.potion"), GTCEu.id("block/fluids/fluid.potion"),
+            .fluid("potion", Gregtech.id("block/fluids/fluid.potion"), Gregtech.id("block/fluids/fluid.potion"),
                     PotionFluid.PotionFluidType::new, PotionFluid::new)
             .lang("Potion")
             .source(PotionFluid::new).noBlock().noBucket()

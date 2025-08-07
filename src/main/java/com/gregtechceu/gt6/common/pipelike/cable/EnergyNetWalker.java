@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.cable;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.WireProperties;
@@ -27,7 +27,7 @@ public class EnergyNetWalker extends PipeNetWalker<CableBlockEntity, WirePropert
             walker.traversePipeNet();
             return walker.routes;
         } catch (Exception e) {
-            GTCEu.LOGGER.error("error while create net data for energynet", e);
+            Gregtech.LOGGER.error("error while create net data for energynet", e);
         }
         return null;
     }

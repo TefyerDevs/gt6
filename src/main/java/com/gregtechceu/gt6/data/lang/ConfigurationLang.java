@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.lang;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.config.ConfigHolder;
 
 import com.tterrag.registrate.providers.RegistrateLangProvider;
@@ -24,7 +24,7 @@ public class ConfigurationLang {
         for (var entry : map.entrySet()) {
             var id = entry.getValue().getId();
             if (added.add(id)) {
-                provider.add(String.format("config.%s.option.%s", GTCEu.MOD_ID, id), id);
+                provider.add(String.format("config.%s.option.%s", Gregtech.MOD_ID, id), id);
             }
             if (entry.getValue() instanceof ObjectValue objectValue) {
                 dfs(provider, added, objectValue.get());

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.item.SurfaceRockBlockItem;
 import com.gregtechceu.gt6.client.renderer.block.SurfaceRockRenderer;
@@ -61,7 +61,7 @@ public class SurfaceRockBlock extends Block {
 
         registerDefaultState(this.defaultBlockState().setValue(FACING, Direction.DOWN));
 
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             SurfaceRockRenderer.create(this);
         }
     }

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.ores;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.config.ConfigHolder;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
@@ -67,7 +67,7 @@ public class OreGenCache {
             return veinMetadataByOrigin
                     .get(chunkPos, () -> oreGenerator.generateMetadata(level, generator, chunkPos));
         } catch (ExecutionException e) {
-            GTCEu.LOGGER.error("Cannot create vein position in chunk {}", chunkPos, e);
+            Gregtech.LOGGER.error("Cannot create vein position in chunk {}", chunkPos, e);
             return List.of();
         }
     }
@@ -87,7 +87,7 @@ public class OreGenCache {
                                         getOrCreateVeinMetadata(level, generator, chunkPos), chunkPos))
                         .stream();
             } catch (ExecutionException e) {
-                GTCEu.LOGGER.error("Cannot create vein in chunk {}", chunkPos, e);
+                Gregtech.LOGGER.error("Cannot create vein in chunk {}", chunkPos, e);
                 return Stream.empty();
             }
         }).filter(Objects::nonNull).toList();
@@ -109,7 +109,7 @@ public class OreGenCache {
                                         getOrCreateVeinMetadata(level, generator, chunkPos), chunkPos))
                         .stream();
             } catch (ExecutionException e) {
-                GTCEu.LOGGER.error("Cannot create vein in chunk {}", chunkPos, e);
+                Gregtech.LOGGER.error("Cannot create vein in chunk {}", chunkPos, e);
                 return Stream.empty();
             }
         }).filter(Objects::nonNull).toList();

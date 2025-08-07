@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.core;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
@@ -119,7 +119,7 @@ public class MixinHelpers {
                 });
             });
 
-            if (!GTCEu.Mods.isAE2Loaded()) {
+            if (!Gregtech.Mods.isAE2Loaded()) {
                 return;
             }
             // If AE2 is loaded, add the Fluid P2P attunement tag to all the buckets

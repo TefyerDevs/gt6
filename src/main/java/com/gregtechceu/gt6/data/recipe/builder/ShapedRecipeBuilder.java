@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.builder;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.recipe.StrictShapedRecipe;
 
 import com.lowdragmc.lowdraglib.utils.Builder;
@@ -126,7 +126,7 @@ public class ShapedRecipeBuilder extends Builder<Ingredient, ShapedRecipeBuilder
         }
 
         if (output.isEmpty()) {
-            GTCEu.LOGGER.error("shaped recipe {} output is empty", id);
+            Gregtech.LOGGER.error("shaped recipe {} output is empty", id);
             throw new IllegalArgumentException(id + ": output items is empty");
         } else {
             JsonObject result = new JsonObject();

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.PipeBlock;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
@@ -44,8 +44,8 @@ public class OpticalPipeBlock extends PipeBlock<OpticalPipeType, OpticalPipeProp
         super(properties, pipeType);
         this.pipeType = pipeType;
         this.properties = OpticalPipeProperties.INSTANCE;
-        this.pipeModel = new PipeModel(pipeType.getThickness(), () -> GTCEu.id("block/pipe/pipe_optical_side"),
-                () -> GTCEu.id("block/pipe/pipe_optical_in"), null, null);
+        this.pipeModel = new PipeModel(pipeType.getThickness(), () -> Gregtech.id("block/pipe/pipe_optical_side"),
+                () -> Gregtech.id("block/pipe/pipe_optical_in"), null, null);
         this.renderer = new PipeBlockRenderer(this.pipeModel);
     }
 

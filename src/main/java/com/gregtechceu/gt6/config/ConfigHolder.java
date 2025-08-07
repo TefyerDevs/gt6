@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.config;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 
 import net.minecraft.commands.Commands;
@@ -10,7 +10,7 @@ import dev.toma.configuration.config.Config;
 import dev.toma.configuration.config.Configurable;
 import dev.toma.configuration.config.format.ConfigFormats;
 
-@Config(id = GTCEu.MOD_ID)
+@Config(id = Gregtech.MOD_ID)
 public class ConfigHolder {
 
     public static ConfigHolder INSTANCE;

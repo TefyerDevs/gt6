@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.rei.orevein;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockore.BedrockOreDefinition;
 import com.gregtechceu.gt6.client.ClientProxy;
 import com.gregtechceu.gt6.common.data.GTItems;
@@ -26,7 +26,7 @@ import org.jetbrains.annotations.NotNull;
 public class GTBedrockOreDisplayCategory extends ModularUIDisplayCategory<GTBedrockOreDisplay> {
 
     public static final CategoryIdentifier<GTBedrockOreDisplay> CATEGORY = CategoryIdentifier
-            .of(GTCEu.id("bedrock_ore_diagram"));
+            .of(Gregtech.id("bedrock_ore_diagram"));
 
     private final Renderer icon;
 

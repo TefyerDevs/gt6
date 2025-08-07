@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.owner;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.config.ConfigHolder;
 
@@ -42,9 +42,9 @@ public abstract sealed class MachineOwner permits PlayerOwner, FTBOwner, Argonau
 
     public static void init() {
         var event = new RegisterOwnerTypeEvent();
-        if (GTCEu.Mods.isFTBTeamsLoaded()) {
+        if (Gregtech.Mods.isFTBTeamsLoaded()) {
             event.register(0, FTBOwner::new);
-        } else if (GTCEu.Mods.isArgonautsLoaded()) {
+        } else if (Gregtech.Mods.isArgonautsLoaded()) {
             event.register(0, ArgonautsOwner::new);
         } else {
             event.register(0, PlayerOwner::new);
@@ -105,7 +105,7 @@ public abstract sealed class MachineOwner permits PlayerOwner, FTBOwner, Argonau
     public static void displayPlayerInfo(List<Component> compList, UUID playerUUID) {
         final var playerName = UsernameCache.getLastKnownUsername(playerUUID);
         var online = "gt6.tooltip.status.trinary.";
-        if (GTCEu.isClientThread()) {
+        if (Gregtech.isClientThread()) {
             var connection = Minecraft.getInstance().getConnection();
             if (connection != null) {
                 online += connection.getOnlinePlayerIds().contains(playerUUID);

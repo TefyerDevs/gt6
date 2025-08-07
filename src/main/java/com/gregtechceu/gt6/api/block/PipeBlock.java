@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.capability.ICoverable;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
@@ -361,7 +361,7 @@ public abstract class PipeBlock<PipeType extends Enum<PipeType> & IPipeType<Node
     public void entityInside(BlockState state, Level level, BlockPos pos, Entity entity) {
         var pipeNode = getPipeTile(level, pos);
         if (pipeNode == null) {
-            GTCEu.LOGGER.error("Pipe was null");
+            Gregtech.LOGGER.error("Pipe was null");
             return;
         }
         if (!pipeNode.getFrameMaterial().isNull()) {

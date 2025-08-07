@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.data.chemical.material.ItemMaterialData;
@@ -98,7 +98,7 @@ public class GTRecipes {
         AddonFinder.getAddons().forEach(addon -> addon.addRecipes(consumer));
 
         // Must run recycling recipes very last
-        if (!(GTCEu.Mods.isKubeJSLoaded() && KJSCallWrapper.recipeEventHasListeners())) {
+        if (!(Gregtech.Mods.isKubeJSLoaded() && KJSCallWrapper.recipeEventHasListeners())) {
             RecyclingRecipes.init(consumer);
             ItemMaterialData.resolveItemMaterialInfos(consumer);
         }

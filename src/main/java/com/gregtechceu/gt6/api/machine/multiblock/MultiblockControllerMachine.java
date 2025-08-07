@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.machine.multiblock;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
 import com.gregtechceu.gt6.api.block.property.GTBlockStateProperties;
 import com.gregtechceu.gt6.api.capability.IParallelHatch;
@@ -249,7 +249,7 @@ public class MultiblockControllerMachine extends MetaMachine implements IMultiCo
             return;
         }
         if (upwardsFacing.getAxis() == Direction.Axis.Y) {
-            GTCEu.LOGGER.error("Tried to set upwards facing to invalid facing {}! Skipping", upwardsFacing);
+            Gregtech.LOGGER.error("Tried to set upwards facing to invalid facing {}! Skipping", upwardsFacing);
             return;
         }
         var blockState = getBlockState();

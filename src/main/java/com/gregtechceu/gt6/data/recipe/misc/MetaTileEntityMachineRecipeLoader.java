@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.misc;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.stack.MaterialEntry;
@@ -639,7 +639,7 @@ public class MetaTileEntityMachineRecipeLoader {
 
         // ME Parts
 
-        if (GTCEu.Mods.isAE2Loaded()) {
+        if (Gregtech.Mods.isAE2Loaded()) {
 
             ItemStack meInterface = AEParts.INTERFACE.stack(1);
             ItemStack accelerationCard = AEItems.SPEED_CARD.stack(2);

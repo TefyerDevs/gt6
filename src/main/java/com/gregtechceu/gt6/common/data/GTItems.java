@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.cover.filter.*;
@@ -408,7 +408,7 @@ public class GTItems {
             .onRegister(attach(new LighterBehavior(true, true, true)))
             .onRegister(attach(new FilteredFluidContainer(100, true, x -> x.getFluid().is(CustomTags.LIGHTER_FLUIDS)),
                     new ItemFluidContainer()))
-            .onRegister(modelPredicate(GTCEu.id("lighter_open"),
+            .onRegister(modelPredicate(Gregtech.id("lighter_open"),
                     (itemStack) -> itemStack.getOrCreateTag().getBoolean(LighterBehavior.LIGHTER_OPEN) ? 1.0f : 0.0f))
             .tag(CustomTags.TOOLS_IGNITER)
             .register();
@@ -420,7 +420,7 @@ public class GTItems {
             .onRegister(attach(new LighterBehavior(true, true, true)))
             .onRegister(attach(new FilteredFluidContainer(1000, true, x -> x.getFluid().is(CustomTags.LIGHTER_FLUIDS)),
                     new ItemFluidContainer()))
-            .onRegister(modelPredicate(GTCEu.id("lighter_open"),
+            .onRegister(modelPredicate(Gregtech.id("lighter_open"),
                     (itemStack) -> itemStack.getOrCreateTag().getBoolean(LighterBehavior.LIGHTER_OPEN) ? 1.0f : 0.0f))
             .tag(CustomTags.TOOLS_IGNITER)
             .register();
@@ -490,156 +490,156 @@ public class GTItems {
     public static ItemEntry<ComponentItem> BATTERY_LV_SODIUM = REGISTRATE
             .item("lv_sodium_battery", ComponentItem::create)
             .lang("Small Sodium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(80000, GTValues.LV)))
             .tag(CustomTags.LV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_MV_SODIUM = REGISTRATE
             .item("mv_sodium_battery", ComponentItem::create)
             .lang("Medium Sodium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(360000, GTValues.MV)))
             .tag(CustomTags.MV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_HV_SODIUM = REGISTRATE
             .item("hv_sodium_battery", ComponentItem::create)
             .lang("Large Sodium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(1200000, GTValues.HV)))
             .tag(CustomTags.HV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> BATTERY_LV_LITHIUM = REGISTRATE
             .item("lv_lithium_battery", ComponentItem::create)
             .lang("Small Lithium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(120000, GTValues.LV)))
             .tag(CustomTags.LV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_MV_LITHIUM = REGISTRATE
             .item("mv_lithium_battery", ComponentItem::create)
             .lang("Medium Lithium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(420000, GTValues.MV)))
             .tag(CustomTags.MV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_HV_LITHIUM = REGISTRATE
             .item("hv_lithium_battery", ComponentItem::create)
             .lang("Large Lithium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(1800000, GTValues.HV)))
             .tag(CustomTags.HV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> BATTERY_LV_CADMIUM = REGISTRATE
             .item("lv_cadmium_battery", ComponentItem::create)
             .lang("Small Cadmium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(100000, GTValues.LV)))
             .tag(CustomTags.LV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_MV_CADMIUM = REGISTRATE
             .item("mv_cadmium_battery", ComponentItem::create)
             .lang("Medium Cadmium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(400000, GTValues.MV)))
             .tag(CustomTags.MV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_HV_CADMIUM = REGISTRATE
             .item("hv_cadmium_battery", ComponentItem::create)
             .lang("Large Cadmium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(1600000, GTValues.HV)))
             .tag(CustomTags.HV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> ENERGIUM_CRYSTAL = REGISTRATE.item("energy_crystal", ComponentItem::create)
             .lang("Energium Crystal")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(6_400_000L, GTValues.HV)))
             .tag(CustomTags.HV_BATTERIES).register();
     public static ItemEntry<ComponentItem> LAPOTRON_CRYSTAL = REGISTRATE.item("lapotron_crystal", ComponentItem::create)
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(25_000_000L, GTValues.EV)))
             .tag(CustomTags.EV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> BATTERY_EV_VANADIUM = REGISTRATE
             .item("ev_vanadium_battery", ComponentItem::create)
             .lang("Small Vanadium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(10_240_000L, GTValues.EV)))
             .tag(CustomTags.EV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_IV_VANADIUM = REGISTRATE
             .item("iv_vanadium_battery", ComponentItem::create)
             .lang("Medium Vanadium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(40_960_000L, GTValues.IV)))
             .tag(CustomTags.IV_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_LuV_VANADIUM = REGISTRATE
             .item("luv_vanadium_battery", ComponentItem::create)
             .lang("Large Vanadium Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(163_840_000L, GTValues.LuV)))
             .tag(CustomTags.LuV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> BATTERY_ZPM_NAQUADRIA = REGISTRATE
             .item("zpm_naquadria_battery", ComponentItem::create)
             .lang("Medium Naquadria Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(655_360_000L, GTValues.ZPM)))
             .tag(CustomTags.ZPM_BATTERIES).register();
     public static ItemEntry<ComponentItem> BATTERY_UV_NAQUADRIA = REGISTRATE
             .item("uv_naquadria_battery", ComponentItem::create)
             .lang("Large Naquadria Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(2_621_440_000L, GTValues.UV)))
             .tag(CustomTags.UV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> ENERGY_LAPOTRONIC_ORB = REGISTRATE
             .item("lapotronic_energy_orb", ComponentItem::create)
             .lang("Lapotronic Energy Orb")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(250_000_000L, GTValues.IV)))
             .tag(CustomTags.IV_BATTERIES).register();
     public static ItemEntry<ComponentItem> ENERGY_LAPOTRONIC_ORB_CLUSTER = REGISTRATE
             .item("lapotronic_energy_orb_cluster", ComponentItem::create)
             .lang("Lapotronic Energy Orb Cluster")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(1_000_000_000L, GTValues.LuV)))
             .tag(CustomTags.LuV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> ENERGY_MODULE = REGISTRATE.item("energy_module", ComponentItem::create)
             .lang("Energy Module")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(4_000_000_000L, GTValues.ZPM)))
             .tag(CustomTags.ZPM_BATTERIES).register();
     public static ItemEntry<ComponentItem> ENERGY_CLUSTER = REGISTRATE.item("energy_cluster", ComponentItem::create)
             .lang("Energy Cluster")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(20_000_000_000L, GTValues.UV)))
             .tag(CustomTags.UV_BATTERIES).register();
 
     public static ItemEntry<ComponentItem> ZERO_POINT_MODULE = REGISTRATE
             .item("zero_point_module", ComponentItem::create)
             .lang("Zero Point Module")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createBattery(2000000000000L, GTValues.ZPM, true))).register();
     public static ItemEntry<ComponentItem> ULTIMATE_BATTERY = REGISTRATE.item("max_battery", ComponentItem::create)
             .lang("Ultimate Battery")
-            .model(overrideModel(GTCEu.id("battery"), 8))
-            .onRegister(modelPredicate(GTCEu.id("battery"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("battery"), 8))
+            .onRegister(modelPredicate(Gregtech.id("battery"), ElectricStats::getStoredPredicate))
             .onRegister(attach(ElectricStats.createRechargeableBattery(Long.MAX_VALUE, GTValues.UHV)))
             .tag(CustomTags.UHV_BATTERIES).register();
 
@@ -1995,8 +1995,8 @@ public class GTItems {
     public static ItemEntry<ComponentItem> PROGRAMMED_CIRCUIT = REGISTRATE
             .item("programmed_circuit", ComponentItem::create)
             .lang("Programmed Circuit")
-            .model(overrideModel(GTCEu.id("circuit"), 33))
-            .onRegister(modelPredicate(GTCEu.id("circuit"),
+            .model(overrideModel(Gregtech.id("circuit"), 33))
+            .onRegister(modelPredicate(Gregtech.id("circuit"),
                     (itemStack) -> IntCircuitBehaviour.getCircuitConfiguration(itemStack) / 100f))
             .onRegister(attach(new IntCircuitBehaviour()))
             .register();
@@ -2173,7 +2173,7 @@ public class GTItems {
     public static ItemEntry<ComponentItem> TURBINE_ROTOR = REGISTRATE.item("turbine_rotor", ComponentItem::create)
             .lang("%s Turbine Rotor")
             .properties(p -> p.stacksTo(1))
-            .model((ctx, prov) -> createTextureModel(ctx, prov, GTCEu.id("item/tools/turbine")))
+            .model((ctx, prov) -> createTextureModel(ctx, prov, Gregtech.id("item/tools/turbine")))
             .color(() -> IMaterialPartItem::getItemStackColor)
             .onRegister(attach(new TurbineRotorBehaviour())).register();
 
@@ -2423,8 +2423,8 @@ public class GTItems {
             .lang("Electric Jetpack")
             .properties(p -> p.rarity(Rarity.UNCOMMON))
             .tag(Tags.Items.ARMORS_CHESTPLATES)
-            .model(overrideModel(GTCEu.id("electric_jetpack"), 8))
-            .onRegister(modelPredicate(GTCEu.id("electric_jetpack"), ElectricStats::getStoredPredicate))
+            .model(overrideModel(Gregtech.id("electric_jetpack"), 8))
+            .onRegister(modelPredicate(Gregtech.id("electric_jetpack"), ElectricStats::getStoredPredicate))
             .register();
 
     public static ItemEntry<ArmorComponentItem> ELECTRIC_JETPACK_ADVANCED = REGISTRATE
@@ -2588,7 +2588,7 @@ public class GTItems {
     public static <T extends Item> NonNullConsumer<T> modelPredicate(ResourceLocation predicate,
                                                                      StackProperty property) {
         return item -> {
-            if (GTCEu.isClientSide()) {
+            if (Gregtech.isClientSide()) {
                 ItemProperties.register(item, predicate, (itemStack, c, l, i) -> property.apply(itemStack));
             }
         };
@@ -2598,7 +2598,7 @@ public class GTItems {
     public static <T extends Item> NonNullConsumer<T> modelPredicate(ResourceLocation predicate,
                                                                      Supplier<Supplier<ItemPropertyFunction>> property) {
         return item -> {
-            if (GTCEu.isClientSide()) {
+            if (Gregtech.isClientSide()) {
                 ItemProperties.register(item, predicate, property.get().get());
             }
         };

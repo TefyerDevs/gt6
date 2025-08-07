@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.kjs.builders.machine;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
@@ -83,10 +83,10 @@ public class KJSSteamMachineBuilder extends BuilderBase<MachineDefinition> {
     public void generateLang(LangEventJS lang) {
         super.generateLang(lang);
         if (value != null) {
-            lang.add(GTCEu.MOD_ID, value.getDescriptionId(), value.getLangValue());
+            lang.add(Gregtech.MOD_ID, value.getDescriptionId(), value.getLangValue());
         }
         if (hpValue != null) {
-            lang.add(GTCEu.MOD_ID, hpValue.getDescriptionId(), hpValue.getLangValue());
+            lang.add(Gregtech.MOD_ID, hpValue.getDescriptionId(), hpValue.getLangValue());
         }
     }
 

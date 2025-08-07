@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.ingredient;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.core.mixins.IngredientAccessor;
 import com.gregtechceu.gt6.core.mixins.ItemValueAccessor;
 import com.gregtechceu.gt6.core.mixins.TagValueAccessor;
@@ -26,7 +26,7 @@ import java.util.stream.Stream;
 
 public class SizedIngredient extends Ingredient {
 
-    public static final ResourceLocation TYPE = GTCEu.id("sized");
+    public static final ResourceLocation TYPE = Gregtech.id("sized");
 
     @Getter
     protected int amount;

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.damagesource.DamageTypeData;
 
 import net.minecraft.data.worldgen.BootstapContext;
@@ -37,6 +37,6 @@ public class GTDamageTypes {
     public static void init() {}
 
     public static void bootstrap(BootstapContext<DamageType> ctx) {
-        DamageTypeData.allInNamespace(GTCEu.MOD_ID).forEach(data -> data.register(ctx));
+        DamageTypeData.allInNamespace(Gregtech.MOD_ID).forEach(data -> data.register(ctx));
     }
 }

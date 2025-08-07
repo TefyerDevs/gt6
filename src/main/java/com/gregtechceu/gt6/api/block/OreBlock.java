@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
 import com.gregtechceu.gt6.client.renderer.block.OreBlockRenderer;
@@ -20,7 +20,7 @@ public class OreBlock extends MaterialBlock {
 
     public OreBlock(Properties properties, TagPrefix tagPrefix, Material material) {
         super(properties, tagPrefix, material, false);
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             OreBlockRenderer.create(this);
         }
     }

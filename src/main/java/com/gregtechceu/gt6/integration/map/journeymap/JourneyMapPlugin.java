@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map.journeymap;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import journeymap.client.api.ClientPlugin;
 import journeymap.client.api.IClientAPI;
@@ -27,13 +27,13 @@ public class JourneyMapPlugin implements IClientPlugin {
     public void initialize(IClientAPI jmClientApi) {
         active = true;
         jmApi = jmClientApi;
-        jmClientApi.subscribe(GTCEu.MOD_ID, EnumSet.of(ClientEvent.Type.REGISTRY));
+        jmClientApi.subscribe(Gregtech.MOD_ID, EnumSet.of(ClientEvent.Type.REGISTRY));
         JourneymapEventListener.init();
     }
 
     @Override
     public String getModId() {
-        return GTCEu.MOD_ID;
+        return Gregtech.MOD_ID;
     }
 
     @Override

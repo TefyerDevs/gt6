@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.machine.trait;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.IWorkable;
 import com.gregtechceu.gt6.api.capability.recipe.EURecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
@@ -184,7 +184,7 @@ public class RecipeLogic extends MachineTrait implements IEnhancedManaged, IWork
      * it should be called on the server side restrictively.
      */
     public RecipeManager getRecipeManager() {
-        return GTCEu.getMinecraftServer().getRecipeManager();
+        return Gregtech.getMinecraftServer().getRecipeManager();
     }
 
     public void serverTick() {

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.item.tool;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.item.IGTTool;
 import com.gregtechceu.gt6.api.sound.SoundEntry;
@@ -52,7 +52,7 @@ public class GTSwordItem extends SwordItem implements IGTTool {
         this.material = material;
         this.electricTier = toolType.electricTier;
         this.toolStats = toolStats;
-        if (GTCEu.isClientSide()) {
+        if (Gregtech.isClientSide()) {
             ToolItemRenderer.create(this, toolType);
         }
         definition$init();

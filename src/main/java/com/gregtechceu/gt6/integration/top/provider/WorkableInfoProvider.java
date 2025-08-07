@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IWorkable;
 import com.gregtechceu.gt6.api.machine.trait.RecipeLogic;
@@ -21,7 +21,7 @@ public class WorkableInfoProvider extends CapabilityInfoProvider<IWorkable> {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("workable_provider");
+        return Gregtech.id("workable_provider");
     }
 
     @Nullable

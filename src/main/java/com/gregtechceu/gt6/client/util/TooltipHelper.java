@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.util;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.utils.GradientUtil;
 
@@ -61,11 +61,11 @@ public class TooltipHelper {
      */
     public static GTFormattingCode createNewCode(int rate, ChatFormatting... codes) {
         if (rate <= 0) {
-            GTCEu.LOGGER.error("Could not create GT Formatting Code with rate {}, must be greater than zero!", rate);
+            Gregtech.LOGGER.error("Could not create GT Formatting Code with rate {}, must be greater than zero!", rate);
             return null;
         }
         if (codes == null || codes.length <= 1) {
-            GTCEu.LOGGER.error("Could not create GT Formatting Code with codes {}, must have length greater than one!",
+            Gregtech.LOGGER.error("Could not create GT Formatting Code with codes {}, must have length greater than one!",
                     Arrays.toString(codes));
             return null;
         }

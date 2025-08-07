@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.ui;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.recipe.FluidRecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
 import com.gregtechceu.gt6.api.capability.recipe.ItemRecipeCapability;
@@ -101,10 +101,10 @@ public class GTRecipeTypeUI {
     public CompoundTag getCustomUI() {
         if (this.customUICache == null) {
             ResourceManager resourceManager = null;
-            if (GTCEu.isClientSide()) {
+            if (Gregtech.isClientSide()) {
                 resourceManager = Minecraft.getInstance().getResourceManager();
-            } else if (GTCEu.getMinecraftServer() != null) {
-                resourceManager = GTCEu.getMinecraftServer().getResourceManager();
+            } else if (Gregtech.getMinecraftServer() != null) {
+                resourceManager = Gregtech.getMinecraftServer().getResourceManager();
             }
             if (resourceManager == null) {
                 this.customUICache = new CompoundTag();
@@ -239,25 +239,25 @@ public class GTRecipeTypeUI {
                 progress.add(dualProgressWidget);
             });
             // add recipe button
-            if (!isJEI && (GTCEu.Mods.isREILoaded() || GTCEu.Mods.isJEILoaded() || GTCEu.Mods.isEMILoaded())) {
+            if (!isJEI && (Gregtech.Mods.isREILoaded() || Gregtech.Mods.isJEILoaded() || Gregtech.Mods.isEMILoaded())) {
                 for (Widget widget : progress) {
                     template.addWidget(new ButtonWidget(widget.getPosition().x, widget.getPosition().y,
                             widget.getSize().width, widget.getSize().height, IGuiTexture.EMPTY, cd -> {
                                 if (cd.isRemote) {
-                                    if (GTCEu.Mods.isREILoaded()) {
+                                    if (Gregtech.Mods.isREILoaded()) {
                                         ViewSearchBuilder.builder().addCategories(
                                                 recipeType.getCategories().stream()
                                                         .filter(GTRecipeCategory::isXEIVisible)
                                                         .map(GTRecipeREICategory::machineCategory)
                                                         .collect(Collectors.toList()))
                                                 .open();
-                                    } else if (GTCEu.Mods.isJEILoaded()) {
+                                    } else if (Gregtech.Mods.isJEILoaded()) {
                                         JEIPlugin.jeiRuntime.getRecipesGui().showTypes(
                                                 recipeType.getCategories().stream()
                                                         .filter(GTRecipeCategory::isXEIVisible)
                                                         .map(GTRecipeJEICategory::machineType)
                                                         .collect(Collectors.toList()));
-                                    } else if (GTCEu.Mods.isEMILoaded()) {
+                                    } else if (Gregtech.Mods.isEMILoaded()) {
                                         EmiApi.displayRecipeCategory(
                                                 GTRecipeEMICategory.machineCategory(recipeType.getCategory()));
                                     }

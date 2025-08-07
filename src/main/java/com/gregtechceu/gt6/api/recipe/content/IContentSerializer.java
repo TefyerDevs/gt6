@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.content;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.recipe.chance.logic.ChanceLogic;
 
 import net.minecraft.nbt.NbtOps;
@@ -23,11 +23,11 @@ public interface IContentSerializer<T> {
     }
 
     default T fromJson(JsonElement json) {
-        return codec().parse(JsonOps.INSTANCE, json).getOrThrow(false, GTCEu.LOGGER::error);
+        return codec().parse(JsonOps.INSTANCE, json).getOrThrow(false, Gregtech.LOGGER::error);
     }
 
     default JsonElement toJson(T content) {
-        return codec().encodeStart(JsonOps.INSTANCE, content).getOrThrow(false, GTCEu.LOGGER::error);
+        return codec().encodeStart(JsonOps.INSTANCE, content).getOrThrow(false, Gregtech.LOGGER::error);
     }
 
     T of(Object o);
@@ -76,10 +76,10 @@ public interface IContentSerializer<T> {
     }
 
     default Tag toNbt(T content) {
-        return codec().encodeStart(NbtOps.INSTANCE, content).getOrThrow(false, GTCEu.LOGGER::error);
+        return codec().encodeStart(NbtOps.INSTANCE, content).getOrThrow(false, Gregtech.LOGGER::error);
     }
 
     default T fromNbt(Tag tag) {
-        return codec().parse(NbtOps.INSTANCE, tag).getOrThrow(false, GTCEu.LOGGER::error);
+        return codec().parse(NbtOps.INSTANCE, tag).getOrThrow(false, Gregtech.LOGGER::error);
     }
 }

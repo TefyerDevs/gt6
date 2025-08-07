@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.gui.widget;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
@@ -226,7 +226,7 @@ public class PatternPreviewWidget extends WidgetGroup {
     public static PatternPreviewWidget getPatternWidget(MultiblockMachineDefinition controllerDefinition) {
         if (LEVEL == null) {
             if (Minecraft.getInstance().level == null) {
-                GTCEu.LOGGER.error("Try to init pattern previews before level load");
+                Gregtech.LOGGER.error("Try to init pattern previews before level load");
                 throw new IllegalStateException();
             }
             LEVEL = new TrackedDummyWorld();
@@ -358,10 +358,10 @@ public class PatternPreviewWidget extends WidgetGroup {
     public void updateScreen() {
         super.updateScreen();
         // I can only think of this way
-        if (!isLoaded && GTCEu.Mods.isEMILoaded() && Minecraft.getInstance().screen instanceof RecipeScreen) {
+        if (!isLoaded && Gregtech.Mods.isEMILoaded() && Minecraft.getInstance().screen instanceof RecipeScreen) {
             setPage(0);
             isLoaded = true;
-        } else if (!isLoaded && GTCEu.Mods.isREILoaded() &&
+        } else if (!isLoaded && Gregtech.Mods.isREILoaded() &&
                 Minecraft.getInstance().screen instanceof AbstractDisplayViewingScreen) {
                     setPage(0);
                     isLoaded = true;
@@ -435,7 +435,7 @@ public class PatternPreviewWidget extends WidgetGroup {
             }
             sceneWidget.setRenderedCore(positions, null);
         } else {
-            GTCEu.LOGGER.warn("Pattern formed checking failed: {}", controllerBase.self().getDefinition());
+            Gregtech.LOGGER.warn("Pattern formed checking failed: {}", controllerBase.self().getDefinition());
         }
     }
 

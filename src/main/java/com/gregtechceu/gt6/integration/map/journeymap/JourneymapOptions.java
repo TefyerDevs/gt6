@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.map.journeymap;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import journeymap.client.api.IClientAPI;
 import journeymap.client.api.option.BooleanOption;
@@ -15,7 +15,7 @@ public class JourneymapOptions {
 
     public JourneymapOptions() {
         final String prefix = "gt6.journeymap.options.layers.";
-        final OptionCategory category = new OptionCategory(GTCEu.MOD_ID, "gt6.journeymap.options.layers");
+        final OptionCategory category = new OptionCategory(Gregtech.MOD_ID, "gt6.journeymap.options.layers");
 
         final BooleanOption oreLayer = new BooleanOption(category, "ore_veins", prefix + "ore_veins", false);
         layerOptions.put(oreLayer.getFieldName(), oreLayer);
@@ -45,7 +45,7 @@ public class JourneymapOptions {
                         api.show(marker);
                     } catch (Exception e) {
                         // It never actually throws anything...
-                        GTCEu.LOGGER.error("Failed to enable marker with name {}", name, e);
+                        Gregtech.LOGGER.error("Failed to enable marker with name {}", name, e);
                     }
                 }
             });

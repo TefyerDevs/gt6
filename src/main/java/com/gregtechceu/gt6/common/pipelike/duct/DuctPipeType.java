@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.pipelike.duct;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.pipenet.IPipeType;
 import com.gregtechceu.gt6.client.model.PipeModel;
 
@@ -19,7 +19,7 @@ public enum DuctPipeType implements IPipeType<DuctPipeProperties>, StringReprese
     HUGE("huge", 0.875f, 16f),
     ;
 
-    public static final ResourceLocation TYPE_ID = GTCEu.id("duct");
+    public static final ResourceLocation TYPE_ID = Gregtech.id("duct");
     public static final DuctPipeType[] VALUES = values();
 
     @Getter
@@ -56,8 +56,8 @@ public enum DuctPipeType implements IPipeType<DuctPipeProperties>, StringReprese
     }
 
     public PipeModel createPipeModel() {
-        return new PipeModel(thickness, () -> GTCEu.id("block/pipe/pipe_duct_side"),
-                () -> GTCEu.id("block/pipe/pipe_duct_in"),
+        return new PipeModel(thickness, () -> Gregtech.id("block/pipe/pipe_duct_side"),
+                () -> Gregtech.id("block/pipe/pipe_duct_in"),
                 null, null);
     }
 }

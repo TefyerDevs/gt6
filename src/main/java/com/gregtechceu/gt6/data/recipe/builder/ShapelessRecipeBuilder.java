@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.builder;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import com.lowdragmc.lowdraglib.utils.NBTToJsonConverter;
 
@@ -97,7 +97,7 @@ public class ShapelessRecipeBuilder {
         json.add("ingredients", jsonarray);
 
         if (output.isEmpty()) {
-            GTCEu.LOGGER.error("shapeless recipe {} output is empty", id);
+            Gregtech.LOGGER.error("shapeless recipe {} output is empty", id);
             throw new IllegalArgumentException(id + ": output items is empty");
         } else {
             JsonObject result = new JsonObject();

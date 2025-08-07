@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.feature.IExhaustVentMachine;
 
@@ -64,6 +64,6 @@ public class ExhaustVentInfoProvider extends CapabilityInfoProvider<IExhaustVent
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("exhaust_vent_info");
+        return Gregtech.id("exhaust_vent_info");
     }
 }

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.ItemMaterialData;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -88,7 +88,7 @@ public class ChemicalHelper {
         ItemMaterialInfo info = ITEM_MATERIAL_INFO.get(itemLike.asItem());
         if (info == null) return MaterialStack.EMPTY;
         if (info.getMaterial().isEmpty()) {
-            GTCEu.LOGGER.error("ItemMaterialInfo for {} is empty!", itemLike);
+            Gregtech.LOGGER.error("ItemMaterialInfo for {} is empty!", itemLike);
             return MaterialStack.EMPTY;
         }
         return info.getMaterial();

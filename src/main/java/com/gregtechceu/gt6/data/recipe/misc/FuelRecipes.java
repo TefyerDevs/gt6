@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.misc;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.fluids.store.FluidStorageKeys;
 import com.gregtechceu.gt6.utils.GTUtil;
 
@@ -28,7 +28,7 @@ public class FuelRecipes {
         for (var fuelEntry : FurnaceBlockEntity.getFuel().entrySet()) {
             addedItems.add(fuelEntry.getKey());
             var resLoc = BuiltInRegistries.ITEM.getKey(fuelEntry.getKey());
-            STEAM_BOILER_RECIPES.recipeBuilder(GTCEu.id(resLoc.getNamespace() + "_" + resLoc.getPath()))
+            STEAM_BOILER_RECIPES.recipeBuilder(Gregtech.id(resLoc.getNamespace() + "_" + resLoc.getPath()))
                     .inputItems(fuelEntry.getKey())
                     .duration(fuelEntry.getValue() * 12) // remove the * 12 if SteamBoilerMachine:240 is uncommented
                     .save(provider);
@@ -37,7 +37,7 @@ public class FuelRecipes {
             var burnTime = GTUtil.getItemBurnTime(item);
             if (burnTime > 0 && !addedItems.contains(item)) {
                 var resLoc = BuiltInRegistries.ITEM.getKey(item);
-                STEAM_BOILER_RECIPES.recipeBuilder(GTCEu.id(resLoc.getNamespace() + "_" + resLoc.getPath()))
+                STEAM_BOILER_RECIPES.recipeBuilder(Gregtech.id(resLoc.getNamespace() + "_" + resLoc.getPath()))
                         .inputItems(item)
                         .duration(burnTime * 12)
                         .save(provider);

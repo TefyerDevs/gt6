@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.PipeBlock;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
@@ -39,8 +39,8 @@ public class LaserPipeBlock extends PipeBlock<LaserPipeType, LaserPipeProperties
     public LaserPipeBlock(Properties properties, LaserPipeType type) {
         super(properties, type);
         this.properties = LaserPipeProperties.INSTANCE;
-        this.model = new PipeModel(LaserPipeType.NORMAL.getThickness(), () -> GTCEu.id("block/pipe/pipe_laser_side"),
-                () -> GTCEu.id("block/pipe/pipe_laser_in"), null, null);
+        this.model = new PipeModel(LaserPipeType.NORMAL.getThickness(), () -> Gregtech.id("block/pipe/pipe_laser_side"),
+                () -> Gregtech.id("block/pipe/pipe_laser_in"), null, null);
         this.renderer = new PipeBlockRenderer(this.model);
     }
 

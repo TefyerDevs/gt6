@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.model.machine;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
@@ -64,9 +64,9 @@ import static com.gregtechceu.gt6.api.machine.IMachineBlockEntity.*;
 public final class MachineModel extends BaseBakedModel implements ICoverableRenderer,
                                 IBlockEntityRendererBakedModel<BlockEntity> {
 
-    public static final ResourceLocation PIPE_OVERLAY = GTCEu.id("block/overlay/machine/overlay_pipe");
-    public static final ResourceLocation FLUID_OUTPUT_OVERLAY = GTCEu.id("block/overlay/machine/overlay_fluid_output");
-    public static final ResourceLocation ITEM_OUTPUT_OVERLAY = GTCEu.id("block/overlay/machine/overlay_item_output");
+    public static final ResourceLocation PIPE_OVERLAY = Gregtech.id("block/overlay/machine/overlay_pipe");
+    public static final ResourceLocation FLUID_OUTPUT_OVERLAY = Gregtech.id("block/overlay/machine/overlay_fluid_output");
+    public static final ResourceLocation ITEM_OUTPUT_OVERLAY = Gregtech.id("block/overlay/machine/overlay_item_output");
 
     private static @Nullable TextureAtlasSprite pipeOverlaySprite;
     private static @Nullable TextureAtlasSprite fluidOutputOverlaySprite;

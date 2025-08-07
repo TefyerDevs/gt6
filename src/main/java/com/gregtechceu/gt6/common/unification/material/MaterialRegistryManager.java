@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.unification.material;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.IMaterialRegistryManager;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.registry.MaterialRegistry;
@@ -101,7 +101,7 @@ public final class MaterialRegistryManager implements IMaterialRegistryManager {
                 modid = name.substring(0, index);
                 materialName = name.substring(index + 1);
             } else {
-                modid = GTCEu.MOD_ID;
+                modid = Gregtech.MOD_ID;
                 materialName = name;
             }
             return getRegistry(modid).get(materialName);
@@ -142,8 +142,8 @@ public final class MaterialRegistryManager implements IMaterialRegistryManager {
 
     @NotNull
     private MaterialRegistryImpl createInternalRegistry() {
-        MaterialRegistryImpl registry = new MaterialRegistryImpl(GTCEu.MOD_ID);
-        this.registries.put(GTCEu.MOD_ID, registry);
+        MaterialRegistryImpl registry = new MaterialRegistryImpl(Gregtech.MOD_ID);
+        this.registries.put(Gregtech.MOD_ID, registry);
         return registry;
     }
 

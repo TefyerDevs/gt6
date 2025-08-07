@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.utils.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.client.Minecraft;
@@ -40,10 +40,10 @@ public class RuntimeExistingFileHelper extends ExistingFileHelper {
         if (packType == PackType.CLIENT_RESOURCES) {
             return Minecraft.getInstance().getResourceManager();
         } else if (packType == PackType.SERVER_DATA) {
-            if (GTCEu.getMinecraftServer() == null) {
+            if (Gregtech.getMinecraftServer() == null) {
                 throw new IllegalStateException("Cannot get server resources without a server or on a remote client.");
             }
-            return GTCEu.getMinecraftServer().getResourceManager();
+            return Gregtech.getMinecraftServer().getResourceManager();
         } else {
             throw new IllegalStateException("Invalid pack type " + packType);
         }

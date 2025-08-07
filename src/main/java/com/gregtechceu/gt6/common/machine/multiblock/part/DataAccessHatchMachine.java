@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.machine.multiblock.part;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.IDataAccessHatch;
 import com.gregtechceu.gt6.api.capability.IMonitorComponent;
@@ -196,7 +196,7 @@ public class DataAccessHatchMachine extends TieredPartMachine
 
     @Override
     public IGuiTexture getComponentIcon() {
-        return new ResourceTexture(GTCEu.id("textures/item/data_module.png")).getSubTexture(0, 0, 1, 1 / 13f);
+        return new ResourceTexture(Gregtech.id("textures/item/data_module.png")).getSubTexture(0, 0, 1, 1 / 13f);
     }
 
     @Override

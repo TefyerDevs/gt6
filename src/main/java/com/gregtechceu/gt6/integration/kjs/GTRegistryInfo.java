@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.kjs;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.DimensionMarker;
 import com.gregtechceu.gt6.api.data.chemical.Element;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -49,7 +49,7 @@ public class GTRegistryInfo<K, V> {
 
     public static final GTRegistryInfo<String, Element> ELEMENT = add(GTRegistries.ELEMENTS, Element.class);
     public static final GTRegistryInfo<String, Material> MATERIAL = add(
-            MaterialRegistryManager.getInstance().getRegistry(GTCEu.MOD_ID), Material.class);
+            MaterialRegistryManager.getInstance().getRegistry(Gregtech.MOD_ID), Material.class);
     public static final GTRegistryInfo<ResourceLocation, GTRecipeType> RECIPE_TYPE = add(GTRegistries.RECIPE_TYPES,
             GTRecipeType.class);
     public static final GTRegistryInfo<ResourceLocation, GTRecipeCategory> RECIPE_CATEGORY = add(
@@ -57,13 +57,13 @@ public class GTRegistryInfo<K, V> {
             GTRecipeCategory.class);
     public static final GTRegistryInfo<ResourceLocation, MachineDefinition> MACHINE = add(GTRegistries.MACHINES,
             MachineDefinition.class);
-    public static final GTRegistryInfo<String, MaterialIconSet> MATERIAL_ICON_SET = add(GTCEu.id("material_icon_set"),
+    public static final GTRegistryInfo<String, MaterialIconSet> MATERIAL_ICON_SET = add(Gregtech.id("material_icon_set"),
             () -> MaterialIconSet.ICON_SETS, MaterialIconSet.class);
     public static final GTRegistryInfo<String, MaterialIconType> MATERIAL_ICON_TYPE = add(
-            GTCEu.id("material_icon_type"), () -> MaterialIconType.ICON_TYPES, MaterialIconType.class);
-    public static final GTRegistryInfo<String, IWorldGenLayer> WORLD_GEN_LAYER = add(GTCEu.id("world_gen_layer"),
+            Gregtech.id("material_icon_type"), () -> MaterialIconType.ICON_TYPES, MaterialIconType.class);
+    public static final GTRegistryInfo<String, IWorldGenLayer> WORLD_GEN_LAYER = add(Gregtech.id("world_gen_layer"),
             () -> WorldGeneratorUtils.WORLD_GEN_LAYERS, SimpleWorldGenLayer.class);
-    public static final GTRegistryInfo<String, TagPrefix> TAG_PREFIX = add(GTCEu.id("tag_prefix"),
+    public static final GTRegistryInfo<String, TagPrefix> TAG_PREFIX = add(Gregtech.id("tag_prefix"),
             () -> TagPrefix.PREFIXES, KJSTagPrefix.class);
     public static final GTRegistryInfo<ResourceLocation, DimensionMarker> DIMENSION_MARKER = add(
             GTRegistries.DIMENSION_MARKERS, DimensionMarker.class);

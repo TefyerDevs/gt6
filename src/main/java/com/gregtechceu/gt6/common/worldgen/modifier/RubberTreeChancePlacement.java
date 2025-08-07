@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.worldgen.modifier;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.config.ConfigHolder;
 
@@ -16,7 +16,7 @@ public class RubberTreeChancePlacement extends RepeatingPlacement {
 
     public static final PlacementModifierType<RubberTreeChancePlacement> RUBBER_TREE_CHANCE_PLACEMENT = GTRegistries
             .register(
-                    BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, GTCEu.id("rubber_tree_chance"),
+                    BuiltInRegistries.PLACEMENT_MODIFIER_TYPE, Gregtech.id("rubber_tree_chance"),
                     () -> RubberTreeChancePlacement.CODEC);
 
     public static final RubberTreeChancePlacement INSTANCE = new RubberTreeChancePlacement();

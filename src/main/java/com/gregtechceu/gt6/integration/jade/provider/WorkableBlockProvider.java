@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.jade.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IWorkable;
 import com.gregtechceu.gt6.common.machine.multiblock.electric.research.ResearchStationMachine;
@@ -24,7 +24,7 @@ import snownee.jade.api.ui.BoxStyle;
 public class WorkableBlockProvider extends CapabilityBlockProvider<IWorkable> {
 
     public WorkableBlockProvider() {
-        super(GTCEu.id("workable_provider"));
+        super(Gregtech.id("workable_provider"));
     }
 
     @Nullable

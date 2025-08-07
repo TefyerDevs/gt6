@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.registry;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.StringTag;
@@ -77,7 +77,7 @@ public abstract class GTRegistry<K, V> implements Iterable<V> {
     private boolean checkActiveModContainerIsGregtech() {
         ModContainer container = ModLoadingContext.get().getActiveContainer();
         return container != null && (container.getModId().equals(this.registryName.getNamespace()) ||
-                container.getModId().equals(GTCEu.MOD_ID) ||
+                container.getModId().equals(Gregtech.MOD_ID) ||
                 container.getModId().equals("minecraft")); // check for minecraft modid in case of datagen or a mishap
     }
 
@@ -99,7 +99,7 @@ public abstract class GTRegistry<K, V> implements Iterable<V> {
             throw new IllegalStateException("[replace] registry %s has been frozen".formatted(registryName));
         }
         if (!containKey(key)) {
-            GTCEu.LOGGER.warn("[replace] couldn't find key %s in registry %s".formatted(registryName, key));
+            Gregtech.LOGGER.warn("[replace] couldn't find key %s in registry %s".formatted(registryName, key));
         }
         registry.put(key, value);
         return value;

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.misc;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
@@ -32,11 +32,11 @@ public class ImageCache {
                 try (InputStream stream = new URL(url).openStream()) {
                     return stream.readAllBytes();
                 } catch (IOException e) {
-                    GTCEu.LOGGER.error("Could not load image {}", url, e);
+                    Gregtech.LOGGER.error("Could not load image {}", url, e);
                     downloading = false;
                     return NULL_MARKER;
                 } finally {
-                    GTCEu.LOGGER.debug("Downloaded image {}! Executing callback", url);
+                    Gregtech.LOGGER.debug("Downloaded image {}! Executing callback", url);
                     downloading = false;
                 }
             }));
@@ -56,7 +56,7 @@ public class ImageCache {
             if (t.getCause() != null) {
                 t = t.getCause();
             }
-            GTCEu.LOGGER.error("Could not load image {}", url, t);
+            Gregtech.LOGGER.error("Could not load image {}", url, t);
         }
     }
 }

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
 import com.gregtechceu.gt6.api.machine.feature.IRecipeLogicMachine;
 import com.gregtechceu.gt6.api.recipe.GTRecipeType;
@@ -23,7 +23,7 @@ public class MachineModeProvider implements IProbeInfoProvider {
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("machine_mode");
+        return Gregtech.id("machine_mode");
     }
 
     @Override

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.renderer.item;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.data.pack.GTDynamicResourcePack;
 
 import net.minecraft.client.Minecraft;
@@ -25,7 +25,7 @@ public class ArmorItemRenderer {
             // read the base armor model JSON
             JsonObject original;
             try (BufferedReader reader = Minecraft.getInstance().getResourceManager()
-                    .openAsReader(GTCEu.id("models/item/armor/%s.json".formatted(model.armorType.getName())))) {
+                    .openAsReader(Gregtech.id("models/item/armor/%s.json".formatted(model.armorType.getName())))) {
                 original = GsonHelper.parse(reader, true);
             } catch (IOException e) {
                 throw new RuntimeException(e);

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.block.ActiveBlock;
 import com.gregtechceu.gt6.api.block.IFusionCasingType;
 
@@ -39,7 +39,7 @@ public class FusionCasingBlock extends ActiveBlock {
 
         @Override
         public ResourceLocation getTexture() {
-            return GTCEu.id("block/casings/fusion/%s".formatted(this.name));
+            return Gregtech.id("block/casings/fusion/%s".formatted(this.name));
         }
     }
 }

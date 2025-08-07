@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.fluids.store;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.fluids.FluidBuilder;
 import com.gregtechceu.gt6.api.registry.registrate.GTRegistrate;
@@ -78,13 +78,13 @@ public class FluidStorageImpl implements FluidStorage {
                 .sorted(Comparator.comparingInt(e -> -e.getKey().getRegistrationPriority()))
                 .forEach(entry -> {
                     if (map.containsKey(entry.getKey())) {
-                        GTCEu.LOGGER.warn("{} already has an associated fluid for material {}", entry.getKey(),
+                        Gregtech.LOGGER.warn("{} already has an associated fluid for material {}", entry.getKey(),
                                 material);
                         return;
                     }
                     Supplier<? extends Fluid> fluid = entry.getValue().build(material, entry.getKey(), registrate);
                     if (!storeNoOverwrites(entry.getKey(), fluid, entry.getValue())) {
-                        GTCEu.LOGGER.error("{} already has an associated fluid for material {}", material, material);
+                        Gregtech.LOGGER.error("{} already has an associated fluid for material {}", material, material);
                     }
                 });
         toRegister = null;

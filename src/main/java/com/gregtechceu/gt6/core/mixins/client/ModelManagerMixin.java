@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.core.mixins.client;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.client.renderer.block.MaterialBlockRenderer;
 import com.gregtechceu.gt6.client.renderer.block.OreBlockRenderer;
 import com.gregtechceu.gt6.client.renderer.block.SurfaceRockRenderer;
@@ -45,12 +45,12 @@ public abstract class ModelManagerMixin {
         SurfaceRockRenderer.reinitModels();
         GTModels.registerMaterialFluidModels();
 
-        if (GTCEu.Mods.isKubeJSLoaded()) {
+        if (Gregtech.Mods.isKubeJSLoaded()) {
             GregTechKubeJSPlugin.generateMachineBlockModels();
         }
-        if (GTCEu.Mods.isModernFixLoaded()) {
+        if (Gregtech.Mods.isModernFixLoaded()) {
             GTModernFixIntegration.setAsLast();
         }
-        GTCEu.LOGGER.info("GregTech Model loading took {}ms", System.currentTimeMillis() - startTime);
+        Gregtech.LOGGER.info("GregTech Model loading took {}ms", System.currentTimeMillis() - startTime);
     }
 }

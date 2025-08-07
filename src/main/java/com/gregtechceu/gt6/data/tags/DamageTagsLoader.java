@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.tags;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.damagesource.DamageTypeData;
 
 import net.minecraft.core.HolderLookup;
@@ -18,12 +18,12 @@ public class DamageTagsLoader extends TagsProvider<DamageType> {
 
     public DamageTagsLoader(PackOutput arg, CompletableFuture<HolderLookup.Provider> completableFuture,
                             @Nullable ExistingFileHelper existingFileHelper) {
-        super(arg, Registries.DAMAGE_TYPE, completableFuture, GTCEu.MOD_ID, existingFileHelper);
+        super(arg, Registries.DAMAGE_TYPE, completableFuture, Gregtech.MOD_ID, existingFileHelper);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        DamageTypeData.allInNamespace(GTCEu.MOD_ID).forEach(damageTypeData -> damageTypeData.tags
+        DamageTypeData.allInNamespace(Gregtech.MOD_ID).forEach(damageTypeData -> damageTypeData.tags
                 .forEach(damageTypeTagKey -> tag(damageTypeTagKey).add(damageTypeData.key)));
     }
 }

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.cover.filter;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.cover.CoverBehavior;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
 import com.gregtechceu.gt6.api.gui.widget.SlotWidget;
@@ -134,7 +134,7 @@ public abstract class FilterHandler<T, F extends Filter<T, F>> implements IEnhan
     private void updateFilter() {
         var filterContainer = getFilterSlot();
 
-        if (GTCEu.isClientThread()) {
+        if (Gregtech.isClientThread()) {
             if (!filterContainer.getStackInSlot(0).isEmpty() && !this.filterItem.isEmpty()) {
                 return;
             }

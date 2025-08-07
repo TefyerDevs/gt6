@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.registry.registrate;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.api.sound.ConfiguredSoundEvent;
 import com.gregtechceu.gt6.api.sound.CustomSoundEntry;
@@ -93,7 +93,7 @@ public class SoundEntryBuilder {
     }
 
     public SoundEntryBuilder addVariant(String name) {
-        return addVariant(GTCEu.id(name));
+        return addVariant(Gregtech.id(name));
     }
 
     public SoundEntryBuilder addVariant(ResourceLocation id) {

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.block;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
@@ -66,7 +66,7 @@ public class MaterialBlock extends AppearanceBlock {
         super(properties);
         this.material = material;
         this.tagPrefix = tagPrefix;
-        if (registerModel && GTCEu.isClientSide()) {
+        if (registerModel && Gregtech.isClientSide()) {
             MaterialBlockRenderer.create(this, tagPrefix.materialIconType(), material.getMaterialIconSet());
         }
     }

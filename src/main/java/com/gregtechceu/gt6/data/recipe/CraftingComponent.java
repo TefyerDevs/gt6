@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.stack.MaterialEntry;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
@@ -35,7 +35,7 @@ public class CraftingComponent {
     public static CraftingComponent of(@NotNull String id, @NotNull Object fallback) {
         var existing = ALL_COMPONENTS.get(id);
         if (existing != null) {
-            GTCEu.LOGGER.error("Duplicate crafting component id: {}, check components", id);
+            Gregtech.LOGGER.error("Duplicate crafting component id: {}, check components", id);
             return existing;
         }
         var ret = new CraftingComponent(fallback);
@@ -85,7 +85,7 @@ public class CraftingComponent {
 
     public static CraftingComponent get(String id) {
         if (!ALL_COMPONENTS.containsKey(id)) {
-            GTCEu.LOGGER.error("No such crafting component: {}", id);
+            Gregtech.LOGGER.error("No such crafting component: {}", id);
             return EMPTY;
         }
         return ALL_COMPONENTS.get(id);

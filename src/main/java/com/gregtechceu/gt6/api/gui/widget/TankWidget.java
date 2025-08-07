@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.gui.widget;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.trait.NotifiableFluidTank;
 import com.gregtechceu.gt6.api.transfer.fluid.IFluidHandlerModifiable;
 import com.gregtechceu.gt6.client.TooltipsHandler;
@@ -225,11 +225,11 @@ public class TankWidget extends Widget implements IRecipeIngredientSlot, IConfig
                 return getXEIIngredientsClickable(entryHandler, tank).get(0);
             }
 
-            if (GTCEu.Mods.isJEILoaded()) {
+            if (Gregtech.Mods.isJEILoaded()) {
                 return JEICallWrapper.getJEIFluidClickable(lastFluidInTank, getPosition(), getSize());
-            } else if (GTCEu.Mods.isREILoaded()) {
+            } else if (Gregtech.Mods.isREILoaded()) {
                 return EntryStacks.of(REICallWrapper.toREIStack(lastFluidInTank));
-            } else if (GTCEu.Mods.isEMILoaded()) {
+            } else if (Gregtech.Mods.isEMILoaded()) {
                 return ForgeEmiStack.of(lastFluidInTank).setChance(XEIChance);
             }
         }
@@ -246,11 +246,11 @@ public class TankWidget extends Widget implements IRecipeIngredientSlot, IConfig
             return getXEIIngredientsClickable(entryHandler, tank);
         }
 
-        if (GTCEu.Mods.isJEILoaded()) {
+        if (Gregtech.Mods.isJEILoaded()) {
             return List.of(JEICallWrapper.getJEIFluidClickable(lastFluidInTank, getPosition(), getSize()));
-        } else if (GTCEu.Mods.isREILoaded()) {
+        } else if (Gregtech.Mods.isREILoaded()) {
             return List.of(EntryStacks.of(REICallWrapper.toREIStack(lastFluidInTank)));
-        } else if (GTCEu.Mods.isEMILoaded()) {
+        } else if (Gregtech.Mods.isEMILoaded()) {
             return List.of(ForgeEmiStack.of(lastFluidInTank).setChance(XEIChance));
         }
         return List.of(lastFluidInTank);
@@ -258,11 +258,11 @@ public class TankWidget extends Widget implements IRecipeIngredientSlot, IConfig
 
     private List<Object> getXEIIngredients(CycleFluidStackHandler handler, int index) {
         FluidStackList stackList = handler.getStackList(index);
-        if (GTCEu.Mods.isJEILoaded()) {
+        if (Gregtech.Mods.isJEILoaded()) {
             return JEICallWrapper.getJEIIngredients(stackList);
-        } else if (GTCEu.Mods.isREILoaded()) {
+        } else if (Gregtech.Mods.isREILoaded()) {
             return REICallWrapper.getREIIngredients(stackList);
-        } else if (GTCEu.Mods.isEMILoaded()) {
+        } else if (Gregtech.Mods.isEMILoaded()) {
             return EMICallWrapper.getEMIIngredients(stackList, getXEIChance());
         }
         return Collections.emptyList();
@@ -270,11 +270,11 @@ public class TankWidget extends Widget implements IRecipeIngredientSlot, IConfig
 
     private List<Object> getXEIIngredientsClickable(CycleFluidStackHandler handler, int index) {
         FluidStackList stackList = handler.getStackList(index);
-        if (GTCEu.Mods.isJEILoaded()) {
+        if (Gregtech.Mods.isJEILoaded()) {
             return JEICallWrapper.getJEIIngredientsClickable(stackList, getPosition(), getSize());
-        } else if (GTCEu.Mods.isREILoaded()) {
+        } else if (Gregtech.Mods.isREILoaded()) {
             return REICallWrapper.getREIIngredients(stackList);
-        } else if (GTCEu.Mods.isEMILoaded()) {
+        } else if (Gregtech.Mods.isEMILoaded()) {
             return EMICallWrapper.getEMIIngredients(stackList, getXEIChance());
         }
         return Collections.emptyList();
@@ -282,11 +282,11 @@ public class TankWidget extends Widget implements IRecipeIngredientSlot, IConfig
 
     private List<Object> getXEIIngredients(CycleFluidEntryHandler handler, int index) {
         FluidEntryList entryList = handler.getEntry(index);
-        if (GTCEu.Mods.isJEILoaded()) {
+        if (Gregtech.Mods.isJEILoaded()) {
             return JEICallWrapper.getJEIIngredients(entryList);
-        } else if (GTCEu.Mods.isREILoaded()) {
+        } else if (Gregtech.Mods.isREILoaded()) {
             return REICallWrapper.getREIIngredients(entryList);
-        } else if (GTCEu.Mods.isEMILoaded()) {
+        } else if (Gregtech.Mods.isEMILoaded()) {
             return EMICallWrapper.getEMIIngredients(entryList, getXEIChance());
         }
         return Collections.emptyList();
@@ -294,11 +294,11 @@ public class TankWidget extends Widget implements IRecipeIngredientSlot, IConfig
 
     private List<Object> getXEIIngredientsClickable(CycleFluidEntryHandler handler, int index) {
         FluidEntryList entryList = handler.getEntry(index);
-        if (GTCEu.Mods.isJEILoaded()) {
+        if (Gregtech.Mods.isJEILoaded()) {
             return JEICallWrapper.getJEIIngredientsClickable(entryList, getPosition(), getSize());
-        } else if (GTCEu.Mods.isREILoaded()) {
+        } else if (Gregtech.Mods.isREILoaded()) {
             return REICallWrapper.getREIIngredients(entryList);
-        } else if (GTCEu.Mods.isEMILoaded()) {
+        } else if (Gregtech.Mods.isEMILoaded()) {
             return EMICallWrapper.getEMIIngredients(entryList, getXEIChance());
         }
         return Collections.emptyList();
@@ -346,7 +346,7 @@ public class TankWidget extends Widget implements IRecipeIngredientSlot, IConfig
     @Override
     public Object getXEICurrentIngredient() {
         if (lastFluidInTank == null || lastFluidInTank.isEmpty()) return null;
-        if (GTCEu.Mods.isJEILoaded()) {
+        if (Gregtech.Mods.isJEILoaded()) {
             return JEICallWrapper.getJEIFluidClickable(lastFluidInTank, getPosition(), getSize());
         }
         return null;

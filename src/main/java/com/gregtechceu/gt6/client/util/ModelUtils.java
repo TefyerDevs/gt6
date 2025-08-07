@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.client.util;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.client.model.machine.MachineModel;
 import com.gregtechceu.gt6.client.renderer.cover.ICoverableRenderer;
 import com.gregtechceu.gt6.integration.modernfix.GTModernFixIntegration;
@@ -37,7 +37,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-@Mod.EventBusSubscriber(modid = GTCEu.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@Mod.EventBusSubscriber(modid = Gregtech.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ModelUtils {
 
     private ModelUtils() {}
@@ -130,7 +130,7 @@ public class ModelUtils {
         }
 
         // don't process the CTM model unwrapping here if modernfix dynamic resources is enabled
-        if (GTCEu.Mods.isModernFixLoaded() && GTModernFixIntegration.isDynamicResourcesEnabled()) return;
+        if (Gregtech.Mods.isModernFixLoaded() && GTModernFixIntegration.isDynamicResourcesEnabled()) return;
 
         // Unwrap all machine models from LDLib CTM models so we don't need to be as aggressive with mixins
         // Also, the caching they have stops our models from updating properly

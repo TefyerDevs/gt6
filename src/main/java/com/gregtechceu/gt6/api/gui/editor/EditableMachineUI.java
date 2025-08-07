@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.gui.editor;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 
 import com.lowdragmc.lowdraglib.gui.editor.configurator.IConfigurableWidget;
@@ -70,10 +70,10 @@ public class EditableMachineUI implements IEditableUI<WidgetGroup, MetaMachine> 
     public CompoundTag getCustomUI() {
         if (this.customUICache == null) {
             ResourceManager resourceManager = null;
-            if (GTCEu.isClientSide()) {
+            if (Gregtech.isClientSide()) {
                 resourceManager = Minecraft.getInstance().getResourceManager();
-            } else if (GTCEu.getMinecraftServer() != null) {
-                resourceManager = GTCEu.getMinecraftServer().getResourceManager();
+            } else if (Gregtech.getMinecraftServer() != null) {
+                resourceManager = Gregtech.getMinecraftServer().getResourceManager();
             }
             if (resourceManager == null) {
                 this.customUICache = new CompoundTag();

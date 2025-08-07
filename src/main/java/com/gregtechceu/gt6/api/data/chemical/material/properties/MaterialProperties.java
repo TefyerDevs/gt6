@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical.material.properties;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 
 import lombok.Getter;
@@ -79,8 +79,8 @@ public class MaterialProperties {
 
         if (propertyMap.keySet().stream().noneMatch(baseTypes::contains)) {
             if (propertyMap.isEmpty()) {
-                if (GTCEu.isDev()) {
-                    GTCEu.LOGGER.debug("Creating empty placeholder Material {}", material);
+                if (Gregtech.isDev()) {
+                    Gregtech.LOGGER.debug("Creating empty placeholder Material {}", material);
                 }
                 propertyMap.put(PropertyKey.EMPTY, PropertyKey.EMPTY.constructDefault());
             } else

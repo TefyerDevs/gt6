@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.top.provider;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.machine.MetaMachine;
 import com.gregtechceu.gt6.api.machine.steam.SteamBoilerMachine;
 import com.gregtechceu.gt6.utils.FormattingUtil;
@@ -89,6 +89,6 @@ public class SteamBoilerInfoProvider extends CapabilityInfoProvider<SteamBoilerM
 
     @Override
     public ResourceLocation getID() {
-        return GTCEu.id("steam_boiler_info");
+        return Gregtech.id("steam_boiler_info");
     }
 }

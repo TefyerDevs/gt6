@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data.machines;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.data.RotationState;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
 import com.gregtechceu.gt6.api.machine.multiblock.PartAbility;
@@ -21,7 +21,7 @@ public class GTAEMachines {
             .tier(EV)
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.IMPORT_ITEMS)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_input_bus"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_input_bus"))
             .tooltips(
                     Component.translatable("gt6.machine.item_bus.import.tooltip"),
                     Component.translatable("gt6.machine.me.item_import.tooltip"),
@@ -35,7 +35,7 @@ public class GTAEMachines {
             .tier(LuV)
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.IMPORT_ITEMS)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_input_bus"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_input_bus"))
             .tooltips(
                     Component.translatable("gt6.machine.item_bus.import.tooltip"),
                     Component.translatable("gt6.machine.me.stocking_item.tooltip.0"),
@@ -51,7 +51,7 @@ public class GTAEMachines {
             .tier(EV)
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.EXPORT_ITEMS)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_output_bus"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_output_bus"))
             .tooltips(
                     Component.translatable("gt6.machine.item_bus.export.tooltip"),
                     Component.translatable("gt6.machine.me.item_export.tooltip"),
@@ -65,7 +65,7 @@ public class GTAEMachines {
             .tier(EV)
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.IMPORT_FLUIDS)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_input_hatch"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_input_hatch"))
             .tooltips(
                     Component.translatable("gt6.machine.fluid_hatch.import.tooltip"),
                     Component.translatable("gt6.machine.me.fluid_import.tooltip"),
@@ -79,7 +79,7 @@ public class GTAEMachines {
             .tier(LuV)
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.IMPORT_FLUIDS)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_input_hatch"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_input_hatch"))
             .tooltips(
                     Component.translatable("gt6.machine.fluid_hatch.import.tooltip"),
                     Component.translatable("gt6.machine.me.stocking_fluid.tooltip.0"),
@@ -95,7 +95,7 @@ public class GTAEMachines {
             .tier(EV)
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.EXPORT_FLUIDS)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_output_hatch"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_output_hatch"))
             .tooltips(
                     Component.translatable("gt6.machine.fluid_hatch.export.tooltip"),
                     Component.translatable("gt6.machine.me.fluid_export.tooltip"),
@@ -109,7 +109,7 @@ public class GTAEMachines {
             .abilities(PartAbility.IMPORT_ITEMS, PartAbility.IMPORT_FLUIDS, PartAbility.EXPORT_FLUIDS,
                     PartAbility.EXPORT_ITEMS)
             .rotationState(RotationState.ALL)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_buffer_hatch"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_buffer_hatch"))
             .langValue("ME Pattern Buffer")
             .tooltips(
                     Component.translatable("block.gt6.pattern_buffer.desc.0"),
@@ -124,7 +124,7 @@ public class GTAEMachines {
             .abilities(PartAbility.IMPORT_ITEMS, PartAbility.IMPORT_FLUIDS, PartAbility.EXPORT_FLUIDS,
                     PartAbility.EXPORT_ITEMS)
             .rotationState(RotationState.ALL)
-            .colorOverlayTieredHullModel(GTCEu.id("block/overlay/appeng/me_buffer_hatch_proxy"))
+            .colorOverlayTieredHullModel(Gregtech.id("block/overlay/appeng/me_buffer_hatch_proxy"))
             .langValue("ME Pattern Buffer Proxy")
             .tooltips(
                     Component.translatable("block.gt6.pattern_buffer_proxy.desc.0"),

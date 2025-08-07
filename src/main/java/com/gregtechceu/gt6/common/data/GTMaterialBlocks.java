@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTCEuAPI;
 import com.gregtechceu.gt6.api.block.MaterialBlock;
 import com.gregtechceu.gt6.api.block.MaterialPipeBlock;
@@ -55,7 +55,7 @@ public class GTMaterialBlocks {
 
     // Material Blocks
     public static void generateMaterialBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Material Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Material Blocks...");
 
         for (TagPrefix tagPrefix : TagPrefix.values()) {
             if (!TagPrefix.ORES.containsKey(tagPrefix) && tagPrefix.doGenerateBlock()) {
@@ -69,7 +69,7 @@ public class GTMaterialBlocks {
                 }
             }
         }
-        GTCEu.LOGGER.debug("Generating GTCEu Material Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Material Blocks... Complete!");
     }
 
     private static void registerMaterialBlock(TagPrefix tagPrefix, Material material, GTRegistrate registrate) {
@@ -93,7 +93,7 @@ public class GTMaterialBlocks {
 
     // Material Ore Blocks
     public static void generateOreBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Ore Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Ore Blocks...");
         for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
             GTRegistrate registrate = registry.getRegistrate();
             for (Material material : registry.getAllMaterials()) {
@@ -102,7 +102,7 @@ public class GTMaterialBlocks {
                 }
             }
         }
-        GTCEu.LOGGER.debug("Generating GTCEu Ore Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Ore Blocks... Complete!");
     }
 
     private static boolean allowOreBlock(Material material) {
@@ -144,7 +144,7 @@ public class GTMaterialBlocks {
 
     // Material Ore Indicator Piles
     public static void generateOreIndicators() {
-        GTCEu.LOGGER.debug("Generating GTCEu Surface Rock Indicator Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Surface Rock Indicator Blocks...");
         for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
             GTRegistrate registrate = registry.getRegistrate();
             for (Material material : registry.getAllMaterials()) {
@@ -154,7 +154,7 @@ public class GTMaterialBlocks {
             }
         }
         SURFACE_ROCK_BLOCKS = SURFACE_ROCK_BLOCKS_BUILDER.build();
-        GTCEu.LOGGER.debug("Generating GTCEu Surface Rock Indicator Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Surface Rock Indicator Blocks... Complete!");
     }
 
     private static boolean allowOreIndicator(Material material) {
@@ -182,7 +182,7 @@ public class GTMaterialBlocks {
 
     // Material Cable & Wire Blocks
     public static void generateCableBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Cable/Wire Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Cable/Wire Blocks...");
         for (Insulation insulation : Insulation.values()) {
             for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
                 GTRegistrate registrate = registry.getRegistrate();
@@ -194,7 +194,7 @@ public class GTMaterialBlocks {
             }
         }
         CABLE_BLOCKS = CABLE_BLOCKS_BUILDER.build();
-        GTCEu.LOGGER.debug("Generating GTCEu Cable/Wire Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Cable/Wire Blocks... Complete!");
     }
 
     private static boolean allowCableBlock(Material material, Insulation insulation) {
@@ -225,7 +225,7 @@ public class GTMaterialBlocks {
 
     // Material Fluid Pipe Blocks
     public static void generateFluidPipeBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Fluid Pipe Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Fluid Pipe Blocks...");
         for (var fluidPipeType : FluidPipeType.values()) {
             for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
                 GTRegistrate registrate = registry.getRegistrate();
@@ -237,7 +237,7 @@ public class GTMaterialBlocks {
             }
         }
         FLUID_PIPE_BLOCKS = FLUID_PIPE_BLOCKS_BUILDER.build();
-        GTCEu.LOGGER.debug("Generating GTCEu Fluid Pipe Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Fluid Pipe Blocks... Complete!");
     }
 
     private static boolean allowFluidPipeBlock(Material material, FluidPipeType fluidPipeType) {
@@ -273,7 +273,7 @@ public class GTMaterialBlocks {
 
     // Material Item Pipe Blocks
     public static void generateItemPipeBlocks() {
-        GTCEu.LOGGER.debug("Generating GTCEu Item Pipe Blocks...");
+        Gregtech.LOGGER.debug("Generating GTCEu Item Pipe Blocks...");
         for (var itemPipeType : ItemPipeType.values()) {
             for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
                 GTRegistrate registrate = registry.getRegistrate();
@@ -285,7 +285,7 @@ public class GTMaterialBlocks {
             }
         }
         ITEM_PIPE_BLOCKS = ITEM_PIPE_BLOCKS_BUILDER.build();
-        GTCEu.LOGGER.debug("Generating GTCEu Item Pipe Blocks... Complete!");
+        Gregtech.LOGGER.debug("Generating GTCEu Item Pipe Blocks... Complete!");
     }
 
     private static boolean allowItemPipeBlock(Material material, ItemPipeType itemPipeType) {

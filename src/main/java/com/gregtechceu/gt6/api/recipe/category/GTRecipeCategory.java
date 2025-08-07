@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.category;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.recipe.GTRecipe;
 import com.gregtechceu.gt6.api.recipe.GTRecipeType;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
@@ -47,8 +47,8 @@ public class GTRecipeCategory {
     public GTRecipeCategory(@NotNull String categoryName, @NotNull GTRecipeType recipeType) {
         this.recipeType = recipeType;
         this.name = categoryName;
-        this.registryKey = GTCEu.id(categoryName);
-        this.languageKey = "%s.recipe.category.%s".formatted(GTCEu.MOD_ID, categoryName);
+        this.registryKey = Gregtech.id(categoryName);
+        this.languageKey = "%s.recipe.category.%s".formatted(Gregtech.MOD_ID, categoryName);
     }
 
     public static GTRecipeCategory registerDefault(@NotNull GTRecipeType recipeType) {
@@ -70,7 +70,7 @@ public class GTRecipeCategory {
     }
 
     public boolean shouldRegisterDisplays() {
-        return (isXEIVisible || GTCEu.isDev()) &&
+        return (isXEIVisible || Gregtech.isDev()) &&
                 this != GTRecipeTypes.FURNACE_RECIPES.getCategory();
     }
 

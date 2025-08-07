@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.generator;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
@@ -16,22 +16,22 @@ import java.util.function.Function;
 @SuppressWarnings("unused")
 public class VeinGenerators {
 
-    public static final Codec<NoopVeinGenerator> NO_OP = register(GTCEu.id("no_op"), NoopVeinGenerator.CODEC,
+    public static final Codec<NoopVeinGenerator> NO_OP = register(Gregtech.id("no_op"), NoopVeinGenerator.CODEC,
             entry -> NoopVeinGenerator.INSTANCE);
 
-    public static final Codec<StandardVeinGenerator> STANDARD = register(GTCEu.id("standard"),
+    public static final Codec<StandardVeinGenerator> STANDARD = register(Gregtech.id("standard"),
             StandardVeinGenerator.CODEC, StandardVeinGenerator::new);
-    public static final Codec<LayeredVeinGenerator> LAYER = register(GTCEu.id("layer"), LayeredVeinGenerator.CODEC,
+    public static final Codec<LayeredVeinGenerator> LAYER = register(Gregtech.id("layer"), LayeredVeinGenerator.CODEC,
             LayeredVeinGenerator::new);
-    public static final Codec<GeodeVeinGenerator> GEODE = register(GTCEu.id("geode"), GeodeVeinGenerator.CODEC,
+    public static final Codec<GeodeVeinGenerator> GEODE = register(Gregtech.id("geode"), GeodeVeinGenerator.CODEC,
             GeodeVeinGenerator::new);
-    public static final Codec<DikeVeinGenerator> DIKE = register(GTCEu.id("dike"), DikeVeinGenerator.CODEC,
+    public static final Codec<DikeVeinGenerator> DIKE = register(Gregtech.id("dike"), DikeVeinGenerator.CODEC,
             DikeVeinGenerator::new);
-    public static final Codec<VeinedVeinGenerator> VEINED = register(GTCEu.id("veined"), VeinedVeinGenerator.CODEC,
+    public static final Codec<VeinedVeinGenerator> VEINED = register(Gregtech.id("veined"), VeinedVeinGenerator.CODEC,
             VeinedVeinGenerator::new);
-    public static final Codec<ClassicVeinGenerator> CLASSIC = register(GTCEu.id("classic"), ClassicVeinGenerator.CODEC,
+    public static final Codec<ClassicVeinGenerator> CLASSIC = register(Gregtech.id("classic"), ClassicVeinGenerator.CODEC,
             ClassicVeinGenerator::new);
-    public static final Codec<CuboidVeinGenerator> CUBOID = register(GTCEu.id("cuboid"), CuboidVeinGenerator.CODEC,
+    public static final Codec<CuboidVeinGenerator> CUBOID = register(Gregtech.id("cuboid"), CuboidVeinGenerator.CODEC,
             CuboidVeinGenerator::new);
 
     public static <

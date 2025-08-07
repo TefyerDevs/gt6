@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.data.recipe.generated;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
@@ -154,7 +154,7 @@ public final class ToolRecipeHandler {
                     "P P", "PhP",
                     'P', plate);
         } else {
-            GTCEu.LOGGER.info(
+            Gregtech.LOGGER.info(
                     "Did not find plate for {}, skipping mining hammer, spade, saw, axe, hoe, pickaxe, scythe, shovel, sword, hammer, file, knife, wrench recipes",
                     material.getName());
         }
@@ -175,11 +175,11 @@ public final class ToolRecipeHandler {
                             'T', new MaterialEntry(TagPrefix.screw, material),
                             'S', rod);
                 } else if (!ArrayUtils.contains(softMaterials, material)) {
-                    GTCEu.LOGGER
+                    Gregtech.LOGGER
                             .info("Did not find bolt for {}, skipping wirecutter recipe", material.getName());
                 }
             } else {
-                GTCEu.LOGGER.info("Did not find plate for {}, skipping wirecutter, butchery knife recipes",
+                Gregtech.LOGGER.info("Did not find plate for {}, skipping wirecutter, butchery knife recipes",
                         material.getName());
             }
 
@@ -192,7 +192,7 @@ public final class ToolRecipeHandler {
                     "hDS", "DSD", "SDf",
                     'S', rod);
         } else if (!ArrayUtils.contains(softMaterials, material)) {
-            GTCEu.LOGGER.warn("Did not find rod for " + material.getName() +
+            Gregtech.LOGGER.warn("Did not find rod for " + material.getName() +
                     ", skipping wirecutter, butchery knife, screwdriver, crowbar recipes");
         }
     }
@@ -287,12 +287,12 @@ public final class ToolRecipeHandler {
                             .EUt(8L * voltageMultiplier)
                             .save(provider);
                 } else {
-                    GTCEu.LOGGER.warn("Did not find gear for " + material.getName() +
+                    Gregtech.LOGGER.warn("Did not find gear for " + material.getName() +
                             ", skipping gear -> buzzsaw blade recipe");
                 }
             }
         } else {
-            GTCEu.LOGGER.warn("Did not find plate for " + material.getName() +
+            Gregtech.LOGGER.warn("Did not find plate for " + material.getName() +
                     ", skipping electric drill, chainsaw, wrench, wirecutter, buzzsaw recipe");
         }
 
@@ -307,7 +307,7 @@ public final class ToolRecipeHandler {
                         "fR", " h",
                         'R', new MaterialEntry(TagPrefix.rodLong, material));
             } else {
-                GTCEu.LOGGER.warn("Did not find long rod for " + material.getName() +
+                Gregtech.LOGGER.warn("Did not find long rod for " + material.getName() +
                         ", skipping electric screwdriver recipe");
             }
         }

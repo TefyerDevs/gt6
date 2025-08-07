@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.item.tool;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
 import com.gregtechceu.gt6.api.item.IGTTool;
@@ -41,7 +41,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-@Mod.EventBusSubscriber(modid = GTCEu.MOD_ID)
+@Mod.EventBusSubscriber(modid = Gregtech.MOD_ID)
 public class ToolEventHandlers {
 
     /**

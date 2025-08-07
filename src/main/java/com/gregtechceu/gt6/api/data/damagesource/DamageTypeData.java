@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.damagesource;
 
-import com.gregtechceu.gt6.GTCEu;
+import com.gregtechceu.gt6.Gregtech;
 
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
@@ -108,7 +108,7 @@ public class DamageTypeData {
         }
 
         public DamageTypeData.Builder location(String path) {
-            return location(GTCEu.id(path));
+            return location(Gregtech.id(path));
         }
 
         /**
@@ -121,7 +121,7 @@ public class DamageTypeData {
         }
 
         public DamageTypeData.Builder simpleId(String path) {
-            return simpleId(GTCEu.id(path));
+            return simpleId(Gregtech.id(path));
         }
 
         /**
