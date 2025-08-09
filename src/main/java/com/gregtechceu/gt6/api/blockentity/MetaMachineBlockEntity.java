@@ -4,7 +4,7 @@ import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.*;
 import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.item.tool.GTToolType;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;

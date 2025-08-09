@@ -2,7 +2,7 @@ package com.gregtechceu.gt6.common.machine.storage;
 
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.ILaserContainer;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;

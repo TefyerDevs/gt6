@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.pipelike.cable;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.WireProperties;
 import com.gregtechceu.gt6.api.pipenet.PipeNetWalker;

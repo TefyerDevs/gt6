@@ -5,7 +5,7 @@ import com.gregtechceu.gt6.api.block.property.GTBlockStateProperties;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
 import com.gregtechceu.gt6.api.capability.IElectricItem;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.IWorkable;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.data.worldgen.bedrockfluid.BedrockFluidVeinSavedData;

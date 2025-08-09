@@ -3,7 +3,7 @@ package com.gregtechceu.gt6.common.blockentity;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.blockentity.PipeBlockEntity;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.WireProperties;
 import com.gregtechceu.gt6.api.gui.GuiTextures;

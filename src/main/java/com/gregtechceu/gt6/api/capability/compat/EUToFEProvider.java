@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.api.capability.compat;
 
 import com.gregtechceu.gt6.api.GTValues;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.config.ConfigHolder;
 import com.gregtechceu.gt6.utils.GTMath;

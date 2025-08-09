@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.recipe.condition;
 
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.machine.trait.RecipeLogic;
 import com.gregtechceu.gt6.api.recipe.GTRecipe;
 import com.gregtechceu.gt6.api.recipe.RecipeCondition;

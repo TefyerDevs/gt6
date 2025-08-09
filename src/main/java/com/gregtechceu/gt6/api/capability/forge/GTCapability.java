@@ -2,7 +2,7 @@ package com.gregtechceu.gt6.api.capability.forge;
 
 import com.gregtechceu.gt6.api.capability.*;
 import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.machine.feature.multiblock.IMaintenanceMachine;
 import com.gregtechceu.gt6.api.machine.trait.RecipeLogic;
 

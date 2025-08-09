@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.api.machine.multiblock;
 
 import com.gregtechceu.gt6.api.GTValues;
-import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.eu.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.recipe.FluidRecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.ItemRecipeCapability;
 import com.gregtechceu.gt6.api.recipe.GTRecipe;
