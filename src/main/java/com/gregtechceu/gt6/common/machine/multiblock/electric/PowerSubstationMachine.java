@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.machine.multiblock.electric;
 
-import com.gregtechceu.gt6.api.capability.IEnergyContainer;
-import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
 import com.gregtechceu.gt6.api.capability.recipe.EURecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
@@ -49,7 +49,7 @@ import java.util.List;
 import java.util.Map;
 
 public class PowerSubstationMachine extends WorkableMultiblockMachine
-                                    implements IEnergyInfoProvider, IFancyUIMachine, IDisplayUIMachine {
+                                    implements IEnergyBaseProvider, IFancyUIMachine, IDisplayUIMachine {
 
     protected static final ManagedFieldHolder MANAGED_FIELD_HOLDER = new ManagedFieldHolder(
             PowerSubstationMachine.class, WorkableMultiblockMachine.MANAGED_FIELD_HOLDER);

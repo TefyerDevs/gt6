@@ -1,8 +1,8 @@
-package com.gregtechceu.gt6.api.capability;
+package com.gregtechceu.gt6.api.capability.energy;
 
 import java.math.BigInteger;
 
-public interface IEnergyInfoProvider {
+public interface IEnergyBaseProvider {
 
     record EnergyInfo(BigInteger capacity, BigInteger stored) {}
 

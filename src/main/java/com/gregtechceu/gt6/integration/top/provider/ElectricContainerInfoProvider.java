@@ -2,7 +2,7 @@ package com.gregtechceu.gt6.integration.top.provider;
 
 import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
-import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
 import com.gregtechceu.gt6.integration.top.element.ProgressElement;
 import com.gregtechceu.gt6.utils.FormattingUtil;
 
@@ -23,7 +23,7 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 
-public class ElectricContainerInfoProvider extends CapabilityInfoProvider<IEnergyInfoProvider> {
+public class ElectricContainerInfoProvider extends CapabilityInfoProvider<IEnergyBaseProvider> {
 
     @Override
     public ResourceLocation getID() {
@@ -32,12 +32,12 @@ public class ElectricContainerInfoProvider extends CapabilityInfoProvider<IEnerg
 
     @Nullable
     @Override
-    protected IEnergyInfoProvider getCapability(Level level, BlockPos pos, @Nullable Direction side) {
+    protected IEnergyBaseProvider getCapability(Level level, BlockPos pos, @Nullable Direction side) {
         return GTCapabilityHelper.getEnergyInfoProvider(level, pos, side);
     }
 
     @Override
-    protected void addProbeInfo(IEnergyInfoProvider capability, IProbeInfo probeInfo, Player player,
+    protected void addProbeInfo(IEnergyBaseProvider capability, IProbeInfo probeInfo, Player player,
                                 BlockEntity blockEntity, IProbeHitData data) {
         var energyInfo = capability.getEnergyInfo();
         if (energyInfo.capacity().compareTo(BigInteger.ZERO) <= 0) return;
@@ -65,7 +65,7 @@ public class ElectricContainerInfoProvider extends CapabilityInfoProvider<IEnerg
     }
 
     @Override
-    protected boolean allowDisplaying(@NotNull IEnergyInfoProvider capability) {
+    protected boolean allowDisplaying(@NotNull IEnergyBaseProvider capability) {
         return !capability.isOneProbeHidden();
     }
 }

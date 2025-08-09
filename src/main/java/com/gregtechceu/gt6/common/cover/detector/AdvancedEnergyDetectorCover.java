@@ -2,7 +2,7 @@ package com.gregtechceu.gt6.common.cover.detector;
 
 import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.ICoverable;
-import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
 import com.gregtechceu.gt6.api.cover.CoverDefinition;
 import com.gregtechceu.gt6.api.cover.IUICover;
 import com.gregtechceu.gt6.api.gui.GuiTextures;
@@ -69,7 +69,7 @@ public class AdvancedEnergyDetectorCover extends EnergyDetectorCover implements 
     protected void update() {
         if (coverHolder.getOffsetTimer() % 20 != 0) return;
 
-        IEnergyInfoProvider energyInfoProvider = getEnergyInfoProvider();
+        IEnergyBaseProvider energyInfoProvider = getEnergyInfoProvider();
         if (energyInfoProvider == null) return;
 
         var energyInfo = energyInfoProvider.getEnergyInfo();

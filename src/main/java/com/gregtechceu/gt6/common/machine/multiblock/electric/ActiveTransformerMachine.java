@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.machine.multiblock.electric;
 
 import com.gregtechceu.gt6.api.capability.IControllable;
-import com.gregtechceu.gt6.api.capability.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.recipe.EURecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
 import com.gregtechceu.gt6.api.gui.GuiTextures;

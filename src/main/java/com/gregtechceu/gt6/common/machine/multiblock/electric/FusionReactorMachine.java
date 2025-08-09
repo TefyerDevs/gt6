@@ -2,7 +2,7 @@ package com.gregtechceu.gt6.common.machine.multiblock.electric;
 
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.IFusionCasingType;
-import com.gregtechceu.gt6.api.capability.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.recipe.EURecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.FluidRecipeCapability;
 import com.gregtechceu.gt6.api.capability.recipe.IO;

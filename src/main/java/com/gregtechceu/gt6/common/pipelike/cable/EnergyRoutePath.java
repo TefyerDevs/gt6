@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.pipelike.cable;
 
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
-import com.gregtechceu.gt6.api.capability.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.pipenet.IRoutePath;
 import com.gregtechceu.gt6.common.blockentity.CableBlockEntity;
 

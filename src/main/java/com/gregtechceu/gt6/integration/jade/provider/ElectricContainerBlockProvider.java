@@ -2,7 +2,7 @@ package com.gregtechceu.gt6.integration.jade.provider;
 
 import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
-import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
 import com.gregtechceu.gt6.utils.FormattingUtil;
 
 import net.minecraft.Util;
@@ -24,19 +24,19 @@ import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.math.MathContext;
 
-public class ElectricContainerBlockProvider extends CapabilityBlockProvider<IEnergyInfoProvider> {
+public class ElectricContainerBlockProvider extends CapabilityBlockProvider<IEnergyBaseProvider> {
 
     public ElectricContainerBlockProvider() {
         super(Gregtech.id("electric_container_provider"));
     }
 
     @Override
-    protected @Nullable IEnergyInfoProvider getCapability(Level level, BlockPos pos, @Nullable Direction side) {
+    protected @Nullable IEnergyBaseProvider getCapability(Level level, BlockPos pos, @Nullable Direction side) {
         return GTCapabilityHelper.getEnergyInfoProvider(level, pos, side);
     }
 
     @Override
-    protected void write(CompoundTag data, IEnergyInfoProvider capability) {
+    protected void write(CompoundTag data, IEnergyBaseProvider capability) {
         data.putByteArray("Energy", capability.getEnergyInfo().stored().toByteArray());
         data.putByteArray("MaxEnergy", capability.getEnergyInfo().capacity().toByteArray());
     }
@@ -66,7 +66,7 @@ public class ElectricContainerBlockProvider extends CapabilityBlockProvider<IEne
     }
 
     @Override
-    protected boolean allowDisplaying(IEnergyInfoProvider capability) {
+    protected boolean allowDisplaying(IEnergyBaseProvider capability) {
         return !capability.isOneProbeHidden();
     }
 

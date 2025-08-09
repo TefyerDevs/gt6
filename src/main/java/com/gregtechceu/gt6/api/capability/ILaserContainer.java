@@ -1,5 +1,7 @@
 package com.gregtechceu.gt6.api.capability;
 
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
+
 /**
  * It is its own separate interface to make piping work easier
  */

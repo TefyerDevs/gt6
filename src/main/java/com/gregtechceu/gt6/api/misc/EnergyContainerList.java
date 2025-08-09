@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.misc;
 
-import com.gregtechceu.gt6.api.capability.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.recipe.ingredient.EnergyStack;
 
 import net.minecraft.core.Direction;

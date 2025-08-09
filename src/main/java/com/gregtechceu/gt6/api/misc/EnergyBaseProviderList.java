@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.misc;
 
-import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
 
 import net.minecraft.MethodsReturnNonnullByDefault;
 
@@ -11,11 +11,11 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 @MethodsReturnNonnullByDefault
 @ParametersAreNonnullByDefault
-public class EnergyInfoProviderList implements IEnergyInfoProvider {
+public class EnergyBaseProviderList implements IEnergyBaseProvider {
 
-    private final List<? extends IEnergyInfoProvider> list;
+    private final List<? extends IEnergyBaseProvider> list;
 
-    public EnergyInfoProviderList(List<? extends IEnergyInfoProvider> list) {
+    public EnergyBaseProviderList(List<? extends IEnergyBaseProvider> list) {
         this.list = list;
     }
 
@@ -24,7 +24,7 @@ public class EnergyInfoProviderList implements IEnergyInfoProvider {
         BigInteger capacity = BigInteger.ZERO;
         BigInteger stored = BigInteger.ZERO;
 
-        for (IEnergyInfoProvider energyInfoProvider : list) {
+        for (IEnergyBaseProvider energyInfoProvider : list) {
             EnergyInfo energyInfo = energyInfoProvider.getEnergyInfo();
 
             capacity = capacity.add(energyInfo.capacity());
@@ -37,7 +37,7 @@ public class EnergyInfoProviderList implements IEnergyInfoProvider {
     @Override
     public long getInputPerSec() {
         long sum = 0;
-        for (IEnergyInfoProvider eip : list) {
+        for (IEnergyBaseProvider eip : list) {
             sum += eip.getInputPerSec();
         }
         return sum;
@@ -46,7 +46,7 @@ public class EnergyInfoProviderList implements IEnergyInfoProvider {
     @Override
     public long getOutputPerSec() {
         long sum = 0;
-        for (IEnergyInfoProvider eip : list) {
+        for (IEnergyBaseProvider eip : list) {
             sum += eip.getOutputPerSec();
         }
         return sum;

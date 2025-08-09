@@ -3,6 +3,8 @@ package com.gregtechceu.gt6.api.blockentity;
 import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.*;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.item.tool.GTToolType;
 import com.gregtechceu.gt6.api.machine.IMachineBlockEntity;
@@ -11,7 +13,7 @@ import com.gregtechceu.gt6.api.machine.feature.multiblock.IMaintenanceMachine;
 import com.gregtechceu.gt6.api.machine.trait.MachineTrait;
 import com.gregtechceu.gt6.api.machine.trait.RecipeLogic;
 import com.gregtechceu.gt6.api.misc.EnergyContainerList;
-import com.gregtechceu.gt6.api.misc.EnergyInfoProviderList;
+import com.gregtechceu.gt6.api.misc.EnergyBaseProviderList;
 import com.gregtechceu.gt6.api.misc.LaserContainerList;
 import com.gregtechceu.gt6.client.model.IBlockEntityRendererBakedModel;
 import com.gregtechceu.gt6.client.model.machine.MachineRenderState;
@@ -195,14 +197,14 @@ public class MetaMachineBlockEntity extends BlockEntity implements IMachineBlock
                         LazyOptional.of(() -> list.size() == 1 ? list.get(0) : new EnergyContainerList(list)));
             }
         } else if (cap == GTCapability.CAPABILITY_ENERGY_INFO_PROVIDER) {
-            if (machine instanceof IEnergyInfoProvider energyInfoProvider) {
+            if (machine instanceof IEnergyBaseProvider energyInfoProvider) {
                 return GTCapability.CAPABILITY_ENERGY_INFO_PROVIDER.orEmpty(cap,
                         LazyOptional.of(() -> energyInfoProvider));
             }
-            var list = getCapabilitiesFromTraits(machine.getTraits(), side, IEnergyInfoProvider.class);
+            var list = getCapabilitiesFromTraits(machine.getTraits(), side, IEnergyBaseProvider.class);
             if (!list.isEmpty()) {
                 return GTCapability.CAPABILITY_ENERGY_INFO_PROVIDER.orEmpty(cap,
-                        LazyOptional.of(() -> list.size() == 1 ? list.get(0) : new EnergyInfoProviderList(list)));
+                        LazyOptional.of(() -> list.size() == 1 ? list.get(0) : new EnergyBaseProviderList(list)));
             }
         } else if (cap == GTCapability.CAPABILITY_CLEANROOM_RECEIVER) {
             if (machine instanceof ICleanroomReceiver cleanroomReceiver) {

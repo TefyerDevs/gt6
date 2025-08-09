@@ -1,5 +1,7 @@
 package com.gregtechceu.gt6.api.capability;
 
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.forge.GTCapability;
 import com.gregtechceu.gt6.api.machine.feature.multiblock.IMaintenanceMachine;
 import com.gregtechceu.gt6.api.machine.trait.RecipeLogic;
@@ -46,7 +48,7 @@ public class GTCapabilityHelper {
     }
 
     @Nullable
-    public static IEnergyInfoProvider getEnergyInfoProvider(Level level, BlockPos pos, @Nullable Direction side) {
+    public static IEnergyBaseProvider getEnergyInfoProvider(Level level, BlockPos pos, @Nullable Direction side) {
         return getBlockEntityCapability(GTCapability.CAPABILITY_ENERGY_INFO_PROVIDER, level, pos, side);
     }
 

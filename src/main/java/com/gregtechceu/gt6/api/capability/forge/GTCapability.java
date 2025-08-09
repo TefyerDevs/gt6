@@ -1,6 +1,8 @@
 package com.gregtechceu.gt6.api.capability.forge;
 
 import com.gregtechceu.gt6.api.capability.*;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.machine.feature.multiblock.IMaintenanceMachine;
 import com.gregtechceu.gt6.api.machine.trait.RecipeLogic;
 
@@ -13,7 +15,7 @@ public class GTCapability {
 
     public static final Capability<IEnergyContainer> CAPABILITY_ENERGY_CONTAINER = CapabilityManager
             .get(new CapabilityToken<>() {});
-    public static final Capability<IEnergyInfoProvider> CAPABILITY_ENERGY_INFO_PROVIDER = CapabilityManager
+    public static final Capability<IEnergyBaseProvider> CAPABILITY_ENERGY_INFO_PROVIDER = CapabilityManager
             .get(new CapabilityToken<>() {});
     public static final Capability<ICoverable> CAPABILITY_COVERABLE = CapabilityManager.get(new CapabilityToken<>() {});
     public static final Capability<IToolable> CAPABILITY_TOOLABLE = CapabilityManager.get(new CapabilityToken<>() {});
@@ -46,7 +48,7 @@ public class GTCapability {
 
     public static void register(RegisterCapabilitiesEvent event) {
         event.register(IEnergyContainer.class);
-        event.register(IEnergyInfoProvider.class);
+        event.register(IEnergyBaseProvider.class);
         event.register(ICoverable.class);
         event.register(IToolable.class);
         event.register(IWorkable.class);

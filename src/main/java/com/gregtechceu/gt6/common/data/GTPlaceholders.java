@@ -2,7 +2,7 @@ package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
-import com.gregtechceu.gt6.api.capability.IEnergyContainer;
+import com.gregtechceu.gt6.api.capability.energy.types.IEnergyContainer;
 import com.gregtechceu.gt6.api.capability.IWorkable;
 import com.gregtechceu.gt6.api.cover.filter.ItemFilter;
 import com.gregtechceu.gt6.api.item.ComponentItem;

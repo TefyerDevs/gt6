@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.integration.cctweaked.peripherals;
 
-import com.gregtechceu.gt6.api.capability.IEnergyInfoProvider;
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
 
 import dan200.computercraft.api.lua.LuaFunction;
 import dan200.computercraft.api.lua.MethodResult;
@@ -13,22 +13,22 @@ public class EnergyInfoPeripheral implements GenericPeripheral {
     }
 
     @LuaFunction
-    public static MethodResult getEnergyStored(IEnergyInfoProvider infoProvider) {
+    public static MethodResult getEnergyStored(IEnergyBaseProvider infoProvider) {
         return MethodResult.of(infoProvider.getEnergyInfo().stored());
     }
 
     @LuaFunction
-    public static MethodResult getEnergyCapacity(IEnergyInfoProvider infoProvider) {
+    public static MethodResult getEnergyCapacity(IEnergyBaseProvider infoProvider) {
         return MethodResult.of(infoProvider.getEnergyInfo().capacity());
     }
 
     @LuaFunction
-    public static MethodResult getInputPerSec(IEnergyInfoProvider changeProvider) {
+    public static MethodResult getInputPerSec(IEnergyBaseProvider changeProvider) {
         return MethodResult.of(changeProvider.getInputPerSec());
     }
 
     @LuaFunction
-    public static MethodResult getOutputPerSec(IEnergyInfoProvider changeProvider) {
+    public static MethodResult getOutputPerSec(IEnergyBaseProvider changeProvider) {
         return MethodResult.of(changeProvider.getOutputPerSec());
     }
 }

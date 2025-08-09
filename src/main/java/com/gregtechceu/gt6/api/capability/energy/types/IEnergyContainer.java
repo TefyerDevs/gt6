@@ -1,10 +1,11 @@
-package com.gregtechceu.gt6.api.capability;
+package com.gregtechceu.gt6.api.capability.energy.types;
 
+import com.gregtechceu.gt6.api.capability.energy.IEnergyBaseProvider;
 import net.minecraft.core.Direction;
 
 import java.math.BigInteger;
 
-public interface IEnergyContainer extends IEnergyInfoProvider {
+public interface IEnergyContainer extends IEnergyBaseProvider {
 
     /**
      * This method is basically {@link #changeEnergy(long)}, but it also handles amperes.
