@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.integration.jei.oreprocessing;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialFlags;
@@ -37,7 +37,7 @@ public class GTOreProcessingInfoCategory extends ModularUIRecipeCategory<GTOrePr
     }
 
     public static void registerRecipes(IRecipeRegistration registry) {
-        registry.addRecipes(RECIPE_TYPE, GTCEuAPI.materialManager.getRegisteredMaterials().stream()
+        registry.addRecipes(RECIPE_TYPE, GTAPI.materialManager.getRegisteredMaterials().stream()
                 .filter((material) -> material.hasProperty(PropertyKey.ORE) &&
                         !material.hasFlag(MaterialFlags.NO_ORE_PROCESSING_TAB))
                 .map(GTOreProcessingInfoWrapper::new)

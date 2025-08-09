@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.worldgen.generator.VeinGenerator;
 
@@ -79,7 +79,7 @@ public class GTLayerPattern {
     public static class Layer {
 
         public static final Codec<Layer> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                Codec.list(Codec.either(TargetBlockState.CODEC.listOf(), GTCEuAPI.materialManager.codec()))
+                Codec.list(Codec.either(TargetBlockState.CODEC.listOf(), GTAPI.materialManager.codec()))
                         .fieldOf("targets")
                         .forGetter(layer -> layer.targets),
                 Codec.intRange(0, Integer.MAX_VALUE)

@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
@@ -60,7 +60,7 @@ public class GTSoundEntries {
 
     public static void init() {
         AddonFinder.getAddons().forEach(IGTAddon::registerSounds);
-        ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.SOUNDS, SoundEntry.class));
+        ModLoader.get().postEvent(new GTAPI.RegisterEvent<>(GTRegistries.SOUNDS, SoundEntry.class));
         GTRegistries.SOUNDS.values().forEach(SoundEntry::prepare);
         registerSounds();
 

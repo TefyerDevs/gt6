@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.block.MaterialBlock;
 import com.gregtechceu.gt6.api.block.MaterialPipeBlock;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -59,7 +59,7 @@ public class GTMaterialBlocks {
 
         for (TagPrefix tagPrefix : TagPrefix.values()) {
             if (!TagPrefix.ORES.containsKey(tagPrefix) && tagPrefix.doGenerateBlock()) {
-                for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+                for (MaterialRegistry registry : GTAPI.materialManager.getRegistries()) {
                     GTRegistrate registrate = registry.getRegistrate();
                     for (Material material : registry.getAllMaterials()) {
                         if (tagPrefix.doGenerateBlock(material)) {
@@ -94,7 +94,7 @@ public class GTMaterialBlocks {
     // Material Ore Blocks
     public static void generateOreBlocks() {
         Gregtech.LOGGER.debug("Generating GTCEu Ore Blocks...");
-        for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+        for (MaterialRegistry registry : GTAPI.materialManager.getRegistries()) {
             GTRegistrate registrate = registry.getRegistrate();
             for (Material material : registry.getAllMaterials()) {
                 if (allowOreBlock(material)) {
@@ -145,7 +145,7 @@ public class GTMaterialBlocks {
     // Material Ore Indicator Piles
     public static void generateOreIndicators() {
         Gregtech.LOGGER.debug("Generating GTCEu Surface Rock Indicator Blocks...");
-        for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+        for (MaterialRegistry registry : GTAPI.materialManager.getRegistries()) {
             GTRegistrate registrate = registry.getRegistrate();
             for (Material material : registry.getAllMaterials()) {
                 if (allowOreIndicator(material)) {
@@ -184,7 +184,7 @@ public class GTMaterialBlocks {
     public static void generateCableBlocks() {
         Gregtech.LOGGER.debug("Generating GTCEu Cable/Wire Blocks...");
         for (Insulation insulation : Insulation.values()) {
-            for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+            for (MaterialRegistry registry : GTAPI.materialManager.getRegistries()) {
                 GTRegistrate registrate = registry.getRegistrate();
                 for (Material material : registry.getAllMaterials()) {
                     if (allowCableBlock(material, insulation)) {
@@ -227,7 +227,7 @@ public class GTMaterialBlocks {
     public static void generateFluidPipeBlocks() {
         Gregtech.LOGGER.debug("Generating GTCEu Fluid Pipe Blocks...");
         for (var fluidPipeType : FluidPipeType.values()) {
-            for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+            for (MaterialRegistry registry : GTAPI.materialManager.getRegistries()) {
                 GTRegistrate registrate = registry.getRegistrate();
                 for (Material material : registry.getAllMaterials()) {
                     if (allowFluidPipeBlock(material, fluidPipeType)) {
@@ -275,7 +275,7 @@ public class GTMaterialBlocks {
     public static void generateItemPipeBlocks() {
         Gregtech.LOGGER.debug("Generating GTCEu Item Pipe Blocks...");
         for (var itemPipeType : ItemPipeType.values()) {
-            for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+            for (MaterialRegistry registry : GTAPI.materialManager.getRegistries()) {
                 GTRegistrate registrate = registry.getRegistrate();
                 for (Material material : registry.getAllMaterials()) {
                     if (allowItemPipeBlock(material, itemPipeType)) {

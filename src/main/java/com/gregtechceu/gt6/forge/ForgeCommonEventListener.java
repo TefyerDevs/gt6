@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.forge;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
 import com.gregtechceu.gt6.api.capability.GTCapabilityHelper;
@@ -594,7 +594,7 @@ public class ForgeCommonEventListener {
                 Matcher matcher = idPattern.matcher(mapping.getKey().getPath());
                 if (matcher.matches()) {
                     BlockEntry<? extends Block> block = GTMaterialBlocks.MATERIAL_BLOCKS.get(prefix,
-                            GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
+                            GTAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
                     if (block != null && block.isPresent()) {
                         mapping.remap(block.get());
                     }
@@ -604,12 +604,12 @@ public class ForgeCommonEventListener {
                 Matcher matcher = idPattern.matcher(mapping.getKey().getPath());
                 if (matcher.matches()) {
                     BlockEntry<? extends Block> block = GTMaterialBlocks.MATERIAL_BLOCKS.get(prefix,
-                            GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
+                            GTAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
                     if (block != null && block.isPresent()) {
                         mapping.remap(block.asItem());
                     } else {
                         ItemEntry<? extends Item> item = GTMaterialItems.MATERIAL_ITEMS.get(prefix,
-                                GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
+                                GTAPI.materialManager.getRegistry(Gregtech.MOD_ID).get(matcher.group(1)));
                         if (item != null && item.isPresent()) {
                             mapping.remap(item.asItem());
                         }

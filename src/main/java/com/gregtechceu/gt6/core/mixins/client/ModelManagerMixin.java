@@ -3,6 +3,7 @@ package com.gregtechceu.gt6.core.mixins.client;
 import com.gregtechceu.gt6.Gregtech;
 import com.gregtechceu.gt6.client.renderer.block.MaterialBlockRenderer;
 import com.gregtechceu.gt6.client.renderer.block.OreBlockRenderer;
+import com.gregtechceu.gt6.client.renderer.block.StickBlockRenderer;
 import com.gregtechceu.gt6.client.renderer.block.SurfaceRockRenderer;
 import com.gregtechceu.gt6.client.renderer.item.ArmorItemRenderer;
 import com.gregtechceu.gt6.client.renderer.item.TagPrefixItemRenderer;
@@ -42,6 +43,7 @@ public abstract class ModelManagerMixin {
         OreBlockRenderer.reinitModels();
         ToolItemRenderer.reinitModels();
         ArmorItemRenderer.reinitModels();
+        StickBlockRenderer.reinitModels();
         SurfaceRockRenderer.reinitModels();
         GTModels.registerMaterialFluidModels();
 

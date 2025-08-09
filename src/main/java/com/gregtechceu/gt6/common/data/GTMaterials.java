@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.MarkerMaterial;
 import com.gregtechceu.gt6.api.data.chemical.material.MarkerMaterials;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -272,7 +272,7 @@ public class GTMaterials {
 
     @NotNull
     public static Material get(String name) {
-        var mat = GTCEuAPI.materialManager.getMaterial(name);
+        var mat = GTAPI.materialManager.getMaterial(name);
         // material could be null here due to the registry grabbing a material that isn't in the map
         if (mat == null) {
             Gregtech.LOGGER.warn("{} is not a known Material", name);

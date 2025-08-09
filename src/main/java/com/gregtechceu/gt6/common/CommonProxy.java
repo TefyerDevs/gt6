@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
@@ -99,9 +99,9 @@ public class CommonProxy {
         eventBus.addListener(AlloyBlastPropertyAddition::addAlloyBlastProperties);
         // must be set here because of KubeJS compat
         // trying to read this before the pre-init stage
-        GTCEuAPI.materialManager = MaterialRegistryManager.getInstance();
+        GTAPI.materialManager = MaterialRegistryManager.getInstance();
         ConfigHolder.init();
-        GTCEuAPI.initializeHighTier();
+        GTAPI.initializeHighTier();
         if (Gregtech.isDev()) {
             ConfigHolder.INSTANCE.recipes.generateLowQualityGems = true;
             ConfigHolder.INSTANCE.compat.energy.enableFEConverters = true;
@@ -166,7 +166,7 @@ public class CommonProxy {
 
         GregTechDatagen.initPost();
         // Register all material manager registries, for materials with mod ids.
-        GTCEuAPI.materialManager.getRegistries().forEach(registry -> {
+        GTAPI.materialManager.getRegistries().forEach(registry -> {
             // Force the material lang generator to be at index 0, so that addons' lang generators can override it.
             AbstractRegistrateAccessor accessor = (AbstractRegistrateAccessor) registry.getRegistrate();
             if (accessor.getDoDatagen().get()) {
@@ -208,7 +208,7 @@ public class CommonProxy {
 
     private static void initMaterials() {
         // First, register other mods' Registries
-        MaterialRegistryManager managerInternal = (MaterialRegistryManager) GTCEuAPI.materialManager;
+        MaterialRegistryManager managerInternal = (MaterialRegistryManager) GTAPI.materialManager;
 
         Gregtech.LOGGER.info("Registering material registries");
         ModLoader.get().postEvent(new MaterialRegistryEvent());
@@ -343,7 +343,7 @@ public class CommonProxy {
     public static final class KJSEventWrapper {
 
         public static void materialRegistry() {
-            GTRegistryInfo.registerFor(GTCEuAPI.materialManager.getRegistry(Gregtech.MOD_ID).getRegistryName());
+            GTRegistryInfo.registerFor(GTAPI.materialManager.getRegistry(Gregtech.MOD_ID).getRegistryName());
         }
 
         public static void materialModification() {

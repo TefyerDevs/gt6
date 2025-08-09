@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.integration.rei.oreprocessing;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialFlags;
@@ -62,7 +62,7 @@ public class GTOreProcessingDisplayCategory extends ModularUIDisplayCategory<GTO
     }
 
     public static void registerDisplays(DisplayRegistry registry) {
-        for (Material mat : GTCEuAPI.materialManager.getRegisteredMaterials()) {
+        for (Material mat : GTAPI.materialManager.getRegisteredMaterials()) {
             if (mat.hasProperty(ORE) && !mat.hasFlag(MaterialFlags.NO_ORE_PROCESSING_TAB)) {
                 registry.add(new GTOreProcessingDisplay(mat));
             }

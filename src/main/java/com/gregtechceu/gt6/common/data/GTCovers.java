@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
@@ -28,9 +28,9 @@ import java.util.function.Supplier;
 public class GTCovers {
 
     public static final int[] ALL_TIERS = GTValues.tiersBetween(GTValues.LV,
-            GTCEuAPI.isHighTier() ? GTValues.OpV : GTValues.UV);
+            GTAPI.isHighTier() ? GTValues.OpV : GTValues.UV);
     public static final int[] ALL_TIERS_WITH_ULV = GTValues.tiersBetween(GTValues.ULV,
-            GTCEuAPI.isHighTier() ? GTValues.OpV : GTValues.UV);
+            GTAPI.isHighTier() ? GTValues.OpV : GTValues.UV);
 
     static {
         GTRegistries.COVERS.unfreeze();
@@ -149,7 +149,7 @@ public class GTCovers {
 
     public static void init() {
         AddonFinder.getAddons().forEach(IGTAddon::registerCovers);
-        ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.COVERS, CoverDefinition.class));
+        ModLoader.get().postEvent(new GTAPI.RegisterEvent<>(GTRegistries.COVERS, CoverDefinition.class));
         GTRegistries.COVERS.freeze();
     }
 }

@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data.machines;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.recipe.ItemRecipeCapability;
 import com.gregtechceu.gt6.api.data.RotationState;
@@ -165,7 +165,7 @@ public class GTMultiMachines {
                         .where('D', FLUID_EXPORT_HATCH[GTValues.LV], Direction.EAST)
                         .where('H', MUFFLER_HATCH[GTValues.LV], Direction.UP)
                         .where('M', MAINTENANCE_HATCH, Direction.NORTH);
-                GTCEuAPI.HEATING_COILS.entrySet().stream()
+                GTAPI.HEATING_COILS.entrySet().stream()
                         .sorted(Comparator.comparingInt(entry -> entry.getKey().getTier()))
                         .forEach(
                                 coil -> shapeInfo.add(builder.shallowCopy().where('C', coil.getValue().get()).build()));
@@ -316,7 +316,7 @@ public class GTMultiMachines {
                         .where('H', MUFFLER_HATCH[GTValues.LV], Direction.SOUTH)
                         .where('M', MAINTENANCE_HATCH, Direction.NORTH)
                         .where('#', Blocks.AIR.defaultBlockState());
-                GTCEuAPI.HEATING_COILS.entrySet().stream()
+                GTAPI.HEATING_COILS.entrySet().stream()
                         .sorted(Comparator.comparingInt(entry -> entry.getKey().getTier()))
                         .forEach(
                                 coil -> shapeInfo.add(builder.shallowCopy().where('C', coil.getValue().get()).build()));
@@ -367,7 +367,7 @@ public class GTMultiMachines {
                         .where('H', MUFFLER_HATCH[GTValues.LV], Direction.SOUTH)
                         .where('M', MAINTENANCE_HATCH, Direction.NORTH)
                         .where('#', Blocks.AIR.defaultBlockState());
-                GTCEuAPI.HEATING_COILS.entrySet().stream()
+                GTAPI.HEATING_COILS.entrySet().stream()
                         .sorted(Comparator.comparingInt(entry -> entry.getKey().getTier()))
                         .forEach(
                                 coil -> shapeInfo.add(builder.shallowCopy().where('C', coil.getValue().get()).build()));
@@ -420,7 +420,7 @@ public class GTMultiMachines {
                         .where('M', MAINTENANCE_HATCH, Direction.NORTH)
                         .where('X', MUFFLER_HATCH[GTValues.LV], Direction.SOUTH)
                         .where('#', Blocks.AIR.defaultBlockState());
-                GTCEuAPI.HEATING_COILS.entrySet().stream()
+                GTAPI.HEATING_COILS.entrySet().stream()
                         .sorted(Comparator.comparingInt(entry -> entry.getKey().getTier()))
                         .forEach(
                                 coil -> shapeInfo.add(builder.shallowCopy().where('C', coil.getValue().get()).build()));
@@ -906,7 +906,7 @@ public class GTMultiMachines {
                 } else {
                     builder.where('M', GTBlocks.PLASTCRETE.get());
                 }
-                GTCEuAPI.CLEANROOM_FILTERS.values()
+                GTAPI.CLEANROOM_FILTERS.values()
                         .forEach(block -> shapeInfo.add(builder.where('F', block.get()).build()));
                 return shapeInfo;
             })
@@ -1034,7 +1034,7 @@ public class GTMultiMachines {
                                                 Direction.NORTH) :
                                         CASING_PALLADIUM_SUBSTATION.get().defaultBlockState());
 
-                GTCEuAPI.PSS_BATTERIES.entrySet().stream()
+                GTAPI.PSS_BATTERIES.entrySet().stream()
                         // filter out empty batteries in example structures, though they are still
                         // allowed in the predicate (so you can see them on right-click)
                         .filter(entry -> entry.getKey().getCapacity() > 0)

@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.IMiner;
 import com.gregtechceu.gt6.api.capability.recipe.IO;
@@ -710,7 +710,7 @@ public class GTMachines {
                             Component.translatable("gt6.machine.energy_hatch.input_hi_amp.tooltip"))
                     .overlayTieredHullModel("energy_input_hatch_4a")
                     .register(),
-            GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV));
+            GTValues.tiersBetween(EV, GTAPI.isHighTier() ? MAX : UHV));
 
     public static final MachineDefinition[] ENERGY_OUTPUT_HATCH_4A = registerTieredMachines("energy_output_hatch_4a",
             (holder, tier) -> new EnergyHatchPartMachine(holder, tier, OUT, 4),
@@ -727,7 +727,7 @@ public class GTMachines {
                             Component.translatable("gt6.machine.energy_hatch.output_hi_amp.tooltip"))
                     .overlayTieredHullModel("energy_output_hatch_4a")
                     .register(),
-            GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV));
+            GTValues.tiersBetween(EV, GTAPI.isHighTier() ? MAX : UHV));
 
     public static final MachineDefinition[] ENERGY_INPUT_HATCH_16A = registerTieredMachines("energy_input_hatch_16a",
             (holder, tier) -> new EnergyHatchPartMachine(holder, tier, IN, 16),
@@ -744,7 +744,7 @@ public class GTMachines {
                             Component.translatable("gt6.machine.energy_hatch.input_hi_amp.tooltip"))
                     .overlayTieredHullModel("energy_input_hatch_16a")
                     .register(),
-            GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV));
+            GTValues.tiersBetween(EV, GTAPI.isHighTier() ? MAX : UHV));
 
     public static final MachineDefinition[] ENERGY_OUTPUT_HATCH_16A = registerTieredMachines("energy_output_hatch_16a",
             (holder, tier) -> new EnergyHatchPartMachine(holder, tier, OUT, 16),
@@ -761,7 +761,7 @@ public class GTMachines {
                             Component.translatable("gt6.machine.energy_hatch.output_hi_amp.tooltip"))
                     .overlayTieredHullModel("energy_output_hatch_16a")
                     .register(),
-            GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV));
+            GTValues.tiersBetween(EV, GTAPI.isHighTier() ? MAX : UHV));
 
     public static final MachineDefinition[] SUBSTATION_ENERGY_INPUT_HATCH = registerTieredMachines(
             "substation_input_hatch_64a",
@@ -779,7 +779,7 @@ public class GTMachines {
                             Component.translatable("gt6.machine.substation_hatch.input.tooltip"))
                     .overlayTieredHullModel("energy_input_hatch_64a")
                     .register(),
-            GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV));
+            GTValues.tiersBetween(EV, GTAPI.isHighTier() ? MAX : UHV));
 
     public static final MachineDefinition[] SUBSTATION_ENERGY_OUTPUT_HATCH = registerTieredMachines(
             "substation_output_hatch_64a",
@@ -797,7 +797,7 @@ public class GTMachines {
                             Component.translatable("gt6.machine.substation_hatch.output.tooltip"))
                     .overlayTieredHullModel("energy_output_hatch_64a")
                     .register(),
-            GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV));
+            GTValues.tiersBetween(EV, GTAPI.isHighTier() ? MAX : UHV));
 
     public static final MachineDefinition[] MUFFLER_HATCH = registerTieredMachines("muffler_hatch",
             MufflerPartMachine::new,
@@ -1025,7 +1025,7 @@ public class GTMachines {
                     .tooltips(LangHandler.getMultiLang("gt6.machine.rotor_holder.tooltip"))
                     .tooltips(Component.translatable("gt6.part_sharing.disabled"))
                     .register(),
-            GTValues.tiersBetween(HV, GTCEuAPI.isHighTier() ? OpV : UV));
+            GTValues.tiersBetween(HV, GTAPI.isHighTier() ? OpV : UV));
 
     public static final MachineDefinition[] LASER_INPUT_HATCH_256 = registerLaserHatch(IN, 256,
             PartAbility.INPUT_LASER);
@@ -1058,7 +1058,7 @@ public class GTMachines {
         if (Gregtech.Mods.isKubeJSLoaded()) {
             GTRegistryInfo.registerFor(GTRegistries.MACHINES.getRegistryName());
         }
-        ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.MACHINES, MachineDefinition.class));
+        ModLoader.get().postEvent(new GTAPI.RegisterEvent<>(GTRegistries.MACHINES, MachineDefinition.class));
 
         GTRegistries.MACHINES.freeze();
 

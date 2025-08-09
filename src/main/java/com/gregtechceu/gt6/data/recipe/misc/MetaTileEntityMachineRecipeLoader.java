@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.data.recipe.misc;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.data.chemical.material.stack.MaterialEntry;
 import com.gregtechceu.gt6.api.machine.MachineDefinition;
@@ -416,7 +416,7 @@ public class MetaTileEntityMachineRecipeLoader {
             if (hatch == null) continue;
 
             MachineDefinition transformer;
-            if (tier == (GTCEuAPI.isHighTier() ? MAX : UHV)) {
+            if (tier == (GTAPI.isHighTier() ? MAX : UHV)) {
                 transformer = HI_AMP_TRANSFORMER_4A[tier - 1];
             } else {
                 transformer = TRANSFORMER[tier];
@@ -438,7 +438,7 @@ public class MetaTileEntityMachineRecipeLoader {
             if (hatch == null) continue;
 
             MachineDefinition transformer;
-            if (tier == (GTCEuAPI.isHighTier() ? MAX : UHV)) {
+            if (tier == (GTAPI.isHighTier() ? MAX : UHV)) {
                 transformer = POWER_TRANSFORMER[tier - 1];
             } else {
                 transformer = POWER_TRANSFORMER[tier];
@@ -474,7 +474,7 @@ public class MetaTileEntityMachineRecipeLoader {
             if (hatch == null) continue;
 
             MachineDefinition transformer;
-            if (tier == (GTCEuAPI.isHighTier() ? MAX : UHV)) {
+            if (tier == (GTAPI.isHighTier() ? MAX : UHV)) {
                 transformer = HI_AMP_TRANSFORMER_4A[tier - 1];
             } else {
                 transformer = TRANSFORMER[tier];
@@ -496,7 +496,7 @@ public class MetaTileEntityMachineRecipeLoader {
             if (hatch == null) continue;
 
             MachineDefinition transformer;
-            if (tier == (GTCEuAPI.isHighTier() ? MAX : UHV)) {
+            if (tier == (GTAPI.isHighTier() ? MAX : UHV)) {
                 transformer = POWER_TRANSFORMER[tier - 1];
             } else {
                 transformer = POWER_TRANSFORMER[tier];

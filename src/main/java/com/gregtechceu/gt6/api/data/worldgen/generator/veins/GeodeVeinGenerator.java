@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.generator.veins;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.tag.TagPrefix;
@@ -324,16 +324,16 @@ public class GeodeVeinGenerator extends VeinGenerator {
                                      TagKey<Block> invalidBlocks, @NotNull TagPrefix providerMaterialPrefix) {
 
         public static final Codec<GeodeBlockSettings> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                Codec.either(BlockStateProvider.CODEC, GTCEuAPI.materialManager.codec()).fieldOf("filling_provider")
+                Codec.either(BlockStateProvider.CODEC, GTAPI.materialManager.codec()).fieldOf("filling_provider")
                         .forGetter(config -> config.fillingProvider),
-                Codec.either(BlockStateProvider.CODEC, GTCEuAPI.materialManager.codec()).fieldOf("inner_layer_provider")
+                Codec.either(BlockStateProvider.CODEC, GTAPI.materialManager.codec()).fieldOf("inner_layer_provider")
                         .forGetter(config -> config.innerLayerProvider),
-                Codec.either(BlockStateProvider.CODEC, GTCEuAPI.materialManager.codec())
+                Codec.either(BlockStateProvider.CODEC, GTAPI.materialManager.codec())
                         .fieldOf("alternate_inner_layer_provider")
                         .forGetter(config -> config.alternateInnerLayerProvider),
-                Codec.either(BlockStateProvider.CODEC, GTCEuAPI.materialManager.codec())
+                Codec.either(BlockStateProvider.CODEC, GTAPI.materialManager.codec())
                         .fieldOf("middle_layer_provider").forGetter(config -> config.middleLayerProvider),
-                Codec.either(BlockStateProvider.CODEC, GTCEuAPI.materialManager.codec()).fieldOf("outer_layer_provider")
+                Codec.either(BlockStateProvider.CODEC, GTAPI.materialManager.codec()).fieldOf("outer_layer_provider")
                         .forGetter(config -> config.outerLayerProvider),
                 ExtraCodecs.nonEmptyList(BlockState.CODEC.listOf()).fieldOf("inner_placements")
                         .forGetter(config -> config.innerPlacements),

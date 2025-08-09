@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data.models;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.block.*;
 import com.gregtechceu.gt6.api.block.property.GTBlockStateProperties;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialIconSet;
@@ -281,7 +281,7 @@ public class GTModels {
      * register fluid models for materials
      */
     public static void registerMaterialFluidModels() {
-        for (var material : GTCEuAPI.materialManager.getRegisteredMaterials()) {
+        for (var material : GTAPI.materialManager.getRegisteredMaterials()) {
             var fluidProperty = material.getProperty(PropertyKey.FLUID);
             if (fluidProperty == null) continue;
             MaterialIconSet iconSet = material.getMaterialIconSet();

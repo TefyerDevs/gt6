@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.core.mixins.top;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gt6.api.item.tool.GTToolType;
@@ -47,7 +47,7 @@ public class ConfigMixin {
             at = @At(value = "INVOKE", target = "Ljava/util/List;iterator()Ljava/util/Iterator;"))
     private static void gt6$injectHarvestTags(CallbackInfoReturnable<Map<ResourceLocation, String>> cir) {
         IntSet passedTiers = new IntOpenHashSet();
-        for (Material mat : GTCEuAPI.materialManager.getRegisteredMaterials()) {
+        for (Material mat : GTAPI.materialManager.getRegisteredMaterials()) {
             if (mat.hasProperty(PropertyKey.TOOL)) {
                 MaterialToolTier tier = mat.getToolTier();
                 int harvestLevel = tier.getLevel();

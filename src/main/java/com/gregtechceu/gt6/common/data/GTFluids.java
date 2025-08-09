@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.properties.PropertyKey;
 import com.gregtechceu.gt6.api.data.chemical.material.registry.MaterialRegistry;
@@ -40,7 +40,7 @@ public class GTFluids {
 
         // register fluids for materials
         REGISTRATE.creativeModeTab(() -> GTCreativeModeTabs.MATERIAL_FLUID);
-        for (MaterialRegistry registry : GTCEuAPI.materialManager.getRegistries()) {
+        for (MaterialRegistry registry : GTAPI.materialManager.getRegistries()) {
             GTRegistrate registrate = registry.getRegistrate();
             for (var material : registry.getAllMaterials()) {
                 var fluidProperty = material.getProperty(PropertyKey.FLUID);

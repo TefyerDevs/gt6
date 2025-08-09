@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.chemical.material;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.Element;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialFlag;
@@ -148,7 +148,7 @@ public class Material implements Comparable<Material> {
     }
 
     protected void registerMaterial() {
-        GTCEuAPI.materialManager.getRegistry(getModid()).register(this);
+        GTAPI.materialManager.getRegistry(getModid()).register(this);
     }
 
     public String getName() {
@@ -168,7 +168,7 @@ public class Material implements Comparable<Material> {
     }
 
     public void addFlags(MaterialFlag... flags) {
-        if (!GTCEuAPI.materialManager.canModifyMaterials())
+        if (!GTAPI.materialManager.canModifyMaterials())
             throw new IllegalStateException("Cannot add flag to material when registry is frozen!");
         this.flags.addFlags(flags).verify(this);
     }
@@ -525,7 +525,7 @@ public class Material implements Comparable<Material> {
     }
 
     public <T extends IMaterialProperty> void setProperty(PropertyKey<T> key, IMaterialProperty property) {
-        if (!GTCEuAPI.materialManager.canModifyMaterials()) {
+        if (!GTAPI.materialManager.canModifyMaterials()) {
             throw new IllegalStateException("Cannot add properties to a Material when registry is frozen!");
         }
         properties.setProperty(key, property);

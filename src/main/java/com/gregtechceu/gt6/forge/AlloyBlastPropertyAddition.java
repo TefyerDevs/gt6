@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.forge;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.chemical.material.event.PostMaterialEvent;
 import com.gregtechceu.gt6.api.data.chemical.material.info.MaterialFlags;
@@ -28,7 +28,7 @@ public class AlloyBlastPropertyAddition {
 
     @SubscribeEvent
     public static void addAlloyBlastProperties(PostMaterialEvent event) {
-        for (Material material : GTCEuAPI.materialManager.getRegisteredMaterials()) {
+        for (Material material : GTAPI.materialManager.getRegisteredMaterials()) {
             if (!material.hasFlag(MaterialFlags.DISABLE_ALLOY_PROPERTY)) {
                 addAlloyBlastProperty(material);
             }

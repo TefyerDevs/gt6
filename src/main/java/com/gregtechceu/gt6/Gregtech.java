@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.client.ClientProxy;
 import com.gregtechceu.gt6.common.CommonProxy;
@@ -34,7 +34,7 @@ public class Gregtech {
 
     public Gregtech() {
         Gregtech.init();
-        GTCEuAPI.instance = this;
+        GTAPI.instance = this;
         DistExecutor.unsafeRunForDist(() -> ClientProxy::new, () -> CommonProxy::new);
     }
 

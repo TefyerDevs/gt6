@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data.machines;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.block.MetaMachineBlock;
 import com.gregtechceu.gt6.api.blockentity.MetaMachineBlockEntity;
@@ -95,12 +95,12 @@ import static com.gregtechceu.gt6.utils.FormattingUtil.*;
 
 public class GTMachineUtils {
 
-    public static final int[] ALL_TIERS = GTValues.tiersBetween(ULV, GTCEuAPI.isHighTier() ? MAX : UHV);
-    public static final int[] ELECTRIC_TIERS = GTValues.tiersBetween(LV, GTCEuAPI.isHighTier() ? OpV : UV);
+    public static final int[] ALL_TIERS = GTValues.tiersBetween(ULV, GTAPI.isHighTier() ? MAX : UHV);
+    public static final int[] ELECTRIC_TIERS = GTValues.tiersBetween(LV, GTAPI.isHighTier() ? OpV : UV);
     public static final int[] LOW_TIERS = GTValues.tiersBetween(LV, EV);
-    public static final int[] HIGH_TIERS = GTValues.tiersBetween(IV, GTCEuAPI.isHighTier() ? OpV : UHV);
-    public static final int[] MULTI_HATCH_TIERS = GTValues.tiersBetween(EV, GTCEuAPI.isHighTier() ? MAX : UHV);
-    public static final int[] DUAL_HATCH_TIERS = GTValues.tiersBetween(LuV, GTCEuAPI.isHighTier() ? MAX : UHV);
+    public static final int[] HIGH_TIERS = GTValues.tiersBetween(IV, GTAPI.isHighTier() ? OpV : UHV);
+    public static final int[] MULTI_HATCH_TIERS = GTValues.tiersBetween(EV, GTAPI.isHighTier() ? MAX : UHV);
+    public static final int[] DUAL_HATCH_TIERS = GTValues.tiersBetween(LuV, GTAPI.isHighTier() ? MAX : UHV);
 
     public static final Int2IntFunction defaultTankSizeFunction = tier -> (tier <= GTValues.LV ? 8 :
             tier == GTValues.MV ? 12 : tier == GTValues.HV ? 16 : tier == GTValues.EV ? 32 : 64) *
@@ -308,7 +308,7 @@ public class GTMachineUtils {
                                         baseAmp, FormattingUtil.formatNumbers(GTValues.V[tier + 1]),
                                         GTValues.VNF[tier + 1]))
                         .register(),
-                GTValues.tiersBetween(ULV, GTCEuAPI.isHighTier() ? OpV : UV));
+                GTValues.tiersBetween(ULV, GTAPI.isHighTier() ? OpV : UV));
         // UHV not needed, as a UV transformer transforms up to UHV
     }
 

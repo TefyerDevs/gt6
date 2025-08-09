@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.data.loader;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
@@ -55,7 +55,7 @@ public class GTOreLoader extends SimpleJsonResourceReloadListener {
 
         GTOres.init();
         AddonFinder.getAddons().forEach(IGTAddon::registerOreVeins);
-        ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.ORE_VEINS, GTOreDefinition.class));
+        ModLoader.get().postEvent(new GTAPI.RegisterEvent<>(GTRegistries.ORE_VEINS, GTOreDefinition.class));
         if (Gregtech.Mods.isKubeJSLoaded()) {
             KJSCallWrapper.fireKJSEvent();
         }

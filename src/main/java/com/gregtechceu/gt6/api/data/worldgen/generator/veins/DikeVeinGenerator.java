@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.generator.veins;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
@@ -180,7 +180,7 @@ public class DikeVeinGenerator extends VeinGenerator {
             implements WeightedEntry {
 
         public static final Codec<DikeBlockDefinition> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                Codec.either(TargetBlockState.CODEC.listOf(), GTCEuAPI.materialManager.codec()).fieldOf("block")
+                Codec.either(TargetBlockState.CODEC.listOf(), GTAPI.materialManager.codec()).fieldOf("block")
                         .forGetter(x -> x.block),
                 Codec.INT.fieldOf("weight").forGetter(x -> x.weight),
                 Codec.INT.fieldOf("min_y").orElse(320).forGetter(x -> x.minY),

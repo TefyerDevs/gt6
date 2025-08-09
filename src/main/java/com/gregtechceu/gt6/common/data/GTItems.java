@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.cover.filter.*;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
@@ -675,23 +675,23 @@ public class GTItems {
             .lang("UV Electric Motor")
             .tag(CustomTags.ELECTRIC_MOTORS)
             .register();
-    public static ItemEntry<Item> ELECTRIC_MOTOR_UHV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_MOTOR_UHV = GTAPI.isHighTier() ?
             REGISTRATE.item("uhv_electric_motor", Item::new).lang("UHV Electric Motor")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_MOTOR_UEV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_MOTOR_UEV = GTAPI.isHighTier() ?
             REGISTRATE.item("uev_electric_motor", Item::new).lang("UEV Electric Motor")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_MOTOR_UIV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_MOTOR_UIV = GTAPI.isHighTier() ?
             REGISTRATE.item("uiv_electric_motor", Item::new).lang("UIV Electric Motor")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_MOTOR_UXV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_MOTOR_UXV = GTAPI.isHighTier() ?
             REGISTRATE.item("uxv_electric_motor", Item::new).lang("UXV Electric Motor")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_MOTOR_OpV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_MOTOR_OpV = GTAPI.isHighTier() ?
             REGISTRATE.item("opv_electric_motor", Item::new).lang("OpV Electric Motor")
                     .register() :
             null;
@@ -781,7 +781,7 @@ public class GTItems {
             .tag(CustomTags.ELECTRIC_PUMPS)
             .register();
 
-    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UHV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UHV = GTAPI.isHighTier() ?
             REGISTRATE.item("uhv_electric_pump", ComponentItem::create)
                     .lang("UHV Electric Pump")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.PUMPS[8])))
@@ -793,7 +793,7 @@ public class GTItems {
                     .register() :
             null;
 
-    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UEV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UEV = GTAPI.isHighTier() ?
             REGISTRATE.item("uev_electric_pump", ComponentItem::create)
                     .lang("UEV Electric Pump")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.PUMPS[9])))
@@ -805,7 +805,7 @@ public class GTItems {
                     .register() :
             null;
 
-    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UIV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UIV = GTAPI.isHighTier() ?
             REGISTRATE.item("uiv_electric_pump", ComponentItem::create)
                     .lang("UIV Electric Pump")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.PUMPS[10])))
@@ -817,7 +817,7 @@ public class GTItems {
                     .register() :
             null;
 
-    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UXV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_UXV = GTAPI.isHighTier() ?
             REGISTRATE.item("uxv_electric_pump", ComponentItem::create)
                     .lang("UXV Electric Pump")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.PUMPS[11])))
@@ -829,7 +829,7 @@ public class GTItems {
                     .register() :
             null;
 
-    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_OpV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ELECTRIC_PUMP_OpV = GTAPI.isHighTier() ?
             REGISTRATE.item("opv_electric_pump", ComponentItem::create)
                     .lang("OpV Electric Pump")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.PUMPS[12])))
@@ -922,7 +922,7 @@ public class GTItems {
             })))
             .tag(CustomTags.FLUID_REGULATORS)
             .register();
-    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UHV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UHV = GTAPI.isHighTier() ?
             REGISTRATE.item("uhv_fluid_regulator", ComponentItem::create)
                     .lang("UHV Fluid Regulator")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.FLUID_REGULATORS[8])))
@@ -933,7 +933,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UEV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UEV = GTAPI.isHighTier() ?
             REGISTRATE.item("uev_fluid_regulator", ComponentItem::create)
                     .lang("UEV Fluid Regulator")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.FLUID_REGULATORS[9])))
@@ -944,7 +944,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UIV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UIV = GTAPI.isHighTier() ?
             REGISTRATE.item("uiv_fluid_regulator", ComponentItem::create)
                     .lang("UIV Fluid Regulator")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.FLUID_REGULATORS[10])))
@@ -955,7 +955,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UXV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> FLUID_REGULATOR_UXV = GTAPI.isHighTier() ?
             REGISTRATE.item("uxv_fluid_regulator", ComponentItem::create)
                     .lang("UXV Fluid Regulator")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.FLUID_REGULATORS[11])))
@@ -966,7 +966,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> FLUID_REGULATOR_OpV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> FLUID_REGULATOR_OpV = GTAPI.isHighTier() ?
             REGISTRATE.item("opv_fluid_regulator", ComponentItem::create)
                     .lang("OpV Fluid Regulator")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.FLUID_REGULATORS[12])))
@@ -1064,7 +1064,7 @@ public class GTItems {
             })))
             .tag(CustomTags.CONVEYOR_MODULES)
             .register();
-    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UHV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UHV = GTAPI.isHighTier() ?
             REGISTRATE.item("uhv_conveyor_module", ComponentItem::create)
                     .lang("UHV Conveyor Module")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.CONVEYORS[8])))
@@ -1074,7 +1074,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UEV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UEV = GTAPI.isHighTier() ?
             REGISTRATE.item("uev_conveyor_module", ComponentItem::create)
                     .lang("UEV Conveyor Module")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.CONVEYORS[9])))
@@ -1084,7 +1084,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UIV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UIV = GTAPI.isHighTier() ?
             REGISTRATE.item("uiv_conveyor_module", ComponentItem::create)
                     .lang("UIV Conveyor Module")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.CONVEYORS[10])))
@@ -1094,7 +1094,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UXV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_UXV = GTAPI.isHighTier() ?
             REGISTRATE.item("uxv_conveyor_module", ComponentItem::create)
                     .lang("UXV Conveyor Module")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.CONVEYORS[11])))
@@ -1104,7 +1104,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_OpV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> CONVEYOR_MODULE_OpV = GTAPI.isHighTier() ?
             REGISTRATE.item("opv_conveyor_module", ComponentItem::create)
                     .lang("OpV Conveyor Module")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.CONVEYORS[12])))
@@ -1147,23 +1147,23 @@ public class GTItems {
             .lang("UV Electric Piston")
             .tag(CustomTags.ELECTRIC_PISTONS)
             .register();
-    public static ItemEntry<Item> ELECTRIC_PISTON_UHV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_PISTON_UHV = GTAPI.isHighTier() ?
             REGISTRATE.item("uhv_electric_piston", Item::new).lang("UHV Electric Piston")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_PISTON_UEV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_PISTON_UEV = GTAPI.isHighTier() ?
             REGISTRATE.item("uev_electric_piston", Item::new).lang("UEV Electric Piston")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_PISTON_UIV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_PISTON_UIV = GTAPI.isHighTier() ?
             REGISTRATE.item("uiv_electric_piston", Item::new).lang("UIV Electric Piston")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_PISTON_UXV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_PISTON_UXV = GTAPI.isHighTier() ?
             REGISTRATE.item("uxv_electric_piston", Item::new).lang("UXV Electric Piston")
                     .register() :
             null;
-    public static ItemEntry<Item> ELECTRIC_PISTON_OpV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> ELECTRIC_PISTON_OpV = GTAPI.isHighTier() ?
             REGISTRATE.item("opv_electric_piston", Item::new).lang("OpV Electric Piston")
                     .register() :
             null;
@@ -1240,7 +1240,7 @@ public class GTItems {
             })))
             .tag(CustomTags.ROBOT_ARMS)
             .register();
-    public static ItemEntry<ComponentItem> ROBOT_ARM_UHV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ROBOT_ARM_UHV = GTAPI.isHighTier() ?
             REGISTRATE.item("uhv_robot_arm", ComponentItem::create)
                     .lang("UHV Robot Arm")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.ROBOT_ARMS[8])))
@@ -1250,7 +1250,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> ROBOT_ARM_UEV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ROBOT_ARM_UEV = GTAPI.isHighTier() ?
             REGISTRATE.item("uev_robot_arm", ComponentItem::create)
                     .lang("UEV Robot Arm")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.ROBOT_ARMS[9])))
@@ -1260,7 +1260,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> ROBOT_ARM_UIV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ROBOT_ARM_UIV = GTAPI.isHighTier() ?
             REGISTRATE.item("uiv_robot_arm", ComponentItem::create)
                     .lang("UIV Robot Arm")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.ROBOT_ARMS[10])))
@@ -1270,7 +1270,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> ROBOT_ARM_UXV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ROBOT_ARM_UXV = GTAPI.isHighTier() ?
             REGISTRATE.item("uxv_robot_arm", ComponentItem::create)
                     .lang("UXV Robot Arm")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.ROBOT_ARMS[11])))
@@ -1280,7 +1280,7 @@ public class GTItems {
                     })))
                     .register() :
             null;
-    public static ItemEntry<ComponentItem> ROBOT_ARM_OpV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<ComponentItem> ROBOT_ARM_OpV = GTAPI.isHighTier() ?
             REGISTRATE.item("opv_robot_arm", ComponentItem::create)
                     .lang("OpV Robot Arm")
                     .onRegister(attach(new CoverPlaceBehavior(GTCovers.ROBOT_ARMS[12])))
@@ -1323,23 +1323,23 @@ public class GTItems {
             .lang("UV Field Generator")
             .tag(CustomTags.FIELD_GENERATORS)
             .register();
-    public static ItemEntry<Item> FIELD_GENERATOR_UHV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> FIELD_GENERATOR_UHV = GTAPI.isHighTier() ?
             REGISTRATE.item("uhv_field_generator", Item::new).lang("UHV Field Generator")
                     .register() :
             null;
-    public static ItemEntry<Item> FIELD_GENERATOR_UEV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> FIELD_GENERATOR_UEV = GTAPI.isHighTier() ?
             REGISTRATE.item("uev_field_generator", Item::new).lang("UEV Field Generator")
                     .register() :
             null;
-    public static ItemEntry<Item> FIELD_GENERATOR_UIV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> FIELD_GENERATOR_UIV = GTAPI.isHighTier() ?
             REGISTRATE.item("uiv_field_generator", Item::new).lang("UIV Field Generator")
                     .register() :
             null;
-    public static ItemEntry<Item> FIELD_GENERATOR_UXV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> FIELD_GENERATOR_UXV = GTAPI.isHighTier() ?
             REGISTRATE.item("uxv_field_generator", Item::new).lang("UXV Field Generator")
                     .register() :
             null;
-    public static ItemEntry<Item> FIELD_GENERATOR_OpV = GTCEuAPI.isHighTier() ?
+    public static ItemEntry<Item> FIELD_GENERATOR_OpV = GTAPI.isHighTier() ?
             REGISTRATE.item("opv_field_generator", Item::new).lang("OpV Field Generator")
                     .register() :
             null;
@@ -1368,19 +1368,19 @@ public class GTItems {
     public static ItemEntry<Item> EMITTER_UV = REGISTRATE.item("uv_emitter", Item::new).lang("UV Emitter")
             .tag(CustomTags.EMITTERS)
             .register();
-    public static ItemEntry<Item> EMITTER_UHV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uhv_emitter", Item::new)
+    public static ItemEntry<Item> EMITTER_UHV = GTAPI.isHighTier() ? REGISTRATE.item("uhv_emitter", Item::new)
             .lang("UHV Emitter")
             .register() : null;
-    public static ItemEntry<Item> EMITTER_UEV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uev_emitter", Item::new)
+    public static ItemEntry<Item> EMITTER_UEV = GTAPI.isHighTier() ? REGISTRATE.item("uev_emitter", Item::new)
             .lang("UEV Emitter")
             .register() : null;
-    public static ItemEntry<Item> EMITTER_UIV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uiv_emitter", Item::new)
+    public static ItemEntry<Item> EMITTER_UIV = GTAPI.isHighTier() ? REGISTRATE.item("uiv_emitter", Item::new)
             .lang("UIV Emitter")
             .register() : null;
-    public static ItemEntry<Item> EMITTER_UXV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uxv_emitter", Item::new)
+    public static ItemEntry<Item> EMITTER_UXV = GTAPI.isHighTier() ? REGISTRATE.item("uxv_emitter", Item::new)
             .lang("UXV Emitter")
             .register() : null;
-    public static ItemEntry<Item> EMITTER_OpV = GTCEuAPI.isHighTier() ? REGISTRATE.item("opv_emitter", Item::new)
+    public static ItemEntry<Item> EMITTER_OpV = GTAPI.isHighTier() ? REGISTRATE.item("opv_emitter", Item::new)
             .lang("OpV Emitter")
             .register() : null;
 
@@ -1408,19 +1408,19 @@ public class GTItems {
     public static ItemEntry<Item> SENSOR_UV = REGISTRATE.item("uv_sensor", Item::new).lang("UV Sensor")
             .tag(CustomTags.SENSORS)
             .register();
-    public static ItemEntry<Item> SENSOR_UHV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uhv_sensor", Item::new)
+    public static ItemEntry<Item> SENSOR_UHV = GTAPI.isHighTier() ? REGISTRATE.item("uhv_sensor", Item::new)
             .lang("UHV Sensor")
             .register() : null;
-    public static ItemEntry<Item> SENSOR_UEV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uev_sensor", Item::new)
+    public static ItemEntry<Item> SENSOR_UEV = GTAPI.isHighTier() ? REGISTRATE.item("uev_sensor", Item::new)
             .lang("UEV Sensor")
             .register() : null;
-    public static ItemEntry<Item> SENSOR_UIV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uiv_sensor", Item::new)
+    public static ItemEntry<Item> SENSOR_UIV = GTAPI.isHighTier() ? REGISTRATE.item("uiv_sensor", Item::new)
             .lang("UIV Sensor")
             .register() : null;
-    public static ItemEntry<Item> SENSOR_UXV = GTCEuAPI.isHighTier() ? REGISTRATE.item("uxv_sensor", Item::new)
+    public static ItemEntry<Item> SENSOR_UXV = GTAPI.isHighTier() ? REGISTRATE.item("uxv_sensor", Item::new)
             .lang("UXV Sensor")
             .register() : null;
-    public static ItemEntry<Item> SENSOR_OpV = GTCEuAPI.isHighTier() ? REGISTRATE.item("opv_sensor", Item::new)
+    public static ItemEntry<Item> SENSOR_OpV = GTAPI.isHighTier() ? REGISTRATE.item("opv_sensor", Item::new)
             .lang("OpV Sensor")
             .register() : null;
 

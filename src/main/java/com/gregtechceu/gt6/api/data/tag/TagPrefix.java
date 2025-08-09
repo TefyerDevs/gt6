@@ -970,6 +970,12 @@ public class TagPrefix {
             .unformattedTagPath("surface_rocks")
             .materialAmount(GTValues.M / 3);
 
+    public static final TagPrefix stick = new TagPrefix("stick")
+            .langValue("Placed Stick")
+            .defaultTagPath("placed_stick/%s")
+            .unformattedTagPath("placed_stick")
+            .materialAmount(GTValues.M / 8);
+
     public static class Conditions {
 
         public static final Predicate<Material> hasToolProperty = mat -> mat.hasProperty(PropertyKey.TOOL);

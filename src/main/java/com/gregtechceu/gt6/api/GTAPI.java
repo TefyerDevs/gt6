@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
 
-public class GTCEuAPI {
+public class GTAPI {
 
     /** Will always be available */
     public static Gregtech instance;

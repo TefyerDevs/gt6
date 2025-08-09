@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.syncdata;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 
 import com.lowdragmc.lowdraglib.syncdata.payload.ObjectTypedPayload;
@@ -22,7 +22,7 @@ public class MaterialPayload extends ObjectTypedPayload<Material> {
 
     @Override
     public void readPayload(FriendlyByteBuf buf) {
-        payload = GTCEuAPI.materialManager.getMaterial(buf.readUtf());
+        payload = GTAPI.materialManager.getMaterial(buf.readUtf());
     }
 
     @Nullable
@@ -33,6 +33,6 @@ public class MaterialPayload extends ObjectTypedPayload<Material> {
 
     @Override
     public void deserializeNBT(Tag tag) {
-        payload = GTCEuAPI.materialManager.getMaterial(tag.getAsString());
+        payload = GTAPI.materialManager.getMaterial(tag.getAsString());
     }
 }

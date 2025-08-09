@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.recipe.condition.RecipeConditionType;
 import com.gregtechceu.gt6.api.registry.GTRegistries;
 import com.gregtechceu.gt6.common.recipe.condition.*;
@@ -66,7 +66,7 @@ public final class GTRecipeConditions {
                             new RecipeConditionType<>(HeraclesQuestCondition::new, HeraclesQuestCondition.CODEC));
         }
         // noinspection unchecked
-        ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.RECIPE_CONDITIONS,
+        ModLoader.get().postEvent(new GTAPI.RegisterEvent<>(GTRegistries.RECIPE_CONDITIONS,
                 (Class<RecipeConditionType<?>>) (Class<?>) RecipeConditionType.class));
         GTRegistries.RECIPE_CONDITIONS.freeze();
     }

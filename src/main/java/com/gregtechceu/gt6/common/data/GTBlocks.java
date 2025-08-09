@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.events.MaterialCasingCollectionEvent;
@@ -527,7 +527,7 @@ public class GTBlocks {
                 .item(BlockItem::new)
                 .build()
                 .register();
-        if (!GTCEuAPI.isHighTier() && tier > GTValues.UHV) {
+        if (!GTAPI.isHighTier() && tier > GTValues.UHV) {
             REGISTRATE.setCreativeTab(entry, null);
         }
         return entry;
@@ -546,7 +546,7 @@ public class GTBlocks {
                 .item(BlockItem::new)
                 .build()
                 .register();
-        if (!GTCEuAPI.isHighTier() && tier > GTValues.UHV) {
+        if (!GTAPI.isHighTier() && tier > GTValues.UHV) {
             REGISTRATE.setCreativeTab(entry, null);
         }
         return entry;
@@ -573,7 +573,7 @@ public class GTBlocks {
                 .item(BlockItem::new)
                 .build()
                 .register();
-        GTCEuAPI.HEATING_COILS.put(coilType, coilBlock);
+        GTAPI.HEATING_COILS.put(coilType, coilBlock);
         return coilBlock;
     }
 
@@ -588,7 +588,7 @@ public class GTBlocks {
                 .build()
                 .register();
 
-        GTCEuAPI.PSS_BATTERIES.put(batteryData, batteryBlock);
+        GTAPI.PSS_BATTERIES.put(batteryData, batteryBlock);
         return batteryBlock;
     }
 
@@ -618,7 +618,7 @@ public class GTBlocks {
                 .item(BlockItem::new)
                 .build()
                 .register();
-        GTCEuAPI.CLEANROOM_FILTERS.put(filterType, filterBlock);
+        GTAPI.CLEANROOM_FILTERS.put(filterType, filterBlock);
         return filterBlock;
     }
 
@@ -1276,6 +1276,15 @@ public class GTBlocks {
             .simpleItem()
             .register();
 
+    public static final BlockEntry<StickBlock> STICK_BLOCK = REGISTRATE.block(TagPrefix.stick.name,StickBlock::new)
+            .properties(p -> p.noLootTable().strength(0.25f))
+            .transform(GTBlocks.unificationBlock(TagPrefix.stick, GTMaterials.Wood))
+            .setData(ProviderType.LANG, NonNullBiConsumer.noop())
+            .setData(ProviderType.LOOT, NonNullBiConsumer.noop())
+            .setData(ProviderType.BLOCKSTATE, NonNullBiConsumer.noop())
+            .addLayer(() -> RenderType::cutoutMipped)
+            .register();;
+
     // Lamps
     public static final Map<DyeColor, BlockEntry<LampBlock>> LAMPS;
     public static final Map<DyeColor, BlockEntry<LampBlock>> BORDERLESS_LAMPS;
@@ -1391,6 +1400,7 @@ public class GTBlocks {
         generateLaserPipeBlocks();    // Laser Pipe Blocks
         generateOpticalPipeBlocks();  // Optical Pipe Blocks
         generateDuctPipeBlocks();     // Duct Pipe Blocks
+        generateSmallBlocks();
 
         // Remove Builder Tables
         GTMaterialBlocks.MATERIAL_BLOCKS_BUILDER = null;
@@ -1401,6 +1411,10 @@ public class GTBlocks {
 
         // GCYM
         GCYMBlocks.init();
+    }
+
+    private static void generateSmallBlocks() {
+
     }
 
     public static boolean doMetalPipe(Material material) {

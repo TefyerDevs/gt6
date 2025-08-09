@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.data.worldgen.generator.veins;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.ChemicalHelper;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 import com.gregtechceu.gt6.api.data.worldgen.GTOreDefinition;
@@ -230,7 +230,7 @@ public class ClassicVeinGenerator extends VeinGenerator {
     public static class Layer {
 
         public static final Codec<Layer> CODEC = RecordCodecBuilder.create(instance -> instance.group(
-                Codec.either(OreConfiguration.TargetBlockState.CODEC.listOf(), GTCEuAPI.materialManager.codec())
+                Codec.either(OreConfiguration.TargetBlockState.CODEC.listOf(), GTAPI.materialManager.codec())
                         .fieldOf("targets").forGetter(layer -> layer.target),
                 ExtraCodecs.intRange(-1, Integer.MAX_VALUE).optionalFieldOf("layers", -1)
                         .forGetter(layer -> layer.layers))

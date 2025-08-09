@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.recipe.chance.logic;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.recipe.chance.boost.ChanceBoostFunction;
 import com.gregtechceu.gt6.api.recipe.content.Content;
@@ -355,7 +355,7 @@ public abstract class ChanceLogic {
 
     @ApiStatus.Internal
     public static void init() {
-        ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.CHANCE_LOGICS, ChanceLogic.class));
+        ModLoader.get().postEvent(new GTAPI.RegisterEvent<>(GTRegistries.CHANCE_LOGICS, ChanceLogic.class));
         GTRegistries.CHANCE_LOGICS.freeze();
     }
 }

@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.config;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 
 import net.minecraft.commands.Commands;
 
@@ -525,7 +525,7 @@ public class ConfigHolder {
 
         /**
          * <strong>Addons mods should not reference this config directly.</strong>
-         * Use {@link GTCEuAPI#isHighTier()} instead.
+         * Use {@link GTAPI#isHighTier()} instead.
          */
         @Configurable
         @Configurable.Comment({ "If High Tier (>UV-tier) GT content should be registered.",

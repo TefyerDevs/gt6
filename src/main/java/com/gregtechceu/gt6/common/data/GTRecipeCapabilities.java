@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.common.data;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.addon.IGTAddon;
 import com.gregtechceu.gt6.api.capability.recipe.*;
@@ -30,7 +30,7 @@ public class GTRecipeCapabilities {
         GTRegistries.RECIPE_CAPABILITIES.register(CWU.name, CWU);
 
         AddonFinder.getAddons().forEach(IGTAddon::registerRecipeCapabilities);
-        ModLoader.get().postEvent(new GTCEuAPI.RegisterEvent<>(GTRegistries.RECIPE_CAPABILITIES,
+        ModLoader.get().postEvent(new GTAPI.RegisterEvent<>(GTRegistries.RECIPE_CAPABILITIES,
                 (Class<RecipeCapability<?>>) (Class<?>) RecipeCapability.class));
         GTRegistries.RECIPE_CAPABILITIES.freeze();
     }

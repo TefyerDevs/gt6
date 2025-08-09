@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.integration.kjs;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.GTValues;
 import com.gregtechceu.gt6.api.capability.recipe.RecipeCapability;
 import com.gregtechceu.gt6.api.cosmetics.CapeRegistry;
@@ -290,7 +290,7 @@ public class GregTechKubeJSPlugin extends KubeJSPlugin {
         super.registerBindings(event);
         // Mod related
         event.add("GTCEu", Gregtech.class);
-        event.add("GTCEuAPI", GTCEuAPI.class);
+        event.add("GTCEuAPI", GTAPI.class);
         event.add("GTRegistries", GTRegistries.class);
         event.add("GTValues", GTValues.class);
         // Material related

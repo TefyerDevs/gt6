@@ -1,6 +1,6 @@
 package com.gregtechceu.gt6.api.block;
 
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
 
 import net.minecraft.resources.ResourceLocation;
@@ -56,7 +56,7 @@ public interface ICoilType {
      */
     ResourceLocation getTexture();
 
-    Lazy<ICoilType[]> ALL_COILS_TEMPERATURE_SORTED = Lazy.of(() -> GTCEuAPI.HEATING_COILS.keySet().stream()
+    Lazy<ICoilType[]> ALL_COILS_TEMPERATURE_SORTED = Lazy.of(() -> GTAPI.HEATING_COILS.keySet().stream()
             .sorted(Comparator.comparingInt(ICoilType::getCoilTemperature))
             .toArray(ICoilType[]::new));
 

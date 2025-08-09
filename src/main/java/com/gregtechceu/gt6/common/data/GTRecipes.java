@@ -1,7 +1,7 @@
 package com.gregtechceu.gt6.common.data;
 
 import com.gregtechceu.gt6.Gregtech;
-import com.gregtechceu.gt6.api.GTCEuAPI;
+import com.gregtechceu.gt6.api.GTAPI;
 import com.gregtechceu.gt6.api.addon.AddonFinder;
 import com.gregtechceu.gt6.api.data.chemical.material.ItemMaterialData;
 import com.gregtechceu.gt6.api.data.chemical.material.Material;
@@ -51,7 +51,7 @@ public class GTRecipes {
         MaterialInfoLoader.init();
 
         // com.gregtechceu.gt6.data.recipe.generated.*
-        for (Material material : GTCEuAPI.materialManager.getRegisteredMaterials()) {
+        for (Material material : GTAPI.materialManager.getRegisteredMaterials()) {
             if (material.hasFlag(MaterialFlags.NO_UNIFICATION)) {
                 continue;
             }
